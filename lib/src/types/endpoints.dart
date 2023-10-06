@@ -1,6 +1,6 @@
 part of '../main.dart';
 
-enum Endpoints {
+enum _Endpoints {
   animalAndVeterinaryAdverseEvents._(
     ['animalandveterinary', 'event'],
   ),
@@ -66,6 +66,6 @@ enum Endpoints {
   ),
   ;
 
-  const Endpoints._(this._value);
+  const _Endpoints._(this._value);
   final List<String> _value;
 }

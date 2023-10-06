@@ -5,200 +5,276 @@ abstract final class DeviceRecallEnforcementReportsFields {}
 final class DeviceRecallEnforcementReports
     extends DeviceRecallEnforcementReportsFields implements OpenFDAEndpointer {
   @override
-  Endpoints get endPointBase => Endpoints.deviceRecallEnforcementReports;
+  final endPointBase = _Endpoints.deviceRecallEnforcementReports;
 
-  final String address1 = 'address_1';
+  final address1 = 'address_1';
+  final address1Exact = 'address_1.exact';
 
-  final String address1Exact = 'address_1.exact';
+  final address2 = 'address_2';
+  final address2Exact = 'address_2.exact';
 
-  final String address2 = 'address_2';
-
-  final String address2Exact = 'address_2.exact';
-
-  final String centerClassificationDate = 'center_classification_date';
+  final centerClassificationDate = 'center_classification_date';
 
   /// The city in which the recalling firm is located.
-  final String city = 'city';
-
-  final String cityExact = 'city.exact';
+  final city = 'city';
+  final cityExact = 'city.exact';
 
   /// Numerical designation (I, II, or III) that is assigned by FDA to a
   /// particular product recall that indicates the relative degree of health
   /// hazard.
+  /// Dangerous or defective products that predictably could cause serious
+  /// health problems or death. Examples include: food found to contain
+  /// botulinum toxin, food with undeclared allergens, a label mix-up on a
+  /// lifesaving drug, or a defective artificial heart valve.
+  final classificationClassI = (
+    'classification',
+    _DeviceRecallEnforcementReportsClassification.classI,
+  );
+  final classificationClassIExact = (
+    'classification.exact',
+    _DeviceRecallEnforcementReportsClassification.classI,
+  );
+
+  /// Products that might cause a temporary health problem, or pose only a
+  /// slight threat of a serious nature. Example: a drug that is under-strength
+  /// but that is not used to treat life-threatening situations.
+  final classificationClassII = (
+    'classification',
+    _DeviceRecallEnforcementReportsClassification.classII,
+  );
+  final classificationClassIIExact = (
+    'classification.exact',
+    _DeviceRecallEnforcementReportsClassification.classII,
+  );
+
+  /// Products that are unlikely to cause any adverse health reaction, but that
+  /// violate FDA labeling or manufacturing laws. Examples include: a minor
+  /// container defect and lack of English labeling in a retail food.
+  final classificationClassIII = (
+    'classification',
+    _DeviceRecallEnforcementReportsClassification.classIII,
+  );
+  final classificationClassIIIExact = (
+    'classification.exact',
+    _DeviceRecallEnforcementReportsClassification.classIII,
+  );
 
   /// A list of all lot and/or serial numbers, product numbers, packer or
   /// manufacturer numbers, sell or use by dates, etc., which appear on the
   /// product or its labeling.
-  final String codeInfo = 'code_info';
+  final codeInfo = 'code_info';
 
   /// The country in which the recalling firm is located.
-  final String country = 'country';
-
-  final String countryExact = 'country.exact';
+  final country = 'country';
+  final countryExact = 'country.exact';
 
   /// General area of initial distribution such as, “Distributors in 6 states:
   /// NY, VA, TX, GA, FL and MA; the Virgin Islands; Canada and Japan”. The term
   /// “nationwide” is defined to mean the fifty states or a significant portion.
   /// Note that subsequent distribution by the consignees to other parties may
   /// not be included.
-  final String distributionPattern = 'distribution_pattern';
+  final distributionPattern = 'distribution_pattern';
 
   /// A numerical designation assigned by FDA to a specific recall event used
   /// for tracking purposes.
-  final String eventId = 'event_id';
+  final eventId = 'event_id';
 
   /// The method(s) by which the firm initially notified the public or their
   /// consignees of a recall. A consignee is a person or firm named in a bill of
   /// lading to whom or to whose order the product has or will be delivered.
-  final String initialFirmNotification = 'initial_firm_notification';
+  final initialFirmNotification = 'initial_firm_notification';
+  final initialFirmNotificationExact = 'initial_firm_notification.exact';
 
-  final String initialFirmNotificationExact = 'initial_firm_notification.exact';
+  final moreCodeInfo = 'more_code_info';
 
-  final String moreCodeInfo = 'more_code_info';
+  final openfda = 'openfda';
 
-  final String openfda = 'openfda';
+  final openfdaApplicationNumber = 'openfda.application_number';
+  final openfdaApplicationNumberExact = 'openfda.application_number.exact';
 
-  final String openfdaApplicationNumber = 'openfda.application_number';
+  final openfdaBrandName = 'openfda.brand_name';
+  final openfdaBrandNameExact = 'openfda.brand_name.exact';
 
-  final String openfdaApplicationNumberExact =
-      'openfda.application_number.exact';
+  final openfdaDosageForm = 'openfda.dosage_form';
+  final openfdaDosageFormExact = 'openfda.dosage_form.exact';
 
-  final String openfdaBrandName = 'openfda.brand_name';
+  final openfdaGenericName = 'openfda.generic_name';
+  final openfdaGenericNameExact = 'openfda.generic_name.exact';
 
-  final String openfdaBrandNameExact = 'openfda.brand_name.exact';
+  final openfdaIsOriginalPackager = 'openfda.is_original_packager';
+  final openfdaIsOriginalPackagerExact = 'openfda.is_original_packager.exact';
 
-  final String openfdaDosageForm = 'openfda.dosage_form';
+  final openfdaManufacturerName = 'openfda.manufacturer_name';
+  final openfdaManufacturerNameExact = 'openfda.manufacturer_name.exact';
 
-  final String openfdaDosageFormExact = 'openfda.dosage_form.exact';
+  final openfdaNui = 'openfda.nui';
+  final openfdaNuiExact = 'openfda.nui.exact';
 
-  final String openfdaGenericName = 'openfda.generic_name';
-
-  final String openfdaGenericNameExact = 'openfda.generic_name.exact';
-
-  final String openfdaIsOriginalPackager = 'openfda.is_original_packager';
-
-  final String openfdaIsOriginalPackagerExact =
-      'openfda.is_original_packager.exact';
-
-  final String openfdaManufacturerName = 'openfda.manufacturer_name';
-
-  final String openfdaManufacturerNameExact = 'openfda.manufacturer_name.exact';
-
-  final String openfdaNui = 'openfda.nui';
-
-  final String openfdaNuiExact = 'openfda.nui.exact';
-
-  final String openfdaOriginalPackagerProductNdc =
+  final openfdaOriginalPackagerProductNdc =
       'openfda.original_packager_product_ndc';
-
-  final String openfdaOriginalPackagerProductNdcExact =
+  final openfdaOriginalPackagerProductNdcExact =
       'openfda.original_packager_product_ndc.exact';
 
-  final String openfdaPackageNdc = 'openfda.package_ndc';
+  final openfdaPackageNdc = 'openfda.package_ndc';
+  final openfdaPackageNdcExact = 'openfda.package_ndc.exact';
 
-  final String openfdaPackageNdcExact = 'openfda.package_ndc.exact';
+  final openfdaPharmClassCs = 'openfda.pharm_class_cs';
+  final openfdaPharmClassCsExact = 'openfda.pharm_class_cs.exact';
 
-  final String openfdaPharmClassCs = 'openfda.pharm_class_cs';
+  final openfdaPharmClassEpc = 'openfda.pharm_class_epc';
+  final openfdaPharmClassEpcExact = 'openfda.pharm_class_epc.exact';
 
-  final String openfdaPharmClassCsExact = 'openfda.pharm_class_cs.exact';
+  final openfdaPharmClassMoa = 'openfda.pharm_class_moa';
+  final openfdaPharmClassMoaExact = 'openfda.pharm_class_moa.exact';
 
-  final String openfdaPharmClassEpc = 'openfda.pharm_class_epc';
+  final openfdaPharmClassPe = 'openfda.pharm_class_pe';
+  final openfdaPharmClassPeExact = 'openfda.pharm_class_pe.exact';
 
-  final String openfdaPharmClassEpcExact = 'openfda.pharm_class_epc.exact';
-
-  final String openfdaPharmClassMoa = 'openfda.pharm_class_moa';
-
-  final String openfdaPharmClassMoaExact = 'openfda.pharm_class_moa.exact';
-
-  final String openfdaPharmClassPe = 'openfda.pharm_class_pe';
-
-  final String openfdaPharmClassPeExact = 'openfda.pharm_class_pe.exact';
-
-  final String openfdaProductNdc = 'openfda.product_ndc';
-
-  final String openfdaProductNdcExact = 'openfda.product_ndc.exact';
+  final openfdaProductNdc = 'openfda.product_ndc';
+  final openfdaProductNdcExact = 'openfda.product_ndc.exact';
 
   /// The type of product being recalled. For device queries, this will always
   /// be `Devices`.
+  /// The recalled product is a device product.
+  final openfdaProductTypeDevices = (
+    'openfda.product_type',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.devices,
+  );
+  final openfdaProductTypeDevicesExact = (
+    'openfda.product_type.exact',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.devices,
+  );
 
-  final String openfdaRoute = 'openfda.route';
+  /// The recalled product is a drug product.
+  final openfdaProductTypeDrugs = (
+    'openfda.product_type',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.drugs,
+  );
+  final openfdaProductTypeDrugsExact = (
+    'openfda.product_type.exact',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.drugs,
+  );
 
-  final String openfdaRouteExact = 'openfda.route.exact';
+  /// The recalled product is a food product.
+  final openfdaProductTypeFood = (
+    'openfda.product_type',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.food,
+  );
+  final openfdaProductTypeFoodExact = (
+    'openfda.product_type.exact',
+    _DeviceRecallEnforcementReportsOpenfdaProductType.food,
+  );
 
-  final String openfdaRxcui = 'openfda.rxcui';
+  final openfdaRoute = 'openfda.route';
+  final openfdaRouteExact = 'openfda.route.exact';
 
-  final String openfdaRxcuiExact = 'openfda.rxcui.exact';
+  final openfdaRxcui = 'openfda.rxcui';
+  final openfdaRxcuiExact = 'openfda.rxcui.exact';
 
-  final String openfdaRxstring = 'openfda.rxstring';
+  final openfdaRxstring = 'openfda.rxstring';
+  final openfdaRxstringExact = 'openfda.rxstring.exact';
 
-  final String openfdaRxstringExact = 'openfda.rxstring.exact';
+  final openfdaRxtty = 'openfda.rxtty';
+  final openfdaRxttyExact = 'openfda.rxtty.exact';
 
-  final String openfdaRxtty = 'openfda.rxtty';
+  final openfdaSplId = 'openfda.spl_id';
+  final openfdaSplIdExact = 'openfda.spl_id.exact';
 
-  final String openfdaRxttyExact = 'openfda.rxtty.exact';
+  final openfdaSplSetId = 'openfda.spl_set_id';
+  final openfdaSplSetIdExact = 'openfda.spl_set_id.exact';
 
-  final String openfdaSplId = 'openfda.spl_id';
+  final openfdaSubstanceName = 'openfda.substance_name';
+  final openfdaSubstanceNameExact = 'openfda.substance_name.exact';
 
-  final String openfdaSplIdExact = 'openfda.spl_id.exact';
+  final openfdaUnii = 'openfda.unii';
+  final openfdaUniiExact = 'openfda.unii.exact';
 
-  final String openfdaSplSetId = 'openfda.spl_set_id';
+  final openfdaUpc = 'openfda.upc';
+  final openfdaUpcExact = 'openfda.upc.exact';
 
-  final String openfdaSplSetIdExact = 'openfda.spl_set_id.exact';
-
-  final String openfdaSubstanceName = 'openfda.substance_name';
-
-  final String openfdaSubstanceNameExact = 'openfda.substance_name.exact';
-
-  final String openfdaUnii = 'openfda.unii';
-
-  final String openfdaUniiExact = 'openfda.unii.exact';
-
-  final String openfdaUpc = 'openfda.upc';
-
-  final String openfdaUpcExact = 'openfda.upc.exact';
-
-  final String productCode = 'product_code';
+  final productCode = 'product_code';
 
   /// Brief description of the product being recalled.
-  final String productDescription = 'product_description';
+  final productDescription = 'product_description';
 
   /// The amount of defective product subject to recall.
-  final String productQuantity = 'product_quantity';
+  final productQuantity = 'product_quantity';
 
-  final String productType = 'product_type';
-
-  final String productTypeExact = 'product_type.exact';
+  final productType = 'product_type';
+  final productTypeExact = 'product_type.exact';
 
   /// Information describing how the product is defective and violates the FD&C
   /// Act or related statutes.
-  final String reasonForRecall = 'reason_for_recall';
+  final reasonForRecall = 'reason_for_recall';
 
   /// Date that the firm first began notifying the public or their consignees of
   /// the recall.
-  final String recallInitiationDate = 'recall_initiation_date';
+  final recallInitiationDate = 'recall_initiation_date';
 
   /// A numerical designation assigned by FDA to a specific recall event used
   /// for tracking purposes.
-  final String recallNumber = 'recall_number';
-
-  final String recallNumberExact = 'recall_number.exact';
+  final recallNumber = 'recall_number';
+  final recallNumberExact = 'recall_number.exact';
 
   /// The firm that initiates a recall or, in the case of an FDA requested
   /// recall or FDA mandated recall, the firm that has primary responsibility
   /// for the manufacture and (or) marketing of the product to be recalled.
-  final String recallingFirm = 'recalling_firm';
-
-  final String recallingFirmExact = 'recalling_firm.exact';
+  final recallingFirm = 'recalling_firm';
+  final recallingFirmExact = 'recalling_firm.exact';
 
   /// Date that the FDA issued the enforcement report for the product recall.
-  final String reportDate = 'report_date';
+  final reportDate = 'report_date';
 
   /// The U.S. state in which the recalling firm is located.
-  final String state = 'state';
+  final state = 'state';
+  final stateExact = 'state.exact';
 
-  final String stateExact = 'state.exact';
+  /// The recall action reaches the point at which the firm has actually
+  /// retrieved and impounded all outstanding product that could reasonably be
+  /// expected to be recovered, or has completed all product corrections.
+  final statusCompleted = (
+    'status',
+    _DeviceRecallEnforcementReportsStatus.completed,
+  );
+  final statusCompletedExact = (
+    'status.exact',
+    _DeviceRecallEnforcementReportsStatus.completed,
+  );
 
-  final String terminationDate = 'termination_date';
+  /// A recall which is currently in progress.
+  final statusOnGoing = (
+    'status',
+    _DeviceRecallEnforcementReportsStatus.onGoing,
+  );
+  final statusOnGoingExact = (
+    'status.exact',
+    _DeviceRecallEnforcementReportsStatus.onGoing,
+  );
+
+  /// Actions that have been determined to be recalls, but that remain in the
+  /// process of being classified.
+  final statusPending = (
+    'status',
+    _DeviceRecallEnforcementReportsStatus.pending,
+  );
+  final statusPendingExact = (
+    'status.exact',
+    _DeviceRecallEnforcementReportsStatus.pending,
+  );
+
+  /// FDA has determined that all reasonable efforts have been made to remove or
+  /// correct the violative product in accordance with the recall strategy, and
+  /// proper disposition has been made according to the degree of hazard.
+  final statusTerminated = (
+    'status',
+    _DeviceRecallEnforcementReportsStatus.terminated,
+  );
+  final statusTerminatedExact = (
+    'status.exact',
+    _DeviceRecallEnforcementReportsStatus.terminated,
+  );
+
+  final terminationDate = 'termination_date';
 
   /// Describes who initiated the recall. Recalls are almost always voluntary,
   /// meaning initiated by a firm. A recall is deemed voluntary when the firm
@@ -208,7 +284,92 @@ final class DeviceRecallEnforcementReports
   /// under section 518(e) of the FD&C Act, National Childhood Vaccine Injury
   /// Act of 1986, 21 CFR 1271.440, Infant Formula Act of 1980 and its 1986
   /// amendments, or the Food Safety Modernization Act (FSMA).
-  final String voluntaryMandated = 'voluntary_mandated';
+  final voluntaryMandated = 'voluntary_mandated';
+  final voluntaryMandatedExact = 'voluntary_mandated.exact';
+}
 
-  final String voluntaryMandatedExact = 'voluntary_mandated.exact';
+enum _DeviceRecallEnforcementReportsClassification {
+  /// Dangerous or defective products that predictably could cause serious
+  /// health problems or death. Examples include: food found to contain
+  /// botulinum toxin, food with undeclared allergens, a label mix-up on a
+  /// lifesaving drug, or a defective artificial heart valve.
+  classI._(
+    'Class I',
+  ),
+
+  /// Products that might cause a temporary health problem, or pose only a
+  /// slight threat of a serious nature. Example: a drug that is under-strength
+  /// but that is not used to treat life-threatening situations.
+  classII._(
+    'Class II',
+  ),
+
+  /// Products that are unlikely to cause any adverse health reaction, but that
+  /// violate FDA labeling or manufacturing laws. Examples include: a minor
+  /// container defect and lack of English labeling in a retail food.
+  classIII._(
+    'Class III',
+  ),
+  ;
+
+  const _DeviceRecallEnforcementReportsClassification._(
+    this.value,
+  );
+  final String value;
+}
+
+enum _DeviceRecallEnforcementReportsOpenfdaProductType {
+  /// The recalled product is a device product.
+  devices._(
+    'Devices',
+  ),
+
+  /// The recalled product is a drug product.
+  drugs._(
+    'Drugs',
+  ),
+
+  /// The recalled product is a food product.
+  food._(
+    'Food',
+  ),
+  ;
+
+  const _DeviceRecallEnforcementReportsOpenfdaProductType._(
+    this.value,
+  );
+  final String value;
+}
+
+enum _DeviceRecallEnforcementReportsStatus {
+  /// The recall action reaches the point at which the firm has actually
+  /// retrieved and impounded all outstanding product that could reasonably be
+  /// expected to be recovered, or has completed all product corrections.
+  completed._(
+    'Completed',
+  ),
+
+  /// A recall which is currently in progress.
+  onGoing._(
+    'On-Going',
+  ),
+
+  /// Actions that have been determined to be recalls, but that remain in the
+  /// process of being classified.
+  pending._(
+    'Pending',
+  ),
+
+  /// FDA has determined that all reasonable efforts have been made to remove or
+  /// correct the violative product in accordance with the recall strategy, and
+  /// proper disposition has been made according to the degree of hazard.
+  terminated._(
+    'Terminated',
+  ),
+  ;
+
+  const _DeviceRecallEnforcementReportsStatus._(
+    this.value,
+  );
+  final String value;
 }

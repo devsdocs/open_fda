@@ -71,7 +71,7 @@ void endPointWriter(String filePath) {
 
   final buff = StringBuffer();
   buff.writeln("part of '${getPrefix}main.dart';");
-  buff.writeln('enum Endpoints {');
+  buff.writeln('enum _Endpoints {');
   for (final e in linkOpenFda) {
     final suffix = e['suffix']! as String;
     final prefix = e['prefix']! as Map;
@@ -85,7 +85,7 @@ void endPointWriter(String filePath) {
     );
   }
   buff.writeln(';');
-  buff.writeln('const Endpoints._(this._value);');
+  buff.writeln('const _Endpoints._(this._value);');
   buff.writeln('final List<String> _value;');
   buff.writeln('}');
 
@@ -200,7 +200,7 @@ String classWriter(
   buff.writeln();
   buff.writeln('@override');
   buff.writeln(
-    'Endpoints get endPointBase => Endpoints.$prefixSnakeCase$suffix;',
+    'final endPointBase = _Endpoints.$prefixSnakeCase$suffix;',
   );
   buff.writeln();
   final fieldsData = fieldWriter(
@@ -306,13 +306,12 @@ String constructorWriter(
       // );
       if (p.possibleValues == null) {
         buff.writeln(
-          "final String ${p.address.toSnakeCase.toSnakeCase} = '${p.address}';",
+          "final ${p.address.toSnakeCase.toSnakeCase} = '${p.address}';",
         );
         if (p.isExact != null) {
           if (p.isExact!) {
-            buff.writeln();
             buff.writeln(
-              "final String ${p.address.toSnakeCase.toSnakeCase}Exact = '${p.address}.exact';",
+              "final ${p.address.toSnakeCase.toSnakeCase}Exact = '${p.address}.exact';",
             );
           }
         }
@@ -320,21 +319,73 @@ String constructorWriter(
         if (p.possibleValuesType == PossibleValuesType.reference) {
           final poss = p.possibleValues! as Reference;
           buff.writeln(
-            "final (String, OpenFDAPossibleValueReference) ${p.address.toSnakeCase.toSnakeCase} = ('${p.address}', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+            "final ${p.address.toSnakeCase.toSnakeCase} = ('${p.address}', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
           );
           if (p.isExact != null) {
             if (p.isExact!) {
-              buff.writeln();
               buff.writeln(
-                "final (String, OpenFDAPossibleValueReference) ${p.address.toSnakeCase.toSnakeCase}Exact = ('${p.address}.exact', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+                "final ${p.address.toSnakeCase.toSnakeCase}Exact = ('${p.address}.exact', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
               );
             }
           }
         } else {
-          // Custom enum here
           final poss = p.possibleValues! as OneOf;
-          if (poss.isAnyNumKeys) {
-          } else {}
+          if (poss.data != null) {
+            final writeEnum = enumWriter(
+              descObjectName,
+              p,
+              childSuffix: childSuffix,
+              isProduction: isProduction,
+            );
+            dataListOfObject.add(writeEnum);
+            poss.data!.forEach((key, value) {
+              buff.writeln(docWriter(value.toString()));
+              if (!poss.isBool!) {
+                final splitKey = key.split('');
+                final enumType = num.tryParse(key) != null
+                    ? int.parse(key).numToWords
+                    : splitKey.any((e) => int.tryParse(e) != null)
+                        ? int.tryParse(splitKey.first) != null &&
+                                int.tryParse(splitKey[2]) == null
+                            ? [
+                                int.parse(splitKey.first).numToWords,
+                                ...splitKey.sublist(1),
+                              ].join().removeNonAlph
+                            : splitKey
+                                .map(
+                                  (e) => int.tryParse(e) != null
+                                      ? int.parse(e).numToWords
+                                      : e,
+                                )
+                                .join()
+                                .removeNonAlph
+                        : key.removeNonAlph;
+                buff.writeln(
+                  "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', _$descObjectName.${enumType.toSnakeCase},);",
+                );
+                if (p.isExact != null) {
+                  if (p.isExact!) {
+                    buff.writeln(
+                      "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', _$descObjectName.${enumType.toSnakeCase},);",
+                    );
+                  }
+                }
+              } else {
+                buff.writeln(
+                  "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', $key,);",
+                );
+                if (p.isExact != null) {
+                  if (p.isExact!) {
+                    buff.writeln(
+                      "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', $key,);",
+                    );
+                  }
+                }
+              }
+            });
+          } else {
+            throw Exception('Empty One Of');
+          }
         }
       }
 
@@ -350,6 +401,7 @@ String constructorWriter(
       buff.writeln();
       buff.writeln(getChild.$1);
       buff.writeln();
+      dataListOfObject.addAll(getChild.$2);
     } else {
       if (props.any(
         (e) =>
@@ -404,14 +456,56 @@ String constructorWriter(
   return (buff.toString(), dataListOfObject);
 }
 
-// String enumWriter(
-//   String prefixMainCase,
-//   String prefixSnakeCase,
-//   String suffix,
-//   List<Props> props, {
-//   String? childSuffix,
-//   bool isProduction = false,
-// }) {}
+String enumWriter(
+  String descObjectName,
+  Props props, {
+  String? childSuffix,
+  bool isProduction = false,
+}) {
+  final poss = props.possibleValues! as OneOf;
+
+  final buff = StringBuffer();
+
+  if (poss.data != null) {
+    if (!poss.isBool!) {
+      buff.writeln('enum _$descObjectName {');
+
+      poss.data!.forEach((key, value) {
+        final splitKey = key.split('');
+        final enumType = num.tryParse(key) != null
+            ? int.parse(key).numToWords
+            : splitKey.any((e) => int.tryParse(e) != null)
+                ? int.tryParse(splitKey.first) != null &&
+                        int.tryParse(splitKey[2]) == null
+                    ? [
+                        int.parse(splitKey.first).numToWords,
+                        ...splitKey.sublist(1),
+                      ].join().removeNonAlph
+                    : splitKey
+                        .map(
+                          (e) => int.tryParse(e) != null
+                              ? int.parse(e).numToWords
+                              : e,
+                        )
+                        .join()
+                        .removeNonAlph
+                : key.removeNonAlph;
+
+        buff.writeln(docWriter(value.toString()));
+        buff.writeln("${enumType.toSnakeCase}._('$key',),");
+      });
+
+      buff.writeln(';');
+      buff.writeln('const _$descObjectName._(this.value,);');
+      buff.writeln('final String value;');
+      buff.writeln('}');
+    }
+  } else {
+    throw Exception('Empty One Of');
+  }
+
+  return buff.toString();
+}
 
 List<Props> getListOfProps(
   Map<String, dynamic> map, {
@@ -523,70 +617,6 @@ String docWriter(String source) {
   }
 
   return docBuff.toString();
-}
-
-extension Str on String {
-  String get toSnakeCase {
-    if (contains(' ')) {
-      final joinSpace = clean
-          .split(' ')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinSpace[0].toLowerCase() + joinSpace.substring(1);
-    }
-    if (contains('_')) {
-      final joinUnderScore = clean
-          .split('_')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-    if (contains('.')) {
-      final joinUnderScore = clean
-          .split('.')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-    if (contains(')')) {
-      final joinUnderScore = clean
-          .split(')')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-    if (contains('(')) {
-      final joinUnderScore = clean
-          .split('(')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-
-    return this[0].toLowerCase() + substring(1);
-  }
-
-  String get toMainCase {
-    if (contains(' ')) {
-      return clean
-          .split(' ')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    if (contains('_')) {
-      return clean
-          .split('_')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    if (contains('.')) {
-      return clean
-          .split('.')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    return this[0].toUpperCase() + substring(1);
-  }
 }
 
 Props getProps(String address, Map<dynamic, dynamic> value) {
@@ -785,4 +815,107 @@ Map<T, dynamic>? _sortJsonMapByKey<T>(Map<T, dynamic>? map) {
               ? _sortJsonList(map[key] as List<dynamic>)
               : map[key],
   };
+}
+
+extension Int on int {
+  String get numToWords {
+    const data = {
+      0: 'zero',
+      1: 'one',
+      2: 'two',
+      3: 'three',
+      4: 'four',
+      5: 'five',
+      6: 'six',
+      7: 'seven',
+      8: 'eight',
+      9: 'nine',
+    };
+    final str = toString();
+    if (str.length == 1) {
+      return data[this]!;
+    } else {
+      return str
+          .split('')
+          .map((e) => data[int.parse(e)]!.capitalizeWord)
+          .join()
+          .toSnakeCase;
+    }
+  }
+}
+
+extension Str on String {
+  String get toSnakeCase {
+    if (contains(' ')) {
+      final joinSpace = clean
+          .split(' ')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+      return joinSpace[0].toLowerCase() + joinSpace.substring(1);
+    }
+    if (contains('_')) {
+      final joinUnderScore = clean
+          .split('_')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
+    }
+    if (contains('.')) {
+      final joinUnderScore = clean
+          .split('.')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
+    }
+
+    return this[0].toLowerCase() + substring(1);
+  }
+
+  String get toMainCase {
+    if (contains(' ')) {
+      return clean
+          .split(' ')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+    }
+    if (contains('_')) {
+      return clean
+          .split('_')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+    }
+    if (contains('.')) {
+      return clean
+          .split('.')
+          .map((e) => e[0].toUpperCase() + e.substring(1))
+          .join();
+    }
+    return this[0].toUpperCase() + substring(1);
+  }
+
+  String get removeNonAlph {
+    final alphs = RegExp(r'[a-zA-Z\*]');
+    final res = !contains(' ')
+        ? !contains(alphs)
+            ? throw Exception('Empty!')
+            : toSnakeCase
+        : (clean.split(' ')
+              ..retainWhere((e) {
+                return e.contains(alphs);
+              }))
+            .map(
+              (e) => e.split('').map((e) => e.contains(alphs) ? e : '').join(),
+            )
+            .join(' ');
+
+    final filter = res == '*'
+        ? 'asterix'
+        : res
+            .replaceAll('-', '')
+            .replaceAll('/', '')
+            .replaceAll(')', '')
+            .replaceAll('(', '');
+
+    return filter;
+  }
 }

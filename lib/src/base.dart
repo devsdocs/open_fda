@@ -86,7 +86,7 @@ enum SortType {
 
 abstract interface class OpenFDAEndpointer {
   OpenFDAEndpointer(this.endPointBase);
-  final Endpoints endPointBase;
+  final _Endpoints endPointBase;
 }
 
 final class OpenFDAPossibleValueReference {

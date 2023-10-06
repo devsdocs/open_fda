@@ -5,269 +5,262 @@ abstract final class OtherSubstanceDataReportsFields {}
 final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
     implements OpenFDAEndpointer {
   @override
-  Endpoints get endPointBase => Endpoints.otherSubstanceDataReports;
+  final endPointBase = _Endpoints.otherSubstanceDataReports;
 
-  final String codes = 'codes';
+  final codes = 'codes';
 
   /// The literal code value.
-  final String codesCode = 'codes.code';
+  final codesCode = 'codes.code';
 
   /// The orginizational system which defines the code meaning (e.g. the
   /// originating database or classification system).
-  final String codesCodeSystem = 'codes.code_system';
+  final codesCodeSystem = 'codes.code_system';
 
   /// Any comments regarding the relationship.
-  final String codesComments = 'codes.comments';
+  final codesComments = 'codes.comments';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String codesReferences = 'codes.references';
+  final codesReferences = 'codes.references';
 
   /// The type of the code (e.g. 'PRIMARY' for a primary code, 'SECONDARY' for a
   /// secondary code, and 'SUPERSEDED' for a code which has been superseded by
   /// another code, etc).
-  final String codesType = 'codes.type';
+  final codesType = 'codes.type';
 
   /// The url to further information regarding this code.
-  final String codesUrl = 'codes.url';
+  final codesUrl = 'codes.url';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String codesUuid = 'codes.uuid';
+  final codesUuid = 'codes.uuid';
 
   /// The level of completeness and specificity of the definition (e.g.
   /// 'complete', 'incomplete', 'representative').
-  final String definitionLevel = 'definition_level';
+  final definitionLevel = 'definition_level';
 
   /// The type of definition ('primary' or 'alternative'). Primary definitions
   /// are the main descriptive form of the substance definition, while
   /// 'alternative' definitions may be seen as definitional 'synonyms' of some
   /// primary record.
-  final String definitionType = 'definition_type';
+  final definitionType = 'definition_type';
 
   /// A container for the mixture information necesary to define a mixture
   /// substance. This includes the mixture components and an optioanl source
   /// material reference.
-  final String mixture = 'mixture';
+  final mixture = 'mixture';
 
   /// A list of components found in the mixture. Each component has a type
   /// specifying whether it is a necessary/optional element of the mixture, as
   /// well as a reference to the substance it specifies.
-  final String mixtureComponents = 'mixture.components';
+  final mixtureComponents = 'mixture.components';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String mixtureComponentsReferences = 'mixture.components.references';
+  final mixtureComponentsReferences = 'mixture.components.references';
 
   /// A reference to the substance which is considered a component of the
   /// mixture.
-  final String mixtureComponentsSubstance = 'mixture.components.substance';
+  final mixtureComponentsSubstance = 'mixture.components.substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String mixtureComponentsSubstanceLinkingId =
+  final mixtureComponentsSubstanceLinkingId =
       'mixture.components.substance.linking_id';
 
   /// The literal string text of a name.
-  final String mixtureComponentsSubstanceName =
-      'mixture.components.substance.name';
+  final mixtureComponentsSubstanceName = 'mixture.components.substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String mixtureComponentsSubstanceRefPname =
+  final mixtureComponentsSubstanceRefPname =
       'mixture.components.substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String mixtureComponentsSubstanceReferences =
+  final mixtureComponentsSubstanceReferences =
       'mixture.components.substance.references';
 
   /// The UUID of the related record.
-  final String mixtureComponentsSubstanceRefuuid =
+  final mixtureComponentsSubstanceRefuuid =
       'mixture.components.substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String mixtureComponentsSubstanceSubstanceClass =
+  final mixtureComponentsSubstanceSubstanceClass =
       'mixture.components.substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String mixtureComponentsSubstanceUnii =
-      'mixture.components.substance.unii';
+  final mixtureComponentsSubstanceUnii = 'mixture.components.substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String mixtureComponentsSubstanceUuid =
-      'mixture.components.substance.uuid';
+  final mixtureComponentsSubstanceUuid = 'mixture.components.substance.uuid';
 
   /// The component type relative to it's mixture ('may be present (any of)',
   /// 'must be present (all of)', etc.).
-  final String mixtureComponentsType = 'mixture.components.type';
+  final mixtureComponentsType = 'mixture.components.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String mixtureComponentsUuid = 'mixture.components.uuid';
+  final mixtureComponentsUuid = 'mixture.components.uuid';
 
   /// A reference to the parent substance which this substance further
   /// qualifies. This tends to be null if this record is a 'whole' structurally
   /// diverse record, and points back to the 'whole' record if the part or other
   /// qualification is present.
-  final String mixtureParentSubstance = 'mixture.parent_substance';
+  final mixtureParentSubstance = 'mixture.parent_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String mixtureParentSubstanceLinkingId =
-      'mixture.parent_substance.linking_id';
+  final mixtureParentSubstanceLinkingId = 'mixture.parent_substance.linking_id';
 
   /// The literal string text of a name.
-  final String mixtureParentSubstanceName = 'mixture.parent_substance.name';
+  final mixtureParentSubstanceName = 'mixture.parent_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String mixtureParentSubstanceRefPname =
-      'mixture.parent_substance.ref_pname';
+  final mixtureParentSubstanceRefPname = 'mixture.parent_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String mixtureParentSubstanceReferences =
+  final mixtureParentSubstanceReferences =
       'mixture.parent_substance.references';
 
   /// The UUID of the related record.
-  final String mixtureParentSubstanceRefuuid =
-      'mixture.parent_substance.refuuid';
+  final mixtureParentSubstanceRefuuid = 'mixture.parent_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String mixtureParentSubstanceSubstanceClass =
+  final mixtureParentSubstanceSubstanceClass =
       'mixture.parent_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String mixtureParentSubstanceUnii = 'mixture.parent_substance.unii';
+  final mixtureParentSubstanceUnii = 'mixture.parent_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String mixtureParentSubstanceUuid = 'mixture.parent_substance.uuid';
+  final mixtureParentSubstanceUuid = 'mixture.parent_substance.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String mixtureReferences = 'mixture.references';
+  final mixtureReferences = 'mixture.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String mixtureUuid = 'mixture.uuid';
+  final mixtureUuid = 'mixture.uuid';
 
   /// A container for the set of physical, structural and agent modifications on
   /// the substance record.
-  final String modifications = 'modifications';
+  final modifications = 'modifications';
 
   /// A list of agent modifications applied to this substance. An agent
   /// modification is an 'agent' (usually a substance) which specifically
   /// interacted with and permanently altered the original substance material
   /// under some specified conditions, forming a new substance.
-  final String modificationsAgentModifications =
-      'modifications.agent_modifications';
+  final modificationsAgentModifications = 'modifications.agent_modifications';
 
   /// The process used for the agent modification.
-  final String modificationsAgentModificationsAgentModificationProcess =
+  final modificationsAgentModificationsAgentModificationProcess =
       'modifications.agent_modifications.agent_modification_process';
 
   /// The role of the agent in the modification process.
-  final String modificationsAgentModificationsAgentModificationRole =
+  final modificationsAgentModificationsAgentModificationRole =
       'modifications.agent_modifications.agent_modification_role';
 
   /// The type of agent modification.
-  final String modificationsAgentModificationsAgentModificationType =
+  final modificationsAgentModificationsAgentModificationType =
       'modifications.agent_modifications.agent_modification_type';
 
   /// A reference to the substance which acts as an agent in the agent
   /// modification.
-  final String modificationsAgentModificationsAgentSubstance =
+  final modificationsAgentModificationsAgentSubstance =
       'modifications.agent_modifications.agent_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String modificationsAgentModificationsAgentSubstanceLinkingId =
+  final modificationsAgentModificationsAgentSubstanceLinkingId =
       'modifications.agent_modifications.agent_substance.linking_id';
 
   /// The literal string text of a name.
-  final String modificationsAgentModificationsAgentSubstanceName =
+  final modificationsAgentModificationsAgentSubstanceName =
       'modifications.agent_modifications.agent_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String modificationsAgentModificationsAgentSubstanceRefPname =
+  final modificationsAgentModificationsAgentSubstanceRefPname =
       'modifications.agent_modifications.agent_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsAgentModificationsAgentSubstanceReferences =
+  final modificationsAgentModificationsAgentSubstanceReferences =
       'modifications.agent_modifications.agent_substance.references';
 
   /// The UUID of the related record.
-  final String modificationsAgentModificationsAgentSubstanceRefuuid =
+  final modificationsAgentModificationsAgentSubstanceRefuuid =
       'modifications.agent_modifications.agent_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String modificationsAgentModificationsAgentSubstanceSubstanceClass =
+  final modificationsAgentModificationsAgentSubstanceSubstanceClass =
       'modifications.agent_modifications.agent_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String modificationsAgentModificationsAgentSubstanceUnii =
+  final modificationsAgentModificationsAgentSubstanceUnii =
       'modifications.agent_modifications.agent_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsAgentModificationsAgentSubstanceUuid =
+  final modificationsAgentModificationsAgentSubstanceUuid =
       'modifications.agent_modifications.agent_substance.uuid';
 
   /// The amount of the agent which was used in the modification.
-  final String modificationsAgentModificationsAmount =
+  final modificationsAgentModificationsAmount =
       'modifications.agent_modifications.amount';
 
   /// The amount's numeric average if present.
-  final String modificationsAgentModificationsAmountAverage =
+  final modificationsAgentModificationsAmountAverage =
       'modifications.agent_modifications.amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String modificationsAgentModificationsAmountHigh =
+  final modificationsAgentModificationsAmountHigh =
       'modifications.agent_modifications.amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String modificationsAgentModificationsAmountHighLimit =
+  final modificationsAgentModificationsAmountHighLimit =
       'modifications.agent_modifications.amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String modificationsAgentModificationsAmountLow =
+  final modificationsAgentModificationsAmountLow =
       'modifications.agent_modifications.amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String modificationsAgentModificationsAmountLowLimit =
+  final modificationsAgentModificationsAmountLowLimit =
       'modifications.agent_modifications.amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
@@ -275,82 +268,82 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String modificationsAgentModificationsAmountNonNumericValue =
+  final modificationsAgentModificationsAmountNonNumericValue =
       'modifications.agent_modifications.amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsAgentModificationsAmountReferences =
+  final modificationsAgentModificationsAmountReferences =
       'modifications.agent_modifications.amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', etc.).
-  final String modificationsAgentModificationsAmountType =
+  final modificationsAgentModificationsAmountType =
       'modifications.agent_modifications.amount.type';
 
   /// The amount's unit of measurement.
-  final String modificationsAgentModificationsAmountUnits =
+  final modificationsAgentModificationsAmountUnits =
       'modifications.agent_modifications.amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsAgentModificationsAmountUuid =
+  final modificationsAgentModificationsAmountUuid =
       'modifications.agent_modifications.amount.uuid';
 
   /// A key specifying how this modification relates to other modifications. All
   /// modifications sharing a group key are considered to be occuring as part of
   /// a single process or event, or descriptive of the same change to the
   /// substance.
-  final String modificationsAgentModificationsModificationGroup =
+  final modificationsAgentModificationsModificationGroup =
       'modifications.agent_modifications.modification_group';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsAgentModificationsReferences =
+  final modificationsAgentModificationsReferences =
       'modifications.agent_modifications.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsAgentModificationsUuid =
+  final modificationsAgentModificationsUuid =
       'modifications.agent_modifications.uuid';
 
   /// A list of physical modifications applied to this substance. A physical
   /// modification is a physical interaction (such as heating) where the result
   /// permanently alters the original source substance.
-  final String modificationsPhysicalModifications =
+  final modificationsPhysicalModifications =
       'modifications.physical_modifications';
 
   /// A key specifying how this modification relates to other modifications. All
   /// modifications sharing a group key are considered to be occuring as part of
   /// a single process or event, or descriptive of the same change to the
   /// substance.
-  final String modificationsPhysicalModificationsModificationGroup =
+  final modificationsPhysicalModificationsModificationGroup =
       'modifications.physical_modifications.modification_group';
 
   /// The list of paramaters needed to define the conditions, context or
   /// environment of applicability for the property value specified.
-  final String modificationsPhysicalModificationsParameters =
+  final modificationsPhysicalModificationsParameters =
       'modifications.physical_modifications.parameters';
 
   /// The amount or value which qualifies the paramater describing the physical
   /// modification (e.g. the temperature used in a heating process).
-  final String modificationsPhysicalModificationsParametersAmount =
+  final modificationsPhysicalModificationsParametersAmount =
       'modifications.physical_modifications.parameters.amount';
 
   /// The amount's numeric average if present.
-  final String modificationsPhysicalModificationsParametersAmountAverage =
+  final modificationsPhysicalModificationsParametersAmountAverage =
       'modifications.physical_modifications.parameters.amount.average';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String modificationsPhysicalModificationsParametersAmountHighLimit =
+  final modificationsPhysicalModificationsParametersAmountHighLimit =
       'modifications.physical_modifications.parameters.amount.high_limit';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String modificationsPhysicalModificationsParametersAmountLowLimit =
+  final modificationsPhysicalModificationsParametersAmountLowLimit =
       'modifications.physical_modifications.parameters.amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
@@ -358,106 +351,105 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String
-      modificationsPhysicalModificationsParametersAmountNonNumericValue =
+  final modificationsPhysicalModificationsParametersAmountNonNumericValue =
       'modifications.physical_modifications.parameters.amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsPhysicalModificationsParametersAmountReferences =
+  final modificationsPhysicalModificationsParametersAmountReferences =
       'modifications.physical_modifications.parameters.amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', 'other' etc.).
-  final String modificationsPhysicalModificationsParametersAmountType =
+  final modificationsPhysicalModificationsParametersAmountType =
       'modifications.physical_modifications.parameters.amount.type';
 
   /// The amount's unit of measurement.
-  final String modificationsPhysicalModificationsParametersAmountUnits =
+  final modificationsPhysicalModificationsParametersAmountUnits =
       'modifications.physical_modifications.parameters.amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsPhysicalModificationsParametersAmountUuid =
+  final modificationsPhysicalModificationsParametersAmountUuid =
       'modifications.physical_modifications.parameters.amount.uuid';
 
   /// The name of the paramater which qualifies / conditions the property's
   /// measurement or domain of applicability.
-  final String modificationsPhysicalModificationsParametersParameterName =
+  final modificationsPhysicalModificationsParametersParameterName =
       'modifications.physical_modifications.parameters.parameter_name';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsPhysicalModificationsParametersReferences =
+  final modificationsPhysicalModificationsParametersReferences =
       'modifications.physical_modifications.parameters.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsPhysicalModificationsParametersUuid =
+  final modificationsPhysicalModificationsParametersUuid =
       'modifications.physical_modifications.parameters.uuid';
 
   /// The role that the physical modification has in the process of the
   /// modification.
-  final String modificationsPhysicalModificationsPhysicalModificationRole =
+  final modificationsPhysicalModificationsPhysicalModificationRole =
       'modifications.physical_modifications.physical_modification_role';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsPhysicalModificationsReferences =
+  final modificationsPhysicalModificationsReferences =
       'modifications.physical_modifications.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsPhysicalModificationsUuid =
+  final modificationsPhysicalModificationsUuid =
       'modifications.physical_modifications.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsReferences = 'modifications.references';
+  final modificationsReferences = 'modifications.references';
 
   /// A list of structural modifications applied to this substance. A stuctural
   /// modification is a known and specific change to the original source
   /// substane described, where a description of the chemical structural change,
   /// location, and amount are feasible.
-  final String modificationsStructuralModifications =
+  final modificationsStructuralModifications =
       'modifications.structural_modifications';
 
   /// The type of extent for the structural modification. 'Complete' if the
   /// extent is considered to have 100% occupancy / replacement, 'partial'
   /// otherwise.
-  final String modificationsStructuralModificationsExtent =
+  final modificationsStructuralModificationsExtent =
       'modifications.structural_modifications.extent';
 
   /// An amount quantifying the extent of the structural modification.
-  final String modificationsStructuralModificationsExtentAmount =
+  final modificationsStructuralModificationsExtentAmount =
       'modifications.structural_modifications.extent_amount';
 
   /// The amount's numeric average if present.
-  final String modificationsStructuralModificationsExtentAmountAverage =
+  final modificationsStructuralModificationsExtentAmountAverage =
       'modifications.structural_modifications.extent_amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String modificationsStructuralModificationsExtentAmountHigh =
+  final modificationsStructuralModificationsExtentAmountHigh =
       'modifications.structural_modifications.extent_amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String modificationsStructuralModificationsExtentAmountHighLimit =
+  final modificationsStructuralModificationsExtentAmountHighLimit =
       'modifications.structural_modifications.extent_amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String modificationsStructuralModificationsExtentAmountLow =
+  final modificationsStructuralModificationsExtentAmountLow =
       'modifications.structural_modifications.extent_amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String modificationsStructuralModificationsExtentAmountLowLimit =
+  final modificationsStructuralModificationsExtentAmountLowLimit =
       'modifications.structural_modifications.extent_amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
@@ -465,40 +457,40 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String modificationsStructuralModificationsExtentAmountNonNumericValue =
+  final modificationsStructuralModificationsExtentAmountNonNumericValue =
       'modifications.structural_modifications.extent_amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsStructuralModificationsExtentAmountReferences =
+  final modificationsStructuralModificationsExtentAmountReferences =
       'modifications.structural_modifications.extent_amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', etc.)
-  final String modificationsStructuralModificationsExtentAmountType =
+  final modificationsStructuralModificationsExtentAmountType =
       'modifications.structural_modifications.extent_amount.type';
 
   /// The amount's unit of measurement.
-  final String modificationsStructuralModificationsExtentAmountUnits =
+  final modificationsStructuralModificationsExtentAmountUnits =
       'modifications.structural_modifications.extent_amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsStructuralModificationsExtentAmountUuid =
+  final modificationsStructuralModificationsExtentAmountUuid =
       'modifications.structural_modifications.extent_amount.uuid';
 
   /// The type of location specification for a residue modified in a structural
   /// modification. (e.g. 'site-specific' or 'residue-specific').
-  final String modificationsStructuralModificationsLocationType =
+  final modificationsStructuralModificationsLocationType =
       'modifications.structural_modifications.location_type';
 
   /// A key specifying how this modification relates to other modifications. All
   /// modifications sharing a group key are considered to be occuring as part of
   /// a single process or event, or descriptive of the same change to the
   /// substance.
-  final String modificationsStructuralModificationsModificationGroup =
+  final modificationsStructuralModificationsModificationGroup =
       'modifications.structural_modifications.modification_group';
 
   /// A reference to the substance which is substituting, binding or connecting
@@ -507,539 +499,528 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// amino acid at a specific site. For nucleic acids, this is more commonly a
   /// full nucleotide which is also considered to replace the linkage, sugar and
   /// nucleobase at some specified site(s).
-  final String modificationsStructuralModificationsMolecularFragment =
+  final modificationsStructuralModificationsMolecularFragment =
       'modifications.structural_modifications.molecular_fragment';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String modificationsStructuralModificationsMolecularFragmentLinkingId =
+  final modificationsStructuralModificationsMolecularFragmentLinkingId =
       'modifications.structural_modifications.molecular_fragment.linking_id';
 
   /// The literal string text of a name.
-  final String modificationsStructuralModificationsMolecularFragmentName =
+  final modificationsStructuralModificationsMolecularFragmentName =
       'modifications.structural_modifications.molecular_fragment.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String modificationsStructuralModificationsMolecularFragmentRefPname =
+  final modificationsStructuralModificationsMolecularFragmentRefPname =
       'modifications.structural_modifications.molecular_fragment.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsStructuralModificationsMolecularFragmentReferences =
+  final modificationsStructuralModificationsMolecularFragmentReferences =
       'modifications.structural_modifications.molecular_fragment.references';
 
   /// The UUID of the related record.
-  final String modificationsStructuralModificationsMolecularFragmentRefuuid =
+  final modificationsStructuralModificationsMolecularFragmentRefuuid =
       'modifications.structural_modifications.molecular_fragment.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String
-      modificationsStructuralModificationsMolecularFragmentSubstanceClass =
+  final modificationsStructuralModificationsMolecularFragmentSubstanceClass =
       'modifications.structural_modifications.molecular_fragment.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String modificationsStructuralModificationsMolecularFragmentUnii =
+  final modificationsStructuralModificationsMolecularFragmentUnii =
       'modifications.structural_modifications.molecular_fragment.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsStructuralModificationsMolecularFragmentUuid =
+  final modificationsStructuralModificationsMolecularFragmentUuid =
       'modifications.structural_modifications.molecular_fragment.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String modificationsStructuralModificationsReferences =
+  final modificationsStructuralModificationsReferences =
       'modifications.structural_modifications.references';
 
   /// The residue which was modified for the structural modification (necessary
   /// if the modification is residue specific instead of site-specific).
-  final String modificationsStructuralModificationsResidueModified =
+  final modificationsStructuralModificationsResidueModified =
       'modifications.structural_modifications.residue_modified';
 
-  final String modificationsStructuralModificationsSites =
+  final modificationsStructuralModificationsSites =
       'modifications.structural_modifications.sites';
 
   /// The index of the residue on that subunit being specified.
-  final String modificationsStructuralModificationsSitesResidueIndex =
+  final modificationsStructuralModificationsSitesResidueIndex =
       'modifications.structural_modifications.sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String modificationsStructuralModificationsSitesSubunitIndex =
+  final modificationsStructuralModificationsSitesSubunitIndex =
       'modifications.structural_modifications.sites.subunit_index';
 
   /// The type of structural modification.
-  final String modificationsStructuralModificationsStructuralModificationType =
+  final modificationsStructuralModificationsStructuralModificationType =
       'modifications.structural_modifications.structural_modification_type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsStructuralModificationsUuid =
+  final modificationsStructuralModificationsUuid =
       'modifications.structural_modifications.uuid';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String modificationsUuid = 'modifications.uuid';
+  final modificationsUuid = 'modifications.uuid';
 
   /// A list of the important component chemical structures which comprise a
   /// chemical substance, as well as their relative ratios to each other
   /// (especially important in the case of non-stoichiometric chemical
   /// substances). These 'moieties' are typically the unique set of disconnected
   /// covalent structures found in the substance.
-  final String moieties = 'moieties';
+  final moieties = 'moieties';
 
   /// Whether or not the record has atropisomerism, or has a chirality where a
   /// hindered rotation about a single bond as a resolt of steric or electronic
   /// constraints.
-  final String moietiesAtropisomerism = 'moieties.atropisomerism';
+  final moietiesAtropisomerism = 'moieties.atropisomerism';
 
   /// The net charge of the structure.
-  final String moietiesCharge = 'moieties.charge';
+  final moietiesCharge = 'moieties.charge';
 
   /// The exact number of times that the structure is repeated.
-  final String moietiesCount = 'moieties.count';
+  final moietiesCount = 'moieties.count';
 
   /// The number of times that a structure is repeated in its referenced
   /// context, represented as an amount. This is particularly useful in defining
   /// ranges on amounts for moieties within non-stoichiometric chemicals.
-  final String moietiesCountAmount = 'moieties.count_amount';
+  final moietiesCountAmount = 'moieties.count_amount';
 
   /// The amount's numeric average if present.
-  final String moietiesCountAmountAverage = 'moieties.count_amount.average';
+  final moietiesCountAmountAverage = 'moieties.count_amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String moietiesCountAmountHigh = 'moieties.count_amount.high';
+  final moietiesCountAmountHigh = 'moieties.count_amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String moietiesCountAmountHighLimit =
-      'moieties.count_amount.high_limit';
+  final moietiesCountAmountHighLimit = 'moieties.count_amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String moietiesCountAmountLow = 'moieties.count_amount.low';
+  final moietiesCountAmountLow = 'moieties.count_amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String moietiesCountAmountLowLimit = 'moieties.count_amount.low_limit';
+  final moietiesCountAmountLowLimit = 'moieties.count_amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
   /// For example, 'solubility' may be described quantitatively or it may be
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String moietiesCountAmountNonNumericValue =
+  final moietiesCountAmountNonNumericValue =
       'moieties.count_amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String moietiesCountAmountReferences =
-      'moieties.count_amount.references';
+  final moietiesCountAmountReferences = 'moieties.count_amount.references';
 
   /// The type of moiety count amount ('Mol ration', 'weight ratio', etc.)
-  final String moietiesCountAmountType = 'moieties.count_amount.type';
+  final moietiesCountAmountType = 'moieties.count_amount.type';
 
   /// The amount's unit of measurement.
-  final String moietiesCountAmountUnits = 'moieties.count_amount.units';
+  final moietiesCountAmountUnits = 'moieties.count_amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String moietiesCountAmountUuid = 'moieties.count_amount.uuid';
+  final moietiesCountAmountUuid = 'moieties.count_amount.uuid';
 
   /// A count of defined stereocenters.
-  final String moietiesDefinedStereo = 'moieties.defined_stereo';
+  final moietiesDefinedStereo = 'moieties.defined_stereo';
 
   /// A hash of the raw structural information encoded.
-  final String moietiesDigest = 'moieties.digest';
+  final moietiesDigest = 'moieties.digest';
 
   /// A count of E/Z, or absolute double bond stereochemistry centers.
-  final String moietiesEzCenters = 'moieties.ez_centers';
+  final moietiesEzCenters = 'moieties.ez_centers';
 
   /// The chemical formula of the record.
-  final String moietiesFormula = 'moieties.formula';
+  final moietiesFormula = 'moieties.formula';
 
   /// The identifier of the structural element itself (this is still a UUID).
-  final String moietiesId = 'moieties.id';
+  final moietiesId = 'moieties.id';
 
   /// The molecular weight of the structure.
-  final String moietiesMolecularWeight = 'moieties.molecular_weight';
+  final moietiesMolecularWeight = 'moieties.molecular_weight';
 
   /// The chemical structure in MDL Molfile format (V2000).
-  final String moietiesMolfile = 'moieties.molfile';
+  final moietiesMolfile = 'moieties.molfile';
 
   /// The optical activity or rotation of the material. '(+)' and '(-)' are used
   /// for optically active materials where activity is known and significantly
   /// useful for definition. '(+/-)' is used for racemic mixtures.
-  final String moietiesOpticalActivity = 'moieties.optical_activity';
+  final moietiesOpticalActivity = 'moieties.optical_activity';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String moietiesReferences = 'moieties.references';
+  final moietiesReferences = 'moieties.references';
 
   /// The chemical structure in SMILES format.
-  final String moietiesSmiles = 'moieties.smiles';
+  final moietiesSmiles = 'moieties.smiles';
 
   /// A count of possible stereocenters.
-  final String moietiesStereoCenters = 'moieties.stereo_centers';
+  final moietiesStereoCenters = 'moieties.stereo_centers';
 
   /// Some textually descriptive information about specific stereochemistry that
   /// cannot adequately be captured elsewhere.
-  final String moietiesStereoComments = 'moieties.stereo_comments';
+  final moietiesStereoComments = 'moieties.stereo_comments';
 
   /// The structure's type of stereochemistry (absolute, achiral, racemic, etc.).
-  final String moietiesStereochemistry = 'moieties.stereochemistry';
+  final moietiesStereochemistry = 'moieties.stereochemistry';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String moietiesUuid = 'moieties.uuid';
+  final moietiesUuid = 'moieties.uuid';
 
   /// The list of names associated with a record. These include scientific,
   /// common, generic and brand names for substances and concepts. Name objects
   /// include both the name as a string, as well as other information.
-  final String names = 'names';
+  final names = 'names';
 
   /// True if this is to be the displayed name for the substance.
-  final String namesDisplayName = 'names.display_name';
+  final namesDisplayName = 'names.display_name';
 
   /// The list of domains that this name is used in (e.g. 'drug', 'cosmetic',
   /// etc).
-  final String namesDomains = 'names.domains';
+  final namesDomains = 'names.domains';
 
   /// The list of languages that use that name as written (ISO 639-1 codes).
-  final String namesLanguages = 'names.languages';
+  final namesLanguages = 'names.languages';
 
   /// The literal string text of a name.
-  final String namesName = 'names.name';
+  final namesName = 'names.name';
 
   /// The list of jurisdictions where that name is used.
-  final String namesNameJurisdiction = 'names.name_jurisdiction';
+  final namesNameJurisdiction = 'names.name_jurisdiction';
 
-  final String namesNameOrgs = 'names.name_orgs';
+  final namesNameOrgs = 'names.name_orgs';
 
   /// A UNIX timestamp for when the naming organization deprecated the name's
   /// status (if it has been deprecated).
-  final String namesNameOrgsDeprecatedDate = 'names.name_orgs.deprecated_date';
+  final namesNameOrgsDeprecatedDate = 'names.name_orgs.deprecated_date';
 
   /// A string representing the naming organization which has designated the
   /// name as official in some regard. (e.g. 'USAN', 'INN').
-  final String namesNameOrgsNameOrg = 'names.name_orgs.name_org';
+  final namesNameOrgsNameOrg = 'names.name_orgs.name_org';
 
-  final String namesNameOrgsReferences = 'names.name_orgs.references';
+  final namesNameOrgsReferences = 'names.name_orgs.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String namesNameOrgsUuid = 'names.name_orgs.uuid';
+  final namesNameOrgsUuid = 'names.name_orgs.uuid';
 
   /// True if this is a 'preferred name' for the substance (each substance may
   /// have many).
-  final String namesPreferred = 'names.preferred';
+  final namesPreferred = 'names.preferred';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String namesReferences = 'names.references';
+  final namesReferences = 'names.references';
 
   /// The type of the name (e.g. 'bn' for 'brand name', 'cn' for 'common name',
   /// and 'sys' for 'systematic name', etc).
-  final String namesType = 'names.type';
+  final namesType = 'names.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String namesUuid = 'names.uuid';
+  final namesUuid = 'names.uuid';
 
   /// A list of notes and general comments for the record.
-  final String notes = 'notes';
+  final notes = 'notes';
 
   /// The literal text of a note comment for a record. These is typically used
   /// to capture some orienting descriptive information, qualifications, or
   /// systematic notes on validation.
-  final String notesNote = 'notes.note';
+  final notesNote = 'notes.note';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String notesReferences = 'notes.references';
+  final notesReferences = 'notes.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String notesUuid = 'notes.uuid';
+  final notesUuid = 'notes.uuid';
 
   /// The definitional information of a nucleic acid substance. Contains
   /// information about the nucleic acid sequence as well as the sugars and
   /// linkages used.
-  final String nucleicAcid = 'nucleic_acid';
+  final nucleicAcid = 'nucleic_acid';
 
   /// The list of linkages used to connect the nucleosides of the nucleic acid,
   /// as well as their sites of use.
-  final String nucleicAcidLinkages = 'nucleic_acid.linkages';
+  final nucleicAcidLinkages = 'nucleic_acid.linkages';
 
   /// The linkage itself which is used. This is a short-hand code for a defined
   /// structural linkage fragment found within the GSRS controlled vocabulary.
-  final String nucleicAcidLinkagesLinkage = 'nucleic_acid.linkages.linkage';
+  final nucleicAcidLinkagesLinkage = 'nucleic_acid.linkages.linkage';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String nucleicAcidLinkagesReferences =
-      'nucleic_acid.linkages.references';
+  final nucleicAcidLinkagesReferences = 'nucleic_acid.linkages.references';
 
   /// A list of explicit detailed sites where the linkage is applicable. A
   /// linkage site is always describing how the nucleoside connects to the NEXT
   /// nucleoside in the series. So a sequence of length 2 will have only 1
   /// linkage, specified at the 1st site (not the second).
-  final String nucleicAcidLinkagesSites = 'nucleic_acid.linkages.sites';
+  final nucleicAcidLinkagesSites = 'nucleic_acid.linkages.sites';
 
   /// The index of the residue on that subunit being specified.
-  final String nucleicAcidLinkagesSitesResidueIndex =
+  final nucleicAcidLinkagesSitesResidueIndex =
       'nucleic_acid.linkages.sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String nucleicAcidLinkagesSitesSubunitIndex =
+  final nucleicAcidLinkagesSitesSubunitIndex =
       'nucleic_acid.linkages.sites.subunit_index';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String nucleicAcidLinkagesUuid = 'nucleic_acid.linkages.uuid';
+  final nucleicAcidLinkagesUuid = 'nucleic_acid.linkages.uuid';
 
   /// The sub-type of nucleic acid.
-  final String nucleicAcidNucleicAcidSubType =
-      'nucleic_acid.nucleic_acid_sub_type';
+  final nucleicAcidNucleicAcidSubType = 'nucleic_acid.nucleic_acid_sub_type';
 
   /// The type of nucleic acid.
-  final String nucleicAcidNucleicAcidType = 'nucleic_acid.nucleic_acid_type';
+  final nucleicAcidNucleicAcidType = 'nucleic_acid.nucleic_acid_type';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String nucleicAcidReferences = 'nucleic_acid.references';
+  final nucleicAcidReferences = 'nucleic_acid.references';
 
   /// The original source of the amino acid sequence. This is a general category
   /// which, for organisms, typically specifies a useful general abstract
   /// taxonic level with increasing granularity as it approaches humans (e.g.
   /// 'bacteria','mouse', 'mouse chimeric', 'human').
-  final String nucleicAcidSequenceOrigin = 'nucleic_acid.sequence_origin';
+  final nucleicAcidSequenceOrigin = 'nucleic_acid.sequence_origin';
 
   /// The type of sequence being specified (e.g. 'incomplete', 'complete').
-  final String nucleicAcidSequenceType = 'nucleic_acid.sequence_type';
+  final nucleicAcidSequenceType = 'nucleic_acid.sequence_type';
 
   /// The list of Subunits found in this nucleic acid. Each subunit is described
   /// by a sequence of nucleobases. Double stranded nucleic acids should
   /// typically be represented by 2 subunits, while single-stranded nucleic
   /// acids will more typically be represented with 1.
-  final String nucleicAcidSubunits = 'nucleic_acid.subunits';
+  final nucleicAcidSubunits = 'nucleic_acid.subunits';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String nucleicAcidSubunitsReferences =
-      'nucleic_acid.subunits.references';
+  final nucleicAcidSubunitsReferences = 'nucleic_acid.subunits.references';
 
   /// The amino acid sequence as a string of 1-letter amino acids, from N-term
   /// to C-term. Lower-case letters represent D-amino acids, while upper-case
   /// are the standard L-amino acids.
-  final String nucleicAcidSubunitsSequence = 'nucleic_acid.subunits.sequence';
+  final nucleicAcidSubunitsSequence = 'nucleic_acid.subunits.sequence';
 
   /// The index of the subunit being specified.
-  final String nucleicAcidSubunitsSubunitIndex =
-      'nucleic_acid.subunits.subunit_index';
+  final nucleicAcidSubunitsSubunitIndex = 'nucleic_acid.subunits.subunit_index';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String nucleicAcidSubunitsUuid = 'nucleic_acid.subunits.uuid';
+  final nucleicAcidSubunitsUuid = 'nucleic_acid.subunits.uuid';
 
   /// The list of sugars (e.g. ribose, deoxyribose, morphilino) which the
   /// nucleobases connect to, as well as their sites of use within the sequence.
-  final String nucleicAcidSugars = 'nucleic_acid.sugars';
+  final nucleicAcidSugars = 'nucleic_acid.sugars';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String nucleicAcidSugarsReferences = 'nucleic_acid.sugars.references';
+  final nucleicAcidSugarsReferences = 'nucleic_acid.sugars.references';
 
   /// A list of explicit detailed sites where the linkage is applicable. A
   /// linkage site is always describing how the nucleoside connects to the NEXT
   /// nucleoside in the series. So a sequence of length 2 will have only 1
   /// linkage, specified at the 1st site (not the second).
-  final String nucleicAcidSugarsSites = 'nucleic_acid.sugars.sites';
+  final nucleicAcidSugarsSites = 'nucleic_acid.sugars.sites';
 
   /// The index of the residue on that subunit being specified.
-  final String nucleicAcidSugarsSitesResidueIndex =
+  final nucleicAcidSugarsSitesResidueIndex =
       'nucleic_acid.sugars.sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String nucleicAcidSugarsSitesSubunitIndex =
+  final nucleicAcidSugarsSitesSubunitIndex =
       'nucleic_acid.sugars.sites.subunit_index';
 
   /// The sugar itself which is used. This is a short-hand code for a defined
   /// structural sugar fragment found within the GSRS controlled vocabulary.
-  final String nucleicAcidSugarsSugar = 'nucleic_acid.sugars.sugar';
+  final nucleicAcidSugarsSugar = 'nucleic_acid.sugars.sugar';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String nucleicAcidSugarsUuid = 'nucleic_acid.sugars.uuid';
+  final nucleicAcidSugarsUuid = 'nucleic_acid.sugars.uuid';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String nucleicAcidUuid = 'nucleic_acid.uuid';
+  final nucleicAcidUuid = 'nucleic_acid.uuid';
 
   /// The definitional information of a polymer substance. Contains information
   /// about the monomers, structural repeat units, amounts, connectivity and
   /// idealized structural form of the polymer.
-  final String polymer = 'polymer';
+  final polymer = 'polymer';
 
   /// A container for classification properties of a polymer.
-  final String polymerClassification = 'polymer.classification';
+  final polymerClassification = 'polymer.classification';
 
   /// A reference to the parent substance which this substance further
   /// qualifies. This tends to be null if this record is a 'whole' structurally
   /// diverse record, and points back to the 'whole' record if the part or other
   /// qualification is present.
-  final String polymerClassificationParentSubstance =
+  final polymerClassificationParentSubstance =
       'polymer.classification.parent_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String polymerClassificationParentSubstanceLinkingId =
+  final polymerClassificationParentSubstanceLinkingId =
       'polymer.classification.parent_substance.linking_id';
 
   /// The literal string text of a name.
-  final String polymerClassificationParentSubstanceName =
+  final polymerClassificationParentSubstanceName =
       'polymer.classification.parent_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String polymerClassificationParentSubstanceRefPname =
+  final polymerClassificationParentSubstanceRefPname =
       'polymer.classification.parent_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerClassificationParentSubstanceReferences =
+  final polymerClassificationParentSubstanceReferences =
       'polymer.classification.parent_substance.references';
 
   /// The UUID of the related record.
-  final String polymerClassificationParentSubstanceRefuuid =
+  final polymerClassificationParentSubstanceRefuuid =
       'polymer.classification.parent_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String polymerClassificationParentSubstanceSubstanceClass =
+  final polymerClassificationParentSubstanceSubstanceClass =
       'polymer.classification.parent_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String polymerClassificationParentSubstanceUnii =
+  final polymerClassificationParentSubstanceUnii =
       'polymer.classification.parent_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerClassificationParentSubstanceUuid =
+  final polymerClassificationParentSubstanceUuid =
       'polymer.classification.parent_substance.uuid';
 
   /// A general classication of the polymer type (e.g. 'homopolymer',
   /// 'copolymer').
-  final String polymerClassificationPolymerClass =
+  final polymerClassificationPolymerClass =
       'polymer.classification.polymer_class';
 
   /// A general classification of the polymer geometry (e.g. 'linear', 'branch',
   /// 'network').
-  final String polymerClassificationPolymerGeometry =
+  final polymerClassificationPolymerGeometry =
       'polymer.classification.polymer_geometry';
 
   /// The set of subclasses describing the polymer (e.g. 'cross-link', 'graft').
-  final String polymerClassificationPolymerSubclass =
+  final polymerClassificationPolymerSubclass =
       'polymer.classification.polymer_subclass';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerClassificationReferences =
-      'polymer.classification.references';
+  final polymerClassificationReferences = 'polymer.classification.references';
 
   /// The type of material used as the source for the polymer. If from a
   /// biological or natural source, further reference to the source material
   /// will be needed.
-  final String polymerClassificationSourceType =
-      'polymer.classification.source_type';
+  final polymerClassificationSourceType = 'polymer.classification.source_type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerClassificationUuid = 'polymer.classification.uuid';
+  final polymerClassificationUuid = 'polymer.classification.uuid';
 
   /// A form of the structure which is meant for displaying a simplified form of
   /// the polymer. This display structure is not meant to be trusted as
   /// canonical for the polymer definition, but is meant to be useful for
   /// communicating a 'conceptual' diagram of the polymer.
-  final String polymerDisplayStructure = 'polymer.display_structure';
+  final polymerDisplayStructure = 'polymer.display_structure';
 
   /// The net charge of the structure.
-  final String polymerDisplayStructureCharge =
-      'polymer.display_structure.charge';
+  final polymerDisplayStructureCharge = 'polymer.display_structure.charge';
 
   /// The exact number of times that the structure is repeated.
-  final String polymerDisplayStructureCount = 'polymer.display_structure.count';
+  final polymerDisplayStructureCount = 'polymer.display_structure.count';
 
   /// A count of defined stereocenters.
-  final String polymerDisplayStructureDefinedStereo =
+  final polymerDisplayStructureDefinedStereo =
       'polymer.display_structure.defined_stereo';
 
   /// A count of E/Z, or absolute double bond stereochemistry centers.
-  final String polymerDisplayStructureEzCenters =
+  final polymerDisplayStructureEzCenters =
       'polymer.display_structure.ez_centers';
 
   /// The identifier of the structural element itself (this is still a UUID).
-  final String polymerDisplayStructureId = 'polymer.display_structure.id';
+  final polymerDisplayStructureId = 'polymer.display_structure.id';
 
   /// The molecular weight of the structure.
-  final String polymerDisplayStructureMolecularWeight =
+  final polymerDisplayStructureMolecularWeight =
       'polymer.display_structure.molecular_weight';
 
   /// The chemical structure in MDL Molfile format (V2000).
-  final String polymerDisplayStructureMolfile =
-      'polymer.display_structure.molfile';
+  final polymerDisplayStructureMolfile = 'polymer.display_structure.molfile';
 
   /// The optical activity or rotation of the material. '(+)' and '(-)' are used
   /// for optically active materials where activity is known and significantly
   /// useful for definition. '(+/-)' is used for racemic mixtures.
-  final String polymerDisplayStructureOpticalActivity =
+  final polymerDisplayStructureOpticalActivity =
       'polymer.display_structure.optical_activity';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerDisplayStructureReferences =
+  final polymerDisplayStructureReferences =
       'polymer.display_structure.references';
 
   /// A count of possible stereocenters.
-  final String polymerDisplayStructureStereoCenters =
+  final polymerDisplayStructureStereoCenters =
       'polymer.display_structure.stereo_centers';
 
   /// The structure's type of stereochemistry (absolute, achiral, racemic, etc.).
-  final String polymerDisplayStructureStereochemistry =
+  final polymerDisplayStructureStereochemistry =
       'polymer.display_structure.stereochemistry';
 
   /// A form of the structure which is meant for communicating a more accurate,
@@ -1047,53 +1028,51 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// the polymer definition is also not meant to be an exhaustive cannonical
   /// form, but is meant to be the most compatible aranagement possible for
   /// unerstanding the structural units.
-  final String polymerIdealizedStructure = 'polymer.idealized_structure';
+  final polymerIdealizedStructure = 'polymer.idealized_structure';
 
   /// The net charge of the structure.
-  final String polymerIdealizedStructureCharge =
-      'polymer.idealized_structure.charge';
+  final polymerIdealizedStructureCharge = 'polymer.idealized_structure.charge';
 
   /// The exact number of times that the structure is repeated.
-  final String polymerIdealizedStructureCount =
-      'polymer.idealized_structure.count';
+  final polymerIdealizedStructureCount = 'polymer.idealized_structure.count';
 
   /// A count of defined stereocenters.
-  final String polymerIdealizedStructureDefinedStereo =
+  final polymerIdealizedStructureDefinedStereo =
       'polymer.idealized_structure.defined_stereo';
 
   /// A count of E/Z, or absolute double bond stereochemistry centers.
-  final String polymerIdealizedStructureEzCenters =
+  final polymerIdealizedStructureEzCenters =
       'polymer.idealized_structure.ez_centers';
 
   /// The identifier of the structural element itself (this is still a UUID).
-  final String polymerIdealizedStructureId = 'polymer.idealized_structure.id';
+  final polymerIdealizedStructureId = 'polymer.idealized_structure.id';
 
   /// The molecular weight of the structure.
-  final String polymerIdealizedStructureMolecularWeight =
+  final polymerIdealizedStructureMolecularWeight =
       'polymer.idealized_structure.molecular_weight';
 
   /// The chemical structure in MDL Molfile format (V2000).
-  final String polymerIdealizedStructureMolfile =
+  final polymerIdealizedStructureMolfile =
       'polymer.idealized_structure.molfile';
 
   /// The optical activity or rotation of the material. '(+)' and '(-)' are used
   /// for optically active materials where activity is known and significantly
   /// useful for definition. '(+/-)' is used for racemic mixtures.
-  final String polymerIdealizedStructureOpticalActivity =
+  final polymerIdealizedStructureOpticalActivity =
       'polymer.idealized_structure.optical_activity';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerIdealizedStructureReferences =
+  final polymerIdealizedStructureReferences =
       'polymer.idealized_structure.references';
 
   /// A count of possible stereocenters.
-  final String polymerIdealizedStructureStereoCenters =
+  final polymerIdealizedStructureStereoCenters =
       'polymer.idealized_structure.stereo_centers';
 
   /// The structure's type of stereochemistry (absolute, achiral, racemic, etc.).
-  final String polymerIdealizedStructureStereochemistry =
+  final polymerIdealizedStructureStereochemistry =
       'polymer.idealized_structure.stereochemistry';
 
   /// A list of starting materials and/or conceptual 'monomers' that either were
@@ -1102,127 +1081,123 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// reference to another substance record. It is important to note, despite
   /// the name, that catalysts and non-monomer starting materials may be
   /// captured here as well.
-  final String polymerMonomers = 'polymer.monomers';
+  final polymerMonomers = 'polymer.monomers';
 
   /// Marking the record or element as belonging to certain groups for use in
   /// tracking which groups should receive visibility, export and/or inclusion
   /// in specific reports.
-  final String polymerMonomersAmount = 'polymer.monomers.amount';
+  final polymerMonomersAmount = 'polymer.monomers.amount';
 
   /// The amount's numeric average if present.
-  final String polymerMonomersAmountAverage = 'polymer.monomers.amount.average';
+  final polymerMonomersAmountAverage = 'polymer.monomers.amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String polymerMonomersAmountHigh = 'polymer.monomers.amount.high';
+  final polymerMonomersAmountHigh = 'polymer.monomers.amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String polymerMonomersAmountHighLimit =
-      'polymer.monomers.amount.high_limit';
+  final polymerMonomersAmountHighLimit = 'polymer.monomers.amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String polymerMonomersAmountLow = 'polymer.monomers.amount.low';
+  final polymerMonomersAmountLow = 'polymer.monomers.amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String polymerMonomersAmountLowLimit =
-      'polymer.monomers.amount.low_limit';
+  final polymerMonomersAmountLowLimit = 'polymer.monomers.amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
   /// For example, 'solubility' may be described quantitatively or it may be
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String polymerMonomersAmountNonNumericValue =
+  final polymerMonomersAmountNonNumericValue =
       'polymer.monomers.amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerMonomersAmountReferences =
-      'polymer.monomers.amount.references';
+  final polymerMonomersAmountReferences = 'polymer.monomers.amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', etc.).
-  final String polymerMonomersAmountType = 'polymer.monomers.amount.type';
+  final polymerMonomersAmountType = 'polymer.monomers.amount.type';
 
   /// The amount's unit of measurement.
-  final String polymerMonomersAmountUnits = 'polymer.monomers.amount.units';
+  final polymerMonomersAmountUnits = 'polymer.monomers.amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerMonomersAmountUuid = 'polymer.monomers.amount.uuid';
+  final polymerMonomersAmountUuid = 'polymer.monomers.amount.uuid';
 
   /// A flag for whether or not the monomer / starting material is considered
   /// canonically defining for the polymer.
-  final String polymerMonomersDefining = 'polymer.monomers.defining';
+  final polymerMonomersDefining = 'polymer.monomers.defining';
 
   /// A reference to the substance which is used as a starting material or
   /// monomer.
-  final String polymerMonomersMonomerSubstance =
-      'polymer.monomers.monomer_substance';
+  final polymerMonomersMonomerSubstance = 'polymer.monomers.monomer_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String polymerMonomersMonomerSubstanceLinkingId =
+  final polymerMonomersMonomerSubstanceLinkingId =
       'polymer.monomers.monomer_substance.linking_id';
 
   /// The literal string text of a name.
-  final String polymerMonomersMonomerSubstanceName =
+  final polymerMonomersMonomerSubstanceName =
       'polymer.monomers.monomer_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String polymerMonomersMonomerSubstanceRefPname =
+  final polymerMonomersMonomerSubstanceRefPname =
       'polymer.monomers.monomer_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerMonomersMonomerSubstanceReferences =
+  final polymerMonomersMonomerSubstanceReferences =
       'polymer.monomers.monomer_substance.references';
 
   /// The UUID of the related record.
-  final String polymerMonomersMonomerSubstanceRefuuid =
+  final polymerMonomersMonomerSubstanceRefuuid =
       'polymer.monomers.monomer_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String polymerMonomersMonomerSubstanceSubstanceClass =
+  final polymerMonomersMonomerSubstanceSubstanceClass =
       'polymer.monomers.monomer_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String polymerMonomersMonomerSubstanceUnii =
+  final polymerMonomersMonomerSubstanceUnii =
       'polymer.monomers.monomer_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerMonomersMonomerSubstanceUuid =
+  final polymerMonomersMonomerSubstanceUuid =
       'polymer.monomers.monomer_substance.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerMonomersReferences = 'polymer.monomers.references';
+  final polymerMonomersReferences = 'polymer.monomers.references';
 
   /// The chemical's type or role in polymerization ('initiator', 'monomer',
   /// 'starting material', etc.).
-  final String polymerMonomersType = 'polymer.monomers.type';
+  final polymerMonomersType = 'polymer.monomers.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerMonomersUuid = 'polymer.monomers.uuid';
+  final polymerMonomersUuid = 'polymer.monomers.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerReferences = 'polymer.references';
+  final polymerReferences = 'polymer.references';
 
   /// A list of SRUs (Structural Repeating Units) as well as non-repeating
   /// structural units which comprise the polymer. Each unit present has a
@@ -1230,33 +1205,32 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// about how the unit can connect to other units and/or itself. This can be
   /// seen as the set of 'pieces' which can be combined together to make the
   /// polymer in question.
-  final String polymerStructuralUnits = 'polymer.structural_units';
+  final polymerStructuralUnits = 'polymer.structural_units';
 
   /// The value or amount that describes the relationship between the two
   /// records. An amount is not always present, but sometimes quantifies the
   /// interaction between two records in some context (e.g. 'the IC50 for an
   /// inhibitor').
-  final String polymerStructuralUnitsAmount = 'polymer.structural_units.amount';
+  final polymerStructuralUnitsAmount = 'polymer.structural_units.amount';
 
   /// The amount's numeric average if present.
-  final String polymerStructuralUnitsAmountAverage =
+  final polymerStructuralUnitsAmountAverage =
       'polymer.structural_units.amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String polymerStructuralUnitsAmountHigh =
+  final polymerStructuralUnitsAmountHigh =
       'polymer.structural_units.amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String polymerStructuralUnitsAmountHighLimit =
+  final polymerStructuralUnitsAmountHighLimit =
       'polymer.structural_units.amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String polymerStructuralUnitsAmountLow =
-      'polymer.structural_units.amount.low';
+  final polymerStructuralUnitsAmountLow = 'polymer.structural_units.amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String polymerStructuralUnitsAmountLowLimit =
+  final polymerStructuralUnitsAmountLowLimit =
       'polymer.structural_units.amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
@@ -1264,867 +1238,852 @@ final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String polymerStructuralUnitsAmountNonNumericValue =
+  final polymerStructuralUnitsAmountNonNumericValue =
       'polymer.structural_units.amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String polymerStructuralUnitsAmountReferences =
+  final polymerStructuralUnitsAmountReferences =
       'polymer.structural_units.amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', etc.).
-  final String polymerStructuralUnitsAmountType =
+  final polymerStructuralUnitsAmountType =
       'polymer.structural_units.amount.type';
 
   /// The amount's unit of measurement.
-  final String polymerStructuralUnitsAmountUnits =
+  final polymerStructuralUnitsAmountUnits =
       'polymer.structural_units.amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerStructuralUnitsAmountUuid =
+  final polymerStructuralUnitsAmountUuid =
       'polymer.structural_units.amount.uuid';
 
   /// A count of the attachment points allowed for the given structural unit
-  final String polymerStructuralUnitsAttachmentCount =
+  final polymerStructuralUnitsAttachmentCount =
       'polymer.structural_units.attachment_count';
 
   /// A map detailing the allowed connections between each connection point in
   /// the structural unit (specified by using R-Group aliases) and the set of
   /// allowed other connection points where they can connect
-  final String polymerStructuralUnitsAttachmentMap =
+  final polymerStructuralUnitsAttachmentMap =
       'polymer.structural_units.attachment_map';
 
   /// A label for the structural unit, typically a sequential capital letter
   /// starting with 'A' ('A','B','C', etc)
-  final String polymerStructuralUnitsLabel = 'polymer.structural_units.label';
+  final polymerStructuralUnitsLabel = 'polymer.structural_units.label';
 
   /// The molfile-format structure of the structural unit
-  final String polymerStructuralUnitsStructure =
-      'polymer.structural_units.structure';
+  final polymerStructuralUnitsStructure = 'polymer.structural_units.structure';
 
   /// The type of structural unit specified, describing whether it is an end
   /// group, SRU, or fragment.
-  final String polymerStructuralUnitsType = 'polymer.structural_units.type';
+  final polymerStructuralUnitsType = 'polymer.structural_units.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String polymerUuid = 'polymer.uuid';
+  final polymerUuid = 'polymer.uuid';
 
   /// A list of physical, chemical or other properties of the record.
-  final String properties = 'properties';
+  final properties = 'properties';
 
   /// A flag for whether or not the property is considered canonically defining
   /// for the substance definition.
-  final String propertiesDefining = 'properties.defining';
+  final propertiesDefining = 'properties.defining';
 
   /// The literal string text of a name.
-  final String propertiesName = 'properties.name';
+  final propertiesName = 'properties.name';
 
   /// The list of paramaters needed to define the conditions, context or
   /// environment of applicability for the property value specified.
-  final String propertiesParameters = 'properties.parameters';
+  final propertiesParameters = 'properties.parameters';
 
   /// The literal string text of a name.
-  final String propertiesParametersName = 'properties.parameters.name';
+  final propertiesParametersName = 'properties.parameters.name';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String propertiesParametersReferences =
-      'properties.parameters.references';
+  final propertiesParametersReferences = 'properties.parameters.references';
 
   /// The type of parameter specified, (e.g. 'CHEMICAL', ''PHYSICAL',
   /// 'ENZYMATIC', or other).
-  final String propertiesParametersType = 'properties.parameters.type';
+  final propertiesParametersType = 'properties.parameters.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String propertiesParametersUuid = 'properties.parameters.uuid';
+  final propertiesParametersUuid = 'properties.parameters.uuid';
 
   /// The value of the property.
-  final String propertiesParametersValue = 'properties.parameters.value';
+  final propertiesParametersValue = 'properties.parameters.value';
 
   /// The amount's numeric average if present.
-  final String propertiesParametersValueAverage =
+  final propertiesParametersValueAverage =
       'properties.parameters.value.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String propertiesParametersValueHigh =
-      'properties.parameters.value.high';
+  final propertiesParametersValueHigh = 'properties.parameters.value.high';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String propertiesParametersValueLow = 'properties.parameters.value.low';
+  final propertiesParametersValueLow = 'properties.parameters.value.low';
 
   /// A textual description of a value which can not be quantified numerically.
   /// For example, 'solubility' may be described quantitatively or it may be
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String propertiesParametersValueNonNumericValue =
+  final propertiesParametersValueNonNumericValue =
       'properties.parameters.value.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String propertiesParametersValueReferences =
+  final propertiesParametersValueReferences =
       'properties.parameters.value.references';
 
   /// The type of the property parameter (e.g. 'CHEMICAL', ''PHYSICAL',
   /// 'ENZYMATIC', or other).
-  final String propertiesParametersValueType =
-      'properties.parameters.value.type';
+  final propertiesParametersValueType = 'properties.parameters.value.type';
 
   /// The amount's unit of measurement.
-  final String propertiesParametersValueUnits =
-      'properties.parameters.value.units';
+  final propertiesParametersValueUnits = 'properties.parameters.value.units';
 
   /// Marking the record or element as belonging to certain groups for use in
   /// tracking which groups should receive visibility, export and/or inclusion
   /// in specific reports.
-  final String propertiesParametersValueUuid =
-      'properties.parameters.value.uuid';
+  final propertiesParametersValueUuid = 'properties.parameters.value.uuid';
 
   /// The type of property: chemical, enzymatic, physical, or other.
-  final String propertiesPropertyType = 'properties.property_type';
+  final propertiesPropertyType = 'properties.property_type';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String propertiesReferences = 'properties.references';
+  final propertiesReferences = 'properties.references';
 
   /// The type of property: chemical, enzymatic, physical, or other.
-  final String propertiesType = 'properties.type';
+  final propertiesType = 'properties.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String propertiesUuid = 'properties.uuid';
+  final propertiesUuid = 'properties.uuid';
 
   /// The value of the property.
-  final String propertiesValue = 'properties.value';
+  final propertiesValue = 'properties.value';
 
   /// The amount's numeric average if present.
-  final String propertiesValueAverage = 'properties.value.average';
+  final propertiesValueAverage = 'properties.value.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String propertiesValueHigh = 'properties.value.high';
+  final propertiesValueHigh = 'properties.value.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String propertiesValueHighLimit = 'properties.value.high_limit';
+  final propertiesValueHighLimit = 'properties.value.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String propertiesValueLow = 'properties.value.low';
+  final propertiesValueLow = 'properties.value.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String propertiesValueLowLimit = 'properties.value.low_limit';
+  final propertiesValueLowLimit = 'properties.value.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
   /// For example, 'solubility' may be described quantitatively or it may be
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String propertiesValueNonNumericValue =
-      'properties.value.non_numeric_value';
+  final propertiesValueNonNumericValue = 'properties.value.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String propertiesValueReferences = 'properties.value.references';
+  final propertiesValueReferences = 'properties.value.references';
 
   /// The type of property specified, (e.g. 'CHEMICAL', ''PHYSICAL',
   /// 'ENZYMATIC', or other).
-  final String propertiesValueType = 'properties.value.type';
+  final propertiesValueType = 'properties.value.type';
 
   /// The amount's unit of measurement.
-  final String propertiesValueUnits = 'properties.value.units';
+  final propertiesValueUnits = 'properties.value.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String propertiesValueUuid = 'properties.value.uuid';
+  final propertiesValueUuid = 'properties.value.uuid';
 
   /// The definitional information of a protein substance. Contains information
   /// about the amino acid sequence, gylcosylation, classification, disulfide
   /// links and other links.
-  final String protein = 'protein';
+  final protein = 'protein';
 
   /// The set of disulfide links that connect different cysteine residues to
   /// each other via a sulfur-sulfur covalent bond.
-  final String proteinDisulfideLinks = 'protein.disulfide_links';
+  final proteinDisulfideLinks = 'protein.disulfide_links';
 
   /// A list of explicit detailed sites where the linkage is applicable. A
   /// linkage site is always describing how the nucleoside connects to the NEXT
   /// nucleoside in the series. So a sequence of length 2 will have only 1
   /// linkage, specified at the 1st site (not the second).
-  final String proteinDisulfideLinksSites = 'protein.disulfide_links.sites';
+  final proteinDisulfideLinksSites = 'protein.disulfide_links.sites';
 
   /// The index of the residue on that subunit being specified.
-  final String proteinDisulfideLinksSitesResidueIndex =
+  final proteinDisulfideLinksSitesResidueIndex =
       'protein.disulfide_links.sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String proteinDisulfideLinksSitesSubunitIndex =
+  final proteinDisulfideLinksSitesSubunitIndex =
       'protein.disulfide_links.sites.subunit_index';
 
   /// Stores information on glycosylation sites and glycosylation type for the
   /// protein.
-  final String proteinGlycosylation = 'protein.glycosylation';
+  final proteinGlycosylation = 'protein.glycosylation';
 
   /// The set of sites where the protein is c-glycosylated.
-  final String proteinGlycosylationCGlycosylationSites =
+  final proteinGlycosylationCGlycosylationSites =
       'protein.glycosylation.c_glycosylation_sites';
 
   /// The index of the residue on that subunit being specified.
-  final String proteinGlycosylationCGlycosylationSitesResidueIndex =
+  final proteinGlycosylationCGlycosylationSitesResidueIndex =
       'protein.glycosylation.c_glycosylation_sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String proteinGlycosylationCGlycosylationSitesSubunitIndex =
+  final proteinGlycosylationCGlycosylationSitesSubunitIndex =
       'protein.glycosylation.c_glycosylation_sites.subunit_index';
 
   /// The type of glycosylation pattern found on the protein. Here, this is a
   /// very general term meant to capture the organism-level pattern that the
   /// glycosylation roughly corresponds to. (e.g. 'mouse', 'human', 'porcine').
-  final String proteinGlycosylationGlycosylationType =
+  final proteinGlycosylationGlycosylationType =
       'protein.glycosylation.glycosylation_type';
 
   /// The set of sites where the protein is n-glycosylated.
-  final String proteinGlycosylationNGlycosylationSites =
+  final proteinGlycosylationNGlycosylationSites =
       'protein.glycosylation.n_glycosylation_sites';
 
   /// The index of the residue on that subunit being specified.
-  final String proteinGlycosylationNGlycosylationSitesResidueIndex =
+  final proteinGlycosylationNGlycosylationSitesResidueIndex =
       'protein.glycosylation.n_glycosylation_sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String proteinGlycosylationNGlycosylationSitesSubunitIndex =
+  final proteinGlycosylationNGlycosylationSitesSubunitIndex =
       'protein.glycosylation.n_glycosylation_sites.subunit_index';
 
   /// The set of sites where the protein is c-glycosylated.
-  final String proteinGlycosylationOGlycosylationSites =
+  final proteinGlycosylationOGlycosylationSites =
       'protein.glycosylation.o_glycosylation_sites';
 
   /// The index of the residue on that subunit being specified.
-  final String proteinGlycosylationOGlycosylationSitesResidueIndex =
+  final proteinGlycosylationOGlycosylationSitesResidueIndex =
       'protein.glycosylation.o_glycosylation_sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String proteinGlycosylationOGlycosylationSitesSubunitIndex =
+  final proteinGlycosylationOGlycosylationSitesSubunitIndex =
       'protein.glycosylation.o_glycosylation_sites.subunit_index';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String proteinGlycosylationReferences =
-      'protein.glycosylation.references';
+  final proteinGlycosylationReferences = 'protein.glycosylation.references';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String proteinGlycosylationUuid = 'protein.glycosylation.uuid';
+  final proteinGlycosylationUuid = 'protein.glycosylation.uuid';
 
   /// The set of links, other than disulfide links, which connect different
   /// amino acid residues found within the protein.
-  final String proteinOtherLinks = 'protein.other_links';
+  final proteinOtherLinks = 'protein.other_links';
 
   /// The type of linkage which connects the residues in a protein.
-  final String proteinOtherLinksLinkageType =
-      'protein.other_links.linkage_type';
+  final proteinOtherLinksLinkageType = 'protein.other_links.linkage_type';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String proteinOtherLinksReferences = 'protein.other_links.references';
+  final proteinOtherLinksReferences = 'protein.other_links.references';
 
   /// A list of explicit detailed sites where the linkage is applicable. A
   /// linkage site is always describing how the nucleoside connects to the NEXT
   /// nucleoside in the series. So a sequence of length 2 will have only 1
   /// linkage, specified at the 1st site (not the second).
-  final String proteinOtherLinksSites = 'protein.other_links.sites';
+  final proteinOtherLinksSites = 'protein.other_links.sites';
 
   /// The index of the residue on that subunit being specified.
-  final String proteinOtherLinksSitesResidueIndex =
+  final proteinOtherLinksSitesResidueIndex =
       'protein.other_links.sites.residue_index';
 
   /// The index of the subunit being specified.
-  final String proteinOtherLinksSitesSubunitIndex =
+  final proteinOtherLinksSitesSubunitIndex =
       'protein.other_links.sites.subunit_index';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String proteinOtherLinksUuid = 'protein.other_links.uuid';
+  final proteinOtherLinksUuid = 'protein.other_links.uuid';
 
   /// A comma-separated set of subtypes descriptive of the protein.
-  final String proteinProteinSubType = 'protein.protein_sub_type';
+  final proteinProteinSubType = 'protein.protein_sub_type';
 
   /// A general typing of the protein.
-  final String proteinProteinType = 'protein.protein_type';
+  final proteinProteinType = 'protein.protein_type';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String proteinReferences = 'protein.references';
+  final proteinReferences = 'protein.references';
 
   /// The original source of the amino acid sequence. This is a general category
   /// which, for organisms, typically specifies a useful general abstract
   /// taxonic level with increasing granularity as it approaches humans (e.g.
   /// 'bacteria','mouse', 'mouse chimeric', 'human').
-  final String proteinSequenceOrigin = 'protein.sequence_origin';
+  final proteinSequenceOrigin = 'protein.sequence_origin';
 
   /// The type of sequence being specified (e.g. 'incomplete', 'complete').
-  final String proteinSequenceType = 'protein.sequence_type';
+  final proteinSequenceType = 'protein.sequence_type';
 
   /// The list of Subunits found in this nucleic acid. Each subunit is described
   /// by a sequence of nucleobases. Double stranded nucleic acids should
   /// typically be represented by 2 subunits, while single-stranded nucleic
   /// acids will more typically be represented with 1.
-  final String proteinSubunits = 'protein.subunits';
+  final proteinSubunits = 'protein.subunits';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String proteinSubunitsReferences = 'protein.subunits.references';
+  final proteinSubunitsReferences = 'protein.subunits.references';
 
   /// The amino acid sequence as a string of 1-letter amino acids, from N-term
   /// to C-term. Lower-case letters represent D-amino acids, while upper-case
   /// are the standard L-amino acids.
-  final String proteinSubunitsSequence = 'protein.subunits.sequence';
+  final proteinSubunitsSequence = 'protein.subunits.sequence';
 
   /// The index of the subunit being specified.
-  final String proteinSubunitsSubunitIndex = 'protein.subunits.subunit_index';
+  final proteinSubunitsSubunitIndex = 'protein.subunits.subunit_index';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String proteinSubunitsUuid = 'protein.subunits.uuid';
+  final proteinSubunitsUuid = 'protein.subunits.uuid';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String proteinUuid = 'protein.uuid';
+  final proteinUuid = 'protein.uuid';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String references = 'references';
+  final references = 'references';
 
   /// The reference text or citation.
-  final String referencesCitation = 'references.citation';
+  final referencesCitation = 'references.citation';
 
   /// The type of reference or document represented (e.g. 'INN', 'Journal
   /// Article', etc).
-  final String referencesDocType = 'references.doc_type';
+  final referencesDocType = 'references.doc_type';
 
   /// The date that the document or reference was obtained / accessed.
-  final String referencesDocumentDate = 'references.document_date';
+  final referencesDocumentDate = 'references.document_date';
 
   /// The identifier of the structural element itself (this is still a UUID).
-  final String referencesId = 'references.id';
+  final referencesId = 'references.id';
 
   /// A marking of whether the reference itself is known to be publicly
   /// accessible.
-  final String referencesPublicDomain = 'references.public_domain';
+  final referencesPublicDomain = 'references.public_domain';
 
   /// A collection of strings which mark the reference as having specific
   /// properties (nomenclature, spectra, definition, etc).
-  final String referencesTags = 'references.tags';
+  final referencesTags = 'references.tags';
 
   /// The url to further information regarding this code.
-  final String referencesUrl = 'references.url';
+  final referencesUrl = 'references.url';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String referencesUuid = 'references.uuid';
+  final referencesUuid = 'references.uuid';
 
   /// A list of related records which share some known relationship with this
   /// record (e.g. salt forms, metabolites, impurities, etc).
-  final String relationships = 'relationships';
+  final relationships = 'relationships';
 
   /// The value or amount that describes the relationship between the two
   /// records. An amount is not always present, but sometimes quantifies the
   /// interaction between two records in some context (e.g. 'the IC50 for an
   /// inhibitor').
-  final String relationshipsAmount = 'relationships.amount';
+  final relationshipsAmount = 'relationships.amount';
 
   /// The amount's numeric average if present.
-  final String relationshipsAmountAverage = 'relationships.amount.average';
+  final relationshipsAmountAverage = 'relationships.amount.average';
 
   /// The highest numerical value likely for the average amount. (highest
   /// average).
-  final String relationshipsAmountHigh = 'relationships.amount.high';
+  final relationshipsAmountHigh = 'relationships.amount.high';
 
   /// The highest allowable numeric value usable for the amount. (highest limit).
-  final String relationshipsAmountHighLimit = 'relationships.amount.high_limit';
+  final relationshipsAmountHighLimit = 'relationships.amount.high_limit';
 
   /// The lowest numerical value likely for the average amount. (lowest average).
-  final String relationshipsAmountLow = 'relationships.amount.low';
+  final relationshipsAmountLow = 'relationships.amount.low';
 
   /// The lowest allowable numeric value usable for the amount. (lowest limit).
-  final String relationshipsAmountLowLimit = 'relationships.amount.low_limit';
+  final relationshipsAmountLowLimit = 'relationships.amount.low_limit';
 
   /// A textual description of a value which can not be quantified numerically.
   /// For example, 'solubility' may be described quantitatively or it may be
   /// described with certain textual categories. Non-numeric values are meant to
   /// specify qualitative values and other values not easily described by
   /// numbers or ranges of numbers.
-  final String relationshipsAmountNonNumericValue =
+  final relationshipsAmountNonNumericValue =
       'relationships.amount.non_numeric_value';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String relationshipsAmountReferences =
-      'relationships.amount.references';
+  final relationshipsAmountReferences = 'relationships.amount.references';
 
   /// The type of the amount specified ('mol ratio'. 'degree of polymerization',
   /// 'weight ratio', etc.).
-  final String relationshipsAmountType = 'relationships.amount.type';
+  final relationshipsAmountType = 'relationships.amount.type';
 
   /// The amount's unit of measurement.
-  final String relationshipsAmountUnits = 'relationships.amount.units';
+  final relationshipsAmountUnits = 'relationships.amount.units';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String relationshipsAmountUuid = 'relationships.amount.uuid';
+  final relationshipsAmountUuid = 'relationships.amount.uuid';
 
   /// Any comments regarding the relationship.
-  final String relationshipsComments = 'relationships.comments';
+  final relationshipsComments = 'relationships.comments';
 
   /// The type of interaction which occurs between the two specified substance
   /// records, if applicable.
-  final String relationshipsInteractionType = 'relationships.interaction_type';
+  final relationshipsInteractionType = 'relationships.interaction_type';
 
   /// A reference to the substance which is considered to be mediating the
   /// relationship or interaction between the two substance records. For
   /// example, in a metabolism relationship the mediator will typically be the
   /// metabolizing enzyme.
-  final String relationshipsMediatorSubstance =
-      'relationships.mediator_substance';
+  final relationshipsMediatorSubstance = 'relationships.mediator_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String relationshipsMediatorSubstanceLinkingId =
+  final relationshipsMediatorSubstanceLinkingId =
       'relationships.mediator_substance.linking_id';
 
   /// The literal string text of a name.
-  final String relationshipsMediatorSubstanceName =
+  final relationshipsMediatorSubstanceName =
       'relationships.mediator_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String relationshipsMediatorSubstanceRefPname =
+  final relationshipsMediatorSubstanceRefPname =
       'relationships.mediator_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String relationshipsMediatorSubstanceReferences =
+  final relationshipsMediatorSubstanceReferences =
       'relationships.mediator_substance.references';
 
   /// The UUID of the related record.
-  final String relationshipsMediatorSubstanceRefuuid =
+  final relationshipsMediatorSubstanceRefuuid =
       'relationships.mediator_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String relationshipsMediatorSubstanceSubstanceClass =
+  final relationshipsMediatorSubstanceSubstanceClass =
       'relationships.mediator_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String relationshipsMediatorSubstanceUnii =
+  final relationshipsMediatorSubstanceUnii =
       'relationships.mediator_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String relationshipsMediatorSubstanceUuid =
+  final relationshipsMediatorSubstanceUuid =
       'relationships.mediator_substance.uuid';
 
   /// Any qualifier needed to describe the relationship / interaction between
   /// the two records.
-  final String relationshipsQualification = 'relationships.qualification';
+  final relationshipsQualification = 'relationships.qualification';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String relationshipsReferences = 'relationships.references';
+  final relationshipsReferences = 'relationships.references';
 
   /// A reference to the related substance (or concept) record.
-  final String relationshipsRelatedSubstance =
-      'relationships.related_substance';
+  final relationshipsRelatedSubstance = 'relationships.related_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String relationshipsRelatedSubstanceLinkingId =
+  final relationshipsRelatedSubstanceLinkingId =
       'relationships.related_substance.linking_id';
 
   /// The literal string text of a name.
-  final String relationshipsRelatedSubstanceName =
+  final relationshipsRelatedSubstanceName =
       'relationships.related_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String relationshipsRelatedSubstanceRefPname =
+  final relationshipsRelatedSubstanceRefPname =
       'relationships.related_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String relationshipsRelatedSubstanceReferences =
+  final relationshipsRelatedSubstanceReferences =
       'relationships.related_substance.references';
 
   /// The UUID of the related record.
-  final String relationshipsRelatedSubstanceRefuuid =
+  final relationshipsRelatedSubstanceRefuuid =
       'relationships.related_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String relationshipsRelatedSubstanceSubstanceClass =
+  final relationshipsRelatedSubstanceSubstanceClass =
       'relationships.related_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String relationshipsRelatedSubstanceUnii =
+  final relationshipsRelatedSubstanceUnii =
       'relationships.related_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String relationshipsRelatedSubstanceUuid =
+  final relationshipsRelatedSubstanceUuid =
       'relationships.related_substance.uuid';
 
   /// The type of relationship (e.g. 'parent -> salt solvate', 'active moiety',
   /// 'inhibitor -> 'target', 'toxin -> conjugate' etc.).
-  final String relationshipsType = 'relationships.type';
+  final relationshipsType = 'relationships.type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String relationshipsUuid = 'relationships.uuid';
+  final relationshipsUuid = 'relationships.uuid';
 
   /// The definitional information of a structurally diverse substance. This
   /// includes informaiton about the source of the material (e.g. taxonomy for
   /// organisms) as well as the state, form and part of the source material
   /// used.
-  final String structurallyDiverse = 'structurally_diverse';
+  final structurallyDiverse = 'structurally_diverse';
 
   /// The developmental stage of the organism, when necessary to describe the
   /// material. (e.g. 'adult', 'larva', etc).
-  final String structurallyDiverseDevelopmentalStage =
+  final structurallyDiverseDevelopmentalStage =
       'structurally_diverse.developmental_stage';
 
   /// A general material type of the fraction which is isolated in a
   /// structurally diverse substance (e.g. 'oils', 'cells', etc).
-  final String structurallyDiverseFractionMaterialType =
+  final structurallyDiverseFractionMaterialType =
       'structurally_diverse.fraction_material_type';
 
   /// A specific name for the fraction which is isolated in a structirally
   /// diverse substance (e.g. 'low molecular weight oils').
-  final String structurallyDiverseFractionName =
-      'structurally_diverse.fraction_name';
+  final structurallyDiverseFractionName = 'structurally_diverse.fraction_name';
 
   /// The scientific name of the species which provided the ovum for a hybrid.
   /// Sometimes the left hand side of the 'x' in hybrid nomenclature.
-  final String structurallyDiverseHybridSpeciesMaternalOrganism =
+  final structurallyDiverseHybridSpeciesMaternalOrganism =
       'structurally_diverse.hybrid_species_maternal_organism';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String structurallyDiverseHybridSpeciesMaternalOrganismLinkingId =
+  final structurallyDiverseHybridSpeciesMaternalOrganismLinkingId =
       'structurally_diverse.hybrid_species_maternal_organism.linking_id';
 
   /// The literal string text of a name.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismName =
+  final structurallyDiverseHybridSpeciesMaternalOrganismName =
       'structurally_diverse.hybrid_species_maternal_organism.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismRefPname =
+  final structurallyDiverseHybridSpeciesMaternalOrganismRefPname =
       'structurally_diverse.hybrid_species_maternal_organism.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismReferences =
+  final structurallyDiverseHybridSpeciesMaternalOrganismReferences =
       'structurally_diverse.hybrid_species_maternal_organism.references';
 
   /// The UUID of the related record.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismRefuuid =
+  final structurallyDiverseHybridSpeciesMaternalOrganismRefuuid =
       'structurally_diverse.hybrid_species_maternal_organism.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismSubstanceClass =
+  final structurallyDiverseHybridSpeciesMaternalOrganismSubstanceClass =
       'structurally_diverse.hybrid_species_maternal_organism.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String structurallyDiverseHybridSpeciesMaternalOrganismUnii =
+  final structurallyDiverseHybridSpeciesMaternalOrganismUnii =
       'structurally_diverse.hybrid_species_maternal_organism.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String structurallyDiverseHybridSpeciesMaternalOrganismUuid =
+  final structurallyDiverseHybridSpeciesMaternalOrganismUuid =
       'structurally_diverse.hybrid_species_maternal_organism.uuid';
 
   /// The scientific name of the species which provided the sperm for a hybrid.
   /// Sometimes the right hand side of the 'x' in hybrid nomenclature.
-  final String structurallyDiverseHybridSpeciesPaternalOrganism =
+  final structurallyDiverseHybridSpeciesPaternalOrganism =
       'structurally_diverse.hybrid_species_paternal_organism';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String structurallyDiverseHybridSpeciesPaternalOrganismLinkingId =
+  final structurallyDiverseHybridSpeciesPaternalOrganismLinkingId =
       'structurally_diverse.hybrid_species_paternal_organism.linking_id';
 
   /// The literal string text of a name.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismName =
+  final structurallyDiverseHybridSpeciesPaternalOrganismName =
       'structurally_diverse.hybrid_species_paternal_organism.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismRefPname =
+  final structurallyDiverseHybridSpeciesPaternalOrganismRefPname =
       'structurally_diverse.hybrid_species_paternal_organism.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismReferences =
+  final structurallyDiverseHybridSpeciesPaternalOrganismReferences =
       'structurally_diverse.hybrid_species_paternal_organism.references';
 
   /// The UUID of the related record.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismRefuuid =
+  final structurallyDiverseHybridSpeciesPaternalOrganismRefuuid =
       'structurally_diverse.hybrid_species_paternal_organism.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismSubstanceClass =
+  final structurallyDiverseHybridSpeciesPaternalOrganismSubstanceClass =
       'structurally_diverse.hybrid_species_paternal_organism.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String structurallyDiverseHybridSpeciesPaternalOrganismUnii =
+  final structurallyDiverseHybridSpeciesPaternalOrganismUnii =
       'structurally_diverse.hybrid_species_paternal_organism.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String structurallyDiverseHybridSpeciesPaternalOrganismUuid =
+  final structurallyDiverseHybridSpeciesPaternalOrganismUuid =
       'structurally_diverse.hybrid_species_paternal_organism.uuid';
 
   /// The part of the organisms name that is more specific than the species rank.
-  final String structurallyDiverseInfraSpecificName =
+  final structurallyDiverseInfraSpecificName =
       'structurally_diverse.infra_specific_name';
 
   /// The type of rank of the infra specific name such as variety, subspecies,
   /// or form.
-  final String structurallyDiverseInfraSpecificType =
+  final structurallyDiverseInfraSpecificType =
       'structurally_diverse.infra_specific_type';
 
   /// The author of the organism's scientific name.
-  final String structurallyDiverseOrganismAuthor =
+  final structurallyDiverseOrganismAuthor =
       'structurally_diverse.organism_author';
 
   /// The organism's taxonomic family.
-  final String structurallyDiverseOrganismFamily =
+  final structurallyDiverseOrganismFamily =
       'structurally_diverse.organism_family';
 
   /// The organism's taxonomic genus.
-  final String structurallyDiverseOrganismGenus =
+  final structurallyDiverseOrganismGenus =
       'structurally_diverse.organism_genus';
 
   /// The organism's species scientific name excluding the genus, known as the
   /// specific epithet.
-  final String structurallyDiverseOrganismSpecies =
+  final structurallyDiverseOrganismSpecies =
       'structurally_diverse.organism_species';
 
   /// A reference to the parent substance which this substance further
   /// qualifies. This tends to be null if this record is a 'whole' structurally
   /// diverse record, and points back to the 'whole' record if the part or other
   /// qualification is present.
-  final String structurallyDiverseParentSubstance =
+  final structurallyDiverseParentSubstance =
       'structurally_diverse.parent_substance';
 
   /// The approvalID of the record if it exists, otherwise some compact and
   /// exchangable ID useful for linking to the referenced record (often the
   /// first 8 chars of its uuid).
-  final String structurallyDiverseParentSubstanceLinkingId =
+  final structurallyDiverseParentSubstanceLinkingId =
       'structurally_diverse.parent_substance.linking_id';
 
   /// The literal string text of a name.
-  final String structurallyDiverseParentSubstanceName =
+  final structurallyDiverseParentSubstanceName =
       'structurally_diverse.parent_substance.name';
 
   /// The 'Priority Name' (usually the display name) of the record being
   /// referenced.
-  final String structurallyDiverseParentSubstanceRefPname =
+  final structurallyDiverseParentSubstanceRefPname =
       'structurally_diverse.parent_substance.ref_pname';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String structurallyDiverseParentSubstanceReferences =
+  final structurallyDiverseParentSubstanceReferences =
       'structurally_diverse.parent_substance.references';
 
   /// The UUID of the related record.
-  final String structurallyDiverseParentSubstanceRefuuid =
+  final structurallyDiverseParentSubstanceRefuuid =
       'structurally_diverse.parent_substance.refuuid';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String structurallyDiverseParentSubstanceSubstanceClass =
+  final structurallyDiverseParentSubstanceSubstanceClass =
       'structurally_diverse.parent_substance.substance_class';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String structurallyDiverseParentSubstanceUnii =
+  final structurallyDiverseParentSubstanceUnii =
       'structurally_diverse.parent_substance.unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String structurallyDiverseParentSubstanceUuid =
+  final structurallyDiverseParentSubstanceUuid =
       'structurally_diverse.parent_substance.uuid';
 
   /// The contiguous physical part(s) of the source material that are isolated
   /// in this substance (e.g. 'flower', 'fruit', 'stem', 'bone'). Full organisms
   /// receive the part of 'Whole'.
-  final String structurallyDiversePart = 'structurally_diverse.part';
+  final structurallyDiversePart = 'structurally_diverse.part';
 
   /// The location of the part(s), if necessary to explain the context of the
   /// part.
-  final String structurallyDiversePartLocation =
-      'structurally_diverse.part_location';
+  final structurallyDiversePartLocation = 'structurally_diverse.part_location';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String structurallyDiverseReferences =
-      'structurally_diverse.references';
+  final structurallyDiverseReferences = 'structurally_diverse.references';
 
   /// The class of source material (e.g. 'organism' or 'mineral').
-  final String structurallyDiverseSourceMaterialClass =
+  final structurallyDiverseSourceMaterialClass =
       'structurally_diverse.source_material_class';
 
   /// A textual catagorization of what state the material is in, if needed (e.g.
   /// 'live', 'killed').
-  final String structurallyDiverseSourceMaterialState =
+  final structurallyDiverseSourceMaterialState =
       'structurally_diverse.source_material_state';
 
   /// The type of source material. This is a general category which, for
   /// organisms, typically specifies a useful general abstract taxonic level
   /// with increasing granularity as it approaches humans (e.g. 'plant',
   /// 'fungus', 'mammal', 'primate', 'human').
-  final String structurallyDiverseSourceMaterialType =
+  final structurallyDiverseSourceMaterialType =
       'structurally_diverse.source_material_type';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String structurallyDiverseUuid = 'structurally_diverse.uuid';
+  final structurallyDiverseUuid = 'structurally_diverse.uuid';
 
   /// Chemical Structure of a chemical substance.
-  final String structure = 'structure';
+  final structure = 'structure';
 
   /// Whether or not the record has atropisomerism, or has a chirality where a
   /// hindered rotation about a single bond as a resolt of steric or electronic
   /// constraints.
-  final String structureAtropisomerism = 'structure.atropisomerism';
+  final structureAtropisomerism = 'structure.atropisomerism';
 
   /// The net charge of the structure.
-  final String structureCharge = 'structure.charge';
+  final structureCharge = 'structure.charge';
 
   /// The exact number of times that the structure is repeated.
-  final String structureCount = 'structure.count';
+  final structureCount = 'structure.count';
 
   /// A count of defined stereocenters.
-  final String structureDefinedStereo = 'structure.defined_stereo';
+  final structureDefinedStereo = 'structure.defined_stereo';
 
   /// A count of E/Z, or absolute double bond stereochemistry centers.
-  final String structureEzCenters = 'structure.ez_centers';
+  final structureEzCenters = 'structure.ez_centers';
 
   /// The chemical formula of the record.
-  final String structureFormula = 'structure.formula';
+  final structureFormula = 'structure.formula';
 
   /// The identifier of the structural element itself (this is still a UUID).
-  final String structureId = 'structure.id';
+  final structureId = 'structure.id';
 
   /// The molecular weight of the structure.
-  final String structureMolecularWeight = 'structure.molecular_weight';
+  final structureMolecularWeight = 'structure.molecular_weight';
 
   /// The chemical structure in MDL Molfile format (V2000).
-  final String structureMolfile = 'structure.molfile';
+  final structureMolfile = 'structure.molfile';
 
   /// The optical activity or rotation of the material. '(+)' and '(-)' are used
   /// for optically active materials where activity is known and significantly
   /// useful for definition. '(+/-)' is used for racemic mixtures.
-  final String structureOpticalActivity = 'structure.optical_activity';
+  final structureOpticalActivity = 'structure.optical_activity';
 
   /// A list of reference uuids, which refer back to the root record's
   /// references, essentially acting as footnotes. The included references are
   /// considered to be the supporting origins of the data element in question.
-  final String structureReferences = 'structure.references';
+  final structureReferences = 'structure.references';
 
   /// The chemical structure in SMILES format.
-  final String structureSmiles = 'structure.smiles';
+  final structureSmiles = 'structure.smiles';
 
   /// A count of possible stereocenters.
-  final String structureStereoCenters = 'structure.stereo_centers';
+  final structureStereoCenters = 'structure.stereo_centers';
 
   /// Some textually descriptive information about specific stereochemistry that
   /// cannot adequately be captured elsewhere.
-  final String structureStereoComments = 'structure.stereo_comments';
+  final structureStereoComments = 'structure.stereo_comments';
 
   /// The structure's type of stereochemistry (absolute, achiral, racemic, etc.).
-  final String structureStereochemistry = 'structure.stereochemistry';
+  final structureStereochemistry = 'structure.stereochemistry';
 
   /// This value wall always be 'reference' if it is intended as a real
   /// reference and 'mention' if it is a place-holder. However, it can also
   /// specify a full substance class, in which case the whole record reference
   /// object is meant to be a full entire record rather than a reference.
-  final String substanceClass = 'substance_class';
+  final substanceClass = 'substance_class';
 
   /// A collection of strings which mark the reference as having specific
   /// properties (nomenclature, spectra, definition, etc).
-  final String tags = 'tags';
+  final tags = 'tags';
 
   /// The Unique Ingredient Identifier (UNII, aka 'Approval ID') is a unique ID
   /// generated for each substance record.
-  final String unii = 'unii';
+  final unii = 'unii';
 
   /// A Universally Unique Identifier (also sometimes called a GUID) for the
   /// element. Most GSRS elements have a uuid to be used for tracking,
   /// processing and referencing a record (and any element of that record).
-  final String uuid = 'uuid';
+  final uuid = 'uuid';
 
   /// The version of the substance being viewed. Increments with every saved
   /// edit.
-  final String version = 'version';
+  final version = 'version';
 }

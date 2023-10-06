@@ -13,15 +13,17 @@ class OneOf extends PossibleValues implements Comparable<OneOf> {
     if (data == null) {
       return null;
     }
-    if (isAnyNumKeys) {
+    if (isAnyNumKeys!) {
       return swapKV(data);
     } else {
       return data;
     }
   }
 
-  bool get isAnyNumKeys =>
-      data!.keys.any((element) => num.tryParse(element) != null);
+  bool? get isBool => data?.keys.every((e) => e == 'true' || e == 'false');
+
+  bool? get isAnyNumKeys =>
+      data?.keys.any((element) => num.tryParse(element) != null);
 
   @override
   bool operator ==(Object other) =>
