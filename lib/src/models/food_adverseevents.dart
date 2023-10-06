@@ -17,36 +17,42 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// age is expressed in days
   final consumerAgeUnitDays = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.days,
   );
 
   /// age is expressed in decades
   final consumerAgeUnitDecades = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.decades,
   );
 
   /// age is expressed in months
   final consumerAgeUnitMonths = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.months,
   );
 
   /// Unknown
   final consumerAgeUnitNotAvailable = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.notAvailable,
   );
 
   /// age is expressed in weeks
   final consumerAgeUnitWeeks = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.weeks,
   );
 
   /// age is expressed in years
   final consumerAgeUnitYears = (
     'consumer.age_unit',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerAgeUnit.years,
   );
 
@@ -54,18 +60,21 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// Female
   final consumerGenderFemale = (
     'consumer.gender',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerGender.female,
   );
 
   /// Male
   final consumerGenderMale = (
     'consumer.gender',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerGender.male,
   );
 
   /// Unknown
   final consumerGenderNotAvailable = (
     'consumer.gender',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsConsumerGender.notAvailable,
   );
 
@@ -79,90 +88,108 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// The adverse event caused a birth defect in a baby
   final outcomesCONGENITALANOMALY = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.cONGENITALANOMALY,
   );
   final outcomesCONGENITALANOMALYExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.cONGENITALANOMALY,
   );
 
   /// The adverse event was the death of the consumer
   final outcomesDEATH = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.dEATH,
   );
   final outcomesDEATHExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.dEATH,
   );
 
   /// The adverse event caused the permanent disability
   final outcomesDISABILITY = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.dISABILITY,
   );
   final outcomesDISABILITYExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.dISABILITY,
   );
 
   /// The consumer was hospitalized
   final outcomesHOSPITALIZATION = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.hOSPITALIZATION,
   );
   final outcomesHOSPITALIZATIONExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.hOSPITALIZATION,
   );
 
   /// The adverse event was life threatening
   final outcomesLIFETHREATENING = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.lIFETHREATENING,
   );
   final outcomesLIFETHREATENINGExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.lIFETHREATENING,
   );
 
   /// The outcome wasn’t serious
   final outcomesNONSERIOUSINJURIESILLNESS = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.nONSERIOUSINJURIESILLNESS,
   );
   final outcomesNONSERIOUSINJURIESILLNESSExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.nONSERIOUSINJURIESILLNESS,
   );
 
   /// The outcome was not reported
   final outcomesNONE = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.nONE,
   );
   final outcomesNONEExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.nONE,
   );
 
   /// The outcome was not one of the specified types
   final outcomesOTHER = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.oTHER,
   );
   final outcomesOTHERExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.oTHER,
   );
 
   /// The outcome included non-specified serious medical events
   final outcomesOTHERSERIOUSIMPORTANTMEDICALEVENTS = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.oTHERSERIOUSIMPORTANTMEDICALEVENTS,
   );
   final outcomesOTHERSERIOUSIMPORTANTMEDICALEVENTSExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.oTHERSERIOUSIMPORTANTMEDICALEVENTS,
   );
 
@@ -170,20 +197,24 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// intervention to prevent permanent impairment or disability
   final outcomesREQINTERVENTIONTOPRVNTPERMIMPRMNT = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.rEQINTERVENTIONTOPRVNTPERMIMPRMNT,
   );
   final outcomesREQINTERVENTIONTOPRVNTPERMIMPRMNTExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.rEQINTERVENTIONTOPRVNTPERMIMPRMNT,
   );
 
   /// The adverse event caused serious injuries or illness
   final outcomesSERIOUSINJURIESILLNESS = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.sERIOUSINJURIESILLNESS,
   );
   final outcomesSERIOUSINJURIESILLNESSExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.sERIOUSINJURIESILLNESS,
   );
 
@@ -191,20 +222,24 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// health care provider
   final outcomesVISITEDAHEALTHCAREPROVIDER = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.vISITEDAHEALTHCAREPROVIDER,
   );
   final outcomesVISITEDAHEALTHCAREPROVIDERExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.vISITEDAHEALTHCAREPROVIDER,
   );
 
   /// The consumer visited an ER
   final outcomesVISITEDANER = (
     'outcomes',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.vISITEDANER,
   );
   final outcomesVISITEDANERExact = (
     'outcomes.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsOutcomes.vISITEDANER,
   );
 
@@ -216,522 +251,609 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// Cheese/Cheese Prod
   final productsIndustryCodeOneTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneTwo,
   );
 
   /// Ice Cream Prod
   final productsIndustryCodeOneThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneThree,
   );
 
   /// Filled Milk/Imit Milk Prod
   final productsIndustryCodeOneFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneFour,
   );
 
   /// Egg/Egg Prod
   final productsIndustryCodeOneFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneFive,
   );
 
   /// Fishery/Seafood Prod
   final productsIndustryCodeOneSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneSix,
   );
 
   /// Meat, Meat Products and Poultry
   final productsIndustryCodeOneSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneSeven,
   );
 
   /// Vegetable Protein Prod
   final productsIndustryCodeOneEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.oneEight,
   );
 
   /// Whole Grain/Milled Grain Prod/Starch
   final productsIndustryCodeTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.two,
   );
 
   /// Fruit/Fruit Prod
   final productsIndustryCodeTwoZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoZero,
   );
 
   /// Fruit/Fruit Prod
   final productsIndustryCodeTwoOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoOne,
   );
 
   /// Fruit/Fruit Prod
   final productsIndustryCodeTwoTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoTwo,
   );
 
   /// Nuts/Edible Seed
   final productsIndustryCodeTwoThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoThree,
   );
 
   /// Vegetables/Vegetable Products
   final productsIndustryCodeTwoFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoFour,
   );
 
   /// Vegetables/Vegetable Products
   final productsIndustryCodeTwoFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoFive,
   );
 
   /// Vegetable Oils
   final productsIndustryCodeTwoSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoSix,
   );
 
   /// Dressing/Condiment
   final productsIndustryCodeTwoSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoSeven,
   );
 
   /// Spices, Flavors And Salts
   final productsIndustryCodeTwoEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoEight,
   );
 
   /// Soft Drink/Water
   final productsIndustryCodeTwoNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.twoNine,
   );
 
   /// Bakery Prod/Dough/Mix/Icing
   final productsIndustryCodeThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.three,
   );
 
   /// Beverage Bases/Conc/Nectar
   final productsIndustryCodeThreeZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeZero,
   );
 
   /// Coffee/Tea
   final productsIndustryCodeThreeOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeOne,
   );
 
   /// Alcoholic Beverage
   final productsIndustryCodeThreeTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeTwo,
   );
 
   /// Candy W/O Choc/Special/Chew Gum
   final productsIndustryCodeThreeThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeThree,
   );
 
   /// Choc/Cocoa Prod
   final productsIndustryCodeThreeFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeFour,
   );
 
   /// Gelatin/Rennet/Pudding Mix/Pie Filling
   final productsIndustryCodeThreeFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeFive,
   );
 
   /// Food Sweeteners (Nutritive)
   final productsIndustryCodeThreeSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeSix,
   );
 
   /// Mult Food Dinner/Grav/Sauce/Special
   final productsIndustryCodeThreeSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeSeven,
   );
 
   /// Soup
   final productsIndustryCodeThreeEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeEight,
   );
 
   /// Prep Salad Prod
   final productsIndustryCodeThreeNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.threeNine,
   );
 
   /// Macaroni/Noodle Prod
   final productsIndustryCodeFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.four,
   );
 
   /// Baby Food Prod
   final productsIndustryCodeFourZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourZero,
   );
 
   /// Dietary Conv Food/Meal Replacements
   final productsIndustryCodeFourOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourOne,
   );
 
   /// Edible Insects And Insect-derived Foods (Arthropods And Annelids)
   final productsIndustryCodeFourTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourTwo,
   );
 
   /// Food Additives (Human Use)
   final productsIndustryCodeFourFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourFive,
   );
 
   /// Food Additives (Human Use)
   final productsIndustryCodeFourSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourSix,
   );
 
   /// Multiple Food Warehouses
   final productsIndustryCodeFourSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fourSeven,
   );
 
   /// Cereal Prep/Breakfast Food
   final productsIndustryCodeFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.five,
   );
 
   /// Color Additiv Food/Drug/Cosmetic
   final productsIndustryCodeFiveZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveZero,
   );
 
   /// Food Service/Conveyance
   final productsIndustryCodeFiveOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveOne,
   );
 
   /// Miscellaneous Food Related Items
   final productsIndustryCodeFiveTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveTwo,
   );
 
   /// Cosmetics
   final productsIndustryCodeFiveThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveThree,
   );
 
   /// Vit/Min/Prot/Unconv Diet(Human/Animal)
   final productsIndustryCodeFiveFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveFour,
   );
 
   /// Pharm Necess & Ctnr For Drug/Bio
   final productsIndustryCodeFiveFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveFive,
   );
 
   /// Antibiotics (Human/Animal)
   final productsIndustryCodeFiveSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveSix,
   );
 
   /// Bio & Licensed In-Vivo & In-Vitro Diag
   final productsIndustryCodeFiveSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveSeven,
   );
 
   /// Multiple Drug Warehouses
   final productsIndustryCodeFiveNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.fiveNine,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixZero,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixOne,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixTwo,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixThree,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixFour,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixFive,
   );
 
   /// Human and Animal Drugs
   final productsIndustryCodeSixSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixSix,
   );
 
   /// Type A Medicated Articles
   final productsIndustryCodeSixSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixSeven,
   );
 
   /// Animal Devices and Diagnostic Products
   final productsIndustryCodeSixEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixEight,
   );
 
   /// Medicated Animal Feeds
   final productsIndustryCodeSixNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sixNine,
   );
 
   /// Snack Food Item
   final productsIndustryCodeSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.seven,
   );
 
   /// Animal Food(Non-Medicated Feed and Feed Ingreds)
   final productsIndustryCodeSevenZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenZero,
   );
 
   /// Byprodcts For Animal Foods
   final productsIndustryCodeSevenOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenOne,
   );
 
   /// Pet/Laboratory Animal Food
   final productsIndustryCodeSevenTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenTwo,
   );
 
   /// Anesthesiology
   final productsIndustryCodeSevenThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenThree,
   );
 
   /// Cardiovascular
   final productsIndustryCodeSevenFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenFour,
   );
 
   /// Chemistry
   final productsIndustryCodeSevenFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenFive,
   );
 
   /// Dental
   final productsIndustryCodeSevenSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenSix,
   );
 
   /// Ear, Nose And Throat
   final productsIndustryCodeSevenSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenSeven,
   );
 
   /// Gastroenterological & Urological
   final productsIndustryCodeSevenEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenEight,
   );
 
   /// General & Plastic Surgery
   final productsIndustryCodeSevenNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.sevenNine,
   );
 
   /// General Hospital/Personal Use
   final productsIndustryCodeEightZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightZero,
   );
 
   /// Hematology
   final productsIndustryCodeEightOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightOne,
   );
 
   /// Immunology
   final productsIndustryCodeEightTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightTwo,
   );
 
   /// Microbiology
   final productsIndustryCodeEightThree = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightThree,
   );
 
   /// Neurological
   final productsIndustryCodeEightFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightFour,
   );
 
   /// Obstetrical & Gynecological
   final productsIndustryCodeEightFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightFive,
   );
 
   /// Ophthalmic
   final productsIndustryCodeEightSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightSix,
   );
 
   /// Orthopedic
   final productsIndustryCodeEightSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightSeven,
   );
 
   /// Pathology
   final productsIndustryCodeEightEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightEight,
   );
 
   /// Physical Medicine
   final productsIndustryCodeEightNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.eightNine,
   );
 
   /// Milk/Butter/Dried Milk Prod
   final productsIndustryCodeNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nine,
   );
 
   /// Radiological
   final productsIndustryCodeNineZero = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineZero,
   );
 
   /// Toxicology
   final productsIndustryCodeNineOne = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineOne,
   );
 
   /// Molecular Genetics
   final productsIndustryCodeNineTwo = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineTwo,
   );
 
   /// Ionizing Non-Medical Devices and Components
   final productsIndustryCodeNineFour = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineFour,
   );
 
   /// Light Emitting Non-Device Products
   final productsIndustryCodeNineFive = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineFive,
   );
 
   /// Radio Frequency Emitting Products
   final productsIndustryCodeNineSix = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineSix,
   );
 
   /// Sound Emitting Products
   final productsIndustryCodeNineSeven = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineSeven,
   );
 
   /// Tobacco Products
   final productsIndustryCodeNineEight = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineEight,
   );
 
   /// Bio/Anim Drug/Feed&Food/Med Dev/Rh Whse
   final productsIndustryCodeNineNine = (
     'products.industry_code',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsIndustryCode.nineNine,
   );
 
@@ -748,30 +870,36 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// consumed or used at the same time when the adverse event started
   final productsRoleConcomitant = (
     'products.role',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.concomitant,
   );
   final productsRoleConcomitantExact = (
     'products.role.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.concomitant,
   );
 
   /// The suspected role of the product was not reported
   final productsRoleNotAvailable = (
     'products.role',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.notAvailable,
   );
   final productsRoleNotAvailableExact = (
     'products.role.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.notAvailable,
   );
 
   /// The product was suspected of causing the adverse event
   final productsRoleSuspect = (
     'products.role',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.suspect,
   );
   final productsRoleSuspectExact = (
     'products.role.exact',
+    PossibleValueType.oneOf,
     _FoodAdverseEventsProductsRole.suspect,
   );
 
@@ -779,6 +907,7 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   /// British English. For instance, *diarrhea* is recorded as `DIARRHOEA`
   final reactions = (
     'reactions',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'MedDRA',
       link: 'http://www.meddra.org/',
@@ -786,6 +915,7 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   );
   final reactionsExact = (
     'reactions.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'MedDRA',
       link: 'http://www.meddra.org/',
@@ -796,6 +926,7 @@ final class FoodAdverseEvents extends FoodAdverseEventsFields
   final reportNumber = 'report_number';
 }
 
+/// Encodes the unit in which the age of the consumer is expressed.
 enum _FoodAdverseEventsConsumerAgeUnit {
   /// age is expressed in days
   days._(
@@ -834,6 +965,7 @@ enum _FoodAdverseEventsConsumerAgeUnit {
   final String value;
 }
 
+/// The reported gender of the consumer.
 enum _FoodAdverseEventsConsumerGender {
   /// Female
   female._(
@@ -857,6 +989,7 @@ enum _FoodAdverseEventsConsumerGender {
   final String value;
 }
 
+/// The outcome or consequence of the adverse event.
 enum _FoodAdverseEventsOutcomes {
   /// The adverse event caused a birth defect in a baby
   cONGENITALANOMALY._(
@@ -932,6 +1065,9 @@ enum _FoodAdverseEventsOutcomes {
   final String value;
 }
 
+/// The FDA industry code for the product. Results in this endpoint are
+/// generally limited to products tagged with industry codes related to human
+/// food and nutritional supplements or cosmetics.
 enum _FoodAdverseEventsProductsIndustryCode {
   /// Cheese/Cheese Prod
   oneTwo._(
@@ -1375,6 +1511,7 @@ enum _FoodAdverseEventsProductsIndustryCode {
   final String value;
 }
 
+/// The reported role of the product in the adverse event report.
 enum _FoodAdverseEventsProductsRole {
   /// The product was not suspected of causing the adverse event, but was being
   /// consumed or used at the same time when the adverse event started

@@ -28,10 +28,12 @@ final class DeviceRecallEnforcementReports
   /// lifesaving drug, or a defective artificial heart valve.
   final classificationClassI = (
     'classification',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classI,
   );
   final classificationClassIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classI,
   );
 
@@ -40,10 +42,12 @@ final class DeviceRecallEnforcementReports
   /// but that is not used to treat life-threatening situations.
   final classificationClassII = (
     'classification',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classII,
   );
   final classificationClassIIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classII,
   );
 
@@ -52,10 +56,12 @@ final class DeviceRecallEnforcementReports
   /// container defect and lack of English labeling in a retail food.
   final classificationClassIII = (
     'classification',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classIII,
   );
   final classificationClassIIIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsClassification.classIII,
   );
 
@@ -138,30 +144,36 @@ final class DeviceRecallEnforcementReports
   /// The recalled product is a device product.
   final openfdaProductTypeDevices = (
     'openfda.product_type',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.devices,
   );
   final openfdaProductTypeDevicesExact = (
     'openfda.product_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.devices,
   );
 
   /// The recalled product is a drug product.
   final openfdaProductTypeDrugs = (
     'openfda.product_type',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.drugs,
   );
   final openfdaProductTypeDrugsExact = (
     'openfda.product_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.drugs,
   );
 
   /// The recalled product is a food product.
   final openfdaProductTypeFood = (
     'openfda.product_type',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.food,
   );
   final openfdaProductTypeFoodExact = (
     'openfda.product_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsOpenfdaProductType.food,
   );
 
@@ -234,20 +246,24 @@ final class DeviceRecallEnforcementReports
   /// expected to be recovered, or has completed all product corrections.
   final statusCompleted = (
     'status',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.completed,
   );
   final statusCompletedExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.completed,
   );
 
   /// A recall which is currently in progress.
   final statusOnGoing = (
     'status',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.onGoing,
   );
   final statusOnGoingExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.onGoing,
   );
 
@@ -255,10 +271,12 @@ final class DeviceRecallEnforcementReports
   /// process of being classified.
   final statusPending = (
     'status',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.pending,
   );
   final statusPendingExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.pending,
   );
 
@@ -267,10 +285,12 @@ final class DeviceRecallEnforcementReports
   /// proper disposition has been made according to the degree of hazard.
   final statusTerminated = (
     'status',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.terminated,
   );
   final statusTerminatedExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DeviceRecallEnforcementReportsStatus.terminated,
   );
 
@@ -288,6 +308,9 @@ final class DeviceRecallEnforcementReports
   final voluntaryMandatedExact = 'voluntary_mandated.exact';
 }
 
+/// Numerical designation (I, II, or III) that is assigned by FDA to a
+/// particular product recall that indicates the relative degree of health
+/// hazard.
 enum _DeviceRecallEnforcementReportsClassification {
   /// Dangerous or defective products that predictably could cause serious
   /// health problems or death. Examples include: food found to contain
@@ -318,6 +341,8 @@ enum _DeviceRecallEnforcementReportsClassification {
   final String value;
 }
 
+/// The type of product being recalled. For device queries, this will always
+/// be `Devices`.
 enum _DeviceRecallEnforcementReportsOpenfdaProductType {
   /// The recalled product is a device product.
   devices._(

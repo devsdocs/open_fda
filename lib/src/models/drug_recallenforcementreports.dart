@@ -28,10 +28,12 @@ final class DrugRecallEnforcementReports
   /// lifesaving drug, or a defective artificial heart valve.
   final classificationClassI = (
     'classification',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classI,
   );
   final classificationClassIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classI,
   );
 
@@ -40,10 +42,12 @@ final class DrugRecallEnforcementReports
   /// but that is not used to treat life-threatening situations.
   final classificationClassII = (
     'classification',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classII,
   );
   final classificationClassIIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classII,
   );
 
@@ -52,10 +56,12 @@ final class DrugRecallEnforcementReports
   /// container defect and lack of English labeling in a retail food.
   final classificationClassIII = (
     'classification',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classIII,
   );
   final classificationClassIIIExact = (
     'classification.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsClassification.classIII,
   );
 
@@ -119,6 +125,7 @@ final class DrugRecallEnforcementReports
   /// Reference Terminology (NDF-RT).
   final openfdaNui = (
     'openfda.nui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -127,6 +134,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaNuiExact = (
     'openfda.nui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -184,6 +192,7 @@ final class DrugRecallEnforcementReports
 
   final openfdaProductType = (
     'openfda.product_type',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -192,6 +201,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaProductTypeExact = (
     'openfda.product_type.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -202,6 +212,7 @@ final class DrugRecallEnforcementReports
   /// The route of administation of the drug product.
   final openfdaRoute = (
     'openfda.route',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -210,6 +221,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaRouteExact = (
     'openfda.route.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -222,6 +234,7 @@ final class DrugRecallEnforcementReports
   /// ingredients, strength, and dose forms.
   final openfdaRxcui = (
     'openfda.rxcui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -230,6 +243,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaRxcuiExact = (
     'openfda.rxcui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -256,6 +270,7 @@ final class DrugRecallEnforcementReports
   /// molecular structure and/or descriptive information.
   final openfdaUnii = (
     'openfda.unii',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -263,6 +278,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaUniiExact = (
     'openfda.unii.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -272,6 +288,7 @@ final class DrugRecallEnforcementReports
   /// Universal Product Code
   final openfdaUpc = (
     'openfda.upc',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',
@@ -279,6 +296,7 @@ final class DrugRecallEnforcementReports
   );
   final openfdaUpcExact = (
     'openfda.upc.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',
@@ -298,30 +316,36 @@ final class DrugRecallEnforcementReports
   /// The recalled product is a device product.
   final productTypeDevices = (
     'product_type',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.devices,
   );
   final productTypeDevicesExact = (
     'product_type.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.devices,
   );
 
   /// The recalled product is a drug product.
   final productTypeDrugs = (
     'product_type',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.drugs,
   );
   final productTypeDrugsExact = (
     'product_type.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.drugs,
   );
 
   /// The recalled product is a food product.
   final productTypeFood = (
     'product_type',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.food,
   );
   final productTypeFoodExact = (
     'product_type.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsProductType.food,
   );
 
@@ -356,20 +380,24 @@ final class DrugRecallEnforcementReports
   /// expected to be recovered, or has completed all product corrections.
   final statusCompleted = (
     'status',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.completed,
   );
   final statusCompletedExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.completed,
   );
 
   /// A recall which is currently in progress.
   final statusOnGoing = (
     'status',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.onGoing,
   );
   final statusOnGoingExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.onGoing,
   );
 
@@ -377,10 +405,12 @@ final class DrugRecallEnforcementReports
   /// process of being classified.
   final statusPending = (
     'status',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.pending,
   );
   final statusPendingExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.pending,
   );
 
@@ -389,10 +419,12 @@ final class DrugRecallEnforcementReports
   /// proper disposition has been made according to the degree of hazard.
   final statusTerminated = (
     'status',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.terminated,
   );
   final statusTerminatedExact = (
     'status.exact',
+    PossibleValueType.oneOf,
     _DrugRecallEnforcementReportsStatus.terminated,
   );
 
@@ -410,6 +442,9 @@ final class DrugRecallEnforcementReports
   final voluntaryMandatedExact = 'voluntary_mandated.exact';
 }
 
+/// Numerical designation (I, II, or III) that is assigned by FDA to a
+/// particular product recall that indicates the relative degree of health
+/// hazard.
 enum _DrugRecallEnforcementReportsClassification {
   /// Dangerous or defective products that predictably could cause serious
   /// health problems or death. Examples include: food found to contain
@@ -440,6 +475,8 @@ enum _DrugRecallEnforcementReportsClassification {
   final String value;
 }
 
+/// The type of product being recalled. For drug queries, this will always be
+/// `Drugs`.
 enum _DrugRecallEnforcementReportsProductType {
   /// The recalled product is a device product.
   devices._(

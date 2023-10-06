@@ -31,11 +31,13 @@ final class DeviceUniqueDeviceIdentifier
   /// In Commercial Distribution
   final commercialDistributionStatusInCommercialDistribution = (
     'commercial_distribution_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierCommercialDistributionStatus
         .inCommercialDistribution,
   );
   final commercialDistributionStatusInCommercialDistributionExact = (
     'commercial_distribution_status.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierCommercialDistributionStatus
         .inCommercialDistribution,
   );
@@ -43,11 +45,13 @@ final class DeviceUniqueDeviceIdentifier
   /// Not in Commercial Distribution
   final commercialDistributionStatusNotInCommercialDistribution = (
     'commercial_distribution_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierCommercialDistributionStatus
         .notInCommercialDistribution,
   );
   final commercialDistributionStatusNotInCommercialDistributionExact = (
     'commercial_distribution_status.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierCommercialDistributionStatus
         .notInCommercialDistribution,
   );
@@ -85,150 +89,180 @@ final class DeviceUniqueDeviceIdentifier
   /// Angle
   final deviceSizesTypeAngle = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.angle,
   );
   final deviceSizesTypeAngleExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.angle,
   );
 
   /// Area/Surface Area
   final deviceSizesTypeAreaSurfaceArea = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.areaSurfaceArea,
   );
   final deviceSizesTypeAreaSurfaceAreaExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.areaSurfaceArea,
   );
 
   /// Catheter Gauge
   final deviceSizesTypeCatheterGauge = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.catheterGauge,
   );
   final deviceSizesTypeCatheterGaugeExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.catheterGauge,
   );
 
   /// Circumference
   final deviceSizesTypeCircumference = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.circumference,
   );
   final deviceSizesTypeCircumferenceExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.circumference,
   );
 
   /// Depth; Device Size Text, specify;
   final deviceSizesTypeDepthDeviceSizeTextSpecify = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.depthDeviceSizeTextSpecify,
   );
   final deviceSizesTypeDepthDeviceSizeTextSpecifyExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.depthDeviceSizeTextSpecify,
   );
 
   /// Height
   final deviceSizesTypeHeight = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.height,
   );
   final deviceSizesTypeHeightExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.height,
   );
 
   /// Length
   final deviceSizesTypeLength = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.length,
   );
   final deviceSizesTypeLengthExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.length,
   );
 
   /// Lumen/Inner Diameter
   final deviceSizesTypeLumenInnerDiameter = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.lumenInnerDiameter,
   );
   final deviceSizesTypeLumenInnerDiameterExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.lumenInnerDiameter,
   );
 
   /// Needle Gauge
   final deviceSizesTypeNeedleGauge = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.needleGauge,
   );
   final deviceSizesTypeNeedleGaugeExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.needleGauge,
   );
 
   /// Outer Diameter
   final deviceSizesTypeOuterDiameter = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.outerDiameter,
   );
   final deviceSizesTypeOuterDiameterExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.outerDiameter,
   );
 
   /// Pore Size
   final deviceSizesTypePoreSize = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.poreSize,
   );
   final deviceSizesTypePoreSizeExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.poreSize,
   );
 
   /// Pressure
   final deviceSizesTypePressure = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.pressure,
   );
   final deviceSizesTypePressureExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.pressure,
   );
 
   /// Total Volume
   final deviceSizesTypeTotalVolume = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.totalVolume,
   );
   final deviceSizesTypeTotalVolumeExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.totalVolume,
   );
 
   /// Weight
   final deviceSizesTypeWeight = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.weight,
   );
   final deviceSizesTypeWeightExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.weight,
   );
 
   /// Width
   final deviceSizesTypeWidth = (
     'device_sizes.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.width,
   );
   final deviceSizesTypeWidthExact = (
     'device_sizes.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesType.width,
   );
 
@@ -236,264 +270,308 @@ final class DeviceUniqueDeviceIdentifier
   /// Centiliter
   final deviceSizesUnitCentiliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.centiliter,
   );
 
   /// Centimeter
   final deviceSizesUnitCentimeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.centimeter,
   );
 
   /// Cubic Inch
   final deviceSizesUnitCubicInch = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.cubicInch,
   );
 
   /// Cup
   final deviceSizesUnitCup = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.cup,
   );
 
   /// Deciliter
   final deviceSizesUnitDeciliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.deciliter,
   );
 
   /// Decimeter
   final deviceSizesUnitDecimeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.decimeter,
   );
 
   /// Feet
   final deviceSizesUnitFeet = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.feet,
   );
 
   /// Femtoliter
   final deviceSizesUnitFemtoliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.femtoliter,
   );
 
   /// Femtometer
   final deviceSizesUnitFemtometer = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.femtometer,
   );
 
   /// Fluid Ounce
   final deviceSizesUnitFluidOunce = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.fluidOunce,
   );
 
   /// French
   final deviceSizesUnitFrench = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.french,
   );
 
   /// Gallon
   final deviceSizesUnitGallon = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.gallon,
   );
 
   /// Gauge
   final deviceSizesUnitGauge = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.gauge,
   );
 
   /// Gram
   final deviceSizesUnitGram = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.gram,
   );
 
   /// Hertz
   final deviceSizesUnitHertz = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.hertz,
   );
 
   /// Inch
   final deviceSizesUnitInch = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.inch,
   );
 
   /// KiloPascal
   final deviceSizesUnitKiloPascal = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.kiloPascal,
   );
 
   /// Kilogram
   final deviceSizesUnitKilogram = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.kilogram,
   );
 
   /// Kiloliter
   final deviceSizesUnitKiloliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.kiloliter,
   );
 
   /// Kilometer
   final deviceSizesUnitKilometer = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.kilometer,
   );
 
   /// Liter
   final deviceSizesUnitLiter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.liter,
   );
 
   /// Meter
   final deviceSizesUnitMeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.meter,
   );
 
   /// Microgram
   final deviceSizesUnitMicrogram = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.microgram,
   );
 
   /// Microliter
   final deviceSizesUnitMicroliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.microliter,
   );
 
   /// Micrometer
   final deviceSizesUnitMicrometer = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.micrometer,
   );
 
   /// Milligram
   final deviceSizesUnitMilligram = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.milligram,
   );
 
   /// Milliliter
   final deviceSizesUnitMilliliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.milliliter,
   );
 
   /// Millimeter
   final deviceSizesUnitMillimeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.millimeter,
   );
 
   /// Nanoliter
   final deviceSizesUnitNanoliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.nanoliter,
   );
 
   /// Nanometer
   final deviceSizesUnitNanometer = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.nanometer,
   );
 
   /// Picoliter
   final deviceSizesUnitPicoliter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.picoliter,
   );
 
   /// Picometer
   final deviceSizesUnitPicometer = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.picometer,
   );
 
   /// Pint
   final deviceSizesUnitPint = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.pint,
   );
 
   /// Pound
   final deviceSizesUnitPound = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.pound,
   );
 
   /// Pound per Square Inch
   final deviceSizesUnitPoundPerSquareInch = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.poundPerSquareInch,
   );
 
   /// Quart
   final deviceSizesUnitQuart = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.quart,
   );
 
   /// Square centimeter
   final deviceSizesUnitSquareCentimeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.squareCentimeter,
   );
 
   /// Square foot
   final deviceSizesUnitSquareFoot = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.squareFoot,
   );
 
   /// Square inch
   final deviceSizesUnitSquareInch = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.squareInch,
   );
 
   /// Square meter
   final deviceSizesUnitSquareMeter = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.squareMeter,
   );
 
   /// Ton
   final deviceSizesUnitTon = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.ton,
   );
 
   /// Yard
   final deviceSizesUnitYard = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.yard,
   );
 
   /// degree
   final deviceSizesUnitDegree = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.degree,
   );
 
   /// millibar
   final deviceSizesUnitMillibar = (
     'device_sizes.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierDeviceSizesUnit.millibar,
   );
 
@@ -511,12 +589,14 @@ final class DeviceUniqueDeviceIdentifier
   /// Active
   final gmdnTermsCodeStatusActive = (
     'gmdn_terms.code_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierGmdnTermsCodeStatus.active,
   );
 
   /// Obsolete
   final gmdnTermsCodeStatusObsolete = (
     'gmdn_terms.code_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierGmdnTermsCodeStatus.obsolete,
   );
 
@@ -528,12 +608,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final gmdnTermsImplantableFalse = (
     'gmdn_terms.implantable',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final gmdnTermsImplantableTrue = (
     'gmdn_terms.implantable',
+    PossibleValueType.bool,
     true,
   );
 
@@ -551,12 +633,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final hasDonationIdNumberFalse = (
     'has_donation_id_number',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final hasDonationIdNumberTrue = (
     'has_donation_id_number',
+    PossibleValueType.bool,
     true,
   );
 
@@ -568,12 +652,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final hasExpirationDateFalse = (
     'has_expiration_date',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final hasExpirationDateTrue = (
     'has_expiration_date',
+    PossibleValueType.bool,
     true,
   );
 
@@ -588,12 +674,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final hasLotOrBatchNumberFalse = (
     'has_lot_or_batch_number',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final hasLotOrBatchNumberTrue = (
     'has_lot_or_batch_number',
+    PossibleValueType.bool,
     true,
   );
 
@@ -605,12 +693,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final hasManufacturingDateFalse = (
     'has_manufacturing_date',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final hasManufacturingDateTrue = (
     'has_manufacturing_date',
+    PossibleValueType.bool,
     true,
   );
 
@@ -623,12 +713,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final hasSerialNumberFalse = (
     'has_serial_number',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final hasSerialNumberTrue = (
     'has_serial_number',
+    PossibleValueType.bool,
     true,
   );
 
@@ -642,40 +734,48 @@ final class DeviceUniqueDeviceIdentifier
   /// GS1
   final identifiersIssuingAgencyGSone = (
     'identifiers.issuing_agency',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gSone,
   );
   final identifiersIssuingAgencyGSoneExact = (
     'identifiers.issuing_agency.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gSone,
   );
 
   /// HIBCC
   final identifiersIssuingAgencyHIBCC = (
     'identifiers.issuing_agency',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.hIBCC,
   );
   final identifiersIssuingAgencyHIBCCExact = (
     'identifiers.issuing_agency.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.hIBCC,
   );
 
   /// ICCBBA
   final identifiersIssuingAgencyICCBBA = (
     'identifiers.issuing_agency',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.iCCBBA,
   );
   final identifiersIssuingAgencyICCBBAExact = (
     'identifiers.issuing_agency.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.iCCBBA,
   );
 
   /// NDC/NHRIC
   final identifiersIssuingAgencyNDCNHRIC = (
     'identifiers.issuing_agency',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.nDCNHRIC,
   );
   final identifiersIssuingAgencyNDCNHRICExact = (
     'identifiers.issuing_agency.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.nDCNHRIC,
   );
 
@@ -689,11 +789,13 @@ final class DeviceUniqueDeviceIdentifier
   /// In Commercial Distribution
   final identifiersPackageStatusInCommercialDistribution = (
     'identifiers.package_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus
         .inCommercialDistribution,
   );
   final identifiersPackageStatusInCommercialDistributionExact = (
     'identifiers.package_status.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus
         .inCommercialDistribution,
   );
@@ -701,11 +803,13 @@ final class DeviceUniqueDeviceIdentifier
   /// Not in Commercial Distribution
   final identifiersPackageStatusNotInCommercialDistribution = (
     'identifiers.package_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus
         .notInCommercialDistribution,
   );
   final identifiersPackageStatusNotInCommercialDistributionExact = (
     'identifiers.package_status.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus
         .notInCommercialDistribution,
   );
@@ -724,6 +828,7 @@ final class DeviceUniqueDeviceIdentifier
   /// devices subject to Direct Marking requirements under 21 CFR 801.45.
   final identifiersTypeDirectMarking = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.directMarking,
   );
 
@@ -732,12 +837,14 @@ final class DeviceUniqueDeviceIdentifier
   /// containers).
   final identifiersTypePackage = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.package,
   );
 
   /// Previous DI
   final identifiersTypePreviousDI = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.previousDI,
   );
 
@@ -749,6 +856,7 @@ final class DeviceUniqueDeviceIdentifier
   /// DI number and full UDI may be on the device itself.
   final identifiersTypePrimary = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.primary,
   );
 
@@ -759,6 +867,7 @@ final class DeviceUniqueDeviceIdentifier
   /// particular version or model of a device.
   final identifiersTypeSecondary = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.secondary,
   );
 
@@ -768,6 +877,7 @@ final class DeviceUniqueDeviceIdentifier
   /// patient.
   final identifiersTypeUnitOfUse = (
     'identifiers.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierIdentifiersType.unitOfUse,
   );
 
@@ -789,12 +899,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isCombinationProductFalse = (
     'is_combination_product',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isCombinationProductTrue = (
     'is_combination_product',
+    PossibleValueType.bool,
     true,
   );
 
@@ -802,12 +914,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isDirectMarkingExemptFalse = (
     'is_direct_marking_exempt',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isDirectMarkingExemptTrue = (
     'is_direct_marking_exempt',
+    PossibleValueType.bool,
     true,
   );
 
@@ -817,12 +931,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isHctPFalse = (
     'is_hct_p',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isHctPTrue = (
     'is_hct_p',
+    PossibleValueType.bool,
     true,
   );
 
@@ -833,12 +949,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isKitFalse = (
     'is_kit',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isKitTrue = (
     'is_kit',
+    PossibleValueType.bool,
     true,
   );
 
@@ -850,12 +968,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isLabeledAsNoNrlFalse = (
     'is_labeled_as_no_nrl',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isLabeledAsNoNrlTrue = (
     'is_labeled_as_no_nrl',
+    PossibleValueType.bool,
     true,
   );
 
@@ -870,12 +990,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isLabeledAsNrlFalse = (
     'is_labeled_as_nrl',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isLabeledAsNrlTrue = (
     'is_labeled_as_nrl',
+    PossibleValueType.bool,
     true,
   );
 
@@ -884,12 +1006,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isOtcFalse = (
     'is_otc',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isOtcTrue = (
     'is_otc',
+    PossibleValueType.bool,
     true,
   );
 
@@ -898,12 +1022,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isPmExemptFalse = (
     'is_pm_exempt',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isPmExemptTrue = (
     'is_pm_exempt',
+    PossibleValueType.bool,
     true,
   );
 
@@ -911,12 +1037,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isRxFalse = (
     'is_rx',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isRxTrue = (
     'is_rx',
+    PossibleValueType.bool,
     true,
   );
 
@@ -925,12 +1053,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final isSingleUseFalse = (
     'is_single_use',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final isSingleUseTrue = (
     'is_single_use',
+    PossibleValueType.bool,
     true,
   );
 
@@ -947,11 +1077,13 @@ final class DeviceUniqueDeviceIdentifier
   /// Labeling does not contain MRI Safety Information
   final mriSafetyLabelingDoesNotContainMRISafetyInformation = (
     'mri_safety',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety
         .labelingDoesNotContainMRISafetyInformation,
   );
   final mriSafetyLabelingDoesNotContainMRISafetyInformationExact = (
     'mri_safety.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety
         .labelingDoesNotContainMRISafetyInformation,
   );
@@ -959,30 +1091,36 @@ final class DeviceUniqueDeviceIdentifier
   /// MR Conditional
   final mriSafetyMRConditional = (
     'mri_safety',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRConditional,
   );
   final mriSafetyMRConditionalExact = (
     'mri_safety.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRConditional,
   );
 
   /// MR Safe
   final mriSafetyMRSafe = (
     'mri_safety',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRSafe,
   );
   final mriSafetyMRSafeExact = (
     'mri_safety.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRSafe,
   );
 
   /// MR Unsafe
   final mriSafetyMRUnsafe = (
     'mri_safety',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRUnsafe,
   );
   final mriSafetyMRUnsafeExact = (
     'mri_safety.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierMriSafety.mRUnsafe,
   );
 
@@ -998,6 +1136,7 @@ final class DeviceUniqueDeviceIdentifier
   /// 510(k)
   final premarketSubmissionsSubmissionTypeFiveonezerok = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType
         .fiveonezerok,
   );
@@ -1005,30 +1144,35 @@ final class DeviceUniqueDeviceIdentifier
   /// BLA
   final premarketSubmissionsSubmissionTypeBLA = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.bLA,
   );
 
   /// HDE
   final premarketSubmissionsSubmissionTypeHDE = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.hDE,
   );
 
   /// NDA
   final premarketSubmissionsSubmissionTypeNDA = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.nDA,
   );
 
   /// PDP
   final premarketSubmissionsSubmissionTypePDP = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.pDP,
   );
 
   /// PMA
   final premarketSubmissionsSubmissionTypePMA = (
     'premarket_submissions.submission_type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.pMA,
   );
 
@@ -1053,36 +1197,42 @@ final class DeviceUniqueDeviceIdentifier
   /// Class I (low to moderate risk): general controls
   final productCodesOpenfdaDeviceClassOne = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final productCodesOpenfdaDeviceClassTwo = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final productCodesOpenfdaDeviceClassThree = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final productCodesOpenfdaDeviceClassF = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final productCodesOpenfdaDeviceClassN = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final productCodesOpenfdaDeviceClassU = (
     'product_codes.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass.u,
   );
 
@@ -1136,18 +1286,21 @@ final class DeviceUniqueDeviceIdentifier
   /// Deactivated
   final recordStatusDeactivated = (
     'record_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierRecordStatus.deactivated,
   );
 
   /// Published
   final recordStatusPublished = (
     'record_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierRecordStatus.published,
   );
 
   /// Unpublished
   final recordStatusUnpublished = (
     'record_status',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierRecordStatus.unpublished,
   );
 
@@ -1158,12 +1311,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final sterilizationIsSterileFalse = (
     'sterilization.is_sterile',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final sterilizationIsSterileTrue = (
     'sterilization.is_sterile',
+    PossibleValueType.bool,
     true,
   );
 
@@ -1171,12 +1326,14 @@ final class DeviceUniqueDeviceIdentifier
   /// false
   final sterilizationIsSterilizationPriorUseFalse = (
     'sterilization.is_sterilization_prior_use',
+    PossibleValueType.bool,
     false,
   );
 
   /// true
   final sterilizationIsSterilizationPriorUseTrue = (
     'sterilization.is_sterilization_prior_use',
+    PossibleValueType.bool,
     true,
   );
 
@@ -1184,6 +1341,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Chlorine Dioxide
   final sterilizationSterilizationMethodsChlorineDioxide = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .chlorineDioxide,
   );
@@ -1191,6 +1349,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Dry Heat Sterilization
   final sterilizationSterilizationMethodsDryHeatSterilization = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .dryHeatSterilization,
   );
@@ -1198,6 +1357,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Ethylene Oxide
   final sterilizationSterilizationMethodsEthyleneOxide = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .ethyleneOxide,
   );
@@ -1205,6 +1365,7 @@ final class DeviceUniqueDeviceIdentifier
   /// High Intensity Light or Pulse Light
   final sterilizationSterilizationMethodsHighIntensityLightOrPulseLight = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .highIntensityLightOrPulseLight,
   );
@@ -1212,6 +1373,7 @@ final class DeviceUniqueDeviceIdentifier
   /// High-level Disinfectant
   final sterilizationSterilizationMethodsHighlevelDisinfectant = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .highlevelDisinfectant,
   );
@@ -1219,6 +1381,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Hydrogen Peroxide
   final sterilizationSterilizationMethodsHydrogenPeroxide = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .hydrogenPeroxide,
   );
@@ -1226,6 +1389,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Liquid Chemical
   final sterilizationSterilizationMethodsLiquidChemical = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .liquidChemical,
   );
@@ -1233,6 +1397,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Microwave Radiation
   final sterilizationSterilizationMethodsMicrowaveRadiation = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .microwaveRadiation,
   );
@@ -1240,6 +1405,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Moist Heat or Steam Sterilization
   final sterilizationSterilizationMethodsMoistHeatOrSteamSterilization = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .moistHeatOrSteamSterilization,
   );
@@ -1247,6 +1413,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Nitrogen Dioxide
   final sterilizationSterilizationMethodsNitrogenDioxide = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .nitrogenDioxide,
   );
@@ -1254,12 +1421,14 @@ final class DeviceUniqueDeviceIdentifier
   /// Ozone
   final sterilizationSterilizationMethodsOzone = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods.ozone,
   );
 
   /// Peracetic Acid
   final sterilizationSterilizationMethodsPeraceticAcid = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .peraceticAcid,
   );
@@ -1267,6 +1436,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Radiation Sterilization
   final sterilizationSterilizationMethodsRadiationSterilization = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .radiationSterilization,
   );
@@ -1274,12 +1444,14 @@ final class DeviceUniqueDeviceIdentifier
   /// Sound Waves
   final sterilizationSterilizationMethodsSoundWaves = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods.soundWaves,
   );
 
   /// Supercritical Carbon Dioxide
   final sterilizationSterilizationMethodsSupercriticalCarbonDioxide = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .supercriticalCarbonDioxide,
   );
@@ -1287,6 +1459,7 @@ final class DeviceUniqueDeviceIdentifier
   /// Ultraviolet Light
   final sterilizationSterilizationMethodsUltravioletLight = (
     'sterilization.sterilization_methods',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods
         .ultravioletLight,
   );
@@ -1300,30 +1473,35 @@ final class DeviceUniqueDeviceIdentifier
   /// Degrees Celsius
   final storageHighUnitDegreesCelsius = (
     'storage.high.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageHighUnit.degreesCelsius,
   );
 
   /// Degrees Fahrenheit
   final storageHighUnitDegreesFahrenheit = (
     'storage.high.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageHighUnit.degreesFahrenheit,
   );
 
   /// Degrees Kelvin
   final storageHighUnitDegreesKelvin = (
     'storage.high.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageHighUnit.degreesKelvin,
   );
 
   /// Kilo Pascal
   final storageHighUnitKiloPascal = (
     'storage.high.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageHighUnit.kiloPascal,
   );
 
   /// Percent (%) Relative Humidity,Millibar
   final storageHighUnitPercentRelativeHumidityMillibar = (
     'storage.high.unit',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageHighUnit
         .percentRelativeHumidityMillibar,
   );
@@ -1341,30 +1519,35 @@ final class DeviceUniqueDeviceIdentifier
   /// Degrees Celsius
   final storageLowValueDegreesCelsius = (
     'storage.low.value',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageLowValue.degreesCelsius,
   );
 
   /// Degrees Fahrenheit
   final storageLowValueDegreesFahrenheit = (
     'storage.low.value',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageLowValue.degreesFahrenheit,
   );
 
   /// Degrees Kelvin
   final storageLowValueDegreesKelvin = (
     'storage.low.value',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageLowValue.degreesKelvin,
   );
 
   /// Kilo Pascal
   final storageLowValueKiloPascal = (
     'storage.low.value',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageLowValue.kiloPascal,
   );
 
   /// Percent (%) Relative Humidity,Millibar
   final storageLowValuePercentRelativeHumidityMillibar = (
     'storage.low.value',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageLowValue
         .percentRelativeHumidityMillibar,
   );
@@ -1378,11 +1561,13 @@ final class DeviceUniqueDeviceIdentifier
   /// Handling Environment Atmospheric Pressure
   final storageTypeHandlingEnvironmentAtmosphericPressure = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType
         .handlingEnvironmentAtmosphericPressure,
   );
   final storageTypeHandlingEnvironmentAtmosphericPressureExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType
         .handlingEnvironmentAtmosphericPressure,
   );
@@ -1390,41 +1575,49 @@ final class DeviceUniqueDeviceIdentifier
   /// Handling Environment Humidity
   final storageTypeHandlingEnvironmentHumidity = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.handlingEnvironmentHumidity,
   );
   final storageTypeHandlingEnvironmentHumidityExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.handlingEnvironmentHumidity,
   );
 
   /// Handling Environment Temperature
   final storageTypeHandlingEnvironmentTemperature = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.handlingEnvironmentTemperature,
   );
   final storageTypeHandlingEnvironmentTemperatureExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.handlingEnvironmentTemperature,
   );
 
   /// Special Storage Conditions
   final storageTypeSpecialStorageConditions = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.specialStorageConditions,
   );
   final storageTypeSpecialStorageConditionsExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.specialStorageConditions,
   );
 
   /// Storage Environment Atmospheric Pressure
   final storageTypeStorageEnvironmentAtmosphericPressure = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType
         .storageEnvironmentAtmosphericPressure,
   );
   final storageTypeStorageEnvironmentAtmosphericPressureExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType
         .storageEnvironmentAtmosphericPressure,
   );
@@ -1432,20 +1625,24 @@ final class DeviceUniqueDeviceIdentifier
   /// Storage Environment Humidity
   final storageTypeStorageEnvironmentHumidity = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.storageEnvironmentHumidity,
   );
   final storageTypeStorageEnvironmentHumidityExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.storageEnvironmentHumidity,
   );
 
   /// Storage Environment Temperature
   final storageTypeStorageEnvironmentTemperature = (
     'storage.type',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.storageEnvironmentTemperature,
   );
   final storageTypeStorageEnvironmentTemperatureExact = (
     'storage.type.exact',
+    PossibleValueType.oneOf,
     _DeviceUniqueDeviceIdentifierStorageType.storageEnvironmentTemperature,
   );
 
@@ -1457,6 +1654,8 @@ final class DeviceUniqueDeviceIdentifier
   final versionOrModelNumberExact = 'version_or_model_number.exact';
 }
 
+/// Indicates whether the device is in commercial distribution as defined
+/// under 21 CFR 807.3(b).
 enum _DeviceUniqueDeviceIdentifierCommercialDistributionStatus {
   /// In Commercial Distribution
   inCommercialDistribution._(
@@ -1475,6 +1674,8 @@ enum _DeviceUniqueDeviceIdentifierCommercialDistributionStatus {
   final String value;
 }
 
+/// Dimension type for the clinically relevant measurement of the medical
+/// device.
 enum _DeviceUniqueDeviceIdentifierDeviceSizesType {
   /// Angle
   angle._(
@@ -1558,6 +1759,7 @@ enum _DeviceUniqueDeviceIdentifierDeviceSizesType {
   final String value;
 }
 
+/// The unit of measure associated with each clinically relevant size.
 enum _DeviceUniqueDeviceIdentifierDeviceSizesUnit {
   /// Centiliter
   centiliter._(
@@ -1786,6 +1988,7 @@ enum _DeviceUniqueDeviceIdentifierDeviceSizesUnit {
   final String value;
 }
 
+/// GMDN Term Status, Active or Obsolete.
 enum _DeviceUniqueDeviceIdentifierGmdnTermsCodeStatus {
   /// Active
   active._(
@@ -1804,6 +2007,7 @@ enum _DeviceUniqueDeviceIdentifierGmdnTermsCodeStatus {
   final String value;
 }
 
+/// Organization accredited by FDA to operate a system for the issuance of UDIs
 enum _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency {
   /// GS1
   gSone._(
@@ -1832,6 +2036,8 @@ enum _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency {
   final String value;
 }
 
+/// Indicates whether the package is in commercial distribution as defined
+/// under 21 CFR 807.3(b).
 enum _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus {
   /// In Commercial Distribution
   inCommercialDistribution._(
@@ -1850,6 +2056,8 @@ enum _DeviceUniqueDeviceIdentifierIdentifiersPackageStatus {
   final String value;
 }
 
+/// Indicates whether the identifier is the Primary, Secondary, Direct
+/// Marking, Unit of Use, Package, or Previous DI
 enum _DeviceUniqueDeviceIdentifierIdentifiersType {
   /// Direct Marking DI. An identifier that is marked directly on the medical
   /// device and is different than the Primary DI Number; only applicable to
@@ -1904,6 +2112,9 @@ enum _DeviceUniqueDeviceIdentifierIdentifiersType {
   final String value;
 }
 
+/// Indicates the MRI Safety Information, if any, that is present in the
+/// device labeling. Please see the ASTM F2503-13 standard for more
+/// information.
 enum _DeviceUniqueDeviceIdentifierMriSafety {
   /// Labeling does not contain MRI Safety Information
   labelingDoesNotContainMRISafetyInformation._(
@@ -1932,6 +2143,7 @@ enum _DeviceUniqueDeviceIdentifierMriSafety {
   final String value;
 }
 
+/// Indicates the premarket submission type.
 enum _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType {
   /// 510(k)
   fiveonezerok._(
@@ -1970,6 +2182,8 @@ enum _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType {
   final String value;
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513).
 enum _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -2008,6 +2222,7 @@ enum _DeviceUniqueDeviceIdentifierProductCodesOpenfdaDeviceClass {
   final String value;
 }
 
+/// Indicates the status of the DI Record.
 enum _DeviceUniqueDeviceIdentifierRecordStatus {
   /// Deactivated
   deactivated._(
@@ -2031,6 +2246,7 @@ enum _DeviceUniqueDeviceIdentifierRecordStatus {
   final String value;
 }
 
+/// Indicates the method(s) of sterilization that can be used for this device.
 enum _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods {
   /// Chlorine Dioxide
   chlorineDioxide._(
@@ -2119,6 +2335,8 @@ enum _DeviceUniqueDeviceIdentifierSterilizationSterilizationMethods {
   final String value;
 }
 
+/// The high value unit of measure associated with the storage and handling
+/// conditions.
 enum _DeviceUniqueDeviceIdentifierStorageHighUnit {
   /// Degrees Celsius
   degreesCelsius._(
@@ -2152,6 +2370,7 @@ enum _DeviceUniqueDeviceIdentifierStorageHighUnit {
   final String value;
 }
 
+/// Indicates the low value for storage and handling requirements.
 enum _DeviceUniqueDeviceIdentifierStorageLowValue {
   /// Degrees Celsius
   degreesCelsius._(
@@ -2185,6 +2404,8 @@ enum _DeviceUniqueDeviceIdentifierStorageLowValue {
   final String value;
 }
 
+/// Indicates storage and handling requirements for the device including
+/// temperature, humidity, and atmospheric pressure.
 enum _DeviceUniqueDeviceIdentifierStorageType {
   /// Handling Environment Atmospheric Pressure
   handlingEnvironmentAtmosphericPressure._(

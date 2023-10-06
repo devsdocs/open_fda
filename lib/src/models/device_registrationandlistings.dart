@@ -12,12 +12,14 @@ final class DeviceRegistrationAndListings
   final establishmentTypeComplaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight =
       (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight,
   );
   final establishmentTypeComplaintFileEstablishmentPerTwooneCFREighttwozeroonenineeightExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight,
   );
@@ -26,12 +28,14 @@ final class DeviceRegistrationAndListings
   final establishmentTypeDevelopSpecificationsButDoNotManufactureAtThisFacility =
       (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .developSpecificationsButDoNotManufactureAtThisFacility,
   );
   final establishmentTypeDevelopSpecificationsButDoNotManufactureAtThisFacilityExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .developSpecificationsButDoNotManufactureAtThisFacility,
   );
@@ -40,12 +44,14 @@ final class DeviceRegistrationAndListings
   final establishmentTypeExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice =
       (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .exportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice,
   );
   final establishmentTypeExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDeviceExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .exportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice,
   );
@@ -53,11 +59,13 @@ final class DeviceRegistrationAndListings
   /// Foreign Private Label Distributor
   final establishmentTypeForeignPrivateLabelDistributor = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .foreignPrivateLabelDistributor,
   );
   final establishmentTypeForeignPrivateLabelDistributorExact = (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .foreignPrivateLabelDistributor,
   );
@@ -65,12 +73,14 @@ final class DeviceRegistrationAndListings
   /// Manufacture Device in the United States for Export Only
   final establishmentTypeManufactureDeviceInTheUnitedStatesForExportOnly = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .manufactureDeviceInTheUnitedStatesForExportOnly,
   );
   final establishmentTypeManufactureDeviceInTheUnitedStatesForExportOnlyExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .manufactureDeviceInTheUnitedStatesForExportOnly,
   );
@@ -78,10 +88,12 @@ final class DeviceRegistrationAndListings
   /// Manufacture Medical Device
   final establishmentTypeManufactureMedicalDevice = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.manufactureMedicalDevice,
   );
   final establishmentTypeManufactureMedicalDeviceExact = (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.manufactureMedicalDevice,
   );
 
@@ -89,12 +101,14 @@ final class DeviceRegistrationAndListings
   final establishmentTypeManufactureMedicalDeviceForAnotherPartyContractManufacturer =
       (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .manufactureMedicalDeviceForAnotherPartyContractManufacturer,
   );
   final establishmentTypeManufactureMedicalDeviceForAnotherPartyContractManufacturerExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .manufactureMedicalDeviceForAnotherPartyContractManufacturer,
   );
@@ -102,21 +116,25 @@ final class DeviceRegistrationAndListings
   /// Remanufacture Medical Device
   final establishmentTypeRemanufactureMedicalDevice = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.remanufactureMedicalDevice,
   );
   final establishmentTypeRemanufactureMedicalDeviceExact = (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.remanufactureMedicalDevice,
   );
 
   /// Repack or Relabel Medical Device
   final establishmentTypeRepackOrRelabelMedicalDevice = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .repackOrRelabelMedicalDevice,
   );
   final establishmentTypeRepackOrRelabelMedicalDeviceExact = (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .repackOrRelabelMedicalDevice,
   );
@@ -124,10 +142,12 @@ final class DeviceRegistrationAndListings
   /// Reprocess Single-Use Device
   final establishmentTypeReprocessSingleUseDevice = (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.reprocessSingleUseDevice,
   );
   final establishmentTypeReprocessSingleUseDeviceExact = (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType.reprocessSingleUseDevice,
   );
 
@@ -135,12 +155,14 @@ final class DeviceRegistrationAndListings
   final establishmentTypeSterilizeMedicalDeviceForAnotherPartyContractSterilizer =
       (
     'establishment_type',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .sterilizeMedicalDeviceForAnotherPartyContractSterilizer,
   );
   final establishmentTypeSterilizeMedicalDeviceForAnotherPartyContractSterilizerExact =
       (
     'establishment_type.exact',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
         .sterilizeMedicalDeviceForAnotherPartyContractSterilizer,
   );
@@ -171,12 +193,14 @@ final class DeviceRegistrationAndListings
   /// No
   final productsExemptN = (
     'products.exempt',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsExempt.n,
   );
 
   /// Yes
   final productsExemptY = (
     'products.exempt',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsExempt.y,
   );
 
@@ -188,36 +212,42 @@ final class DeviceRegistrationAndListings
   /// Class I (low to moderate risk): general controls
   final productsOpenfdaDeviceClassOne = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final productsOpenfdaDeviceClassTwo = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final productsOpenfdaDeviceClassThree = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final productsOpenfdaDeviceClassF = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final productsOpenfdaDeviceClassN = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final productsOpenfdaDeviceClassU = (
     'products.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass.u,
   );
 
@@ -241,6 +271,7 @@ final class DeviceRegistrationAndListings
   /// surveillance of the specific medical device.
   final productsOpenfdaRegulationNumber = (
     'products.openfda.regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -249,6 +280,7 @@ final class DeviceRegistrationAndListings
   );
   final productsOpenfdaRegulationNumberExact = (
     'products.openfda.regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -289,12 +321,14 @@ final class DeviceRegistrationAndListings
   /// No
   final registrationInitialImporterFlagN = (
     'registration.initial_importer_flag',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsRegistrationInitialImporterFlag.n,
   );
 
   /// Yes
   final registrationInitialImporterFlagY = (
     'registration.initial_importer_flag',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsRegistrationInitialImporterFlag.y,
   );
 
@@ -408,12 +442,14 @@ final class DeviceRegistrationAndListings
   /// Active
   final registrationStatusCodeOne = (
     'registration.status_code',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsRegistrationStatusCode.one,
   );
 
   /// Active awaiting assignment of registration number
   final registrationStatusCodeFive = (
     'registration.status_code',
+    PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsRegistrationStatusCode.five,
   );
 
@@ -486,6 +522,7 @@ final class DeviceRegistrationAndListings
   final registrationZipCodeExact = 'registration.zip_code.exact';
 }
 
+/// Facility operation or activity, e.g. “Manufacturer” (short version).
 enum _DeviceRegistrationAndListingsEstablishmentType {
   /// Complaint File Establishment per 21 CFR 820.198
   complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight._(
@@ -549,6 +586,7 @@ enum _DeviceRegistrationAndListingsEstablishmentType {
   final String value;
 }
 
+/// Flag indicating whether a device is exempt or not.
 enum _DeviceRegistrationAndListingsProductsExempt {
   /// No
   n._(
@@ -567,6 +605,9 @@ enum _DeviceRegistrationAndListingsProductsExempt {
   final String value;
 }
 
+/// A risk based classification system for all medical devices (Federal Food,
+/// Drug, and Cosmetic Act, section 513). Additional information can be found
+/// [here](http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/Overview/ClassifyYourDevice/default.htm).
 enum _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -605,6 +646,7 @@ enum _DeviceRegistrationAndListingsProductsOpenfdaDeviceClass {
   final String value;
 }
 
+/// Identifies whether facility is an initial importer.
 enum _DeviceRegistrationAndListingsRegistrationInitialImporterFlag {
   /// No
   n._(
@@ -623,6 +665,7 @@ enum _DeviceRegistrationAndListingsRegistrationInitialImporterFlag {
   final String value;
 }
 
+/// Registration status code.
 enum _DeviceRegistrationAndListingsRegistrationStatusCode {
   /// Active
   one._(

@@ -22,200 +22,240 @@ final class DeviceClearance extends DeviceClearanceFields
   /// Anesthesiology
   final advisoryCommitteeAN = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.aN,
   );
   final advisoryCommitteeANExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.aN,
   );
 
   /// Clinical Chemistry
   final advisoryCommitteeCH = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.cH,
   );
   final advisoryCommitteeCHExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.cH,
   );
 
   /// Cardiovascular
   final advisoryCommitteeCV = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.cV,
   );
   final advisoryCommitteeCVExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.cV,
   );
 
   /// Dental
   final advisoryCommitteeDE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.dE,
   );
   final advisoryCommitteeDEExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.dE,
   );
 
   /// Ear, Nose, Throat
   final advisoryCommitteeEN = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.eN,
   );
   final advisoryCommitteeENExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.eN,
   );
 
   /// Gastroenterology, Urology
   final advisoryCommitteeGU = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.gU,
   );
   final advisoryCommitteeGUExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.gU,
   );
 
   /// Hematology
   final advisoryCommitteeHE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.hE,
   );
   final advisoryCommitteeHEExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.hE,
   );
 
   /// General Hospital
   final advisoryCommitteeHO = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.hO,
   );
   final advisoryCommitteeHOExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.hO,
   );
 
   /// Immunology
   final advisoryCommitteeIM = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.iM,
   );
   final advisoryCommitteeIMExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.iM,
   );
 
   /// Medical Genetics
   final advisoryCommitteeMG = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.mG,
   );
   final advisoryCommitteeMGExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.mG,
   );
 
   /// Microbiology
   final advisoryCommitteeMI = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.mI,
   );
   final advisoryCommitteeMIExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.mI,
   );
 
   /// Neurology
   final advisoryCommitteeNE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.nE,
   );
   final advisoryCommitteeNEExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.nE,
   );
 
   /// Obstetrics/Gynecology
   final advisoryCommitteeOB = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oB,
   );
   final advisoryCommitteeOBExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oB,
   );
 
   /// Ophthalmic
   final advisoryCommitteeOP = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oP,
   );
   final advisoryCommitteeOPExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oP,
   );
 
   /// Orthopedic
   final advisoryCommitteeOR = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oR,
   );
   final advisoryCommitteeORExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.oR,
   );
 
   /// Pathology
   final advisoryCommitteePA = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.pA,
   );
   final advisoryCommitteePAExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.pA,
   );
 
   /// Physical Medicine
   final advisoryCommitteePM = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.pM,
   );
   final advisoryCommitteePMExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.pM,
   );
 
   /// Radiology
   final advisoryCommitteeRA = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.rA,
   );
   final advisoryCommitteeRAExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.rA,
   );
 
   /// General, Plastic Surgery
   final advisoryCommitteeSU = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.sU,
   );
   final advisoryCommitteeSUExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.sU,
   );
 
   /// Clinical Toxicology
   final advisoryCommitteeTX = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.tX,
   );
   final advisoryCommitteeTXExact = (
     'advisory_committee.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceAdvisoryCommittee.tX,
   );
 
@@ -242,70 +282,84 @@ final class DeviceClearance extends DeviceClearanceFields
   /// Direct
   final clearanceTypeDirect = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.direct,
   );
   final clearanceTypeDirectExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.direct,
   );
 
   /// Dual
   final clearanceTypeDual = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.dual,
   );
   final clearanceTypeDualExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.dual,
   );
 
   /// NSE
   final clearanceTypeNse = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.nse,
   );
   final clearanceTypeNseExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.nse,
   );
 
   /// Post
   final clearanceTypePost = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.post,
   );
   final clearanceTypePostExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.post,
   );
 
   /// Special
   final clearanceTypeSpecial = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.special,
   );
   final clearanceTypeSpecialExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.special,
   );
 
   /// Track
   final clearanceTypeTrack = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.track,
   );
   final clearanceTypeTrackExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.track,
   );
 
   /// Traditional
   final clearanceTypeTraditional = (
     'clearance_type',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.traditional,
   );
   final clearanceTypeTraditionalExact = (
     'clearance_type.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceClearanceType.traditional,
   );
 
@@ -339,70 +393,84 @@ final class DeviceClearance extends DeviceClearanceFields
   /// Substantially Equivalent - Kit with Drugs
   final decisionCodeSEKD = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sEKD,
   );
   final decisionCodeSEKDExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sEKD,
   );
 
   /// Substantially Equivalent with Drug
   final decisionCodeSESD = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESD,
   );
   final decisionCodeSESDExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESD,
   );
 
   /// Substantially Equivalent
   final decisionCodeSESE = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESE,
   );
   final decisionCodeSESEExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESE,
   );
 
   /// Substantially Equivalent - Kit
   final decisionCodeSESK = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESK,
   );
   final decisionCodeSESKExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESK,
   );
 
   /// Substantially Equivalent - Postmarket Surveillance Required
   final decisionCodeSESP = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESP,
   );
   final decisionCodeSESPExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESP,
   );
 
   /// Potential Recall
   final decisionCodeSESR = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESR,
   );
   final decisionCodeSESRExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESR,
   );
 
   /// Substantially Equivalent - With Limitations
   final decisionCodeSESU = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESU,
   );
   final decisionCodeSESUExact = (
     'decision_code.exact',
+    PossibleValueType.oneOf,
     _DeviceClearanceDecisionCode.sESU,
   );
 
@@ -444,36 +512,42 @@ final class DeviceClearance extends DeviceClearanceFields
   /// Class I (low to moderate risk): general controls
   final openfdaDeviceClassOne = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final openfdaDeviceClassTwo = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final openfdaDeviceClassThree = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final openfdaDeviceClassF = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final openfdaDeviceClassN = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final openfdaDeviceClassU = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceClearanceOpenfdaDeviceClass.u,
   );
 
@@ -505,6 +579,7 @@ final class DeviceClearance extends DeviceClearanceFields
   /// surveillance of the specific medical device.
   final openfdaRegulationNumber = (
     'openfda.regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -513,6 +588,7 @@ final class DeviceClearance extends DeviceClearanceFields
   );
   final openfdaRegulationNumberExact = (
     'openfda.regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -567,12 +643,14 @@ final class DeviceClearance extends DeviceClearanceFields
   /// No
   final thirdPartyFlagN = (
     'third_party_flag',
+    PossibleValueType.oneOf,
     _DeviceClearanceThirdPartyFlag.n,
   );
 
   /// Yes
   final thirdPartyFlagY = (
     'third_party_flag',
+    PossibleValueType.oneOf,
     _DeviceClearanceThirdPartyFlag.y,
   );
 
@@ -580,6 +658,12 @@ final class DeviceClearance extends DeviceClearanceFields
   final zipCode = 'zip_code';
 }
 
+/// Code under which the product was originally classified, based on the
+/// product code. This is a historical designation for the group that
+/// initially placed a device into Class I, Class II, or Class III following
+/// the medical device amendments of May 28, 1976. Two letters indicate the
+/// medical specialty panel that was responsible for classifying the product
+/// (e.g. GU).
 enum _DeviceClearanceAdvisoryCommittee {
   /// Anesthesiology
   aN._(
@@ -688,6 +772,7 @@ enum _DeviceClearanceAdvisoryCommittee {
   final String value;
 }
 
+/// Denotes the submission method utilized for the submission of the 510(k).
 enum _DeviceClearanceClearanceType {
   /// Direct
   direct._(
@@ -731,6 +816,8 @@ enum _DeviceClearanceClearanceType {
   final String value;
 }
 
+/// Four letter codes that denote the specific substantial equivalence
+/// decision rendered by FDA on a specific 510(k).
 enum _DeviceClearanceDecisionCode {
   /// Substantially Equivalent - Kit with Drugs
   sEKD._(
@@ -774,6 +861,8 @@ enum _DeviceClearanceDecisionCode {
   final String value;
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513)
 enum _DeviceClearanceOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -812,6 +901,9 @@ enum _DeviceClearanceOpenfdaDeviceClass {
   final String value;
 }
 
+/// Eligibility for a manufacturer to utilize a contracted Accredited Person
+/// in lieu of direct submission to FDA yielding a streamlined review process.
+/// Criteria in section 523(b)(3) of 21 U.S.C. 360m(b).
 enum _DeviceClearanceThirdPartyFlag {
   /// No
   n._(

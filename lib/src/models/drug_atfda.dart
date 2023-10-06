@@ -42,6 +42,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   /// Reference Terminology (NDF-RT).
   final openfdaNui = (
     'openfda.nui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -50,6 +51,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   );
   final openfdaNuiExact = (
     'openfda.nui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -102,6 +104,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   /// The route of administation of the drug product.
   final openfdaRoute = (
     'openfda.route',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -110,6 +113,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   );
   final openfdaRouteExact = (
     'openfda.route.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -122,6 +126,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   /// ingredients, strength, and dose forms.
   final openfdaRxcui = (
     'openfda.rxcui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -130,6 +135,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   );
   final openfdaRxcuiExact = (
     'openfda.rxcui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -156,6 +162,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   /// molecular structure and/or descriptive information.
   final openfdaUnii = (
     'openfda.unii',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -163,6 +170,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   );
   final openfdaUniiExact = (
     'openfda.unii.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -196,24 +204,28 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   /// Prescription
   final productsMarketingStatusOne = (
     'products.marketing_status',
+    PossibleValueType.oneOf,
     _DrugAtFDAProductsMarketingStatus.one,
   );
 
   /// Discontinued
   final productsMarketingStatusTwo = (
     'products.marketing_status',
+    PossibleValueType.oneOf,
     _DrugAtFDAProductsMarketingStatus.two,
   );
 
   /// None (Tentative Approval)
   final productsMarketingStatusThree = (
     'products.marketing_status',
+    PossibleValueType.oneOf,
     _DrugAtFDAProductsMarketingStatus.three,
   );
 
   /// Over-the-counter
   final productsMarketingStatusFour = (
     'products.marketing_status',
+    PossibleValueType.oneOf,
     _DrugAtFDAProductsMarketingStatus.four,
   );
 
@@ -305,6 +317,7 @@ final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
   final submissionsSubmissionType = 'submissions.submission_type';
 }
 
+/// Indicates how a drug product is sold in the United States.
 enum _DrugAtFDAProductsMarketingStatus {
   /// Prescription
   one._(

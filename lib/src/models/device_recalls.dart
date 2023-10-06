@@ -76,36 +76,42 @@ final class DeviceRecalls extends DeviceRecallsFields
   /// Class I (low to moderate risk): general controls
   final openfdaDeviceClassOne = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final openfdaDeviceClassTwo = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final openfdaDeviceClassThree = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final openfdaDeviceClassF = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final openfdaDeviceClassN = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final openfdaDeviceClassU = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceRecallsOpenfdaDeviceClass.u,
   );
 
@@ -143,6 +149,7 @@ final class DeviceRecalls extends DeviceRecallsFields
   /// surveillance of the specific medical device.
   final openfdaRegulationNumber = (
     'openfda.regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -151,6 +158,7 @@ final class DeviceRecalls extends DeviceRecallsFields
   );
   final openfdaRegulationNumberExact = (
     'openfda.regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -222,6 +230,8 @@ final class DeviceRecalls extends DeviceRecallsFields
   final state = 'state';
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513)
 enum _DeviceRecallsOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(

@@ -17,36 +17,42 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Class I (low to moderate risk): general controls
   final deviceClassOne = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final deviceClassTwo = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final deviceClassThree = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.three,
   );
 
   /// HDE
   final deviceClassF = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.f,
   );
 
   /// Not classified
   final deviceClassN = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.n,
   );
 
   /// Unclassified
   final deviceClassU = (
     'device_class',
+    PossibleValueType.oneOf,
     _DeviceClassificationDeviceClass.u,
   );
 
@@ -61,12 +67,14 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Not exempt due to Good Manufacturing Practice (GMP)/Quality System
   final gmpExemptFlagN = (
     'gmp_exempt_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationGmpExemptFlag.n,
   );
 
   /// Exempt due to Good Manufacturing Practice (GMP)/Quality System
   final gmpExemptFlagY = (
     'gmp_exempt_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationGmpExemptFlag.y,
   );
 
@@ -77,12 +85,14 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Device is not implantable
   final implantFlagN = (
     'implant_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationImplantFlag.n,
   );
 
   /// Device is implantable
   final implantFlagY = (
     'implant_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationImplantFlag.y,
   );
 
@@ -92,12 +102,14 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Device is not used for life sustaining purposes
   final lifeSustainSupportFlagN = (
     'life_sustain_support_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationLifeSustainSupportFlag.n,
   );
 
   /// Device is used for life sustaining purposes.
   final lifeSustainSupportFlagY = (
     'life_sustain_support_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationLifeSustainSupportFlag.y,
   );
 
@@ -110,120 +122,140 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Anesthesiology
   final medicalSpecialtyAN = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.aN,
   );
 
   /// Clinical Chemistry
   final medicalSpecialtyCH = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.cH,
   );
 
   /// Cardiovascular
   final medicalSpecialtyCV = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.cV,
   );
 
   /// Dental
   final medicalSpecialtyDE = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.dE,
   );
 
   /// Ear, Nose, Throat
   final medicalSpecialtyEN = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.eN,
   );
 
   /// Gastroenterology, Urology
   final medicalSpecialtyGU = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.gU,
   );
 
   /// Hematology
   final medicalSpecialtyHE = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.hE,
   );
 
   /// General Hospital
   final medicalSpecialtyHO = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.hO,
   );
 
   /// Immunology
   final medicalSpecialtyIM = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.iM,
   );
 
   /// Medical Genetics
   final medicalSpecialtyMG = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.mG,
   );
 
   /// Microbiology
   final medicalSpecialtyMI = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.mI,
   );
 
   /// Neurology
   final medicalSpecialtyNE = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.nE,
   );
 
   /// Obstetrics/Gynecology
   final medicalSpecialtyOB = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.oB,
   );
 
   /// Ophthalmic
   final medicalSpecialtyOP = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.oP,
   );
 
   /// Orthopedic
   final medicalSpecialtyOR = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.oR,
   );
 
   /// Pathology
   final medicalSpecialtyPA = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.pA,
   );
 
   /// Physical Medicine
   final medicalSpecialtyPM = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.pM,
   );
 
   /// Radiology
   final medicalSpecialtyRA = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.rA,
   );
 
   /// General, Plastic Surgery
   final medicalSpecialtySU = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.sU,
   );
 
   /// Clinical Toxicology
   final medicalSpecialtyTX = (
     'medical_specialty',
+    PossibleValueType.oneOf,
     _DeviceClassificationMedicalSpecialty.tX,
   );
 
@@ -275,6 +307,7 @@ final class DeviceClassification extends DeviceClassificationFields
   /// surveillance of the specific medical device.
   final regulationNumber = (
     'regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -283,6 +316,7 @@ final class DeviceClassification extends DeviceClassificationFields
   );
   final regulationNumberExact = (
     'regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -304,24 +338,28 @@ final class DeviceClassification extends DeviceClassificationFields
   /// 510(K)
   final submissionTypeIdOne = (
     'submission_type_id',
+    PossibleValueType.oneOf,
     _DeviceClassificationSubmissionTypeId.one,
   );
 
   /// PMA
   final submissionTypeIdTwo = (
     'submission_type_id',
+    PossibleValueType.oneOf,
     _DeviceClassificationSubmissionTypeId.two,
   );
 
   /// Contact ODE
   final submissionTypeIdThree = (
     'submission_type_id',
+    PossibleValueType.oneOf,
     _DeviceClassificationSubmissionTypeId.three,
   );
 
   /// 510(K) Exempt
   final submissionTypeIdFour = (
     'submission_type_id',
+    PossibleValueType.oneOf,
     _DeviceClassificationSubmissionTypeId.four,
   );
 
@@ -334,6 +372,7 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Device is eligible for The Voluntary Malfunction Summary Reporting Program
   final summaryMalfunctionReportingEligible = (
     'summary_malfunction_reporting',
+    PossibleValueType.oneOf,
     _DeviceClassificationSummaryMalfunctionReporting.eligible,
   );
 
@@ -341,6 +380,7 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Program
   final summaryMalfunctionReportingIneligible = (
     'summary_malfunction_reporting',
+    PossibleValueType.oneOf,
     _DeviceClassificationSummaryMalfunctionReporting.ineligible,
   );
 
@@ -351,12 +391,14 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Device is not a candidate for a third party review program
   final thirdPartyFlagN = (
     'third_party_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationThirdPartyFlag.n,
   );
 
   /// Device is a candidate for a third party review program
   final thirdPartyFlagY = (
     'third_party_flag',
+    PossibleValueType.oneOf,
     _DeviceClassificationThirdPartyFlag.y,
   );
 
@@ -365,46 +407,55 @@ final class DeviceClassification extends DeviceClassificationFields
   /// Pre-Amendment
   final unclassifiedReasonOne = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.one,
   );
 
   /// IDE
   final unclassifiedReasonTwo = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.two,
   );
 
   /// For Export Only
   final unclassifiedReasonThree = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.three,
   );
 
   /// Unknown
   final unclassifiedReasonFour = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.four,
   );
 
   /// Guidance Under Development
   final unclassifiedReasonFive = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.five,
   );
 
   /// Enforcement Discretion
   final unclassifiedReasonSix = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.six,
   );
 
   /// Not FDA Regulated
   final unclassifiedReasonSeven = (
     'unclassified_reason',
+    PossibleValueType.oneOf,
     _DeviceClassificationUnclassifiedReason.seven,
   );
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513).
 enum _DeviceClassificationDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -443,6 +494,10 @@ enum _DeviceClassificationDeviceClass {
   final String value;
 }
 
+/// An indication the device is exempt from Good Manufacturing Processes CFR
+/// 820. U.S. zip code of the Applicant. See
+/// [here](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpcd/315.cfm)
+/// for more detail.
 enum _DeviceClassificationGmpExemptFlag {
   /// Not exempt due to Good Manufacturing Practice (GMP)/Quality System
   n._(
@@ -461,6 +516,10 @@ enum _DeviceClassificationGmpExemptFlag {
   final String value;
 }
 
+/// An indicator that the device is placed into a surgically or naturally
+/// formed cavity of the human body. Intended to remain implanted for 30 days
+/// or more; or the Commissioner makes a determination (that the device is to
+/// be considered implanted).
 enum _DeviceClassificationImplantFlag {
   /// Device is not implantable
   n._(
@@ -479,6 +538,9 @@ enum _DeviceClassificationImplantFlag {
   final String value;
 }
 
+/// An indicator that the device is essential to, or yields information that
+/// is essential to, the restoration or continuation of a bodily function
+/// important to the continuation of human life.
 enum _DeviceClassificationLifeSustainSupportFlag {
   /// Device is not used for life sustaining purposes
   n._(
@@ -497,6 +559,12 @@ enum _DeviceClassificationLifeSustainSupportFlag {
   final String value;
 }
 
+/// Regulation Medical Specialty is assigned based on the regulation (e.g. 21
+/// CFR Part 888 is Orthopedic Devices) which is why Class 3 devices lack the
+/// “Regulation Medical Specialty” field. Two letters indicating the medical
+/// specialty panel responsible for reviewing the product. See
+/// [link](http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/Overview/ClassifyYourDevice/ucm051668.htm#medicalspecialty)
+/// for further detail.
 enum _DeviceClassificationMedicalSpecialty {
   /// Anesthesiology
   aN._(
@@ -605,6 +673,8 @@ enum _DeviceClassificationMedicalSpecialty {
   final String value;
 }
 
+/// The submission type (510(k), PMA, 510(k) Exempt) to which a product code
+/// is limited, or “Contact ODE” if its limitations (if any) are undetermined.
 enum _DeviceClassificationSubmissionTypeId {
   /// 510(K)
   one._(
@@ -633,6 +703,12 @@ enum _DeviceClassificationSubmissionTypeId {
   final String value;
 }
 
+/// The Voluntary Malfunction Summary Reporting Program allows participating
+/// companies to submit certain medical device malfunction reports in summary
+/// form on a quarterly basis. The program applies to eligible devices
+/// regulated by the Center for Devices and Radiological Health (CDRH) and
+/// Center for Biologics Evaluation and Research (CBER), including device-led
+/// combination products.
 enum _DeviceClassificationSummaryMalfunctionReporting {
   /// Device is eligible for The Voluntary Malfunction Summary Reporting Program
   eligible._(
@@ -652,6 +728,10 @@ enum _DeviceClassificationSummaryMalfunctionReporting {
   final String value;
 }
 
+/// Eligibility for a manufacturer to utilize a contracted Accredited Person
+/// in lieu of direct submission to FDA. By law, FDA must in turn issue a
+/// final determination within 30 days after receiving the recommendation of
+/// an Accredited Person (yielding a streamlined review process).
 enum _DeviceClassificationThirdPartyFlag {
   /// Device is not a candidate for a third party review program
   n._(
@@ -670,6 +750,8 @@ enum _DeviceClassificationThirdPartyFlag {
   final String value;
 }
 
+/// This indicates the reason why a device is unclassified (e.g.
+/// Pre-Amendment).
 enum _DeviceClassificationUnclassifiedReason {
   /// Pre-Amendment
   one._(

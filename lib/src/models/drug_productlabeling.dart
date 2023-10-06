@@ -524,6 +524,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   /// Reference Terminology (NDF-RT).
   final openfdaNui = (
     'openfda.nui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -532,6 +533,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaNuiExact = (
     'openfda.nui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -589,6 +591,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
 
   final openfdaProductType = (
     'openfda.product_type',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -597,6 +600,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaProductTypeExact = (
     'openfda.product_type.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -607,6 +611,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   /// The route of administation of the drug product.
   final openfdaRoute = (
     'openfda.route',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -615,6 +620,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaRouteExact = (
     'openfda.route.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -627,6 +633,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   /// ingredients, strength, and dose forms.
   final openfdaRxcui = (
     'openfda.rxcui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -635,6 +642,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaRxcuiExact = (
     'openfda.rxcui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -661,6 +669,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   /// molecular structure and/or descriptive information.
   final openfdaUnii = (
     'openfda.unii',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -668,6 +677,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaUniiExact = (
     'openfda.unii.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -677,6 +687,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   /// Universal Product Code
   final openfdaUpc = (
     'openfda.upc',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',
@@ -684,6 +695,7 @@ final class DrugProductLabeling extends DrugProductLabelingFields
   );
   final openfdaUpcExact = (
     'openfda.upc.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',

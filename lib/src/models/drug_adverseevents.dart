@@ -24,18 +24,21 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Yes
   final fulfillexpeditecriteriaOne = (
     'fulfillexpeditecriteria',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsFulfillexpeditecriteria.one,
   );
 
   /// No
   final fulfillexpeditecriteriaTwo = (
     'fulfillexpeditecriteria',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsFulfillexpeditecriteria.two,
   );
 
   /// The name of the country where the event occurred.
   final occurcountry = (
     'occurcountry',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
@@ -43,6 +46,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final occurcountryExact = (
     'occurcountry.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
@@ -57,36 +61,42 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Drug withdrawn
   final patientDrugActiondrugOne = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.one,
   );
 
   /// Dose reduced
   final patientDrugActiondrugTwo = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.two,
   );
 
   /// Dose increased
   final patientDrugActiondrugThree = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.three,
   );
 
   /// Dose not changed
   final patientDrugActiondrugFour = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.four,
   );
 
   /// Unknown
   final patientDrugActiondrugFive = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.five,
   );
 
   /// Not applicable
   final patientDrugActiondrugSix = (
     'patient.drug.actiondrug',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugActiondrug.six,
   );
 
@@ -105,18 +115,21 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Yes
   final patientDrugDrugadditionalOne = (
     'patient.drug.drugadditional',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadditional.one,
   );
 
   /// No
   final patientDrugDrugadditionalTwo = (
     'patient.drug.drugadditional',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadditional.two,
   );
 
   /// Does not apply
   final patientDrugDrugadditionalThree = (
     'patient.drug.drugadditional',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadditional.three,
   );
 
@@ -124,670 +137,804 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Auricular (otic)
   final patientDrugDrugadministrationrouteOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.one,
   );
   final patientDrugDrugadministrationrouteOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.one,
   );
 
   /// Buccal
   final patientDrugDrugadministrationrouteTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.two,
   );
   final patientDrugDrugadministrationrouteTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.two,
   );
 
   /// Cutaneous
   final patientDrugDrugadministrationrouteThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.three,
   );
   final patientDrugDrugadministrationrouteThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.three,
   );
 
   /// Dental
   final patientDrugDrugadministrationrouteFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.four,
   );
   final patientDrugDrugadministrationrouteFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.four,
   );
 
   /// Endocervical
   final patientDrugDrugadministrationrouteFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.five,
   );
   final patientDrugDrugadministrationrouteFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.five,
   );
 
   /// Endosinusial
   final patientDrugDrugadministrationrouteSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.six,
   );
   final patientDrugDrugadministrationrouteSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.six,
   );
 
   /// Endotracheal
   final patientDrugDrugadministrationrouteSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.seven,
   );
   final patientDrugDrugadministrationrouteSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.seven,
   );
 
   /// Epidural
   final patientDrugDrugadministrationrouteEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.eight,
   );
   final patientDrugDrugadministrationrouteEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.eight,
   );
 
   /// Extra-amniotic
   final patientDrugDrugadministrationrouteNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.nine,
   );
   final patientDrugDrugadministrationrouteNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.nine,
   );
 
   /// Hemodialysis
   final patientDrugDrugadministrationrouteOneZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneZero,
   );
   final patientDrugDrugadministrationrouteOneZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneZero,
   );
 
   /// Intra corpus cavernosum
   final patientDrugDrugadministrationrouteOneOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneOne,
   );
   final patientDrugDrugadministrationrouteOneOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneOne,
   );
 
   /// Intra-amniotic
   final patientDrugDrugadministrationrouteOneTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneTwo,
   );
   final patientDrugDrugadministrationrouteOneTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneTwo,
   );
 
   /// Intra-arterial
   final patientDrugDrugadministrationrouteOneThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneThree,
   );
   final patientDrugDrugadministrationrouteOneThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneThree,
   );
 
   /// Intra-articular
   final patientDrugDrugadministrationrouteOneFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneFour,
   );
   final patientDrugDrugadministrationrouteOneFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneFour,
   );
 
   /// Intra-uterine
   final patientDrugDrugadministrationrouteOneFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneFive,
   );
   final patientDrugDrugadministrationrouteOneFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneFive,
   );
 
   /// Intracardiac
   final patientDrugDrugadministrationrouteOneSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneSix,
   );
   final patientDrugDrugadministrationrouteOneSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneSix,
   );
 
   /// Intracavernous
   final patientDrugDrugadministrationrouteOneSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneSeven,
   );
   final patientDrugDrugadministrationrouteOneSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneSeven,
   );
 
   /// Intracerebral
   final patientDrugDrugadministrationrouteOneEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneEight,
   );
   final patientDrugDrugadministrationrouteOneEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneEight,
   );
 
   /// Intracervical
   final patientDrugDrugadministrationrouteOneNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneNine,
   );
   final patientDrugDrugadministrationrouteOneNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.oneNine,
   );
 
   /// Intracisternal
   final patientDrugDrugadministrationrouteTwoZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoZero,
   );
   final patientDrugDrugadministrationrouteTwoZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoZero,
   );
 
   /// Intracorneal
   final patientDrugDrugadministrationrouteTwoOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoOne,
   );
   final patientDrugDrugadministrationrouteTwoOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoOne,
   );
 
   /// Intracoronary
   final patientDrugDrugadministrationrouteTwoTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoTwo,
   );
   final patientDrugDrugadministrationrouteTwoTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoTwo,
   );
 
   /// Intradermal
   final patientDrugDrugadministrationrouteTwoThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoThree,
   );
   final patientDrugDrugadministrationrouteTwoThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoThree,
   );
 
   /// Intradiscal (intraspinal)
   final patientDrugDrugadministrationrouteTwoFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoFour,
   );
   final patientDrugDrugadministrationrouteTwoFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoFour,
   );
 
   /// Intrahepatic
   final patientDrugDrugadministrationrouteTwoFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoFive,
   );
   final patientDrugDrugadministrationrouteTwoFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoFive,
   );
 
   /// Intralesional
   final patientDrugDrugadministrationrouteTwoSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoSix,
   );
   final patientDrugDrugadministrationrouteTwoSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoSix,
   );
 
   /// Intralymphatic
   final patientDrugDrugadministrationrouteTwoSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoSeven,
   );
   final patientDrugDrugadministrationrouteTwoSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoSeven,
   );
 
   /// Intramedullar (bone marrow)
   final patientDrugDrugadministrationrouteTwoEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoEight,
   );
   final patientDrugDrugadministrationrouteTwoEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoEight,
   );
 
   /// Intrameningeal
   final patientDrugDrugadministrationrouteTwoNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoNine,
   );
   final patientDrugDrugadministrationrouteTwoNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.twoNine,
   );
 
   /// Intramuscular
   final patientDrugDrugadministrationrouteThreeZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeZero,
   );
   final patientDrugDrugadministrationrouteThreeZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeZero,
   );
 
   /// Intraocular
   final patientDrugDrugadministrationrouteThreeOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeOne,
   );
   final patientDrugDrugadministrationrouteThreeOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeOne,
   );
 
   /// Intrapericardial
   final patientDrugDrugadministrationrouteThreeTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeTwo,
   );
   final patientDrugDrugadministrationrouteThreeTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeTwo,
   );
 
   /// Intraperitoneal
   final patientDrugDrugadministrationrouteThreeThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeThree,
   );
   final patientDrugDrugadministrationrouteThreeThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeThree,
   );
 
   /// Intrapleural
   final patientDrugDrugadministrationrouteThreeFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeFour,
   );
   final patientDrugDrugadministrationrouteThreeFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeFour,
   );
 
   /// Intrasynovial
   final patientDrugDrugadministrationrouteThreeFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeFive,
   );
   final patientDrugDrugadministrationrouteThreeFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeFive,
   );
 
   /// Intratumor
   final patientDrugDrugadministrationrouteThreeSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeSix,
   );
   final patientDrugDrugadministrationrouteThreeSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeSix,
   );
 
   /// Intrathecal
   final patientDrugDrugadministrationrouteThreeSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeSeven,
   );
   final patientDrugDrugadministrationrouteThreeSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeSeven,
   );
 
   /// Intrathoracic
   final patientDrugDrugadministrationrouteThreeEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeEight,
   );
   final patientDrugDrugadministrationrouteThreeEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeEight,
   );
 
   /// Intratracheal
   final patientDrugDrugadministrationrouteThreeNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeNine,
   );
   final patientDrugDrugadministrationrouteThreeNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.threeNine,
   );
 
   /// Intravenous bolus
   final patientDrugDrugadministrationrouteFourZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourZero,
   );
   final patientDrugDrugadministrationrouteFourZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourZero,
   );
 
   /// Intravenous drip
   final patientDrugDrugadministrationrouteFourOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourOne,
   );
   final patientDrugDrugadministrationrouteFourOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourOne,
   );
 
   /// Intravenous (not otherwise specified)
   final patientDrugDrugadministrationrouteFourTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourTwo,
   );
   final patientDrugDrugadministrationrouteFourTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourTwo,
   );
 
   /// Intravesical
   final patientDrugDrugadministrationrouteFourThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourThree,
   );
   final patientDrugDrugadministrationrouteFourThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourThree,
   );
 
   /// Iontophoresis
   final patientDrugDrugadministrationrouteFourFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourFour,
   );
   final patientDrugDrugadministrationrouteFourFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourFour,
   );
 
   /// Nasal
   final patientDrugDrugadministrationrouteFourFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourFive,
   );
   final patientDrugDrugadministrationrouteFourFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourFive,
   );
 
   /// Occlusive dressing technique
   final patientDrugDrugadministrationrouteFourSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourSix,
   );
   final patientDrugDrugadministrationrouteFourSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourSix,
   );
 
   /// Ophthalmic
   final patientDrugDrugadministrationrouteFourSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourSeven,
   );
   final patientDrugDrugadministrationrouteFourSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourSeven,
   );
 
   /// Oral
   final patientDrugDrugadministrationrouteFourEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourEight,
   );
   final patientDrugDrugadministrationrouteFourEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourEight,
   );
 
   /// Oropharingeal
   final patientDrugDrugadministrationrouteFourNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourNine,
   );
   final patientDrugDrugadministrationrouteFourNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fourNine,
   );
 
   /// Other
   final patientDrugDrugadministrationrouteFiveZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveZero,
   );
   final patientDrugDrugadministrationrouteFiveZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveZero,
   );
 
   /// Parenteral
   final patientDrugDrugadministrationrouteFiveOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveOne,
   );
   final patientDrugDrugadministrationrouteFiveOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveOne,
   );
 
   /// Periarticular
   final patientDrugDrugadministrationrouteFiveTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveTwo,
   );
   final patientDrugDrugadministrationrouteFiveTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveTwo,
   );
 
   /// Perineural
   final patientDrugDrugadministrationrouteFiveThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveThree,
   );
   final patientDrugDrugadministrationrouteFiveThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveThree,
   );
 
   /// Rectal
   final patientDrugDrugadministrationrouteFiveFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveFour,
   );
   final patientDrugDrugadministrationrouteFiveFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveFour,
   );
 
   /// Respiratory (inhalation)
   final patientDrugDrugadministrationrouteFiveFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveFive,
   );
   final patientDrugDrugadministrationrouteFiveFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveFive,
   );
 
   /// Retrobulbar
   final patientDrugDrugadministrationrouteFiveSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveSix,
   );
   final patientDrugDrugadministrationrouteFiveSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveSix,
   );
 
   /// Sunconjunctival
   final patientDrugDrugadministrationrouteFiveSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveSeven,
   );
   final patientDrugDrugadministrationrouteFiveSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveSeven,
   );
 
   /// Subcutaneous
   final patientDrugDrugadministrationrouteFiveEight = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveEight,
   );
   final patientDrugDrugadministrationrouteFiveEightExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveEight,
   );
 
   /// Subdermal
   final patientDrugDrugadministrationrouteFiveNine = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveNine,
   );
   final patientDrugDrugadministrationrouteFiveNineExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.fiveNine,
   );
 
   /// Sublingual
   final patientDrugDrugadministrationrouteSixZero = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixZero,
   );
   final patientDrugDrugadministrationrouteSixZeroExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixZero,
   );
 
   /// Topical
   final patientDrugDrugadministrationrouteSixOne = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixOne,
   );
   final patientDrugDrugadministrationrouteSixOneExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixOne,
   );
 
   /// Transdermal
   final patientDrugDrugadministrationrouteSixTwo = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixTwo,
   );
   final patientDrugDrugadministrationrouteSixTwoExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixTwo,
   );
 
   /// Transmammary
   final patientDrugDrugadministrationrouteSixThree = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixThree,
   );
   final patientDrugDrugadministrationrouteSixThreeExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixThree,
   );
 
   /// Transplacental
   final patientDrugDrugadministrationrouteSixFour = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixFour,
   );
   final patientDrugDrugadministrationrouteSixFourExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixFour,
   );
 
   /// Unknown
   final patientDrugDrugadministrationrouteSixFive = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixFive,
   );
   final patientDrugDrugadministrationrouteSixFiveExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixFive,
   );
 
   /// Urethral
   final patientDrugDrugadministrationrouteSixSix = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixSix,
   );
   final patientDrugDrugadministrationrouteSixSixExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixSix,
   );
 
   /// Vaginal
   final patientDrugDrugadministrationrouteSixSeven = (
     'patient.drug.drugadministrationroute',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixSeven,
   );
   final patientDrugDrugadministrationrouteSixSevenExact = (
     'patient.drug.drugadministrationroute.exact',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugadministrationroute.sixSeven,
   );
 
@@ -805,6 +952,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Suspect (the drug was considered by the reporter to be the cause)
   final patientDrugDrugcharacterizationOne = (
     'patient.drug.drugcharacterization',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcharacterization.one,
   );
 
@@ -812,6 +960,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// drug)
   final patientDrugDrugcharacterizationTwo = (
     'patient.drug.drugcharacterization',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcharacterization.two,
   );
 
@@ -819,6 +968,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// with the suspect drug)
   final patientDrugDrugcharacterizationThree = (
     'patient.drug.drugcharacterization',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcharacterization.three,
   );
 
@@ -831,24 +981,28 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// kg (kilograms)
   final patientDrugDrugcumulativedosageunitOne = (
     'patient.drug.drugcumulativedosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcumulativedosageunit.one,
   );
 
   /// g (grams)
   final patientDrugDrugcumulativedosageunitTwo = (
     'patient.drug.drugcumulativedosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcumulativedosageunit.two,
   );
 
   /// mg (milligrams)
   final patientDrugDrugcumulativedosageunitThree = (
     'patient.drug.drugcumulativedosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcumulativedosageunit.three,
   );
 
   /// µg (micrograms)
   final patientDrugDrugcumulativedosageunitFour = (
     'patient.drug.drugcumulativedosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugcumulativedosageunit.four,
   );
 
@@ -878,66 +1032,77 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Year
   final patientDrugDrugintervaldosagedefinitionEightZeroOne = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroOne,
   );
 
   /// Month
   final patientDrugDrugintervaldosagedefinitionEightZeroTwo = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroTwo,
   );
 
   /// Week
   final patientDrugDrugintervaldosagedefinitionEightZeroThree = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroThree,
   );
 
   /// Day
   final patientDrugDrugintervaldosagedefinitionEightZeroFour = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroFour,
   );
 
   /// Hour
   final patientDrugDrugintervaldosagedefinitionEightZeroFive = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroFive,
   );
 
   /// Minute
   final patientDrugDrugintervaldosagedefinitionEightZeroSix = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroSix,
   );
 
   /// Trimester
   final patientDrugDrugintervaldosagedefinitionEightZeroSeven = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightZeroSeven,
   );
 
   /// Cyclical
   final patientDrugDrugintervaldosagedefinitionEightOneZero = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightOneZero,
   );
 
   /// Trimester
   final patientDrugDrugintervaldosagedefinitionEightOneOne = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightOneOne,
   );
 
   /// As necessary
   final patientDrugDrugintervaldosagedefinitionEightOneTwo = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightOneTwo,
   );
 
   /// Total
   final patientDrugDrugintervaldosagedefinitionEightOneThree = (
     'patient.drug.drugintervaldosagedefinition',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition.eightOneThree,
   );
 
@@ -949,18 +1114,21 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Yes
   final patientDrugDrugrecurreadministrationOne = (
     'patient.drug.drugrecurreadministration',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugrecurreadministration.one,
   );
 
   /// No
   final patientDrugDrugrecurreadministrationTwo = (
     'patient.drug.drugrecurreadministration',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugrecurreadministration.two,
   );
 
   /// Unknown
   final patientDrugDrugrecurreadministrationThree = (
     'patient.drug.drugrecurreadministration',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugrecurreadministration.three,
   );
 
@@ -1003,24 +1171,28 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// kg (kilograms)
   final patientDrugDrugstructuredosageunitOne = (
     'patient.drug.drugstructuredosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugstructuredosageunit.one,
   );
 
   /// g (grams)
   final patientDrugDrugstructuredosageunitTwo = (
     'patient.drug.drugstructuredosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugstructuredosageunit.two,
   );
 
   /// mg (milligrams)
   final patientDrugDrugstructuredosageunitThree = (
     'patient.drug.drugstructuredosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugstructuredosageunit.three,
   );
 
   /// µg (micrograms)
   final patientDrugDrugstructuredosageunitFour = (
     'patient.drug.drugstructuredosageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugstructuredosageunit.four,
   );
 
@@ -1033,36 +1205,42 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Year
   final patientDrugDrugtreatmentdurationunitEightZeroOne = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroOne,
   );
 
   /// Month
   final patientDrugDrugtreatmentdurationunitEightZeroTwo = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroTwo,
   );
 
   /// Week
   final patientDrugDrugtreatmentdurationunitEightZeroThree = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroThree,
   );
 
   /// Day
   final patientDrugDrugtreatmentdurationunitEightZeroFour = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroFour,
   );
 
   /// Hour
   final patientDrugDrugtreatmentdurationunitEightZeroFive = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroFive,
   );
 
   /// Minute
   final patientDrugDrugtreatmentdurationunitEightZeroSix = (
     'patient.drug.drugtreatmentdurationunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit.eightZeroSix,
   );
 
@@ -1109,6 +1287,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Reference Terminology (NDF-RT).
   final patientDrugOpenfdaNui = (
     'patient.drug.openfda.nui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -1117,6 +1296,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientDrugOpenfdaNuiExact = (
     'patient.drug.openfda.nui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'NDF-RT',
       link:
@@ -1176,6 +1356,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
 
   final patientDrugOpenfdaProductType = (
     'patient.drug.openfda.product_type',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -1184,6 +1365,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientDrugOpenfdaProductTypeExact = (
     'patient.drug.openfda.product_type.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Type of drug product',
       link:
@@ -1194,6 +1376,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// The route of administation of the drug product.
   final patientDrugOpenfdaRoute = (
     'patient.drug.openfda.route',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -1202,6 +1385,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientDrugOpenfdaRouteExact = (
     'patient.drug.openfda.route.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Route of administration',
       link:
@@ -1214,6 +1398,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// ingredients, strength, and dose forms.
   final patientDrugOpenfdaRxcui = (
     'patient.drug.openfda.rxcui',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -1222,6 +1407,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientDrugOpenfdaRxcuiExact = (
     'patient.drug.openfda.rxcui.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'RxNorm and RxCUI documentation',
       link:
@@ -1250,6 +1436,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// molecular structure and/or descriptive information.
   final patientDrugOpenfdaUnii = (
     'patient.drug.openfda.unii',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -1257,6 +1444,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientDrugOpenfdaUniiExact = (
     'patient.drug.openfda.unii.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -1267,36 +1455,42 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Neonate
   final patientPatientagegroupOne = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.one,
   );
 
   /// Infant
   final patientPatientagegroupTwo = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.two,
   );
 
   /// Child
   final patientPatientagegroupThree = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.three,
   );
 
   /// Adolescent
   final patientPatientagegroupFour = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.four,
   );
 
   /// Adult
   final patientPatientagegroupFive = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.five,
   );
 
   /// Elderly
   final patientPatientagegroupSix = (
     'patient.patientagegroup',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientagegroup.six,
   );
 
@@ -1318,36 +1512,42 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Decade
   final patientPatientonsetageunitEightZeroZero = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroZero,
   );
 
   /// Year
   final patientPatientonsetageunitEightZeroOne = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroOne,
   );
 
   /// Month
   final patientPatientonsetageunitEightZeroTwo = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroTwo,
   );
 
   /// Week
   final patientPatientonsetageunitEightZeroThree = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroThree,
   );
 
   /// Day
   final patientPatientonsetageunitEightZeroFour = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroFour,
   );
 
   /// Hour
   final patientPatientonsetageunitEightZeroFive = (
     'patient.patientonsetageunit',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientonsetageunit.eightZeroFive,
   );
 
@@ -1355,18 +1555,21 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Unknown
   final patientPatientsexZero = (
     'patient.patientsex',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientsex.zero,
   );
 
   /// Male
   final patientPatientsexOne = (
     'patient.patientsex',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientsex.one,
   );
 
   /// Female
   final patientPatientsexTwo = (
     'patient.patientsex',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientPatientsex.two,
   );
 
@@ -1380,6 +1583,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// a standardized medical terminology.
   final patientReactionReactionmeddrapt = (
     'patient.reaction.reactionmeddrapt',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'MedDRA',
       link:
@@ -1388,6 +1592,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final patientReactionReactionmeddraptExact = (
     'patient.reaction.reactionmeddrapt.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'MedDRA',
       link:
@@ -1404,36 +1609,42 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Recovered/resolved
   final patientReactionReactionoutcomeOne = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.one,
   );
 
   /// Recovering/resolving
   final patientReactionReactionoutcomeTwo = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.two,
   );
 
   /// Not recovered/not resolved
   final patientReactionReactionoutcomeThree = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.three,
   );
 
   /// Recovered/resolved with sequelae (consequent health issues)
   final patientReactionReactionoutcomeFour = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.four,
   );
 
   /// Fatal
   final patientReactionReactionoutcomeFive = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.five,
   );
 
   /// Unknown
   final patientReactionReactionoutcomeSix = (
     'patient.reaction.reactionoutcome',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPatientReactionReactionoutcome.six,
   );
 
@@ -1453,30 +1664,35 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Physician
   final primarysourceQualificationOne = (
     'primarysource.qualification',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPrimarysourceQualification.one,
   );
 
   /// Pharmacist
   final primarysourceQualificationTwo = (
     'primarysource.qualification',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPrimarysourceQualification.two,
   );
 
   /// Other health professional
   final primarysourceQualificationThree = (
     'primarysource.qualification',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPrimarysourceQualification.three,
   );
 
   /// Lawyer
   final primarysourceQualificationFour = (
     'primarysource.qualification',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPrimarysourceQualification.four,
   );
 
   /// Consumer or non-health professional
   final primarysourceQualificationFive = (
     'primarysource.qualification',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsPrimarysourceQualification.five,
   );
 
@@ -1488,6 +1704,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Country of the reporter of the event.
   final primarysourcecountry = (
     'primarysourcecountry',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
@@ -1495,6 +1712,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   );
   final primarysourcecountryExact = (
     'primarysourcecountry.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
@@ -1531,6 +1749,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Other
   final receiverReceivertypeSix = (
     'receiver.receivertype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsReceiverReceivertype.six,
   );
 
@@ -1553,24 +1772,28 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Spontaneous
   final reporttypeOne = (
     'reporttype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsReporttype.one,
   );
 
   /// Report from study
   final reporttypeTwo = (
     'reporttype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsReporttype.two,
   );
 
   /// Other
   final reporttypeThree = (
     'reporttype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsReporttype.three,
   );
 
   /// Not available to sender (unknown)
   final reporttypeFour = (
     'reporttype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsReporttype.four,
   );
 
@@ -1598,6 +1821,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// Regulatory authority
   final senderSendertypeTwo = (
     'sender.sendertype',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsSenderSendertype.two,
   );
 
@@ -1607,12 +1831,14 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   /// condition
   final seriousOne = (
     'serious',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsSerious.one,
   );
 
   /// The adverse event did not result in any of the above
   final seriousTwo = (
     'serious',
+    PossibleValueType.oneOf,
     _DrugAdverseEventsSerious.two,
   );
 
@@ -1649,6 +1875,7 @@ final class DrugAdverseEvents extends DrugAdverseEventsFields
   final transmissiondateformat = 'transmissiondateformat';
 }
 
+/// Identifies expedited reports (those that were processed within 15 days).
 enum _DrugAdverseEventsFulfillexpeditecriteria {
   /// Yes
   one._(
@@ -1667,6 +1894,7 @@ enum _DrugAdverseEventsFulfillexpeditecriteria {
   final String value;
 }
 
+/// Actions taken with the drug.
 enum _DrugAdverseEventsPatientDrugActiondrug {
   /// Drug withdrawn
   one._(
@@ -1705,6 +1933,9 @@ enum _DrugAdverseEventsPatientDrugActiondrug {
   final String value;
 }
 
+/// Dechallenge outcome information—whether the event abated after product use
+/// stopped or the dose was reduced. Only present when this was attempted and
+/// the data was provided.
 enum _DrugAdverseEventsPatientDrugDrugadditional {
   /// Yes
   one._(
@@ -1728,6 +1959,7 @@ enum _DrugAdverseEventsPatientDrugDrugadditional {
   final String value;
 }
 
+/// The drug’s route of administration.
 enum _DrugAdverseEventsPatientDrugDrugadministrationroute {
   /// Auricular (otic)
   one._(
@@ -2071,6 +2303,8 @@ enum _DrugAdverseEventsPatientDrugDrugadministrationroute {
   final String value;
 }
 
+/// Reported role of the drug in the adverse event report. These values are
+/// not validated by FDA.
 enum _DrugAdverseEventsPatientDrugDrugcharacterization {
   /// Suspect (the drug was considered by the reporter to be the cause)
   one._(
@@ -2096,6 +2330,7 @@ enum _DrugAdverseEventsPatientDrugDrugcharacterization {
   final String value;
 }
 
+/// The unit for `drugcumulativedosagenumb`.
 enum _DrugAdverseEventsPatientDrugDrugcumulativedosageunit {
   /// kg (kilograms)
   one._(
@@ -2124,6 +2359,7 @@ enum _DrugAdverseEventsPatientDrugDrugcumulativedosageunit {
   final String value;
 }
 
+/// The unit for the interval in the field `drugintervaldosageunitnumb.`
 enum _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition {
   /// Year
   eightZeroOne._(
@@ -2187,6 +2423,7 @@ enum _DrugAdverseEventsPatientDrugDrugintervaldosagedefinition {
   final String value;
 }
 
+/// Whether the reaction occured after readministration of the drug.
 enum _DrugAdverseEventsPatientDrugDrugrecurreadministration {
   /// Yes
   one._(
@@ -2210,6 +2447,8 @@ enum _DrugAdverseEventsPatientDrugDrugrecurreadministration {
   final String value;
 }
 
+/// The unit for the field `drugstructuredosagenumb`. For example, *mg* in
+/// `300 mg`.
 enum _DrugAdverseEventsPatientDrugDrugstructuredosageunit {
   /// kg (kilograms)
   one._(
@@ -2276,6 +2515,7 @@ enum _DrugAdverseEventsPatientDrugDrugtreatmentdurationunit {
   final String value;
 }
 
+/// Populated with Patient Age Group code.
 enum _DrugAdverseEventsPatientPatientagegroup {
   /// Neonate
   one._(
@@ -2314,6 +2554,7 @@ enum _DrugAdverseEventsPatientPatientagegroup {
   final String value;
 }
 
+/// The unit for the interval in the field `patientonsetage.`
 enum _DrugAdverseEventsPatientPatientonsetageunit {
   /// Decade
   eightZeroZero._(
@@ -2352,6 +2593,7 @@ enum _DrugAdverseEventsPatientPatientonsetageunit {
   final String value;
 }
 
+/// The sex of the patient.
 enum _DrugAdverseEventsPatientPatientsex {
   /// Unknown
   zero._(
@@ -2375,6 +2617,8 @@ enum _DrugAdverseEventsPatientPatientsex {
   final String value;
 }
 
+/// Outcome of the reaction in `reactionmeddrapt` at the time of last
+/// observation.
 enum _DrugAdverseEventsPatientReactionReactionoutcome {
   /// Recovered/resolved
   one._(
@@ -2413,6 +2657,7 @@ enum _DrugAdverseEventsPatientReactionReactionoutcome {
   final String value;
 }
 
+/// Category of individual who submitted the report.
 enum _DrugAdverseEventsPrimarysourceQualification {
   /// Physician
   one._(
@@ -2446,6 +2691,8 @@ enum _DrugAdverseEventsPrimarysourceQualification {
   final String value;
 }
 
+/// The type of organization receiving the report. The value,`6`, is only
+/// specified if it is `other`, otherwise it is left blank.
 enum _DrugAdverseEventsReceiverReceivertype {
   /// Other
   six._(
@@ -2459,6 +2706,7 @@ enum _DrugAdverseEventsReceiverReceivertype {
   final String value;
 }
 
+/// Code indicating the circumstances under which the report was generated.
 enum _DrugAdverseEventsReporttype {
   /// Spontaneous
   one._(
@@ -2487,6 +2735,8 @@ enum _DrugAdverseEventsReporttype {
   final String value;
 }
 
+/// The name of the organization sending the report. Because FDA is providing
+/// these reports to you, the value is always `2`.
 enum _DrugAdverseEventsSenderSendertype {
   /// Regulatory authority
   two._(
@@ -2500,6 +2750,7 @@ enum _DrugAdverseEventsSenderSendertype {
   final String value;
 }
 
+/// Seriousness of the adverse event.
 enum _DrugAdverseEventsSerious {
   /// The adverse event resulted in death, a life threatening condition,
   /// hospitalization, disability, congenital anomaly, or other serious

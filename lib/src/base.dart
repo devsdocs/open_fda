@@ -74,7 +74,6 @@ final class OpenFDAQuery {
   }
 }
 
-///
 enum SortType {
   ascending._('asc'),
   descending._('desc'),
@@ -93,4 +92,10 @@ final class OpenFDAPossibleValueReference {
   OpenFDAPossibleValueReference(this.name, {this.link});
   final String? name;
   final String? link;
+}
+
+enum PossibleValueType {
+  bool,
+  oneOf,
+  reference,
 }

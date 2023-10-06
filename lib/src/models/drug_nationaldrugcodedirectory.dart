@@ -44,30 +44,35 @@ final class DrugNationalDrugCodeDirectory
   /// CI
   final deaScheduleOne = (
     'dea_schedule',
+    PossibleValueType.oneOf,
     _DrugNationalDrugCodeDirectoryDeaSchedule.one,
   );
 
   /// CII
   final deaScheduleTwo = (
     'dea_schedule',
+    PossibleValueType.oneOf,
     _DrugNationalDrugCodeDirectoryDeaSchedule.two,
   );
 
   /// CIII
   final deaScheduleThree = (
     'dea_schedule',
+    PossibleValueType.oneOf,
     _DrugNationalDrugCodeDirectoryDeaSchedule.three,
   );
 
   /// CIV
   final deaScheduleFour = (
     'dea_schedule',
+    PossibleValueType.oneOf,
     _DrugNationalDrugCodeDirectoryDeaSchedule.four,
   );
 
   /// CV
   final deaScheduleFive = (
     'dea_schedule',
+    PossibleValueType.oneOf,
     _DrugNationalDrugCodeDirectoryDeaSchedule.five,
   );
 
@@ -215,6 +220,8 @@ final class DrugNationalDrugCodeDirectory
   final splId = 'spl_id';
 }
 
+/// This is the assigned DEA Schedule number as reported by the labeler.
+/// Values are CI, CII, CIII, CIV, and CV.
 enum _DrugNationalDrugCodeDirectoryDeaSchedule {
   /// CI
   one._(

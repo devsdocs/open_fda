@@ -14,120 +14,140 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// Anesthesiology
   final advisoryCommitteeAN = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.aN,
   );
 
   /// Clinical Chemistry
   final advisoryCommitteeCH = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.cH,
   );
 
   /// Cardiovascular
   final advisoryCommitteeCV = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.cV,
   );
 
   /// Dental
   final advisoryCommitteeDE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.dE,
   );
 
   /// Ear, Nose, Throat
   final advisoryCommitteeEN = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.eN,
   );
 
   /// Gastroenterology, Urology
   final advisoryCommitteeGU = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.gU,
   );
 
   /// Hematology
   final advisoryCommitteeHE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.hE,
   );
 
   /// General Hospital
   final advisoryCommitteeHO = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.hO,
   );
 
   /// Immunology
   final advisoryCommitteeIM = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.iM,
   );
 
   /// Medical Genetics
   final advisoryCommitteeMG = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.mG,
   );
 
   /// Microbiology
   final advisoryCommitteeMI = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.mI,
   );
 
   /// Neurology
   final advisoryCommitteeNE = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.nE,
   );
 
   /// Obstetrics/Gynecology
   final advisoryCommitteeOB = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.oB,
   );
 
   /// Ophthalmic
   final advisoryCommitteeOP = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.oP,
   );
 
   /// Orthopedic
   final advisoryCommitteeOR = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.oR,
   );
 
   /// Pathology
   final advisoryCommitteePA = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.pA,
   );
 
   /// Physical Medicine
   final advisoryCommitteePM = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.pM,
   );
 
   /// Radiology
   final advisoryCommitteeRA = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.rA,
   );
 
   /// General, Plastic Surgery
   final advisoryCommitteeSU = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.sU,
   );
 
   /// Clinical Toxicology
   final advisoryCommitteeTX = (
     'advisory_committee',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalAdvisoryCommittee.tX,
   );
 
@@ -157,48 +177,56 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// Conversion after approval.
   final decisionCodeAPCV = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.aPCV,
   );
 
   /// Approval: PMA has been approved.
   final decisionCodeAPPR = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.aPPR,
   );
 
   /// Reclassification after approval.
   final decisionCodeAPRL = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.aPRL,
   );
 
   /// Withdrawal after approval.
   final decisionCodeAPWD = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.aPWD,
   );
 
   /// Denial: PMA has been denied.
   final decisionCodeDENY = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.dENY,
   );
 
   /// No decision made in 30 days.
   final decisionCodeGTthreezero = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.gTthreezero,
   );
 
   /// 30 day notice acceptance (decision made in ≤30 days).
   final decisionCodeLEthreezero = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.lEthreezero,
   );
 
   /// Withdrawal: PMA has been withdrawn.
   final decisionCodeWTDR = (
     'decision_code',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalDecisionCode.wTDR,
   );
 
@@ -213,12 +241,14 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// No
   final expeditedReviewFlagN = (
     'expedited_review_flag',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalExpeditedReviewFlag.n,
   );
 
   /// Yes
   final expeditedReviewFlagY = (
     'expedited_review_flag',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalExpeditedReviewFlag.y,
   );
 
@@ -237,36 +267,42 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// Class I (low to moderate risk): general controls
   final openfdaDeviceClassOne = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final openfdaDeviceClassTwo = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final openfdaDeviceClassThree = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final openfdaDeviceClassF = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final openfdaDeviceClassN = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final openfdaDeviceClassU = (
     'openfda.device_class',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalOpenfdaDeviceClass.u,
   );
 
@@ -298,6 +334,7 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// surveillance of the specific medical device.
   final openfdaRegulationNumber = (
     'openfda.regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -306,6 +343,7 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   );
   final openfdaRegulationNumberExact = (
     'openfda.regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -363,10 +401,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// that is required for acceptance of the modification.
   final supplementTypeThreedayNoticeAndPMASupplement = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.threedayNoticeAndPMASupplement,
   );
   final supplementTypeThreedayNoticeAndPMASupplementExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.threedayNoticeAndPMASupplement,
   );
 
@@ -378,11 +418,13 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// in the approval order.
   final supplementTypeAnnualPeriodicReportOrThreezerodaySupplements = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType
         .annualPeriodicReportOrThreezerodaySupplements,
   );
   final supplementTypeAnnualPeriodicReportOrThreezerodaySupplementsExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType
         .annualPeriodicReportOrThreezerodaySupplements,
   );
@@ -391,10 +433,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// including all information submitted with or incorporated by reference.
   final supplementTypePMA = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMA,
   );
   final supplementTypePMAExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMA,
   );
 
@@ -406,10 +450,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// is called a “manufacturing site change supplement.”
   final supplementTypePMAManufacturingSiteChangeSupplement = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMAManufacturingSiteChangeSupplement,
   );
   final supplementTypePMAManufacturingSiteChangeSupplementExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMAManufacturingSiteChangeSupplement,
   );
 
@@ -420,10 +466,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// software, color additives, or labeling.
   final supplementTypePMASupplementOneeightzeroDays = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMASupplementOneeightzeroDays,
   );
   final supplementTypePMASupplementOneeightzeroDaysExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.pMASupplementOneeightzeroDays,
   );
 
@@ -442,10 +490,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// association.
   final supplementTypeSpecialPMASupplement = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.specialPMASupplement,
   );
   final supplementTypeSpecialPMASupplementExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.specialPMASupplement,
   );
 
@@ -453,10 +503,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// describes PMA amendments and supplements.
   final supplementTypeSubpartB = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.subpartB,
   );
   final supplementTypeSubpartBExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.subpartB,
   );
 
@@ -470,10 +522,12 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// panel-track supplements).
   final supplementTypeSubpartE = (
     'supplement_type',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.subpartE,
   );
   final supplementTypeSubpartEExact = (
     'supplement_type.exact',
+    PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType.subpartE,
   );
 
@@ -489,6 +543,10 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   final zipExt = 'zip_ext';
 }
 
+/// This equates to the review division within CDRH in which the PMA would be
+/// reviewed, if it were reviewed today; this is derived from the procode and
+/// is always same as the “Review Panel” field in the Device Classification
+/// database (e.g. GU).
 enum _DevicePreMarketApprovalAdvisoryCommittee {
   /// Anesthesiology
   aN._(
@@ -597,6 +655,7 @@ enum _DevicePreMarketApprovalAdvisoryCommittee {
   final String value;
 }
 
+/// A four digit code reflecting the final decision for a PMA submission.
 enum _DevicePreMarketApprovalDecisionCode {
   /// Conversion after approval.
   aPCV._(
@@ -645,6 +704,7 @@ enum _DevicePreMarketApprovalDecisionCode {
   final String value;
 }
 
+/// Flag indicating that the approval review process was expidited.
 enum _DevicePreMarketApprovalExpeditedReviewFlag {
   /// No
   n._(
@@ -663,6 +723,8 @@ enum _DevicePreMarketApprovalExpeditedReviewFlag {
   final String value;
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513)
 enum _DevicePreMarketApprovalOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -701,6 +763,13 @@ enum _DevicePreMarketApprovalOpenfdaDeviceClass {
   final String value;
 }
 
+/// [Link to general criteria used for PMA
+/// regulation](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?CFRPart=814).
+/// The “PMA regulation” (21 CFR Part 814) sets forth general criteria for
+/// determining when you must submit a PMA supplement or a 30-day notice for a
+/// device modification or manufacturing change (21 CFR 814.39). See
+/// [here](http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/HowtoMarketYourDevice/PremarketSubmissions/PremarketApprovalPMA/ucm050467.htm#types)
+/// for more detail.
 enum _DevicePreMarketApprovalSupplementType {
   /// Section 515(d) of the Act (21 U.S.C. 360e), as amended by the Food and
   /// Drug Administration Modernization Act of 1997 (FDAMA)(Pub. L. 105-115),

@@ -27,18 +27,21 @@ final class AnimalAndVeterinaryAdverseEvents
   /// made.
   final animalAgeQualifierEstimated = (
     'animal.age.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalAgeQualifier.estimated,
   );
 
   /// The age of the animal(s) is known.
   final animalAgeQualifierMeasured = (
     'animal.age.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalAgeQualifier.measured,
   );
 
   /// The age of the animal(s) is not known.
   final animalAgeQualifierUnknown = (
     'animal.age.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalAgeQualifier.unknown,
   );
 
@@ -85,18 +88,21 @@ final class AnimalAndVeterinaryAdverseEvents
   /// The animal was not weighed but an estimation of the age can be made.
   final animalWeightQualifierEstimated = (
     'animal.weight.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalWeightQualifier.estimated,
   );
 
   /// The animal was weighed.
   final animalWeightQualifierMeasured = (
     'animal.weight.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalWeightQualifier.measured,
   );
 
   /// The animal's weight is not known.
   final animalWeightQualifierUnknown = (
     'animal.weight.qualifier',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsAnimalWeightQualifier.unknown,
   );
 
@@ -122,12 +128,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Adverse event did not abate.
   final drugAeAbatedAfterStoppingDrugNo = (
     'drug.ae_abated_after_stopping_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug.no,
   );
 
   /// The veterinary medicinal product was neither stopped nor re-introduced.
   final drugAeAbatedAfterStoppingDrugNotApplicable = (
     'drug.ae_abated_after_stopping_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug
         .notApplicable,
   );
@@ -135,12 +143,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Information is not available.
   final drugAeAbatedAfterStoppingDrugUnknown = (
     'drug.ae_abated_after_stopping_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug.unknown,
   );
 
   /// Adverse event abated.
   final drugAeAbatedAfterStoppingDrugYes = (
     'drug.ae_abated_after_stopping_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug.yes,
   );
 
@@ -150,12 +160,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Adverse event did not reappear.
   final drugAeReappearedAfterResumingDrugNo = (
     'drug.ae_reappeared_after_resuming_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug.no,
   );
 
   /// The veterinary medicinal product was neither stopped nor re-introduced.
   final drugAeReappearedAfterResumingDrugNotApplicable = (
     'drug.ae_reappeared_after_resuming_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug
         .notApplicable,
   );
@@ -163,12 +175,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Information is not available.
   final drugAeReappearedAfterResumingDrugUnknown = (
     'drug.ae_reappeared_after_resuming_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug.unknown,
   );
 
   /// Adverse event reappeared.
   final drugAeReappearedAfterResumingDrugYes = (
     'drug.ae_reappeared_after_resuming_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug.yes,
   );
 
@@ -252,24 +266,28 @@ final class AnimalAndVeterinaryAdverseEvents
   /// There was no previous adverse event.
   final drugPreviousAeToDrugNo = (
     'drug.previous_ae_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug.no,
   );
 
   /// There was no previous exposure to the veterinary medicinal product.
   final drugPreviousAeToDrugNotApplicable = (
     'drug.previous_ae_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug.notApplicable,
   );
 
   /// Information is not available.
   final drugPreviousAeToDrugUnknown = (
     'drug.previous_ae_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug.unknown,
   );
 
   /// There was a previous adverse event.
   final drugPreviousAeToDrugYes = (
     'drug.previous_ae_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug.yes,
   );
 
@@ -279,18 +297,21 @@ final class AnimalAndVeterinaryAdverseEvents
   /// There was no previous exposure.
   final drugPreviousExposureToDrugNo = (
     'drug.previous_exposure_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousExposureToDrug.no,
   );
 
   /// Information is not available.
   final drugPreviousExposureToDrugUnknown = (
     'drug.previous_exposure_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousExposureToDrug.unknown,
   );
 
   /// There was a previous exposure.
   final drugPreviousExposureToDrugYes = (
     'drug.previous_exposure_to_drug',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugPreviousExposureToDrug.yes,
   );
 
@@ -307,12 +328,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// The veterinary medicinal product was used in an off-label use manner.
   final drugUsedAccordingToLabelNo = (
     'drug.used_according_to_label',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugUsedAccordingToLabel.no,
   );
 
   /// Information is not available.
   final drugUsedAccordingToLabelUnknown = (
     'drug.used_according_to_label',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugUsedAccordingToLabel.unknown,
   );
 
@@ -320,6 +343,7 @@ final class AnimalAndVeterinaryAdverseEvents
   /// recommendations/directions of use.
   final drugUsedAccordingToLabelYes = (
     'drug.used_according_to_label',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsDrugUsedAccordingToLabel.yes,
   );
 
@@ -374,60 +398,72 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Died
   final outcomeMedicalStatusDied = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.died,
   );
   final outcomeMedicalStatusDiedExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.died,
   );
 
   /// Euthanized
   final outcomeMedicalStatusEuthanized = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.euthanized,
   );
   final outcomeMedicalStatusEuthanizedExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.euthanized,
   );
 
   /// Ongoing
   final outcomeMedicalStatusOngoing = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.ongoing,
   );
   final outcomeMedicalStatusOngoingExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.ongoing,
   );
 
   /// Recovered with Sequela
   final outcomeMedicalStatusRecoveredWithSequela = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.recoveredWithSequela,
   );
   final outcomeMedicalStatusRecoveredWithSequelaExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.recoveredWithSequela,
   );
 
   /// Recovered/Normal
   final outcomeMedicalStatusRecoveredNormal = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.recoveredNormal,
   );
   final outcomeMedicalStatusRecoveredNormalExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.recoveredNormal,
   );
 
   /// Unknown
   final outcomeMedicalStatusUnknown = (
     'outcome.medical_status',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.unknown,
   );
   final outcomeMedicalStatusUnknownExact = (
     'outcome.medical_status.exact',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus.unknown,
   );
 
@@ -467,18 +503,21 @@ final class AnimalAndVeterinaryAdverseEvents
   /// VeDDRA Version 11
   final reactionVeddraVersionOneOne = (
     'reaction.veddra_version',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsReactionVeddraVersion.oneOne,
   );
 
   /// VeDDRA Version 2
   final reactionVeddraVersionTwo = (
     'reaction.veddra_version',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsReactionVeddraVersion.two,
   );
 
   /// VeDDRA Version 3
   final reactionVeddraVersionThree = (
     'reaction.veddra_version',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsReactionVeddraVersion.three,
   );
 
@@ -528,6 +567,7 @@ final class AnimalAndVeterinaryAdverseEvents
   /// The adverse event is none of the above.
   final seriousAeNo = (
     'serious_ae',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsSeriousAe.no,
   );
 
@@ -537,6 +577,7 @@ final class AnimalAndVeterinaryAdverseEvents
   /// disfigurement.
   final seriousAeYes = (
     'serious_ae',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsSeriousAe.yes,
   );
 
@@ -549,12 +590,14 @@ final class AnimalAndVeterinaryAdverseEvents
   /// Human or animal was not treated.
   final treatedForAeF = (
     'treated_for_ae',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsTreatedForAe.f,
   );
 
   /// Human or animal was treated.
   final treatedForAeT = (
     'treated_for_ae',
+    PossibleValueType.oneOf,
     _AnimalAndVeterinaryAdverseEventsTreatedForAe.t,
   );
 
@@ -567,6 +610,8 @@ final class AnimalAndVeterinaryAdverseEvents
   final uniqueAerIdNumber = 'unique_aer_id_number';
 }
 
+/// This describes the method used to determine the age of the affected
+/// animal(s).
 enum _AnimalAndVeterinaryAdverseEventsAnimalAgeQualifier {
   /// The age of the animal(s) is not known, but an estimation of the age can be
   /// made.
@@ -591,6 +636,8 @@ enum _AnimalAndVeterinaryAdverseEventsAnimalAgeQualifier {
   final String value;
 }
 
+/// This list describes how the weight of the affected animal(s) was
+/// determined.
 enum _AnimalAndVeterinaryAdverseEventsAnimalWeightQualifier {
   /// The animal was not weighed but an estimation of the age can be made.
   estimated._(
@@ -614,6 +661,8 @@ enum _AnimalAndVeterinaryAdverseEventsAnimalWeightQualifier {
   final String value;
 }
 
+/// A list of values (Yes, No, Unknown, or Not Applicable) describing whether
+/// the adverse event abated after stopping the veterinary medicinal product.
 enum _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug {
   /// Adverse event did not abate.
   no._(
@@ -642,6 +691,9 @@ enum _AnimalAndVeterinaryAdverseEventsDrugAeAbatedAfterStoppingDrug {
   final String value;
 }
 
+/// A list of values (Yes, No, Unknown, or Not Applicable) describing whether
+/// the adverse event reappeared after re-introduction of the veterinary
+/// medicinal product.
 enum _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug {
   /// Adverse event did not reappear.
   no._(
@@ -670,6 +722,10 @@ enum _AnimalAndVeterinaryAdverseEventsDrugAeReappearedAfterResumingDrug {
   final String value;
 }
 
+/// A list of values (Yes, No, Unknown, or Not Applicable) describing whether
+/// or not the affected animal(s) experienced an adverse event when exposed to
+/// the veterinary medicinal product on a date previous to this adverse event
+/// report.
 enum _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug {
   /// There was no previous adverse event.
   no._(
@@ -698,6 +754,9 @@ enum _AnimalAndVeterinaryAdverseEventsDrugPreviousAeToDrug {
   final String value;
 }
 
+/// A list of values (Yes, No, or Unknown) describing whether or not the
+/// affected animal(s) had been exposed to the veterinary medicinal product on
+/// a date previous to the adverse event report.
 enum _AnimalAndVeterinaryAdverseEventsDrugPreviousExposureToDrug {
   /// There was no previous exposure.
   no._(
@@ -721,6 +780,9 @@ enum _AnimalAndVeterinaryAdverseEventsDrugPreviousExposureToDrug {
   final String value;
 }
 
+/// A list of values (Yes, No, or Unknown) describing whether the veterinary
+/// medicinal product was used according to its labeled
+/// recommendations/directions of use.
 enum _AnimalAndVeterinaryAdverseEventsDrugUsedAccordingToLabel {
   /// The veterinary medicinal product was used in an off-label use manner.
   no._(
@@ -745,6 +807,7 @@ enum _AnimalAndVeterinaryAdverseEventsDrugUsedAccordingToLabel {
   final String value;
 }
 
+/// The animal's medical status after treatment.
 enum _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus {
   /// Died
   died._(
@@ -783,6 +846,8 @@ enum _AnimalAndVeterinaryAdverseEventsOutcomeMedicalStatus {
   final String value;
 }
 
+/// The version of VeDDRA from which the veddra codes and terms have been
+/// supplied for use in this adverse event report.
 enum _AnimalAndVeterinaryAdverseEventsReactionVeddraVersion {
   /// VeDDRA Version 11
   oneOne._(
@@ -806,6 +871,8 @@ enum _AnimalAndVeterinaryAdverseEventsReactionVeddraVersion {
   final String value;
 }
 
+/// A list of values (Yes or No) characterizing the seriousness of the adverse
+/// event.
 enum _AnimalAndVeterinaryAdverseEventsSeriousAe {
   /// The adverse event is none of the above.
   no._(
@@ -827,6 +894,8 @@ enum _AnimalAndVeterinaryAdverseEventsSeriousAe {
   final String value;
 }
 
+/// A list of values (T or F) describing whether or not the human or animal
+/// affected received treatment in response to the adverse event.
 enum _AnimalAndVeterinaryAdverseEventsTreatedForAe {
   /// Human or animal was not treated.
   f._(

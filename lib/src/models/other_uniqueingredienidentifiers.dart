@@ -16,6 +16,7 @@ final class OtherUniqueIngredienIdentifiers
   /// molecular structure and/or descriptive information.
   final unii = (
     'unii',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
@@ -23,6 +24,7 @@ final class OtherUniqueIngredienIdentifiers
   );
   final uniiExact = (
     'unii.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',

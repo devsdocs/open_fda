@@ -319,12 +319,12 @@ String constructorWriter(
         if (p.possibleValuesType == PossibleValuesType.reference) {
           final poss = p.possibleValues! as Reference;
           buff.writeln(
-            "final ${p.address.toSnakeCase.toSnakeCase} = ('${p.address}', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+            "final ${p.address.toSnakeCase.toSnakeCase} = ('${p.address}', PossibleValueType.reference, OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
           );
           if (p.isExact != null) {
             if (p.isExact!) {
               buff.writeln(
-                "final ${p.address.toSnakeCase.toSnakeCase}Exact = ('${p.address}.exact', OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+                "final ${p.address.toSnakeCase.toSnakeCase}Exact = ('${p.address}.exact', PossibleValueType.reference, OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
               );
             }
           }
@@ -361,23 +361,23 @@ String constructorWriter(
                                 .removeNonAlph
                         : key.removeNonAlph;
                 buff.writeln(
-                  "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', _$descObjectName.${enumType.toSnakeCase},);",
+                  "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
                 );
                 if (p.isExact != null) {
                   if (p.isExact!) {
                     buff.writeln(
-                      "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', _$descObjectName.${enumType.toSnakeCase},);",
+                      "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
                     );
                   }
                 }
               } else {
                 buff.writeln(
-                  "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', $key,);",
+                  "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.bool, $key,);",
                 );
                 if (p.isExact != null) {
                   if (p.isExact!) {
                     buff.writeln(
-                      "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', $key,);",
+                      "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', PossibleValueType.bool, $key,);",
                     );
                   }
                 }
@@ -468,6 +468,9 @@ String enumWriter(
 
   if (poss.data != null) {
     if (!poss.isBool!) {
+      if (props.comment != null) {
+        buff.writeln(docWriter(props.comment!));
+      }
       buff.writeln('enum _$descObjectName {');
 
       poss.data!.forEach((key, value) {

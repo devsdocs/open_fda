@@ -14,24 +14,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final antibodyAgreeFN = (
     'antibody_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree.fN,
   );
 
   /// False Positive
   final antibodyAgreeFP = (
     'antibody_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree.fP,
   );
 
   /// True Negative
   final antibodyAgreeTN = (
     'antibody_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree.tN,
   );
 
   /// True Positive
   final antibodyAgreeTP = (
     'antibody_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree.tP,
   );
 
@@ -62,24 +66,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final igaAgreeFN = (
     'iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgaAgree.fN,
   );
 
   /// False Positive
   final igaAgreeFP = (
     'iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgaAgree.fP,
   );
 
   /// True Negative
   final igaAgreeTN = (
     'iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgaAgree.tN,
   );
 
   /// True Positive
   final igaAgreeTP = (
     'iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgaAgree.tP,
   );
 
@@ -90,24 +98,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final iggAgreeFN = (
     'igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIggAgree.fN,
   );
 
   /// False Positive
   final iggAgreeFP = (
     'igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIggAgree.fP,
   );
 
   /// True Negative
   final iggAgreeTN = (
     'igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIggAgree.tN,
   );
 
   /// True Positive
   final iggAgreeTP = (
     'igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIggAgree.tP,
   );
 
@@ -124,24 +136,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final igmAgreeFN = (
     'igm_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmAgree.fN,
   );
 
   /// False Positive
   final igmAgreeFP = (
     'igm_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmAgree.fP,
   );
 
   /// True Negative
   final igmAgreeTN = (
     'igm_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmAgree.tN,
   );
 
   /// True Positive
   final igmAgreeTP = (
     'igm_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmAgree.tP,
   );
 
@@ -149,24 +165,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final igmIgaAgreeFN = (
     'igm_iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree.fN,
   );
 
   /// False Positive
   final igmIgaAgreeFP = (
     'igm_iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree.fP,
   );
 
   /// True Negative
   final igmIgaAgreeTN = (
     'igm_iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree.tN,
   );
 
   /// True Positive
   final igmIgaAgreeTP = (
     'igm_iga_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree.tP,
   );
 
@@ -178,24 +198,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final igmIggAgreeFN = (
     'igm_igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree.fN,
   );
 
   /// False Positive
   final igmIggAgreeFP = (
     'igm_igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree.fP,
   );
 
   /// True Negative
   final igmIggAgreeTN = (
     'igm_igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree.tN,
   );
 
   /// True Positive
   final igmIggAgreeTP = (
     'igm_igg_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree.tP,
   );
 
@@ -224,24 +248,28 @@ final class DeviceCovid19SerologicalTestingEvaluations
   /// False Negative
   final panAgreeFN = (
     'pan_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsPanAgree.fN,
   );
 
   /// False Positive
   final panAgreeFP = (
     'pan_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsPanAgree.fP,
   );
 
   /// True Negative
   final panAgreeTN = (
     'pan_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsPanAgree.tN,
   );
 
   /// True Positive
   final panAgreeTP = (
     'pan_agree',
+    PossibleValueType.oneOf,
     _DeviceCovid19SerologicalTestingEvaluationsPanAgree.tP,
   );
 
@@ -265,6 +293,9 @@ final class DeviceCovid19SerologicalTestingEvaluations
   final type = 'type';
 }
 
+/// Agreement between all antibody results and antibody_truth. Any positive
+/// makes the result positive. All results must be negative for the overall
+/// result to be considered negative.
 enum _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree {
   /// False Negative
   fN._(
@@ -293,6 +324,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsAntibodyAgree {
   final String value;
 }
 
+/// Agreement between iga_result and antibody_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsIgaAgree {
   /// False Negative
   fN._(
@@ -321,6 +353,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsIgaAgree {
   final String value;
 }
 
+/// Agreement between igg_result and igg_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsIggAgree {
   /// False Negative
   fN._(
@@ -349,6 +382,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsIggAgree {
   final String value;
 }
 
+/// Agreement between igm_result and igm_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsIgmAgree {
   /// False Negative
   fN._(
@@ -377,6 +411,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsIgmAgree {
   final String value;
 }
 
+/// Agreement between igm_iga_result and antibody_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree {
   /// False Negative
   fN._(
@@ -405,6 +440,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsIgmIgaAgree {
   final String value;
 }
 
+/// Agreement between igm_igg_result and antibody_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree {
   /// False Negative
   fN._(
@@ -433,6 +469,7 @@ enum _DeviceCovid19SerologicalTestingEvaluationsIgmIggAgree {
   final String value;
 }
 
+/// Agreement between pan_result and antibody_truth.
 enum _DeviceCovid19SerologicalTestingEvaluationsPanAgree {
   /// False Negative
   fN._(

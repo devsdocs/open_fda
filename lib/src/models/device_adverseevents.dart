@@ -12,20 +12,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// No
   final adverseEventFlagN = (
     'adverse_event_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsAdverseEventFlag.n,
   );
   final adverseEventFlagNExact = (
     'adverse_event_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsAdverseEventFlag.n,
   );
 
   /// Yes
   final adverseEventFlagY = (
     'adverse_event_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsAdverseEventFlag.y,
   );
   final adverseEventFlagYExact = (
     'adverse_event_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsAdverseEventFlag.y,
   );
 
@@ -82,32 +86,38 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Documentation forthcoming.
   final deviceDateRemovedFlagAsterix = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.asterix,
   );
   final deviceDateRemovedFlagAsterixExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.asterix,
   );
 
   /// Documentation forthcoming.
   final deviceDateRemovedFlagB = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.b,
   );
   final deviceDateRemovedFlagBExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.b,
   );
 
   /// Only a year and month were provided. Day was set to 01.
   final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsToZeroone = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag
         .monthAndYearProvidedOnlyDayDefaultsToZeroone,
   );
   final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsToZerooneExact =
       (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag
         .monthAndYearProvidedOnlyDayDefaultsToZeroone,
   );
@@ -115,50 +125,60 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Documentation forthcoming.
   final deviceDateRemovedFlagNoInformationAtThisTime = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.noInformationAtThisTime,
   );
   final deviceDateRemovedFlagNoInformationAtThisTimeExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.noInformationAtThisTime,
   );
 
   /// Documentation forthcoming.
   final deviceDateRemovedFlagNotAvailable = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.notAvailable,
   );
   final deviceDateRemovedFlagNotAvailableExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.notAvailable,
   );
 
   /// Documentation forthcoming.
   final deviceDateRemovedFlagUnknown = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.unknown,
   );
   final deviceDateRemovedFlagUnknownExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.unknown,
   );
 
   /// Documentation forthcoming.
   final deviceDateRemovedFlagV = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.v,
   );
   final deviceDateRemovedFlagVExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.v,
   );
 
   /// Only a year was provided. Month was set to 01 (January) and day set to 01.
   final deviceDateRemovedFlagYearProvidedOnly = (
     'device.date_removed_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.yearProvidedOnly,
   );
   final deviceDateRemovedFlagYearProvidedOnlyExact = (
     'device.date_removed_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag.yearProvidedOnly,
   );
 
@@ -177,11 +197,13 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Device was returned to manufacturer
   final deviceDeviceAvailabilityDeviceWasReturnedToManufacturer = (
     'device.device_availability',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability
         .deviceWasReturnedToManufacturer,
   );
   final deviceDeviceAvailabilityDeviceWasReturnedToManufacturerExact = (
     'device.device_availability.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability
         .deviceWasReturnedToManufacturer,
   );
@@ -189,40 +211,48 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Documentation forthcoming.
   final deviceDeviceAvailabilityI = (
     'device.device_availability',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.i,
   );
   final deviceDeviceAvailabilityIExact = (
     'device.device_availability.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.i,
   );
 
   /// No
   final deviceDeviceAvailabilityNo = (
     'device.device_availability',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.no,
   );
   final deviceDeviceAvailabilityNoExact = (
     'device.device_availability.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.no,
   );
 
   /// No answer provided
   final deviceDeviceAvailabilityNoAnswerProvided = (
     'device.device_availability',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.noAnswerProvided,
   );
   final deviceDeviceAvailabilityNoAnswerProvidedExact = (
     'device.device_availability.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.noAnswerProvided,
   );
 
   /// Yes
   final deviceDeviceAvailabilityYes = (
     'device.device_availability',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.yes,
   );
   final deviceDeviceAvailabilityYesExact = (
     'device.device_availability.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceAvailability.yes,
   );
 
@@ -231,12 +261,14 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// made available to, the manufacturer.
   final deviceDeviceEvaluatedByManufacturerDeviceNotReturnedToManufacturer = (
     'device.device_evaluated_by_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer
         .deviceNotReturnedToManufacturer,
   );
   final deviceDeviceEvaluatedByManufacturerDeviceNotReturnedToManufacturerExact =
       (
     'device.device_evaluated_by_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer
         .deviceNotReturnedToManufacturer,
   );
@@ -245,21 +277,25 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// conducted.
   final deviceDeviceEvaluatedByManufacturerNo = (
     'device.device_evaluated_by_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer.no,
   );
   final deviceDeviceEvaluatedByManufacturerNoExact = (
     'device.device_evaluated_by_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer.no,
   );
 
   /// No answer was provided or this information was unavailable.
   final deviceDeviceEvaluatedByManufacturerNoAnswerProvidedOrEmpty = (
     'device.device_evaluated_by_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer
         .noAnswerProvidedOrEmpty,
   );
   final deviceDeviceEvaluatedByManufacturerNoAnswerProvidedOrEmptyExact = (
     'device.device_evaluated_by_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer
         .noAnswerProvidedOrEmpty,
   );
@@ -267,10 +303,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// An evaluation was made of the suspect or related medical device.
   final deviceDeviceEvaluatedByManufacturerYes = (
     'device.device_evaluated_by_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer.yes,
   );
   final deviceDeviceEvaluatedByManufacturerYesExact = (
     'device.device_evaluated_by_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer.yes,
   );
 
@@ -283,162 +321,194 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Attorney
   final deviceDeviceOperatorAttorney = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.attorney,
   );
   final deviceDeviceOperatorAttorneyExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.attorney,
   );
 
   /// Audiologist
   final deviceDeviceOperatorAudiologist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.audiologist,
   );
   final deviceDeviceOperatorAudiologistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.audiologist,
   );
 
   /// Biomedical engineer
   final deviceDeviceOperatorBiomedicalEngineer = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.biomedicalEngineer,
   );
   final deviceDeviceOperatorBiomedicalEngineerExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.biomedicalEngineer,
   );
 
   /// Dental assistant
   final deviceDeviceOperatorDentalAssistant = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentalAssistant,
   );
   final deviceDeviceOperatorDentalAssistantExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentalAssistant,
   );
 
   /// Dental hygienist
   final deviceDeviceOperatorDentalHygienist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentalHygienist,
   );
   final deviceDeviceOperatorDentalHygienistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentalHygienist,
   );
 
   /// Dentist
   final deviceDeviceOperatorDentist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentist,
   );
   final deviceDeviceOperatorDentistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dentist,
   );
 
   /// Device unattended
   final deviceDeviceOperatorDeviceUnattended = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.deviceUnattended,
   );
   final deviceDeviceOperatorDeviceUnattendedExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.deviceUnattended,
   );
 
   /// Dietician
   final deviceDeviceOperatorDietician = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dietician,
   );
   final deviceDeviceOperatorDieticianExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.dietician,
   );
 
   /// Emergency medical technician
   final deviceDeviceOperatorEmergencyMedicalTechnician = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.emergencyMedicalTechnician,
   );
   final deviceDeviceOperatorEmergencyMedicalTechnicianExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.emergencyMedicalTechnician,
   );
 
   /// Health professional
   final deviceDeviceOperatorHealthProfessional = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.healthProfessional,
   );
   final deviceDeviceOperatorHealthProfessionalExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.healthProfessional,
   );
 
   /// Home health aide
   final deviceDeviceOperatorHomeHealthAide = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.homeHealthAide,
   );
   final deviceDeviceOperatorHomeHealthAideExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.homeHealthAide,
   );
 
   /// Hospital service technician
   final deviceDeviceOperatorHospitalServiceTechnician = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.hospitalServiceTechnician,
   );
   final deviceDeviceOperatorHospitalServiceTechnicianExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.hospitalServiceTechnician,
   );
 
   /// Invalid data
   final deviceDeviceOperatorInvalidData = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.invalidData,
   );
   final deviceDeviceOperatorInvalidDataExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.invalidData,
   );
 
   /// Lay user/patient
   final deviceDeviceOperatorLayUserpatient = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.layUserpatient,
   );
   final deviceDeviceOperatorLayUserpatientExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.layUserpatient,
   );
 
   /// Medical assistant
   final deviceDeviceOperatorMedicalAssistant = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.medicalAssistant,
   );
   final deviceDeviceOperatorMedicalAssistantExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.medicalAssistant,
   );
 
   /// Medical equipment company technician/representative
   final deviceDeviceOperatorMedicalEquipmentCompanyTechnicianrepresentative = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator
         .medicalEquipmentCompanyTechnicianrepresentative,
   );
   final deviceDeviceOperatorMedicalEquipmentCompanyTechnicianrepresentativeExact =
       (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator
         .medicalEquipmentCompanyTechnicianrepresentative,
   );
@@ -446,270 +516,324 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Medical technologist
   final deviceDeviceOperatorMedicalTechnologist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.medicalTechnologist,
   );
   final deviceDeviceOperatorMedicalTechnologistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.medicalTechnologist,
   );
 
   /// No information
   final deviceDeviceOperatorNoInformation = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.noInformation,
   );
   final deviceDeviceOperatorNoInformationExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.noInformation,
   );
 
   /// Not applicable
   final deviceDeviceOperatorNotApplicable = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.notApplicable,
   );
   final deviceDeviceOperatorNotApplicableExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.notApplicable,
   );
 
   /// Nuclear medicine technologist
   final deviceDeviceOperatorNuclearMedicineTechnologist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nuclearMedicineTechnologist,
   );
   final deviceDeviceOperatorNuclearMedicineTechnologistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nuclearMedicineTechnologist,
   );
 
   /// Nurse
   final deviceDeviceOperatorNurse = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nurse,
   );
   final deviceDeviceOperatorNurseExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nurse,
   );
 
   /// Nursing assistant
   final deviceDeviceOperatorNursingAssistant = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nursingAssistant,
   );
   final deviceDeviceOperatorNursingAssistantExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.nursingAssistant,
   );
 
   /// Occupational therapist
   final deviceDeviceOperatorOccupationalTherapist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.occupationalTherapist,
   );
   final deviceDeviceOperatorOccupationalTherapistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.occupationalTherapist,
   );
 
   /// Other
   final deviceDeviceOperatorOther = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.other,
   );
   final deviceDeviceOperatorOtherExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.other,
   );
 
   /// Other caregivers
   final deviceDeviceOperatorOtherCaregivers = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.otherCaregivers,
   );
   final deviceDeviceOperatorOtherCaregiversExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.otherCaregivers,
   );
 
   /// Other health care professional
   final deviceDeviceOperatorOtherHealthCareProfessional = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.otherHealthCareProfessional,
   );
   final deviceDeviceOperatorOtherHealthCareProfessionalExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.otherHealthCareProfessional,
   );
 
   /// Paramedic
   final deviceDeviceOperatorParamedic = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.paramedic,
   );
   final deviceDeviceOperatorParamedicExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.paramedic,
   );
 
   /// Patient
   final deviceDeviceOperatorPatient = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.patient,
   );
   final deviceDeviceOperatorPatientExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.patient,
   );
 
   /// Patient family member or friend
   final deviceDeviceOperatorPatientFamilyMemberOrFriend = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.patientFamilyMemberOrFriend,
   );
   final deviceDeviceOperatorPatientFamilyMemberOrFriendExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.patientFamilyMemberOrFriend,
   );
 
   /// Personal care assistant
   final deviceDeviceOperatorPersonalCareAssistant = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.personalCareAssistant,
   );
   final deviceDeviceOperatorPersonalCareAssistantExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.personalCareAssistant,
   );
 
   /// Pharmacist
   final deviceDeviceOperatorPharmacist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.pharmacist,
   );
   final deviceDeviceOperatorPharmacistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.pharmacist,
   );
 
   /// Phlebotomist
   final deviceDeviceOperatorPhlebotomist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.phlebotomist,
   );
   final deviceDeviceOperatorPhlebotomistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.phlebotomist,
   );
 
   /// Physical therapist
   final deviceDeviceOperatorPhysicalTherapist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicalTherapist,
   );
   final deviceDeviceOperatorPhysicalTherapistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicalTherapist,
   );
 
   /// Physician
   final deviceDeviceOperatorPhysician = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physician,
   );
   final deviceDeviceOperatorPhysicianExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physician,
   );
 
   /// Physician assistant
   final deviceDeviceOperatorPhysicianAssistant = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicianAssistant,
   );
   final deviceDeviceOperatorPhysicianAssistantExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicianAssistant,
   );
 
   /// Physicist
   final deviceDeviceOperatorPhysicist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicist,
   );
   final deviceDeviceOperatorPhysicistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.physicist,
   );
 
   /// Radiologic technologist
   final deviceDeviceOperatorRadiologicTechnologist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.radiologicTechnologist,
   );
   final deviceDeviceOperatorRadiologicTechnologistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.radiologicTechnologist,
   );
 
   /// Respiratory therapist
   final deviceDeviceOperatorRespiratoryTherapist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.respiratoryTherapist,
   );
   final deviceDeviceOperatorRespiratoryTherapistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.respiratoryTherapist,
   );
 
   /// Risk manager
   final deviceDeviceOperatorRiskManager = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.riskManager,
   );
   final deviceDeviceOperatorRiskManagerExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.riskManager,
   );
 
   /// Service and testing personnel
   final deviceDeviceOperatorServiceAndTestingPersonnel = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.serviceAndTestingPersonnel,
   );
   final deviceDeviceOperatorServiceAndTestingPersonnelExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.serviceAndTestingPersonnel,
   );
 
   /// Service personnel
   final deviceDeviceOperatorServicePersonnel = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.servicePersonnel,
   );
   final deviceDeviceOperatorServicePersonnelExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.servicePersonnel,
   );
 
   /// Speech therapist
   final deviceDeviceOperatorSpeechTherapist = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.speechTherapist,
   );
   final deviceDeviceOperatorSpeechTherapistExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.speechTherapist,
   );
 
   /// Unknown
   final deviceDeviceOperatorUnknown = (
     'device.device_operator',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.unknown,
   );
   final deviceDeviceOperatorUnknownExact = (
     'device.device_operator.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDeviceOperator.unknown,
   );
 
@@ -719,6 +843,7 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// CFR Parts 862-892</a>.
   final deviceDeviceReportProductCode = (
     'device.device_report_product_code',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Product Classification Database',
       link:
@@ -727,6 +852,7 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   );
   final deviceDeviceReportProductCodeExact = (
     'device.device_report_product_code.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'Product Classification Database',
       link:
@@ -811,36 +937,42 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Class I (low to moderate risk): general controls
   final deviceOpenfdaDeviceClassOne = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.one,
   );
 
   /// Class II (moderate to high risk): general controls and special controls
   final deviceOpenfdaDeviceClassTwo = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.two,
   );
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
   final deviceOpenfdaDeviceClassThree = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.three,
   );
 
   /// HDE
   final deviceOpenfdaDeviceClassF = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.f,
   );
 
   /// Not classified
   final deviceOpenfdaDeviceClassN = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.n,
   );
 
   /// Unclassified
   final deviceOpenfdaDeviceClassU = (
     'device.openfda.device_class',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceOpenfdaDeviceClass.u,
   );
 
@@ -870,6 +1002,7 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// surveillance of the specific medical device.
   final deviceOpenfdaRegulationNumber = (
     'device.openfda.regulation_number',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -878,6 +1011,7 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   );
   final deviceOpenfdaRegulationNumberExact = (
     'device.openfda.regulation_number.exact',
+    PossibleValueType.reference,
     OpenFDAPossibleValueReference(
       'CFR database',
       link:
@@ -931,530 +1065,636 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Ambulatory health care facility
   final eventLocationAmbulatoryHealthCareFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatoryHealthCareFacility,
   );
   final eventLocationAmbulatoryHealthCareFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatoryHealthCareFacility,
   );
 
   /// Ambulatory surgical center
   final eventLocationAmbulatorySurgicalCenter = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatorySurgicalCenter,
   );
   final eventLocationAmbulatorySurgicalCenterExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatorySurgicalCenter,
   );
 
   /// Ambulatory surgical facility
   final eventLocationAmbulatorySurgicalFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatorySurgicalFacility,
   );
   final eventLocationAmbulatorySurgicalFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.ambulatorySurgicalFacility,
   );
 
   /// Blood bank
   final eventLocationBloodBank = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.bloodBank,
   );
   final eventLocationBloodBankExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.bloodBank,
   );
 
   /// Bloodmobile
   final eventLocationBloodmobile = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.bloodmobile,
   );
   final eventLocationBloodmobileExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.bloodmobile,
   );
 
   /// Catheterization lab - free standing
   final eventLocationCatheterizationLabFreeStanding = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.catheterizationLabFreeStanding,
   );
   final eventLocationCatheterizationLabFreeStandingExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.catheterizationLabFreeStanding,
   );
 
   /// Catheterization suite
   final eventLocationCatheterizationSuite = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.catheterizationSuite,
   );
   final eventLocationCatheterizationSuiteExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.catheterizationSuite,
   );
 
   /// Chemotherapy center
   final eventLocationChemotherapyCenter = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.chemotherapyCenter,
   );
   final eventLocationChemotherapyCenterExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.chemotherapyCenter,
   );
 
   /// Clinic - walk in, other
   final eventLocationClinicWalkInOther = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.clinicWalkInOther,
   );
   final eventLocationClinicWalkInOtherExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.clinicWalkInOther,
   );
 
   /// Critical care unit
   final eventLocationCriticalCareUnit = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.criticalCareUnit,
   );
   final eventLocationCriticalCareUnitExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.criticalCareUnit,
   );
 
   /// Dialysis center
   final eventLocationDialysisCenter = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.dialysisCenter,
   );
   final eventLocationDialysisCenterExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.dialysisCenter,
   );
 
   /// Dialysis unit
   final eventLocationDialysisUnit = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.dialysisUnit,
   );
   final eventLocationDialysisUnitExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.dialysisUnit,
   );
 
   /// Drug clinic
   final eventLocationDrugClinic = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.drugClinic,
   );
   final eventLocationDrugClinicExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.drugClinic,
   );
 
   /// Emergency room
   final eventLocationEmergencyRoom = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.emergencyRoom,
   );
   final eventLocationEmergencyRoomExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.emergencyRoom,
   );
 
   /// Examination room
   final eventLocationExaminationRoom = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.examinationRoom,
   );
   final eventLocationExaminationRoomExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.examinationRoom,
   );
 
   /// Home
   final eventLocationHome = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.home,
   );
   final eventLocationHomeExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.home,
   );
 
   /// Hospice
   final eventLocationHospice = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.hospice,
   );
   final eventLocationHospiceExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.hospice,
   );
 
   /// Hospital
   final eventLocationHospital = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.hospital,
   );
   final eventLocationHospitalExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.hospital,
   );
 
   /// Imaging center - mobile
   final eventLocationImagingCenterMobile = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.imagingCenterMobile,
   );
   final eventLocationImagingCenterMobileExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.imagingCenterMobile,
   );
 
   /// Imaging center - stationary
   final eventLocationImagingCenterStationary = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.imagingCenterStationary,
   );
   final eventLocationImagingCenterStationaryExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.imagingCenterStationary,
   );
 
   /// In transit to user/medical facility
   final eventLocationInTransitToUsermedicalFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.inTransitToUsermedicalFacility,
   );
   final eventLocationInTransitToUsermedicalFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.inTransitToUsermedicalFacility,
   );
 
   /// Invalid data
   final eventLocationInvalidData = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.invalidData,
   );
   final eventLocationInvalidDataExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.invalidData,
   );
 
   /// Laboratory
   final eventLocationLaboratory = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.laboratory,
   );
   final eventLocationLaboratoryExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.laboratory,
   );
 
   /// Laboratory/pathology department
   final eventLocationLaboratorypathologyDepartment = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.laboratorypathologyDepartment,
   );
   final eventLocationLaboratorypathologyDepartmentExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.laboratorypathologyDepartment,
   );
 
   /// Long-term care facility
   final eventLocationLongtermCareFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.longtermCareFacility,
   );
   final eventLocationLongtermCareFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.longtermCareFacility,
   );
 
   /// Maternity ward - nursery
   final eventLocationMaternityWardNursery = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.maternityWardNursery,
   );
   final eventLocationMaternityWardNurseryExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.maternityWardNursery,
   );
 
   /// Mobile health unit
   final eventLocationMobileHealthUnit = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.mobileHealthUnit,
   );
   final eventLocationMobileHealthUnitExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.mobileHealthUnit,
   );
 
   /// Mri centers
   final eventLocationMriCenters = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.mriCenters,
   );
   final eventLocationMriCentersExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.mriCenters,
   );
 
   /// No information
   final eventLocationNoInformation = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.noInformation,
   );
   final eventLocationNoInformationExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.noInformation,
   );
 
   /// Not applicable
   final eventLocationNotApplicable = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.notApplicable,
   );
   final eventLocationNotApplicableExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.notApplicable,
   );
 
   /// Nursing home
   final eventLocationNursingHome = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.nursingHome,
   );
   final eventLocationNursingHomeExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.nursingHome,
   );
 
   /// Operating room
   final eventLocationOperatingRoom = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.operatingRoom,
   );
   final eventLocationOperatingRoomExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.operatingRoom,
   );
 
   /// Other
   final eventLocationOther = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.other,
   );
   final eventLocationOtherExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.other,
   );
 
   /// Outdoors
   final eventLocationOutdoors = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outdoors,
   );
   final eventLocationOutdoorsExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outdoors,
   );
 
   /// Outpatient clinic/surgery
   final eventLocationOutpatientClinicsurgery = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientClinicsurgery,
   );
   final eventLocationOutpatientClinicsurgeryExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientClinicsurgery,
   );
 
   /// Outpatient diagnostic facility
   final eventLocationOutpatientDiagnosticFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientDiagnosticFacility,
   );
   final eventLocationOutpatientDiagnosticFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientDiagnosticFacility,
   );
 
   /// Outpatient treatment facility
   final eventLocationOutpatientTreatmentFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientTreatmentFacility,
   );
   final eventLocationOutpatientTreatmentFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.outpatientTreatmentFacility,
   );
 
   /// Park
   final eventLocationPark = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.park,
   );
   final eventLocationParkExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.park,
   );
 
   /// Patients home
   final eventLocationPatientsHome = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.patientsHome,
   );
   final eventLocationPatientsHomeExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.patientsHome,
   );
 
   /// Patients room or ward
   final eventLocationPatientsRoomOrWard = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.patientsRoomOrWard,
   );
   final eventLocationPatientsRoomOrWardExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.patientsRoomOrWard,
   );
 
   /// Playground
   final eventLocationPlayground = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.playground,
   );
   final eventLocationPlaygroundExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.playground,
   );
 
   /// Psychiatric center - walk in, other
   final eventLocationPsychiatricCenterWalkInOther = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.psychiatricCenterWalkInOther,
   );
   final eventLocationPsychiatricCenterWalkInOtherExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.psychiatricCenterWalkInOther,
   );
 
   /// Psychiatric facility
   final eventLocationPsychiatricFacility = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.psychiatricFacility,
   );
   final eventLocationPsychiatricFacilityExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.psychiatricFacility,
   );
 
   /// Public building
   final eventLocationPublicBuilding = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.publicBuilding,
   );
   final eventLocationPublicBuildingExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.publicBuilding,
   );
 
   /// Public venue
   final eventLocationPublicVenue = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.publicVenue,
   );
   final eventLocationPublicVenueExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.publicVenue,
   );
 
   /// Radiology department
   final eventLocationRadiologyDepartment = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.radiologyDepartment,
   );
   final eventLocationRadiologyDepartmentExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.radiologyDepartment,
   );
 
   /// Rehabilitation center
   final eventLocationRehabilitationCenter = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.rehabilitationCenter,
   );
   final eventLocationRehabilitationCenterExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.rehabilitationCenter,
   );
 
   /// Retirement home
   final eventLocationRetirementHome = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.retirementHome,
   );
   final eventLocationRetirementHomeExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.retirementHome,
   );
 
   /// School
   final eventLocationSchool = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.school,
   );
   final eventLocationSchoolExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.school,
   );
 
   /// Street
   final eventLocationStreet = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.street,
   );
   final eventLocationStreetExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.street,
   );
 
   /// Tuberculosis clinic
   final eventLocationTuberculosisClinic = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.tuberculosisClinic,
   );
   final eventLocationTuberculosisClinicExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.tuberculosisClinic,
   );
 
   /// Unknown
   final eventLocationUnknown = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.unknown,
   );
   final eventLocationUnknownExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.unknown,
   );
 
   /// Urgent care center
   final eventLocationUrgentCareCenter = (
     'event_location',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.urgentCareCenter,
   );
   final eventLocationUrgentCareCenterExact = (
     'event_location.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventLocation.urgentCareCenter,
   );
 
@@ -1462,70 +1702,84 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Death, either caused by or associated with the adverse event.
   final eventTypeDeath = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.death,
   );
   final eventTypeDeathExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.death,
   );
 
   /// Documentation forthcoming.
   final eventTypeInjuryIJ = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIJ,
   );
   final eventTypeInjuryIJExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIJ,
   );
 
   /// Documentation forthcoming.
   final eventTypeInjuryIL = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIL,
   );
   final eventTypeInjuryILExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIL,
   );
 
   /// Documentation forthcoming.
   final eventTypeInjuryIN = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIN,
   );
   final eventTypeInjuryINExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.injuryIN,
   );
 
   /// Product malfunction.
   final eventTypeMalfunction = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.malfunction,
   );
   final eventTypeMalfunctionExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.malfunction,
   );
 
   /// No information was provided.
   final eventTypeNoAnswerProvided = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.noAnswerProvided,
   );
   final eventTypeNoAnswerProvidedExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.noAnswerProvided,
   );
 
   /// Other serious/important medical event.
   final eventTypeOther = (
     'event_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.other,
   );
   final eventTypeOtherExact = (
     'event_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsEventType.other,
   );
 
@@ -1538,20 +1792,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// The initial reporter is not a health professional.
   final healthProfessionalN = (
     'health_professional',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsHealthProfessional.n,
   );
   final healthProfessionalNExact = (
     'health_professional.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsHealthProfessional.n,
   );
 
   /// The initial reporter is a health professional.
   final healthProfessionalY = (
     'health_professional',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsHealthProfessional.y,
   );
   final healthProfessionalYExact = (
     'health_professional.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsHealthProfessional.y,
   );
 
@@ -1560,40 +1818,48 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// FDA was not notified by the initial reporter.
   final initialReportToFdaNo = (
     'initial_report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.no,
   );
   final initialReportToFdaNoExact = (
     'initial_report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.no,
   );
 
   /// This information was not provided.
   final initialReportToFdaNoAnswerProvidedOrEmpty = (
     'initial_report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.noAnswerProvidedOrEmpty,
   );
   final initialReportToFdaNoAnswerProvidedOrEmptyExact = (
     'initial_report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.noAnswerProvidedOrEmpty,
   );
 
   /// Unknown whether FDA was also notified by the initial reporter.
   final initialReportToFdaUnknown = (
     'initial_report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.unknown,
   );
   final initialReportToFdaUnknownExact = (
     'initial_report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.unknown,
   );
 
   /// FDA was also notified by the initial reporter.
   final initialReportToFdaYes = (
     'initial_report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.yes,
   );
   final initialReportToFdaYesExact = (
     'initial_report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsInitialReportToFda.yes,
   );
 
@@ -1747,20 +2013,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// There are no subsequent manufacturer-submitted reports.
   final manufacturerLinkFlagN = (
     'manufacturer_link_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsManufacturerLinkFlag.n,
   );
   final manufacturerLinkFlagNExact = (
     'manufacturer_link_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsManufacturerLinkFlag.n,
   );
 
   /// There are subsequent manufacturer-submitted reports.
   final manufacturerLinkFlagY = (
     'manufacturer_link_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsManufacturerLinkFlag.y,
   );
   final manufacturerLinkFlagYExact = (
     'manufacturer_link_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsManufacturerLinkFlag.y,
   );
 
@@ -1817,10 +2087,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Documentation forthcoming.
   final mdrTextTextTypeCodeAdditionalManufacturerNarrative = (
     'mdr_text.text_type_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.additionalManufacturerNarrative,
   );
   final mdrTextTextTypeCodeAdditionalManufacturerNarrativeExact = (
     'mdr_text.text_type_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.additionalManufacturerNarrative,
   );
 
@@ -1837,10 +2109,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// procedures and laboratory tests.
   final mdrTextTextTypeCodeDescriptionOfEventOrProblem = (
     'mdr_text.text_type_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.descriptionOfEventOrProblem,
   );
   final mdrTextTextTypeCodeDescriptionOfEventOrProblemExact = (
     'mdr_text.text_type_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.descriptionOfEventOrProblem,
   );
 
@@ -1849,10 +2123,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// included in this section.
   final mdrTextTextTypeCodeManufacturerEvaluationSummary = (
     'mdr_text.text_type_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.manufacturerEvaluationSummary,
   );
   final mdrTextTextTypeCodeManufacturerEvaluationSummaryExact = (
     'mdr_text.text_type_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsMdrTextTextTypeCode.manufacturerEvaluationSummary,
   );
 
@@ -1908,110 +2184,132 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Congenital Anomaly
   final patientSequenceNumberOutcomeCongenitalAnomaly = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.congenitalAnomaly,
   );
   final patientSequenceNumberOutcomeCongenitalAnomalyExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.congenitalAnomaly,
   );
 
   /// Death
   final patientSequenceNumberOutcomeDeath = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.death,
   );
   final patientSequenceNumberOutcomeDeathExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.death,
   );
 
   /// Disability
   final patientSequenceNumberOutcomeDisability = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.disability,
   );
   final patientSequenceNumberOutcomeDisabilityExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.disability,
   );
 
   /// Hospitalization
   final patientSequenceNumberOutcomeHospitalization = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.hospitalization,
   );
   final patientSequenceNumberOutcomeHospitalizationExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.hospitalization,
   );
 
   /// Invalid Data
   final patientSequenceNumberOutcomeInvalidData = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.invalidData,
   );
   final patientSequenceNumberOutcomeInvalidDataExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.invalidData,
   );
 
   /// Life Threatening
   final patientSequenceNumberOutcomeLifeThreatening = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.lifeThreatening,
   );
   final patientSequenceNumberOutcomeLifeThreateningExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.lifeThreatening,
   );
 
   /// No Information
   final patientSequenceNumberOutcomeNoInformation = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.noInformation,
   );
   final patientSequenceNumberOutcomeNoInformationExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.noInformation,
   );
 
   /// Not Applicable
   final patientSequenceNumberOutcomeNotApplicable = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.notApplicable,
   );
   final patientSequenceNumberOutcomeNotApplicableExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.notApplicable,
   );
 
   /// Other
   final patientSequenceNumberOutcomeOther = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.other,
   );
   final patientSequenceNumberOutcomeOtherExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.other,
   );
 
   /// Required Intervention
   final patientSequenceNumberOutcomeRequiredIntervention = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.requiredIntervention,
   );
   final patientSequenceNumberOutcomeRequiredInterventionExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.requiredIntervention,
   );
 
   /// Unknown
   final patientSequenceNumberOutcomeUnknown = (
     'patient.sequence_number_outcome',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.unknown,
   );
   final patientSequenceNumberOutcomeUnknownExact = (
     'patient.sequence_number_outcome.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPatientSequenceNumberOutcome.unknown,
   );
 
@@ -2025,40 +2323,48 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Invalid data or this information was not provided.
   final previousUseCodeAsterix = (
     'previous_use_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.asterix,
   );
   final previousUseCodeAsterixExact = (
     'previous_use_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.asterix,
   );
 
   /// Initial use.
   final previousUseCodeI = (
     'previous_use_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.i,
   );
   final previousUseCodeIExact = (
     'previous_use_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.i,
   );
 
   /// Reuse.
   final previousUseCodeR = (
     'previous_use_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.r,
   );
   final previousUseCodeRExact = (
     'previous_use_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.r,
   );
 
   /// Unknown.
   final previousUseCodeU = (
     'previous_use_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.u,
   );
   final previousUseCodeUExact = (
     'previous_use_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsPreviousUseCode.u,
   );
 
@@ -2067,10 +2373,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// The report is not about a defect or malfunction.
   final productProblemFlagN = (
     'product_problem_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsProductProblemFlag.n,
   );
   final productProblemFlagNExact = (
     'product_problem_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsProductProblemFlag.n,
   );
 
@@ -2080,10 +2388,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// were to recur.
   final productProblemFlagY = (
     'product_problem_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsProductProblemFlag.y,
   );
   final productProblemFlagYExact = (
     'product_problem_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsProductProblemFlag.y,
   );
 
@@ -2097,100 +2407,120 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Inspection
   final remedialActionInspection = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.inspection,
   );
   final remedialActionInspectionExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.inspection,
   );
 
   /// Invalid Data
   final remedialActionInvalidData = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.invalidData,
   );
   final remedialActionInvalidDataExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.invalidData,
   );
 
   /// Modification/Adjustment
   final remedialActionModificationAdjustment = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.modificationAdjustment,
   );
   final remedialActionModificationAdjustmentExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.modificationAdjustment,
   );
 
   /// Notification
   final remedialActionNotification = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.notification,
   );
   final remedialActionNotificationExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.notification,
   );
 
   /// Other
   final remedialActionOther = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.other,
   );
   final remedialActionOtherExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.other,
   );
 
   /// Patient Monitoring
   final remedialActionPatientMonitoring = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.patientMonitoring,
   );
   final remedialActionPatientMonitoringExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.patientMonitoring,
   );
 
   /// Recall
   final remedialActionRecall = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.recall,
   );
   final remedialActionRecallExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.recall,
   );
 
   /// Relabeling
   final remedialActionRelabeling = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.relabeling,
   );
   final remedialActionRelabelingExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.relabeling,
   );
 
   /// Repair
   final remedialActionRepair = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.repair,
   );
   final remedialActionRepairExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.repair,
   );
 
   /// Replace
   final remedialActionReplace = (
     'remedial_action',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.replace,
   );
   final remedialActionReplaceExact = (
     'remedial_action.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsRemedialAction.replace,
   );
 
@@ -2226,40 +2556,48 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Distributor report
   final reportSourceCodeDistributorReport = (
     'report_source_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.distributorReport,
   );
   final reportSourceCodeDistributorReportExact = (
     'report_source_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.distributorReport,
   );
 
   /// Manufacturer report
   final reportSourceCodeManufacturerReport = (
     'report_source_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.manufacturerReport,
   );
   final reportSourceCodeManufacturerReportExact = (
     'report_source_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.manufacturerReport,
   );
 
   /// User facility report
   final reportSourceCodeUserFacilityReport = (
     'report_source_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.userFacilityReport,
   );
   final reportSourceCodeUserFacilityReportExact = (
     'report_source_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.userFacilityReport,
   );
 
   /// Voluntary report
   final reportSourceCodeVoluntaryReport = (
     'report_source_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.voluntaryReport,
   );
   final reportSourceCodeVoluntaryReportExact = (
     'report_source_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportSourceCode.voluntaryReport,
   );
 
@@ -2270,20 +2608,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// The report was not sent to the FDA by a user facility or importer.
   final reportToFdaN = (
     'report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToFda.n,
   );
   final reportToFdaNExact = (
     'report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToFda.n,
   );
 
   /// The report was sent to the FDA by a user facility or importer.
   final reportToFdaY = (
     'report_to_fda',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToFda.y,
   );
   final reportToFdaYExact = (
     'report_to_fda.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToFda.y,
   );
 
@@ -2296,20 +2638,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// The report was not sent to the manufacturer by a user facility or importer.
   final reportToManufacturerN = (
     'report_to_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToManufacturer.n,
   );
   final reportToManufacturerNExact = (
     'report_to_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToManufacturer.n,
   );
 
   /// The report was sent to the manufacturer by a user facility or importer.
   final reportToManufacturerY = (
     'report_to_manufacturer',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToManufacturer.y,
   );
   final reportToManufacturerYExact = (
     'report_to_manufacturer.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReportToManufacturer.y,
   );
 
@@ -2317,150 +2663,180 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Attorney
   final reporterOccupationCodeAttorney = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.attorney,
   );
   final reporterOccupationCodeAttorneyExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.attorney,
   );
 
   /// Audiologist
   final reporterOccupationCodeAudiologist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.audiologist,
   );
   final reporterOccupationCodeAudiologistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.audiologist,
   );
 
   /// Biomedical engineer
   final reporterOccupationCodeBiomedicalEngineer = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.biomedicalEngineer,
   );
   final reporterOccupationCodeBiomedicalEngineerExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.biomedicalEngineer,
   );
 
   /// Dental assistant
   final reporterOccupationCodeDentalAssistant = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentalAssistant,
   );
   final reporterOccupationCodeDentalAssistantExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentalAssistant,
   );
 
   /// Dental hygienist
   final reporterOccupationCodeDentalHygienist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentalHygienist,
   );
   final reporterOccupationCodeDentalHygienistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentalHygienist,
   );
 
   /// Dentist
   final reporterOccupationCodeDentist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentist,
   );
   final reporterOccupationCodeDentistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dentist,
   );
 
   /// Device unattended
   final reporterOccupationCodeDeviceUnattended = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.deviceUnattended,
   );
   final reporterOccupationCodeDeviceUnattendedExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.deviceUnattended,
   );
 
   /// Dietician
   final reporterOccupationCodeDietician = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dietician,
   );
   final reporterOccupationCodeDieticianExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.dietician,
   );
 
   /// Emergency medical technician
   final reporterOccupationCodeEmergencyMedicalTechnician = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.emergencyMedicalTechnician,
   );
   final reporterOccupationCodeEmergencyMedicalTechnicianExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.emergencyMedicalTechnician,
   );
 
   /// Health professional
   final reporterOccupationCodeHealthProfessional = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.healthProfessional,
   );
   final reporterOccupationCodeHealthProfessionalExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.healthProfessional,
   );
 
   /// Home health aide
   final reporterOccupationCodeHomeHealthAide = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.homeHealthAide,
   );
   final reporterOccupationCodeHomeHealthAideExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.homeHealthAide,
   );
 
   /// Hospital service technician
   final reporterOccupationCodeHospitalServiceTechnician = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.hospitalServiceTechnician,
   );
   final reporterOccupationCodeHospitalServiceTechnicianExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.hospitalServiceTechnician,
   );
 
   /// Invalid data
   final reporterOccupationCodeInvalidData = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.invalidData,
   );
   final reporterOccupationCodeInvalidDataExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.invalidData,
   );
 
   /// Lay user/patient
   final reporterOccupationCodeLayUserpatient = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.layUserpatient,
   );
   final reporterOccupationCodeLayUserpatientExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.layUserpatient,
   );
 
   /// Medical assistant
   final reporterOccupationCodeMedicalAssistant = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.medicalAssistant,
   );
   final reporterOccupationCodeMedicalAssistantExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.medicalAssistant,
   );
 
@@ -2468,12 +2844,14 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   final reporterOccupationCodeMedicalEquipmentCompanyTechnicianrepresentative =
       (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode
         .medicalEquipmentCompanyTechnicianrepresentative,
   );
   final reporterOccupationCodeMedicalEquipmentCompanyTechnicianrepresentativeExact =
       (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode
         .medicalEquipmentCompanyTechnicianrepresentative,
   );
@@ -2481,270 +2859,324 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Medical technologist
   final reporterOccupationCodeMedicalTechnologist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.medicalTechnologist,
   );
   final reporterOccupationCodeMedicalTechnologistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.medicalTechnologist,
   );
 
   /// No information
   final reporterOccupationCodeNoInformation = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.noInformation,
   );
   final reporterOccupationCodeNoInformationExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.noInformation,
   );
 
   /// Not applicable
   final reporterOccupationCodeNotApplicable = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.notApplicable,
   );
   final reporterOccupationCodeNotApplicableExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.notApplicable,
   );
 
   /// Nuclear medicine technologist
   final reporterOccupationCodeNuclearMedicineTechnologist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nuclearMedicineTechnologist,
   );
   final reporterOccupationCodeNuclearMedicineTechnologistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nuclearMedicineTechnologist,
   );
 
   /// Nurse
   final reporterOccupationCodeNurse = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nurse,
   );
   final reporterOccupationCodeNurseExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nurse,
   );
 
   /// Nursing assistant
   final reporterOccupationCodeNursingAssistant = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nursingAssistant,
   );
   final reporterOccupationCodeNursingAssistantExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.nursingAssistant,
   );
 
   /// Occupational therapist
   final reporterOccupationCodeOccupationalTherapist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.occupationalTherapist,
   );
   final reporterOccupationCodeOccupationalTherapistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.occupationalTherapist,
   );
 
   /// Other
   final reporterOccupationCodeOther = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.other,
   );
   final reporterOccupationCodeOtherExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.other,
   );
 
   /// Other caregivers
   final reporterOccupationCodeOtherCaregivers = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.otherCaregivers,
   );
   final reporterOccupationCodeOtherCaregiversExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.otherCaregivers,
   );
 
   /// Other health care professional
   final reporterOccupationCodeOtherHealthCareProfessional = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.otherHealthCareProfessional,
   );
   final reporterOccupationCodeOtherHealthCareProfessionalExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.otherHealthCareProfessional,
   );
 
   /// Paramedic
   final reporterOccupationCodeParamedic = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.paramedic,
   );
   final reporterOccupationCodeParamedicExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.paramedic,
   );
 
   /// Patient
   final reporterOccupationCodePatient = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.patient,
   );
   final reporterOccupationCodePatientExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.patient,
   );
 
   /// Patient family member or friend
   final reporterOccupationCodePatientFamilyMemberOrFriend = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.patientFamilyMemberOrFriend,
   );
   final reporterOccupationCodePatientFamilyMemberOrFriendExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.patientFamilyMemberOrFriend,
   );
 
   /// Personal care assistant
   final reporterOccupationCodePersonalCareAssistant = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.personalCareAssistant,
   );
   final reporterOccupationCodePersonalCareAssistantExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.personalCareAssistant,
   );
 
   /// Pharmacist
   final reporterOccupationCodePharmacist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.pharmacist,
   );
   final reporterOccupationCodePharmacistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.pharmacist,
   );
 
   /// Phlebotomist
   final reporterOccupationCodePhlebotomist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.phlebotomist,
   );
   final reporterOccupationCodePhlebotomistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.phlebotomist,
   );
 
   /// Physical therapist
   final reporterOccupationCodePhysicalTherapist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicalTherapist,
   );
   final reporterOccupationCodePhysicalTherapistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicalTherapist,
   );
 
   /// Physician
   final reporterOccupationCodePhysician = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physician,
   );
   final reporterOccupationCodePhysicianExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physician,
   );
 
   /// Physician assistant
   final reporterOccupationCodePhysicianAssistant = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicianAssistant,
   );
   final reporterOccupationCodePhysicianAssistantExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicianAssistant,
   );
 
   /// Physicist
   final reporterOccupationCodePhysicist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicist,
   );
   final reporterOccupationCodePhysicistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.physicist,
   );
 
   /// Radiologic technologist
   final reporterOccupationCodeRadiologicTechnologist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.radiologicTechnologist,
   );
   final reporterOccupationCodeRadiologicTechnologistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.radiologicTechnologist,
   );
 
   /// Respiratory therapist
   final reporterOccupationCodeRespiratoryTherapist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.respiratoryTherapist,
   );
   final reporterOccupationCodeRespiratoryTherapistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.respiratoryTherapist,
   );
 
   /// Risk manager
   final reporterOccupationCodeRiskManager = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.riskManager,
   );
   final reporterOccupationCodeRiskManagerExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.riskManager,
   );
 
   /// Service and testing personnel
   final reporterOccupationCodeServiceAndTestingPersonnel = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.serviceAndTestingPersonnel,
   );
   final reporterOccupationCodeServiceAndTestingPersonnelExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.serviceAndTestingPersonnel,
   );
 
   /// Service personnel
   final reporterOccupationCodeServicePersonnel = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.servicePersonnel,
   );
   final reporterOccupationCodeServicePersonnelExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.servicePersonnel,
   );
 
   /// Speech therapist
   final reporterOccupationCodeSpeechTherapist = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.speechTherapist,
   );
   final reporterOccupationCodeSpeechTherapistExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.speechTherapist,
   );
 
   /// Unknown
   final reporterOccupationCodeUnknown = (
     'reporter_occupation_code',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.unknown,
   );
   final reporterOccupationCodeUnknownExact = (
     'reporter_occupation_code.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReporterOccupationCode.unknown,
   );
 
@@ -2753,10 +3185,12 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Was not a single-use device that was reprocessed and reused.
   final reprocessedAndReusedFlagN = (
     'reprocessed_and_reused_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.n,
   );
   final reprocessedAndReusedFlagNExact = (
     'reprocessed_and_reused_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.n,
   );
 
@@ -2764,20 +3198,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// single-use device was reprocessed and reused.
   final reprocessedAndReusedFlagUNK = (
     'reprocessed_and_reused_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.uNK,
   );
   final reprocessedAndReusedFlagUNKExact = (
     'reprocessed_and_reused_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.uNK,
   );
 
   /// Was a single-use device that was reprocessed and reused.
   final reprocessedAndReusedFlagY = (
     'reprocessed_and_reused_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.y,
   );
   final reprocessedAndReusedFlagYExact = (
     'reprocessed_and_reused_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsReprocessedAndReusedFlag.y,
   );
 
@@ -2786,20 +3224,24 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// device being reported (e.g. an X-ray machine).
   final singleUseFlagNo = (
     'single_use_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSingleUseFlag.no,
   );
   final singleUseFlagNoExact = (
     'single_use_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSingleUseFlag.no,
   );
 
   /// The device was labeled for single use.
   final singleUseFlagYes = (
     'single_use_flag',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSingleUseFlag.yes,
   );
   final singleUseFlagYesExact = (
     'single_use_flag.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSingleUseFlag.yes,
   );
 
@@ -2807,110 +3249,132 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Company representation
   final sourceTypeCompanyRepresentation = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.companyRepresentation,
   );
   final sourceTypeCompanyRepresentationExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.companyRepresentation,
   );
 
   /// Consumer
   final sourceTypeConsumer = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.consumer,
   );
   final sourceTypeConsumerExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.consumer,
   );
 
   /// Distributor
   final sourceTypeDistributor = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.distributor,
   );
   final sourceTypeDistributorExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.distributor,
   );
 
   /// Foreign
   final sourceTypeForeign = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.foreign,
   );
   final sourceTypeForeignExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.foreign,
   );
 
   /// Health Professional
   final sourceTypeHealthProfessional = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.healthProfessional,
   );
   final sourceTypeHealthProfessionalExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.healthProfessional,
   );
 
   /// Invalid data
   final sourceTypeInvalidData = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.invalidData,
   );
   final sourceTypeInvalidDataExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.invalidData,
   );
 
   /// Literature
   final sourceTypeLiterature = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.literature,
   );
   final sourceTypeLiteratureExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.literature,
   );
 
   /// Other
   final sourceTypeOther = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.other,
   );
   final sourceTypeOtherExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.other,
   );
 
   /// Study
   final sourceTypeStudy = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.study,
   );
   final sourceTypeStudyExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.study,
   );
 
   /// Unknown
   final sourceTypeUnknown = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.unknown,
   );
   final sourceTypeUnknownExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.unknown,
   );
 
   /// User facility
   final sourceTypeUserFacility = (
     'source_type',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.userFacility,
   );
   final sourceTypeUserFacilityExact = (
     'source_type.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsSourceType.userFacility,
   );
 
@@ -2918,44 +3382,54 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   /// Documentation forthcoming.
   final typeOfReportExtraCopyReceived = (
     'type_of_report',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.extraCopyReceived,
   );
   final typeOfReportExtraCopyReceivedExact = (
     'type_of_report.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.extraCopyReceived,
   );
 
   /// Additional or corrected information.
   final typeOfReportFollowup = (
     'type_of_report',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.followup,
   );
   final typeOfReportFollowupExact = (
     'type_of_report.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.followup,
   );
 
   /// Initial report of an event.
   final typeOfReportInitialSubmission = (
     'type_of_report',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.initialSubmission,
   );
   final typeOfReportInitialSubmissionExact = (
     'type_of_report.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.initialSubmission,
   );
 
   /// Documentation forthcoming.
   final typeOfReportOtherInformationSubmitted = (
     'type_of_report',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.otherInformationSubmitted,
   );
   final typeOfReportOtherInformationSubmittedExact = (
     'type_of_report.exact',
+    PossibleValueType.oneOf,
     _DeviceAdverseEventsTypeOfReport.otherInformationSubmitted,
   );
 }
 
+/// Whether the report is about an incident where the use of the device is
+/// suspected to have resulted in an adverse outcome in a patient.
 enum _DeviceAdverseEventsAdverseEventFlag {
   /// No
   n._(
@@ -2974,6 +3448,8 @@ enum _DeviceAdverseEventsAdverseEventFlag {
   final String value;
 }
 
+/// Whether an implanted device was removed from the patient, and if so, what
+/// kind of date was provided.
 enum _DeviceAdverseEventsDeviceDateRemovedFlag {
   /// Documentation forthcoming.
   asterix._(
@@ -3022,6 +3498,8 @@ enum _DeviceAdverseEventsDeviceDateRemovedFlag {
   final String value;
 }
 
+/// Whether the device is available for evaluation by the manufacturer, or
+/// whether the device was returned to the manufacturer.
 enum _DeviceAdverseEventsDeviceDeviceAvailability {
   /// Device was returned to manufacturer
   deviceWasReturnedToManufacturer._(
@@ -3055,6 +3533,7 @@ enum _DeviceAdverseEventsDeviceDeviceAvailability {
   final String value;
 }
 
+/// Whether the suspect device was evaluated by the manufacturer.
 enum _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer {
   /// An evaluation could not be made because the device was not returned to, or
   /// made available to, the manufacturer.
@@ -3085,6 +3564,8 @@ enum _DeviceAdverseEventsDeviceDeviceEvaluatedByManufacturer {
   final String value;
 }
 
+/// The person using the medical device at the time of the adverse event. This
+/// may be a health professional, a lay person, or may not be applicable.
 enum _DeviceAdverseEventsDeviceDeviceOperator {
   /// Attorney
   attorney._(
@@ -3308,6 +3789,8 @@ enum _DeviceAdverseEventsDeviceDeviceOperator {
   final String value;
 }
 
+/// A risk based classification system for all medical devices ((Federal Food,
+/// Drug, and Cosmetic Act, section 513)
 enum _DeviceAdverseEventsDeviceOpenfdaDeviceClass {
   /// Class I (low to moderate risk): general controls
   one._(
@@ -3346,6 +3829,7 @@ enum _DeviceAdverseEventsDeviceOpenfdaDeviceClass {
   final String value;
 }
 
+/// Where the event occurred.
 enum _DeviceAdverseEventsEventLocation {
   /// Ambulatory health care facility
   ambulatoryHealthCareFacility._(
@@ -3619,6 +4103,7 @@ enum _DeviceAdverseEventsEventLocation {
   final String value;
 }
 
+/// Outcomes associated with the adverse event.
 enum _DeviceAdverseEventsEventType {
   /// Death, either caused by or associated with the adverse event.
   death._(
@@ -3662,6 +4147,8 @@ enum _DeviceAdverseEventsEventType {
   final String value;
 }
 
+/// Whether the initial reporter was a health professional (e.g. physician,
+/// pharmacist, nurse, etc.) or not.
 enum _DeviceAdverseEventsHealthProfessional {
   /// The initial reporter is not a health professional.
   n._(
@@ -3680,6 +4167,8 @@ enum _DeviceAdverseEventsHealthProfessional {
   final String value;
 }
 
+/// Whether the initial reporter also notified or submitted a copy of this
+/// report to FDA.
 enum _DeviceAdverseEventsInitialReportToFda {
   /// FDA was not notified by the initial reporter.
   no._(
@@ -3708,6 +4197,10 @@ enum _DeviceAdverseEventsInitialReportToFda {
   final String value;
 }
 
+/// Indicates whether a user facility/importer-submitted
+/// (distributor-submitted) report has had subsequent manufacturer-submitted
+/// reports. If so, the distributor information (address, etc.) will also be
+/// present and this field will contain `Y`.
 enum _DeviceAdverseEventsManufacturerLinkFlag {
   /// There are no subsequent manufacturer-submitted reports.
   n._(
@@ -3726,6 +4219,8 @@ enum _DeviceAdverseEventsManufacturerLinkFlag {
   final String value;
 }
 
+/// String that describes the type of narrative contained within the text
+/// field.
 enum _DeviceAdverseEventsMdrTextTextTypeCode {
   /// Documentation forthcoming.
   additionalManufacturerNarrative._(
@@ -3761,6 +4256,10 @@ enum _DeviceAdverseEventsMdrTextTextTypeCode {
   final String value;
 }
 
+/// Outcome associated with the adverse event for this patient. Expect wide
+/// variability in this field; each string in the list of strings may contain
+/// multiple outcomes, separated by commas, and with numbers, which may or may
+/// not be related to the `patient_sequence_number`.
 enum _DeviceAdverseEventsPatientSequenceNumberOutcome {
   /// Congenital Anomaly
   congenitalAnomaly._(
@@ -3824,6 +4323,8 @@ enum _DeviceAdverseEventsPatientSequenceNumberOutcome {
   final String value;
 }
 
+/// Whether the use of the suspect medical device was the initial use, reuse,
+/// or unknown.
 enum _DeviceAdverseEventsPreviousUseCode {
   /// Invalid data or this information was not provided.
   asterix._(
@@ -3852,6 +4353,8 @@ enum _DeviceAdverseEventsPreviousUseCode {
   final String value;
 }
 
+/// Indicates whether or not a report was about the quality, performance or
+/// safety of a device.
 enum _DeviceAdverseEventsProductProblemFlag {
   /// The report is not about a defect or malfunction.
   n._(
@@ -3873,6 +4376,8 @@ enum _DeviceAdverseEventsProductProblemFlag {
   final String value;
 }
 
+/// Follow-up actions taken by the device manufacturer at the time of the
+/// report submission, if applicable.
 enum _DeviceAdverseEventsRemedialAction {
   /// Inspection
   inspection._(
@@ -3931,6 +4436,7 @@ enum _DeviceAdverseEventsRemedialAction {
   final String value;
 }
 
+/// Source of the adverse event report
 enum _DeviceAdverseEventsReportSourceCode {
   /// Distributor report
   distributorReport._(
@@ -3959,6 +4465,10 @@ enum _DeviceAdverseEventsReportSourceCode {
   final String value;
 }
 
+/// Whether the report was sent to the FDA by a user facility or importer
+/// (distributor). User facilities are required to send reports of
+/// device-related deaths. Importers are required to send reports of
+/// device-related deaths and serious injuries.
 enum _DeviceAdverseEventsReportToFda {
   /// The report was not sent to the FDA by a user facility or importer.
   n._(
@@ -3977,6 +4487,12 @@ enum _DeviceAdverseEventsReportToFda {
   final String value;
 }
 
+/// Whether the report was sent to the manufacturer by a user facility or
+/// importer (distributor). User facilities are required to send reports of
+/// device-related deaths and serious injuries to manufacturers. Importers are
+/// required to send reports to manufacturers of device-related deaths,
+/// device-related serious injuries, and device-related malfunctions that
+/// could cause or contribute to a death or serious injury.
 enum _DeviceAdverseEventsReportToManufacturer {
   /// The report was not sent to the manufacturer by a user facility or importer.
   n._(
@@ -3995,6 +4511,7 @@ enum _DeviceAdverseEventsReportToManufacturer {
   final String value;
 }
 
+/// Initial reporter occupation.
 enum _DeviceAdverseEventsReporterOccupationCode {
   /// Attorney
   attorney._(
@@ -4218,6 +4735,8 @@ enum _DeviceAdverseEventsReporterOccupationCode {
   final String value;
 }
 
+/// Indicates whether the suspect device was a single-use device that was
+/// reprocessed and reused on a patient.
 enum _DeviceAdverseEventsReprocessedAndReusedFlag {
   /// Was not a single-use device that was reprocessed and reused.
   n._(
@@ -4242,6 +4761,7 @@ enum _DeviceAdverseEventsReprocessedAndReusedFlag {
   final String value;
 }
 
+/// Whether the device was labeled for single use or not.
 enum _DeviceAdverseEventsSingleUseFlag {
   /// The device was not labeled for single use, or this is irrelevant to the
   /// device being reported (e.g. an X-ray machine).
@@ -4261,6 +4781,7 @@ enum _DeviceAdverseEventsSingleUseFlag {
   final String value;
 }
 
+/// The manufacturer-reported source of the adverse event report.
 enum _DeviceAdverseEventsSourceType {
   /// Company representation
   companyRepresentation._(
@@ -4324,6 +4845,7 @@ enum _DeviceAdverseEventsSourceType {
   final String value;
 }
 
+/// The type of report.
 enum _DeviceAdverseEventsTypeOfReport {
   /// Documentation forthcoming.
   extraCopyReceived._(
