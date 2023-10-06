@@ -1,0 +1,1088 @@
+{
+  "properties": {
+    "authoritynumb": {
+      "description": "Populated with the Regulatory Authority’s case report number, when available.",
+      "format": null,
+      "is_exact": true,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "companynumb": {
+      "description": "Identifier for the company providing the report. This is self-assigned.",
+      "format": null,
+      "is_exact": true,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "duplicate": {
+      "description": "This value is `1` if earlier versions of this report were submitted to FDA. openFDA only shows the most recent version.",
+      "format": null,
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "fulfillexpeditecriteria": {
+      "description": "Identifies expedited reports (those that were processed within 15 days).",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": {
+        "type": "one_of",
+        "value": {
+          "1": "Yes",
+          "2": "No"
+        }
+      },
+      "type": "string"
+    },
+    "occurcountry": {
+      "description": "The name of the country where the event occurred.",
+      "format": null,
+      "is_exact": true,
+      "pattern": "^[A-Z]{2}$",
+      "possible_values": {
+        "type": "reference",
+        "value": {
+          "link": "http://data.okfn.org/data/core/country-list",
+          "name": "Country codes"
+        }
+      },
+      "type": "string"
+    },
+    "patient": {
+      "properties": {
+        "drug": {
+          "items": {
+            "properties": {
+              "actiondrug": {
+                "description": "Actions taken with the drug.",
+                "format": "int64",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "1": "Drug withdrawn",
+                    "2": "Dose reduced",
+                    "3": "Dose increased",
+                    "4": "Dose not changed",
+                    "5": "Unknown",
+                    "6": "Not applicable"
+                  }
+                },
+                "type": "string"
+              },
+              "activesubstance": {
+                "properties": {
+                  "activesubstancename": {
+                    "description": "Product active ingredient, which may be different than other drug identifiers (when provided).",
+                    "format": null,
+                    "is_exact": true,
+                    "pattern": null,
+                    "possible_values": null,
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "drugadditional": {
+                "description": "Dechallenge outcome information—whether the event abated after product use stopped or the dose was reduced. Only present when this was attempted and the data was provided.",
+                "format": "int64",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "1": "Yes",
+                    "2": "No",
+                    "3": "Does not apply"
+                  }
+                },
+                "type": "string"
+              },
+              "drugadministrationroute": {
+                "description": "The drug’s route of administration.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "001": "Auricular (otic)",
+                    "002": "Buccal",
+                    "003": "Cutaneous",
+                    "004": "Dental",
+                    "005": "Endocervical",
+                    "006": "Endosinusial",
+                    "007": "Endotracheal",
+                    "008": "Epidural",
+                    "009": "Extra-amniotic",
+                    "010": "Hemodialysis",
+                    "011": "Intra corpus cavernosum",
+                    "012": "Intra-amniotic",
+                    "013": "Intra-arterial",
+                    "014": "Intra-articular",
+                    "015": "Intra-uterine",
+                    "016": "Intracardiac",
+                    "017": "Intracavernous",
+                    "018": "Intracerebral",
+                    "019": "Intracervical",
+                    "020": "Intracisternal",
+                    "021": "Intracorneal",
+                    "022": "Intracoronary",
+                    "023": "Intradermal",
+                    "024": "Intradiscal (intraspinal)",
+                    "025": "Intrahepatic",
+                    "026": "Intralesional",
+                    "027": "Intralymphatic",
+                    "028": "Intramedullar (bone marrow)",
+                    "029": "Intrameningeal",
+                    "030": "Intramuscular",
+                    "031": "Intraocular",
+                    "032": "Intrapericardial",
+                    "033": "Intraperitoneal",
+                    "034": "Intrapleural",
+                    "035": "Intrasynovial",
+                    "036": "Intratumor",
+                    "037": "Intrathecal",
+                    "038": "Intrathoracic",
+                    "039": "Intratracheal",
+                    "040": "Intravenous bolus",
+                    "041": "Intravenous drip",
+                    "042": "Intravenous (not otherwise specified)",
+                    "043": "Intravesical",
+                    "044": "Iontophoresis",
+                    "045": "Nasal",
+                    "046": "Occlusive dressing technique",
+                    "047": "Ophthalmic",
+                    "048": "Oral",
+                    "049": "Oropharingeal",
+                    "050": "Other",
+                    "051": "Parenteral",
+                    "052": "Periarticular",
+                    "053": "Perineural",
+                    "054": "Rectal",
+                    "055": "Respiratory (inhalation)",
+                    "056": "Retrobulbar",
+                    "057": "Sunconjunctival",
+                    "058": "Subcutaneous",
+                    "059": "Subdermal",
+                    "060": "Sublingual",
+                    "061": "Topical",
+                    "062": "Transdermal",
+                    "063": "Transmammary",
+                    "064": "Transplacental",
+                    "065": "Unknown",
+                    "066": "Urethral",
+                    "067": "Vaginal"
+                  }
+                },
+                "type": "string"
+              },
+              "drugauthorizationnumb": {
+                "description": "Drug authorization or application number (NDA or ANDA), if provided.",
+                "format": null,
+                "is_exact": true,
+                "pattern": "^[0-9]{6}$",
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugbatchnumb": {
+                "description": "Drug product lot number, if provided.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugcharacterization": {
+                "description": "Reported role of the drug in the adverse event report. These values are not validated by FDA.",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "1": "Suspect (the drug was considered by the reporter to be the cause)",
+                    "2": "Concomitant (the drug was reported as being taken along with the suspect drug)",
+                    "3": "Interacting (the drug was considered by the reporter to have interacted with the suspect drug)"
+                  }
+                },
+                "type": "string"
+              },
+              "drugcumulativedosagenumb": {
+                "description": "The cumulative dose taken until the first reaction was experienced, if provided.",
+                "format": "float",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugcumulativedosageunit": {
+                "description": "The unit for `drugcumulativedosagenumb`.",
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "001": "kg (kilograms)",
+                    "002": "g (grams)",
+                    "003": "mg (milligrams)",
+                    "004": "µg (micrograms)"
+                  }
+                },
+                "type": "string"
+              },
+              "drugdosageform": {
+                "description": "The drug’s dosage form. There is no standard, but values may include terms like `tablet` or `solution for injection`.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugdosagetext": {
+                "description": "Additional detail about the dosage taken. Frequently unknown, but occasionally including information like a brief textual description of the schedule of administration.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugenddate": {
+                "description": "Date the patient stopped taking the drug.",
+                "format": "date",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugenddateformat": {
+                "description": "Encoding format of the field `drugenddateformat`. Always set to `102` (YYYYMMDD).",
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugindication": {
+                "description": "Indication for the drug’s use.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugintervaldosagedefinition": {
+                "description": "The unit for the interval in the field `drugintervaldosageunitnumb.`",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "801": "Year",
+                    "802": "Month",
+                    "803": "Week",
+                    "804": "Day",
+                    "805": "Hour",
+                    "806": "Minute",
+                    "807": "Trimester",
+                    "810": "Cyclical",
+                    "811": "Trimester",
+                    "812": "As necessary",
+                    "813": "Total"
+                  }
+                },
+                "type": "string"
+              },
+              "drugintervaldosageunitnumb": {
+                "description": "Number of units in the field `drugintervaldosagedefinition`.",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugrecurreadministration": {
+                "description": "Whether the reaction occured after readministration of the drug.",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "1": "Yes",
+                    "2": "No",
+                    "3": "Unknown"
+                  }
+                },
+                "type": "string"
+              },
+              "drugrecurrence": {
+                "properties": {
+                  "drugrecuraction": {
+                    "description": "Populated with the Reaction/Event information if/when `drugrecurreadministration` equals `1`.",
+                    "format": null,
+                    "is_exact": true,
+                    "pattern": null,
+                    "possible_values": null,
+                    "type": "string"
+                  },
+                  "drugrecuractionmeddraversion": {
+                    "description": "The version of MedDRA from which the term in `drugrecuraction` is drawn.",
+                    "format": null,
+                    "is_exact": true,
+                    "pattern": null,
+                    "possible_values": null,
+                    "type": "string"
+                  }
+                }
+              },
+              "drugseparatedosagenumb": {
+                "description": "The number of separate doses that were administered.",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugstartdate": {
+                "description": "Date the patient began taking the drug.",
+                "format": "date",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugstartdateformat": {
+                "description": "Encoding format of the field `drugstartdate`. Always set to `102` (YYYYMMDD).",
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugstructuredosagenumb": {
+                "description": "The number portion of a dosage; when combined with `drugstructuredosageunit` the complete dosage information is represented. For example, *300* in `300 mg`.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugstructuredosageunit": {
+                "description": "The unit for the field `drugstructuredosagenumb`. For example, *mg* in `300 mg`.",
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "001": "kg (kilograms)",
+                    "002": "g (grams)",
+                    "003": "mg (milligrams)",
+                    "004": "µg (micrograms)"
+                  }
+                },
+                "type": "string"
+              },
+              "drugtreatmentduration": {
+                "description": "The interval of the field `drugtreatmentdurationunit` for which the patient was taking the drug.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "drugtreatmentdurationunit": {
+                "description": null,
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "801": "Year",
+                    "802": "Month",
+                    "803": "Week",
+                    "804": "Day",
+                    "805": "Hour",
+                    "806": "Minute"
+                  }
+                },
+                "type": "string"
+              },
+              "medicinalproduct": {
+                "description": "Drug name. This may be the valid trade name of the product (such as `ADVIL` or `ALEVE`) or the generic name (such as `IBUPROFEN`). This field is not systematically normalized. It may contain misspellings or idiosyncratic descriptions of drugs, such as combination products such as those used for birth control.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "openfda": {
+                "properties": {
+                  "application_number": {
+                    "items": {
+                      "description": "This corresponds to the NDA, ANDA, or BLA number reported by the labeler for products which have the corresponding Marketing Category designated. If the designated Marketing Category is OTC Monograph Final or OTC Monograph Not Final, then the application number will be the CFR citation corresponding to the appropriate Monograph (e.g. “part 341”). For unapproved drugs, this field will be null.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[BLA|ANDA|NDA]{3,4}[0-9]{6}$",
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "brand_name": {
+                    "items": {
+                      "description": "Brand or trade name of the drug product.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "generic_name": {
+                    "items": {
+                      "description": "Generic name(s) of the drug product.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "manufacturer_name": {
+                    "items": {
+                      "description": "Name of manufacturer or company that makes this drug product, corresponding to the labeler code segment of the NDC.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "nui": {
+                    "items": {
+                      "description": "Unique identifier applied to a drug concept within the National Drug File Reference Terminology (NDF-RT).",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[N][0-9]{10}$",
+                      "possible_values": {
+                        "type": "reference",
+                        "value": {
+                          "link": "https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/",
+                          "name": "NDF-RT"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "package_ndc": {
+                    "items": {
+                      "description": "This number, known as the NDC, identifies the labeler, product, and trade package size. The first segment, the labeler code, is assigned by the FDA. A labeler is any firm that manufactures (including repackers or relabelers), or distributes (under its own name) the drug.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[0-9]{5,4}-[0-9]{4,3}-[0-9]{1,2}$",
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_cs": {
+                    "items": {
+                      "description": "Chemical structure classification of the drug product’s pharmacologic class. Takes the form of the classification, followed by `[Chemical/Ingredient]` (such as `Thiazides [Chemical/Ingredient]` or `Antibodies, Monoclonal [Chemical/Ingredient].",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_epc": {
+                    "items": {
+                      "description": "Established pharmacologic class associated with an approved indication of an active moiety (generic drug) that the FDA has determined to be scientifically valid and clinically meaningful. Takes the form of the pharmacologic class, followed by `[EPC]` (such as `Thiazide Diuretic [EPC]` or `Tumor Necrosis Factor Blocker [EPC]`.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_moa": {
+                    "items": {
+                      "description": "Mechanism of action of the drug—molecular, subcellular, or cellular functional activity—of the drug’s established pharmacologic class. Takes the form of the mechanism of action, followed by `[MoA]` (such as `Calcium Channel Antagonists [MoA]` or `Tumor Necrosis Factor Receptor Blocking Activity [MoA]`.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_pe": {
+                    "items": {
+                      "description": "Physiologic effect or pharmacodynamic effect—tissue, organ, or organ system level functional activity—of the drug’s established pharmacologic class. Takes the form of the effect, followed by `[PE]` (such as `Increased Diuresis [PE]` or `Decreased Cytokine Activity [PE]`.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "product_ndc": {
+                    "items": {
+                      "description": "The labeler manufacturer code and product code segments of the NDC number, separated by a hyphen.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[0-9]{5,4}-[0-9]{4,3}$",
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "product_type": {
+                    "items": {
+                      "description": null,
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": {
+                        "type": "reference",
+                        "value": {
+                          "link": "http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162063.htm",
+                          "name": "Type of drug product"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "route": {
+                    "items": {
+                      "description": "The route of administation of the drug product.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": {
+                        "type": "reference",
+                        "value": {
+                          "link": "http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162034.htm",
+                          "name": "Route of administration"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "rxcui": {
+                    "items": {
+                      "description": "The RxNorm Concept Unique Identifier. RxCUI is a unique number that describes a semantic concept about the drug product, including its ingredients, strength, and dose forms.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[0-9]{6}$",
+                      "possible_values": {
+                        "type": "reference",
+                        "value": {
+                          "link": "https://www.nlm.nih.gov/research/umls/rxnorm/docs/2012/rxnorm_doco_full_2012-3.html",
+                          "name": "RxNorm and RxCUI documentation"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "spl_id": {
+                    "items": {
+                      "description": "Unique identifier for a particular version of a Structured Product Label for a product. Also referred to as the document ID.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "spl_set_id": {
+                    "items": {
+                      "description": "Unique identifier for the Structured Product Label for a product, which is stable across versions of the label. Also referred to as the set ID.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "substance_name": {
+                    "items": {
+                      "description": "The list of active ingredients of a drug product.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": null,
+                      "possible_values": null,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "unii": {
+                    "items": {
+                      "description": "Unique Ingredient Identifier, which is a non-proprietary, free, unique, unambiguous, non-semantic, alphanumeric identifier based on a substance’s molecular structure and/or descriptive information.",
+                      "format": null,
+                      "is_exact": true,
+                      "pattern": "^[A-Z0-9]{10}$",
+                      "possible_values": {
+                        "type": "reference",
+                        "value": {
+                          "link": "http://fdasis.nlm.nih.gov/srs/srs.jsp",
+                          "name": "Unique Ingredient Identifiers"
+                        }
+                      },
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "type": "array"
+        },
+        "patientagegroup": {
+          "description": "Populated with Patient Age Group code.",
+          "format": "int32",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "1": "Neonate",
+              "2": "Infant",
+              "3": "Child",
+              "4": "Adolescent",
+              "5": "Adult",
+              "6": "Elderly"
+            }
+          },
+          "type": "string"
+        },
+        "patientdeath": {
+          "properties": {
+            "patientdeathdate": {
+              "description": "If the patient died, the date that the patient died.",
+              "format": "date",
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "string"
+            },
+            "patientdeathdateformat": {
+              "description": "Encoding format of the field `patientdeathdate`. Always set to `102` (YYYYMMDD).",
+              "format": null,
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "patientonsetage": {
+          "description": "Age of the patient when the event first occured.",
+          "format": "float",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "patientonsetageunit": {
+          "description": "The unit for the interval in the field `patientonsetage.`",
+          "format": null,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "800": "Decade",
+              "801": "Year",
+              "802": "Month",
+              "803": "Week",
+              "804": "Day",
+              "805": "Hour"
+            }
+          },
+          "type": "string"
+        },
+        "patientsex": {
+          "description": "The sex of the patient.",
+          "format": "int32",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "0": "Unknown",
+              "1": "Male",
+              "2": "Female"
+            }
+          },
+          "type": "string"
+        },
+        "patientweight": {
+          "description": "The patient weight, in kg (kilograms).",
+          "format": "float",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "reaction": {
+          "items": {
+            "properties": {
+              "reactionmeddrapt": {
+                "description": "Patient reaction, as a MedDRA term. Note that these terms are encoded in British English. For instance, diarrhea is spelled `diarrohea`. MedDRA is a standardized medical terminology.",
+                "format": null,
+                "is_exact": true,
+                "pattern": null,
+                "possible_values": {
+                  "type": "reference",
+                  "value": {
+                    "link": "http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162038.htm",
+                    "name": "MedDRA"
+                  }
+                },
+                "type": "string"
+              },
+              "reactionmeddraversionpt": {
+                "description": "The version of MedDRA from which the term in `reactionmeddrapt` is drawn.",
+                "format": null,
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": null,
+                "type": "string"
+              },
+              "reactionoutcome": {
+                "description": "Outcome of the reaction in `reactionmeddrapt` at the time of last observation.",
+                "format": "int32",
+                "is_exact": false,
+                "pattern": null,
+                "possible_values": {
+                  "type": "one_of",
+                  "value": {
+                    "1": "Recovered/resolved",
+                    "2": "Recovering/resolving",
+                    "3": "Not recovered/not resolved",
+                    "4": "Recovered/resolved with sequelae (consequent health issues)",
+                    "5": "Fatal",
+                    "6": "Unknown"
+                  }
+                },
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "summary": {
+          "properties": {
+            "narrativeincludeclinical": {
+              "description": "Populated with Case Event Date, when available; does `NOT` include Case Narrative.",
+              "format": null,
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "primarysource": {
+      "properties": {
+        "literaturereference": {
+          "description": "Populated with the Literature Reference information, when available.",
+          "format": null,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "qualification": {
+          "description": "Category of individual who submitted the report.",
+          "format": null,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "1": "Physician",
+              "2": "Pharmacist",
+              "3": "Other health professional",
+              "4": "Lawyer",
+              "5": "Consumer or non-health professional"
+            }
+          },
+          "type": "string"
+        },
+        "reportercountry": {
+          "description": "Country from which the report was submitted.",
+          "format": null,
+          "is_exact": true,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "primarysourcecountry": {
+      "description": "Country of the reporter of the event.",
+      "format": null,
+      "is_exact": true,
+      "pattern": null,
+      "possible_values": {
+        "type": "reference",
+        "value": {
+          "link": "http://data.okfn.org/data/core/country-list",
+          "name": "Country codes"
+        }
+      },
+      "type": "string"
+    },
+    "receiptdate": {
+      "description": "Date that the _most recent_ information in the report was received by FDA.",
+      "format": "date",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "receiptdateformat": {
+      "description": "Encoding format of the `transmissiondate` field. Always set to 102 (YYYYMMDD).",
+      "format": null,
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "receivedate": {
+      "description": "Date that the report was _first_ received by FDA. If this report has multiple versions, this will be the date the first version was received by FDA.",
+      "format": "date",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "receivedateformat": {
+      "description": "Encoding format of the `transmissiondate` field. Always set to 102 (YYYYMMDD).",
+      "format": null,
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "receiver": {
+      "description": "Information on the organization receiving the report.",
+      "properties": {
+        "receiverorganization": {
+          "description": "Name of the organization receiving the report. Because FDA received the report, the value is always `FDA`.",
+          "format": null,
+          "is_exact": true,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "receivertype": {
+          "description": "The type of organization receiving the report. The value,`6`, is only specified if it is `other`, otherwise it is left blank.",
+          "format": "int32",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "6": "Other"
+            }
+          },
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "reportduplicate": {
+      "description": "If a report is a duplicate or more recent version than a previously submitted report, this field will provide additional details on source provider.",
+      "properties": {
+        "duplicatenumb": {
+          "description": "The case identifier for the duplicate.",
+          "format": null,
+          "is_exact": true,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "duplicatesource": {
+          "description": "The name of the organization providing the duplicate.",
+          "format": null,
+          "is_exact": true,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "reporttype": {
+      "description": "Code indicating the circumstances under which the report was generated.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": {
+        "type": "one_of",
+        "value": {
+          "1": "Spontaneous",
+          "2": "Report from study",
+          "3": "Other",
+          "4": "Not available to sender (unknown)"
+        }
+      },
+      "type": "string"
+    },
+    "safetyreportid": {
+      "description": "The 8-digit Safety Report ID number, also known as the case report number or case ID. The first 7 digits (before the hyphen) identify an individual report and the last digit (after the hyphen) is a checksum. This field can be used to identify or find a specific adverse event report.",
+      "format": null,
+      "is_exact": true,
+      "pattern": "^[0-9]{7}-[0-9]{1,2}$",
+      "possible_values": null,
+      "type": "string"
+    },
+    "safetyreportversion": {
+      "description": "The version number of the `safetyreportid`. Multiple versions of the same report may exist, it is generally best to only count the latest report and disregard others. openFDA will only return the latest version of a report.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "sender": {
+      "properties": {
+        "senderorganization": {
+          "description": "Name of the organization sending the report. Because FDA is providing these reports to you, the value is always `FDA-Public Use.`",
+          "format": null,
+          "is_exact": true,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "sendertype": {
+          "description": "The name of the organization sending the report. Because FDA is providing these reports to you, the value is always `2`.",
+          "format": "int32",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "2": "Regulatory authority"
+            }
+          },
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "serious": {
+      "description": "Seriousness of the adverse event.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": {
+        "type": "one_of",
+        "value": {
+          "1": "The adverse event resulted in death, a life threatening condition, hospitalization, disability, congenital anomaly, or other serious condition",
+          "2": "The adverse event did not result in any of the above"
+        }
+      },
+      "type": "string"
+    },
+    "seriousnesscongenitalanomali": {
+      "description": "This value is `1` if the adverse event resulted in a congenital anomaly, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "seriousnessdeath": {
+      "description": "This value is `1` if the adverse event resulted in death, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "seriousnessdisabling": {
+      "description": "This value is `1` if the adverse event resulted in disability, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "seriousnesshospitalization": {
+      "description": "This value is `1` if the adverse event resulted in a hospitalization, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "seriousnesslifethreatening": {
+      "description": "This value is `1` if the adverse event resulted in a life threatening condition, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "seriousnessother": {
+      "description": "This value is `1` if the adverse event resulted in some other serious condition, and absent otherwise.",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "transmissiondate": {
+      "description": "Date that the record was created. This may be earlier than the date the record was received by the FDA.",
+      "format": "date",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    },
+    "transmissiondateformat": {
+      "description": "Encoding format of the `transmissiondate` field. Always set to 102 (YYYYMMDD).",
+      "format": "int32",
+      "is_exact": false,
+      "pattern": null,
+      "possible_values": null,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

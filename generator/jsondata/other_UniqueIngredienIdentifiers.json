@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "subtstance_name": {
+      "items": {
+        "description": "The specific substance identified by the unii.",
+        "format": null,
+        "is_exact": true,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "unii": {
+      "items": {
+        "description": "Unique Ingredient Identifier, which is a non-proprietary, free, unique, unambiguous, non-semantic, alphanumeric identifier based on a substance’s molecular structure and/or descriptive information.",
+        "format": null,
+        "is_exact": true,
+        "pattern": "^[A-Z0-9]{10}$",
+        "possible_values": {
+          "type": "reference",
+          "value": {
+            "link": "http://fdasis.nlm.nih.gov/srs/srs.jsp",
+            "name": "Unique Ingredient Identifiers"
+          }
+        },
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

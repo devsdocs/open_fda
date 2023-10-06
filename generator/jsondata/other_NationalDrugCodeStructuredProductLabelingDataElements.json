@@ -1,0 +1,201 @@
+{
+  "properties": {
+    "application_number_or_citation": {
+      "items": {
+        "description": "Some types of marketing categories may be associated with FDA assigned numbers (e.g., NDA123456) or regulatory citations (e.g., part348).",
+        "format": null,
+        "hide": true,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "billing_unit": {
+      "items": {
+        "description": "The National Council for Prescription Drug Programs (NCPDP) developed the Billing Unit Standard to assist in consistent and accurate billing of pharmaceutical products. Information on the NCPDP Billing Unit Standard may be found at http://www.ncpdp.org/PDF/BUS_overview.pdfdisclaimer icon. This column may contain a NCPDP Billing Unit (GM, ML or EA).",
+        "format": null,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "dosage_form": {
+      "items": {
+        "description": "This column contains the dosage form as manufactured.",
+        "format": null,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "inactivation_date": {
+      "description": "The date on which registration or listing data was inactivated by FDA due to inaccuracies, incompleteness or incompliance.",
+      "format": "date",
+      "is_exact": false,
+      "possible_values": null,
+      "type": "string"
+    },
+    "marketing_category": {
+      "items": {
+        "description": "The author chooses a category that most closely describes the FDA regulations for marketing the product.",
+        "format": null,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "marketing_end_date": {
+      "items": {
+        "description": "This is the expiration date of the last lot distributed. Products that are actively being marketed will not have a marketing end date. Products that are no longer manufactured may have a future end marketing date for the expiration of the last lot distributed.",
+        "format": "date",
+        "is_exact": false,
+        "pattern": "YYYYmmdd",
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "marketing_start_date": {
+      "items": {
+        "description": "This is the date the author indicates when it started marketing the packaged product.",
+        "format": "date",
+        "is_exact": false,
+        "pattern": "YYYYmmdd",
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "meta": {
+      "description": "This section contains a disclaimer and license information. The field `last_updated` indicates when the data files were exported.",
+      "format": null,
+      "hide": true,
+      "possible_values": null,
+      "properties": {
+        "disclaimer": {
+          "description": "Important details notes about openFDA data and limitations of the dataset.",
+          "format": null,
+          "hide": true,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "last_updated": {
+          "description": "The last date when this openFDA endpoint was updated. Note that this does not correspond to the most recent record for the endpoint or dataset. Rather, it is the last time the openFDA API was itself updated.",
+          "format": "date",
+          "hide": true,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "license": {
+          "description": "Link to a web page with license terms that govern data within openFDA.",
+          "format": null,
+          "hide": true,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "results": {
+          "properties": {
+            "limit": {
+              "description": "Number of records in this return, defined by the `limit` [query parameter](/api/). If there is no `limit` parameter, the API returns one result.",
+              "format": "int64",
+              "hide": true,
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            },
+            "skip": {
+              "description": "Offset (page) of results, defined by the `skip` [query parameter](/api/).",
+              "format": "int64",
+              "hide": true,
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            },
+            "total": {
+              "description": "Total number of records matching the search criteria.",
+              "format": "int64",
+              "hide": true,
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "package_ndc": {
+      "items": {
+        "description": "This number, known as the NDC, identifies the labeler, product, and trade package size. The first segment, the labeler code, is assigned by the FDA. A labeler is any firm that manufactures (including repackers or relabelers), or distributes (under its own name) the drug.",
+        "format": null,
+        "hide": true,
+        "is_exact": false,
+        "pattern": "^[0-9]{5,4}-[0-9]{4,3}-[0-9]{1,2}$",
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "package_ndc11": {
+      "items": {
+        "description": "The NDC11 is a transformed version of the segmented NDC code using the algorithm defined by the National Council for Prescription Drug Programs (NCPDP). Three segment NHRIC codes have also been transformed following the same algorithm. Two segment NHRIC and ISBT codes have not been transformed.",
+        "format": null,
+        "hide": true,
+        "is_exact": false,
+        "pattern": "^[0-9]{11}$",
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "product_type": {
+      "items": {
+        "description": "The author chooses a type that most closely describes the product (e.g., Vaccine) associated with the SPL document.",
+        "format": null,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "proprietary_name": {
+      "items": {
+        "description": "Also known as the trade name. It is the name of the product chosen by the author.",
+        "format": null,
+        "is_exact": false,
+        "pattern": null,
+        "possible_values": null,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "reactivation_date": {
+      "description": "The date on which a previously FDA inactivated registration or listing data is reactivated.",
+      "format": "date",
+      "is_exact": false,
+      "possible_values": null,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

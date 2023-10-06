@@ -1,0 +1,308 @@
+{
+  "properties": {
+    "consumer": {
+      "properties": {
+        "age": {
+          "description": "The reported age of the consumer at the time of the adverse event report, expressed in the unit in the field `age_unit`.",
+          "format": null,
+          "is_exact": false,
+          "possible_values": null,
+          "type": "string"
+        },
+        "age_unit": {
+          "description": "Encodes the unit in which the age of the consumer is expressed.",
+          "format": null,
+          "is_exact": false,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "Day(s)": "age is expressed in days",
+              "Decade(s)": "age is expressed in decades",
+              "Month(s)": "age is expressed in months",
+              "Not Available": "Unknown",
+              "Week(s)": "age is expressed in weeks",
+              "Year(s)": "age is expressed in years"
+            }
+          },
+          "type": "string"
+        },
+        "gender": {
+          "description": "The reported gender of the consumer.",
+          "format": null,
+          "is_exact": false,
+          "possible_values": {
+            "type": "one_of",
+            "value": {
+              "Female": "Female",
+              "Male": "Male",
+              "Not Available": "Unknown"
+            }
+          },
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "date_created": {
+      "description": "Date the report was received by FDA.",
+      "format": "date",
+      "is_exact": false,
+      "possible_values": null,
+      "type": "string"
+    },
+    "date_started": {
+      "description": "Date of the adverse event (when it was considered to have started).",
+      "format": "date",
+      "is_exact": false,
+      "possible_values": null,
+      "type": "string"
+    },
+    "meta": {
+      "description": "This section contains a disclaimer and license information. The field `last_updated` indicates when the data files were exported.",
+      "format": null,
+      "possible_values": null,
+      "properties": {
+        "disclaimer": {
+          "description": "Important details notes about openFDA data and limitations of the dataset.",
+          "format": null,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "last_updated": {
+          "description": "The last date when this openFDA endpoint was updated. Note that this does not correspond to the most recent record for the endpoint or dataset. Rather, it is the last time the openFDA API was itself updated.",
+          "format": "date",
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "license": {
+          "description": "Link to a web page with license terms that govern data within openFDA.",
+          "format": null,
+          "is_exact": false,
+          "pattern": null,
+          "possible_values": null,
+          "type": "string"
+        },
+        "results": {
+          "properties": {
+            "limit": {
+              "description": "Number of records in this return, defined by the `limit` [query parameter](/api/). If there is no `limit` parameter, the API returns one result.",
+              "format": "int64",
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            },
+            "skip": {
+              "description": "Offset (page) of results, defined by the `skip` [query parameter](/api/).",
+              "format": "int64",
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            },
+            "total": {
+              "description": "Total number of records matching the search criteria.",
+              "format": "int64",
+              "is_exact": false,
+              "pattern": null,
+              "possible_values": null,
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "outcomes": {
+      "items": {
+        "description": "The outcome or consequence of the adverse event.",
+        "format": null,
+        "is_exact": true,
+        "possible_values": {
+          "type": "one_of",
+          "value": {
+            "CONGENITAL ANOMALY": "The adverse event caused a birth defect in a baby",
+            "DEATH": "The adverse event was the death of the consumer",
+            "DISABILITY": "The adverse event caused the permanent disability",
+            "HOSPITALIZATION": "The consumer was hospitalized",
+            "LIFE THREATENING": "The adverse event was life threatening",
+            "NON-SERIOUS INJURIES/ ILLNESS": "The outcome wasn’t serious",
+            "NONE": "The outcome was not reported",
+            "OTHER": "The outcome was not one of the specified types",
+            "OTHER SERIOUS (IMPORTANT MEDICAL EVENTS)": "The outcome included non-specified serious medical events",
+            "REQ. INTERVENTION TO PRVNT PERM. IMPRMNT.": "The adverse event caused an illness or injury serious enough to require intervention to prevent permanent impairment or disability",
+            "SERIOUS INJURIES/ ILLNESS": "The adverse event caused serious injuries or illness",
+            "VISITED A HEALTH CARE PROVIDER": "The adverse event was serious enough to cause the consumer to visit a health care provider",
+            "VISITED AN ER": "The consumer visited an ER"
+          }
+        },
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "products": {
+      "items": {
+        "properties": {
+          "industry_code": {
+            "description": "The FDA industry code for the product. Results in this endpoint are generally limited to products tagged with industry codes related to human food and nutritional supplements or cosmetics.",
+            "format": null,
+            "is_exact": false,
+            "possible_values": {
+              "type": "one_of",
+              "value": {
+                "12": "Cheese/Cheese Prod",
+                "13": "Ice Cream Prod",
+                "14": "Filled Milk/Imit Milk Prod",
+                "15": "Egg/Egg Prod",
+                "16": "Fishery/Seafood Prod",
+                "17": "Meat, Meat Products and Poultry",
+                "18": "Vegetable Protein Prod",
+                "2": "Whole Grain/Milled Grain Prod/Starch",
+                "20": "Fruit/Fruit Prod",
+                "21": "Fruit/Fruit Prod",
+                "22": "Fruit/Fruit Prod",
+                "23": "Nuts/Edible Seed",
+                "24": "Vegetables/Vegetable Products",
+                "25": "Vegetables/Vegetable Products",
+                "26": "Vegetable Oils",
+                "27": "Dressing/Condiment",
+                "28": "Spices, Flavors And Salts",
+                "29": "Soft Drink/Water",
+                "3": "Bakery Prod/Dough/Mix/Icing",
+                "30": "Beverage Bases/Conc/Nectar",
+                "31": "Coffee/Tea",
+                "32": "Alcoholic Beverage",
+                "33": "Candy W/O Choc/Special/Chew Gum",
+                "34": "Choc/Cocoa Prod",
+                "35": "Gelatin/Rennet/Pudding Mix/Pie Filling",
+                "36": "Food Sweeteners (Nutritive)",
+                "37": "Mult Food Dinner/Grav/Sauce/Special",
+                "38": "Soup",
+                "39": "Prep Salad Prod",
+                "4": "Macaroni/Noodle Prod",
+                "40": "Baby Food Prod",
+                "41": "Dietary Conv Food/Meal Replacements",
+                "42": "Edible Insects And Insect-derived Foods (Arthropods And Annelids)",
+                "45": "Food Additives (Human Use)",
+                "46": "Food Additives (Human Use)",
+                "47": "Multiple Food Warehouses",
+                "5": "Cereal Prep/Breakfast Food",
+                "50": "Color Additiv Food/Drug/Cosmetic",
+                "51": "Food Service/Conveyance",
+                "52": "Miscellaneous Food Related Items",
+                "53": "Cosmetics",
+                "54": "Vit/Min/Prot/Unconv Diet(Human/Animal)",
+                "55": "Pharm Necess & Ctnr For Drug/Bio",
+                "56": "Antibiotics (Human/Animal)",
+                "57": "Bio & Licensed In-Vivo & In-Vitro Diag",
+                "59": "Multiple Drug Warehouses",
+                "60": "Human and Animal Drugs",
+                "61": "Human and Animal Drugs",
+                "62": "Human and Animal Drugs",
+                "63": "Human and Animal Drugs",
+                "64": "Human and Animal Drugs",
+                "65": "Human and Animal Drugs",
+                "66": "Human and Animal Drugs",
+                "67": "Type A Medicated Articles",
+                "68": "Animal Devices and Diagnostic Products",
+                "69": "Medicated Animal Feeds",
+                "7": "Snack Food Item",
+                "70": "Animal Food(Non-Medicated Feed and Feed Ingreds)",
+                "71": "Byprodcts For Animal Foods",
+                "72": "Pet/Laboratory Animal Food",
+                "73": "Anesthesiology",
+                "74": "Cardiovascular",
+                "75": "Chemistry",
+                "76": "Dental",
+                "77": "Ear, Nose And Throat",
+                "78": "Gastroenterological & Urological",
+                "79": "General & Plastic Surgery",
+                "80": "General Hospital/Personal Use",
+                "81": "Hematology",
+                "82": "Immunology",
+                "83": "Microbiology",
+                "84": "Neurological",
+                "85": "Obstetrical & Gynecological",
+                "86": "Ophthalmic",
+                "87": "Orthopedic",
+                "88": "Pathology",
+                "89": "Physical Medicine",
+                "9": "Milk/Butter/Dried Milk Prod",
+                "90": "Radiological",
+                "91": "Toxicology",
+                "92": "Molecular Genetics",
+                "94": "Ionizing Non-Medical Devices and Components",
+                "95": "Light Emitting Non-Device Products",
+                "96": "Radio Frequency Emitting Products",
+                "97": "Sound Emitting Products",
+                "98": "Tobacco Products",
+                "99": "Bio/Anim Drug/Feed&Food/Med Dev/Rh Whse"
+              }
+            },
+            "type": "string"
+          },
+          "industry_name": {
+            "description": "The FDA industry name associated with the product.",
+            "format": null,
+            "is_exact": true,
+            "possible_values": null,
+            "type": "string"
+          },
+          "name_brand": {
+            "description": "The reported brand name of the product.",
+            "format": null,
+            "is_exact": true,
+            "possible_values": null,
+            "type": "string"
+          },
+          "role": {
+            "description": "The reported role of the product in the adverse event report.",
+            "format": null,
+            "is_exact": true,
+            "possible_values": {
+              "type": "one_of",
+              "value": {
+                "Concomitant": "The product was not suspected of causing the adverse event, but was being consumed or used at the same time when the adverse event started",
+                "Not Available": "The suspected role of the product was not reported",
+                "Suspect": "The product was suspected of causing the adverse event"
+              }
+            },
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "reactions": {
+      "items": {
+        "description": "MedDRA terms for the reactions. Note that these terms are encoded in British English. For instance, *diarrhea* is recorded as `DIARRHOEA`",
+        "format": null,
+        "is_exact": true,
+        "possible_values": {
+          "type": "reference",
+          "value": {
+            "link": "http://www.meddra.org/",
+            "name": "MedDRA"
+          }
+        },
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "report_number": {
+      "description": "The report number.",
+      "format": null,
+      "is_exact": false,
+      "possible_values": null,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
