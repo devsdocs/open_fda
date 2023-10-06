@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DevicePreMarketApprovalFields {}
-
-final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.devicePreMarketApproval;
+final class DevicePreMarketApproval extends _OpenFDAEndpointer {
+  DevicePreMarketApproval()
+      : super(
+          _Endpoints.devicePreMarketApproval,
+        );
 
   /// This equates to the review division within CDRH in which the PMA would be
   /// reviewed, if it were reviewed today; this is derived from the procode and
@@ -210,17 +209,17 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   );
 
   /// No decision made in 30 days.
-  final decisionCodeGTthreezero = (
+  final decisionCodeGT30 = (
     'decision_code',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalDecisionCode.gTthreezero,
+    _DevicePreMarketApprovalDecisionCode.gT30,
   );
 
   /// 30 day notice acceptance (decision made in ≤30 days).
-  final decisionCodeLEthreezero = (
+  final decisionCodeLE30 = (
     'decision_code',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalDecisionCode.lEthreezero,
+    _DevicePreMarketApprovalDecisionCode.lE30,
   );
 
   /// Withdrawal: PMA has been withdrawn.
@@ -399,15 +398,15 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// the applicant that the submission has been converted to a 135-day
   /// supplement (21 CFR 814.39(f)), and describes further information or action
   /// that is required for acceptance of the modification.
-  final supplementTypeThreedayNoticeAndPMASupplement = (
+  final supplementTypeThree0dayNoticeAnd135PMASupplement = (
     'supplement_type',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalSupplementType.threedayNoticeAndPMASupplement,
+    _DevicePreMarketApprovalSupplementType.three0dayNoticeAnd135PMASupplement,
   );
-  final supplementTypeThreedayNoticeAndPMASupplementExact = (
+  final supplementTypeThree0dayNoticeAnd135PMASupplementExact = (
     'supplement_type.exact',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalSupplementType.threedayNoticeAndPMASupplement,
+    _DevicePreMarketApprovalSupplementType.three0dayNoticeAnd135PMASupplement,
   );
 
   /// In accordance with 21 CFR 814.82(a)(7), FDA may require as a condition of
@@ -416,17 +415,17 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// In most cases, after the PMA is approved, the PMA applicant is required to
   /// submit reports to FDA annually unless a different time frame is specified
   /// in the approval order.
-  final supplementTypeAnnualPeriodicReportOrThreezerodaySupplements = (
+  final supplementTypeAnnualPeriodicReportOr30daySupplements = (
     'supplement_type',
     PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType
-        .annualPeriodicReportOrThreezerodaySupplements,
+        .annualPeriodicReportOr30daySupplements,
   );
-  final supplementTypeAnnualPeriodicReportOrThreezerodaySupplementsExact = (
+  final supplementTypeAnnualPeriodicReportOr30daySupplementsExact = (
     'supplement_type.exact',
     PossibleValueType.oneOf,
     _DevicePreMarketApprovalSupplementType
-        .annualPeriodicReportOrThreezerodaySupplements,
+        .annualPeriodicReportOr30daySupplements,
   );
 
   /// Any premarket approval application for a class III medical device,
@@ -464,15 +463,15 @@ final class DevicePreMarketApproval extends DevicePreMarketApprovalFields
   /// section 515 that is not a panel-track supplement and requests a
   /// significant change in components, materials, design, specification,
   /// software, color additives, or labeling.
-  final supplementTypePMASupplementOneeightzeroDays = (
+  final supplementTypePMASupplement180Days = (
     'supplement_type',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalSupplementType.pMASupplementOneeightzeroDays,
+    _DevicePreMarketApprovalSupplementType.pMASupplement180Days,
   );
-  final supplementTypePMASupplementOneeightzeroDaysExact = (
+  final supplementTypePMASupplement180DaysExact = (
     'supplement_type.exact',
     PossibleValueType.oneOf,
-    _DevicePreMarketApprovalSupplementType.pMASupplementOneeightzeroDays,
+    _DevicePreMarketApprovalSupplementType.pMASupplement180Days,
   );
 
   /// Changes Being Effected Sections 21 CFR 814.39(d)(1) and (d)(2)provide that
@@ -683,12 +682,12 @@ enum _DevicePreMarketApprovalDecisionCode {
   ),
 
   /// No decision made in 30 days.
-  gTthreezero._(
+  gT30._(
     'GT30',
   ),
 
   /// 30 day notice acceptance (decision made in ≤30 days).
-  lEthreezero._(
+  lE30._(
     'LE30',
   ),
 
@@ -782,7 +781,7 @@ enum _DevicePreMarketApprovalSupplementType {
   /// the applicant that the submission has been converted to a 135-day
   /// supplement (21 CFR 814.39(f)), and describes further information or action
   /// that is required for acceptance of the modification.
-  threedayNoticeAndPMASupplement._(
+  three0dayNoticeAnd135PMASupplement._(
     '30-day Notice and 135 PMA Supplement',
   ),
 
@@ -792,7 +791,7 @@ enum _DevicePreMarketApprovalSupplementType {
   /// In most cases, after the PMA is approved, the PMA applicant is required to
   /// submit reports to FDA annually unless a different time frame is specified
   /// in the approval order.
-  annualPeriodicReportOrThreezerodaySupplements._(
+  annualPeriodicReportOr30daySupplements._(
     'Annual (periodic) Report or 30-day Supplements',
   ),
 
@@ -817,7 +816,7 @@ enum _DevicePreMarketApprovalSupplementType {
   /// section 515 that is not a panel-track supplement and requests a
   /// significant change in components, materials, design, specification,
   /// software, color additives, or labeling.
-  pMASupplementOneeightzeroDays._(
+  pMASupplement180Days._(
     'PMA supplement (180 days)',
   ),
 

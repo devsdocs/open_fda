@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class OtherSubstanceDataReportsFields {}
-
-final class OtherSubstanceDataReports extends OtherSubstanceDataReportsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.otherSubstanceDataReports;
+final class OtherSubstanceDataReports extends _OpenFDAEndpointer {
+  OtherSubstanceDataReports()
+      : super(
+          _Endpoints.otherSubstanceDataReports,
+        );
 
   final codes = 'codes';
 

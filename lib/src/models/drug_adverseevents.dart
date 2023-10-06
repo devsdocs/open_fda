@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DrugAdverseEventsFields {}
-
-final class DrugAdverseEvents extends DrugAdverseEventsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.drugAdverseEvents;
+final class DrugAdverseEvents extends _OpenFDAEndpointer {
+  DrugAdverseEvents()
+      : super(
+          _Endpoints.drugAdverseEvents,
+        );
 
   /// Populated with the Regulatory Authority’s case report number, when
   /// available.

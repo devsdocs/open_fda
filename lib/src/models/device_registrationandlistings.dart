@@ -1,27 +1,24 @@
 part of '../main.dart';
 
-abstract final class DeviceRegistrationAndListingsFields {}
-
-final class DeviceRegistrationAndListings
-    extends DeviceRegistrationAndListingsFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceRegistrationAndListings;
+final class DeviceRegistrationAndListings extends _OpenFDAEndpointer {
+  DeviceRegistrationAndListings()
+      : super(
+          _Endpoints.deviceRegistrationAndListings,
+        );
 
   /// Facility operation or activity, e.g. “Manufacturer” (short version).
   /// Complaint File Establishment per 21 CFR 820.198
-  final establishmentTypeComplaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight =
-      (
+  final establishmentTypeComplaintFileEstablishmentPer21CFR820198 = (
     'establishment_type',
     PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
-        .complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight,
+        .complaintFileEstablishmentPer21CFR820198,
   );
-  final establishmentTypeComplaintFileEstablishmentPerTwooneCFREighttwozeroonenineeightExact =
-      (
+  final establishmentTypeComplaintFileEstablishmentPer21CFR820198Exact = (
     'establishment_type.exact',
     PossibleValueType.oneOf,
     _DeviceRegistrationAndListingsEstablishmentType
-        .complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight,
+        .complaintFileEstablishmentPer21CFR820198,
   );
 
   /// Develop Specifications But Do Not Manufacture At This Facility
@@ -525,7 +522,7 @@ final class DeviceRegistrationAndListings
 /// Facility operation or activity, e.g. “Manufacturer” (short version).
 enum _DeviceRegistrationAndListingsEstablishmentType {
   /// Complaint File Establishment per 21 CFR 820.198
-  complaintFileEstablishmentPerTwooneCFREighttwozeroonenineeight._(
+  complaintFileEstablishmentPer21CFR820198._(
     'Complaint File Establishment per 21 CFR 820.198',
   ),
 

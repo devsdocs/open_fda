@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DeviceClearanceFields {}
-
-final class DeviceClearance extends DeviceClearanceFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceClearance;
+final class DeviceClearance extends _OpenFDAEndpointer {
+  DeviceClearance()
+      : super(
+          _Endpoints.deviceClearance,
+        );
 
   /// Delivery address of the applicant.
   final address1 = 'address_1';

@@ -1,13 +1,11 @@
 part of '../main.dart';
 
-abstract final class OtherNationalDrugCodeStructuredProductLabelingDataElementsFields {}
-
 final class OtherNationalDrugCodeStructuredProductLabelingDataElements
-    extends OtherNationalDrugCodeStructuredProductLabelingDataElementsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase =
-      _Endpoints.otherNationalDrugCodeStructuredProductLabelingDataElements;
+    extends _OpenFDAEndpointer {
+  OtherNationalDrugCodeStructuredProductLabelingDataElements()
+      : super(
+          _Endpoints.otherNationalDrugCodeStructuredProductLabelingDataElements,
+        );
 
   /// Some types of marketing categories may be associated with FDA assigned
   /// numbers (e.g., NDA123456) or regulatory citations (e.g., part348).

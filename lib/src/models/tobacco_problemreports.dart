@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class TobaccoProblemReportsFields {}
-
-final class TobaccoProblemReports extends TobaccoProblemReportsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.tobaccoProblemReports;
+final class TobaccoProblemReports extends _OpenFDAEndpointer {
+  TobaccoProblemReports()
+      : super(
+          _Endpoints.tobaccoProblemReports,
+        );
 
   /// Date report was received by CTP; this is the earliest date of report
   /// receipt, either to Safety Reporting Portal (SRP) or by other means. Date

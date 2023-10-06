@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class FoodAdverseEventsFields {}
-
-final class FoodAdverseEvents extends FoodAdverseEventsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.foodAdverseEvents;
+final class FoodAdverseEvents extends _OpenFDAEndpointer {
+  FoodAdverseEvents()
+      : super(
+          _Endpoints.foodAdverseEvents,
+        );
 
   final consumer = 'consumer';
 

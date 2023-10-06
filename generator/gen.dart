@@ -7,7 +7,8 @@ import 'package:yaml_magic/yaml_magic.dart';
 import 'model.dart';
 import 'raw.dart';
 
-Future<void> fetchYamlAndConvertToJson() async {
+Future<void> fetchYamlAndConvertToJson([bool download = false]) async {
+  if (download == false) return;
   const base =
       'https://raw.githubusercontent.com/FDA/open.fda.gov/master/src/constants/fields/';
   for (final e in linkOpenFda) {
@@ -147,12 +148,12 @@ String superClassWriter(
 }) {
   final buff = StringBuffer();
 
-  final superClassName = '$prefixMainCase${suffix}Fields';
+  // final superClassName = '$prefixMainCase${suffix}Fields';
   if (childSuffix == null) {
-    buff.writeln(
-      'abstract final class $superClassName {',
-    );
-    buff.writeln('}');
+    // buff.writeln(
+    //   'abstract final class $superClassName {',
+    // );
+    // buff.writeln('}');
   }
 
   buff.writeln(
@@ -179,12 +180,12 @@ String classWriter(
 }) {
   final buff = StringBuffer();
 
-  final superClassName = '$prefixMainCase${suffix}Fields';
+  // final superClassName = '$prefixMainCase${suffix}Fields';
 
   final className = '$prefixMainCase${childSuffix ?? suffix}';
 
   buff.writeln(
-    'final class $className extends $superClassName implements OpenFDAEndpointer {',
+    'final class $className extends _OpenFDAEndpointer {',
   );
   buff.writeln(
     constructorWriter(
@@ -197,11 +198,11 @@ String classWriter(
     ),
   );
 
-  buff.writeln();
-  buff.writeln('@override');
-  buff.writeln(
-    'final endPointBase = _Endpoints.$prefixSnakeCase$suffix;',
-  );
+  // buff.writeln();
+  // buff.writeln('@override');
+  // buff.writeln(
+  //   'final endPointBase = _Endpoints.$prefixSnakeCase$suffix;',
+  // );
   buff.writeln();
   final fieldsData = fieldWriter(
     prefixMainCase,
@@ -249,6 +250,9 @@ String constructorWriter(
       buff.writeln('this.${p.address.toSnakeCase.toSnakeCase},');
     }
     buff.writeln('});');
+  } else {
+    final className = '$prefixMainCase${childSuffix ?? suffix}';
+    buff.writeln('$className() : super(_Endpoints.$prefixSnakeCase$suffix,);');
   }
 
   return buff.toString();
@@ -341,25 +345,7 @@ String constructorWriter(
             poss.data!.forEach((key, value) {
               buff.writeln(docWriter(value.toString()));
               if (!poss.isBool!) {
-                final splitKey = key.split('');
-                final enumType = num.tryParse(key) != null
-                    ? int.parse(key).numToWords
-                    : splitKey.any((e) => int.tryParse(e) != null)
-                        ? int.tryParse(splitKey.first) != null &&
-                                int.tryParse(splitKey[2]) == null
-                            ? [
-                                int.parse(splitKey.first).numToWords,
-                                ...splitKey.sublist(1),
-                              ].join().removeNonAlph
-                            : splitKey
-                                .map(
-                                  (e) => int.tryParse(e) != null
-                                      ? int.parse(e).numToWords
-                                      : e,
-                                )
-                                .join()
-                                .removeNonAlph
-                        : key.removeNonAlph;
+                final enumType = getEnumType(key);
                 buff.writeln(
                   "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
                 );
@@ -456,6 +442,21 @@ String constructorWriter(
   return (buff.toString(), dataListOfObject);
 }
 
+String getEnumType(String key) {
+  final splitKey = key.split('');
+  final enumType = num.tryParse(key) != null
+      ? int.parse(key).numToWords
+      : splitKey.any((e) => int.tryParse(e) != null)
+          ? int.tryParse(splitKey.first) != null
+              ? [
+                  int.parse(splitKey.first).numToWords,
+                  ...splitKey.sublist(1),
+                ].join().removeNonAlph
+              : key.removeNonAlph
+          : key.removeNonAlph;
+  return enumType;
+}
+
 String enumWriter(
   String descObjectName,
   Props props, {
@@ -474,25 +475,7 @@ String enumWriter(
       buff.writeln('enum _$descObjectName {');
 
       poss.data!.forEach((key, value) {
-        final splitKey = key.split('');
-        final enumType = num.tryParse(key) != null
-            ? int.parse(key).numToWords
-            : splitKey.any((e) => int.tryParse(e) != null)
-                ? int.tryParse(splitKey.first) != null &&
-                        int.tryParse(splitKey[2]) == null
-                    ? [
-                        int.parse(splitKey.first).numToWords,
-                        ...splitKey.sublist(1),
-                      ].join().removeNonAlph
-                    : splitKey
-                        .map(
-                          (e) => int.tryParse(e) != null
-                              ? int.parse(e).numToWords
-                              : e,
-                        )
-                        .join()
-                        .removeNonAlph
-                : key.removeNonAlph;
+        final enumType = getEnumType(key);
 
         buff.writeln(docWriter(value.toString()));
         buff.writeln("${enumType.toSnakeCase}._('$key',),");
@@ -897,15 +880,15 @@ extension Str on String {
   }
 
   String get removeNonAlph {
-    final alphs = RegExp(r'[a-zA-Z\*]');
+    final alphs = RegExp(r'[a-zA-Z0-9\*]');
     final res = !contains(' ')
         ? !contains(alphs)
             ? throw Exception('Empty!')
             : toSnakeCase
         : (clean.split(' ')
-              ..retainWhere((e) {
-                return e.contains(alphs);
-              }))
+              ..retainWhere(
+                (e) => e.contains(alphs),
+              ))
             .map(
               (e) => e.split('').map((e) => e.contains(alphs) ? e : '').join(),
             )

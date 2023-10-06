@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class OtherUniqueIngredienIdentifiersFields {}
-
-final class OtherUniqueIngredienIdentifiers
-    extends OtherUniqueIngredienIdentifiersFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.otherUniqueIngredienIdentifiers;
+final class OtherUniqueIngredienIdentifiers extends _OpenFDAEndpointer {
+  OtherUniqueIngredienIdentifiers()
+      : super(
+          _Endpoints.otherUniqueIngredienIdentifiers,
+        );
 
   /// The specific substance identified by the unii.
   final subtstanceName = 'subtstance_name';

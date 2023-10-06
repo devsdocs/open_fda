@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DeviceClassificationFields {}
-
-final class DeviceClassification extends DeviceClassificationFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceClassification;
+final class DeviceClassification extends _OpenFDAEndpointer {
+  DeviceClassification()
+      : super(
+          _Endpoints.deviceClassification,
+        );
 
   /// Compositional definition of a medical device, based on the input of
   /// nomenclature experts, incorporating the definition of components of a

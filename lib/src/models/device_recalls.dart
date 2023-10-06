@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DeviceRecallsFields {}
-
-final class DeviceRecalls extends DeviceRecallsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceRecalls;
+final class DeviceRecalls extends _OpenFDAEndpointer {
+  DeviceRecalls()
+      : super(
+          _Endpoints.deviceRecalls,
+        );
 
   /// Action taken as part of the recall.
   final action = 'action';

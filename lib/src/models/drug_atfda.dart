@@ -1,10 +1,10 @@
 part of '../main.dart';
 
-abstract final class DrugAtFDAFields {}
-
-final class DrugAtFDA extends DrugAtFDAFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.drugAtFDA;
+final class DrugAtFDA extends _OpenFDAEndpointer {
+  DrugAtFDA()
+      : super(
+          _Endpoints.drugAtFDA,
+        );
 
   /// This corresponds to the NDA, ANDA, or BLA number reported by the labeler
   /// for products which have the corresponding Marketing Category designated.

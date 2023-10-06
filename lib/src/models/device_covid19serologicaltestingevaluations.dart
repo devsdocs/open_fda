@@ -1,12 +1,11 @@
 part of '../main.dart';
 
-abstract final class DeviceCovid19SerologicalTestingEvaluationsFields {}
-
 final class DeviceCovid19SerologicalTestingEvaluations
-    extends DeviceCovid19SerologicalTestingEvaluationsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceCovid19SerologicalTestingEvaluations;
+    extends _OpenFDAEndpointer {
+  DeviceCovid19SerologicalTestingEvaluations()
+      : super(
+          _Endpoints.deviceCovid19SerologicalTestingEvaluations,
+        );
 
   /// Agreement between all antibody results and antibody_truth. Any positive
   /// makes the result positive. All results must be negative for the overall

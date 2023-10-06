@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class FoodRecallEnforcementReportsFields {}
-
-final class FoodRecallEnforcementReports
-    extends FoodRecallEnforcementReportsFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.foodRecallEnforcementReports;
+final class FoodRecallEnforcementReports extends _OpenFDAEndpointer {
+  FoodRecallEnforcementReports()
+      : super(
+          _Endpoints.foodRecallEnforcementReports,
+        );
 
   final address1 = 'address_1';
   final address1Exact = 'address_1.exact';

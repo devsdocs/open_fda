@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DeviceAdverseEventsFields {}
-
-final class DeviceAdverseEvents extends DeviceAdverseEventsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceAdverseEvents;
+final class DeviceAdverseEvents extends _OpenFDAEndpointer {
+  DeviceAdverseEvents()
+      : super(
+          _Endpoints.deviceAdverseEvents,
+        );
 
   /// Whether the report is about an incident where the use of the device is
   /// suspected to have resulted in an adverse outcome in a patient.
@@ -108,18 +107,17 @@ final class DeviceAdverseEvents extends DeviceAdverseEventsFields
   );
 
   /// Only a year and month were provided. Day was set to 01.
-  final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsToZeroone = (
+  final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsTo01 = (
     'device.date_removed_flag',
     PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag
-        .monthAndYearProvidedOnlyDayDefaultsToZeroone,
+        .monthAndYearProvidedOnlyDayDefaultsTo01,
   );
-  final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsToZerooneExact =
-      (
+  final deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsTo01Exact = (
     'device.date_removed_flag.exact',
     PossibleValueType.oneOf,
     _DeviceAdverseEventsDeviceDateRemovedFlag
-        .monthAndYearProvidedOnlyDayDefaultsToZeroone,
+        .monthAndYearProvidedOnlyDayDefaultsTo01,
   );
 
   /// Documentation forthcoming.
@@ -3462,7 +3460,7 @@ enum _DeviceAdverseEventsDeviceDateRemovedFlag {
   ),
 
   /// Only a year and month were provided. Day was set to 01.
-  monthAndYearProvidedOnlyDayDefaultsToZeroone._(
+  monthAndYearProvidedOnlyDayDefaultsTo01._(
     'Month and year provided only day defaults to 01',
   ),
 

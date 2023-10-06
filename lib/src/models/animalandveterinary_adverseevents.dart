@@ -1,12 +1,10 @@
 part of '../main.dart';
 
-abstract final class AnimalAndVeterinaryAdverseEventsFields {}
-
-final class AnimalAndVeterinaryAdverseEvents
-    extends AnimalAndVeterinaryAdverseEventsFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.animalAndVeterinaryAdverseEvents;
+final class AnimalAndVeterinaryAdverseEvents extends _OpenFDAEndpointer {
+  AnimalAndVeterinaryAdverseEvents()
+      : super(
+          _Endpoints.animalAndVeterinaryAdverseEvents,
+        );
 
   /// Animal(s) involved in the adverse drug event.
   final animal = 'animal';

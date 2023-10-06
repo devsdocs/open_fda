@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DrugProductLabelingFields {}
-
-final class DrugProductLabeling extends DrugProductLabelingFields
-    implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.drugProductLabeling;
+final class DrugProductLabeling extends _OpenFDAEndpointer {
+  DrugProductLabeling()
+      : super(
+          _Endpoints.drugProductLabeling,
+        );
 
   /// Information about the types of abuse that can occur with the drug and
   /// adverse reactions pertinent to those types of abuse, primarily based on

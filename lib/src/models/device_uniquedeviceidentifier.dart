@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DeviceUniqueDeviceIdentifierFields {}
-
-final class DeviceUniqueDeviceIdentifier
-    extends DeviceUniqueDeviceIdentifierFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.deviceUniqueDeviceIdentifier;
+final class DeviceUniqueDeviceIdentifier extends _OpenFDAEndpointer {
+  DeviceUniqueDeviceIdentifier()
+      : super(
+          _Endpoints.deviceUniqueDeviceIdentifier,
+        );
 
   /// The Proprietary/Trade/Brand name of the medical device as used in device
   /// labeling or in the catalog. This information may 1) be on a label attached
@@ -732,15 +731,15 @@ final class DeviceUniqueDeviceIdentifier
 
   /// Organization accredited by FDA to operate a system for the issuance of UDIs
   /// GS1
-  final identifiersIssuingAgencyGSone = (
+  final identifiersIssuingAgencyGS1 = (
     'identifiers.issuing_agency',
     PossibleValueType.oneOf,
-    _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gSone,
+    _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gS1,
   );
-  final identifiersIssuingAgencyGSoneExact = (
+  final identifiersIssuingAgencyGS1Exact = (
     'identifiers.issuing_agency.exact',
     PossibleValueType.oneOf,
-    _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gSone,
+    _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency.gS1,
   );
 
   /// HIBCC
@@ -1134,11 +1133,10 @@ final class DeviceUniqueDeviceIdentifier
 
   /// Indicates the premarket submission type.
   /// 510(k)
-  final premarketSubmissionsSubmissionTypeFiveonezerok = (
+  final premarketSubmissionsSubmissionTypeFive10k = (
     'premarket_submissions.submission_type',
     PossibleValueType.oneOf,
-    _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType
-        .fiveonezerok,
+    _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType.five10k,
   );
 
   /// BLA
@@ -2010,7 +2008,7 @@ enum _DeviceUniqueDeviceIdentifierGmdnTermsCodeStatus {
 /// Organization accredited by FDA to operate a system for the issuance of UDIs
 enum _DeviceUniqueDeviceIdentifierIdentifiersIssuingAgency {
   /// GS1
-  gSone._(
+  gS1._(
     'GS1',
   ),
 
@@ -2146,7 +2144,7 @@ enum _DeviceUniqueDeviceIdentifierMriSafety {
 /// Indicates the premarket submission type.
 enum _DeviceUniqueDeviceIdentifierPremarketSubmissionsSubmissionType {
   /// 510(k)
-  fiveonezerok._(
+  five10k._(
     '510(k)',
   ),
 

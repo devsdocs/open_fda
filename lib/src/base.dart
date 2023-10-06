@@ -14,7 +14,7 @@ abstract class OpenFDA {
   Uri _buildUri() {
     return Uri.https(
       _base,
-      '/${_query._fields.endPointBase._value.join('/')}.json',
+      '/${_query._fields._endPointBase._value.join('/')}.json',
       {
         if (_apiKey != null) 'api_key': _apiKey,
         ..._query.build(),
@@ -45,7 +45,7 @@ final class OpenFDAQuery {
     }
   }
 
-  final OpenFDAEndpointer _fields;
+  final _OpenFDAEndpointer _fields;
   final String? search;
   final SortType? sortType;
   final int? count;
@@ -83,9 +83,9 @@ enum SortType {
   final String value;
 }
 
-abstract interface class OpenFDAEndpointer {
-  OpenFDAEndpointer(this.endPointBase);
-  final _Endpoints endPointBase;
+abstract final interface class _OpenFDAEndpointer {
+  _OpenFDAEndpointer(this._endPointBase);
+  final _Endpoints _endPointBase;
 }
 
 final class OpenFDAPossibleValueReference {
@@ -98,4 +98,18 @@ enum PossibleValueType {
   bool,
   oneOf,
   reference,
+}
+
+
+abstract final class _OpenFDAFieldSearch{
+_OpenFDAFieldSearch(this.endpoints);
+final _OpenFDAEndpointer endpoints;
+}
+abstract final class _OpenFDAFieldSort{
+_OpenFDAFieldSort(this.endpoints);
+final _OpenFDAEndpointer endpoints;
+}
+abstract final class _OpenFDAFieldCount{
+_OpenFDAFieldCount(this.endpoints);
+final _OpenFDAEndpointer endpoints;
 }

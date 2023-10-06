@@ -1,11 +1,10 @@
 part of '../main.dart';
 
-abstract final class DrugNationalDrugCodeDirectoryFields {}
-
-final class DrugNationalDrugCodeDirectory
-    extends DrugNationalDrugCodeDirectoryFields implements OpenFDAEndpointer {
-  @override
-  final endPointBase = _Endpoints.drugNationalDrugCodeDirectory;
+final class DrugNationalDrugCodeDirectory extends _OpenFDAEndpointer {
+  DrugNationalDrugCodeDirectory()
+      : super(
+          _Endpoints.drugNationalDrugCodeDirectory,
+        );
 
   final activeIngredients = 'active_ingredients';
 

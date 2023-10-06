@@ -1,18 +1,16 @@
 name: open_fda
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/devsdocs/open_fda
 
 environment:
   sdk: ^3.1.2
 
-# Add regular dependencies here.
 dependencies:
   csv: ^5.0.2
   reusable_tools: ^1.0.14
   yaml: ^3.1.2
   yaml_magic: ^1.0.5
-  # path: ^1.8.0
 
 dev_dependencies:
   lint: ^2.1.2
