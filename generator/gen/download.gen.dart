@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 Future<void> fetchYamlAndConvertToJson([bool download = false]) async {
   if (download == false) return;

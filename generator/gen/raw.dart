@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 /// Get data use
 /// https://raw.githubusercontent.com/FDA/open.fda.gov/master/src/constants/fields/

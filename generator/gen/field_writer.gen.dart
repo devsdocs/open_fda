@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 (String, List<String>) fieldWriter(
   String prefixMainCase,

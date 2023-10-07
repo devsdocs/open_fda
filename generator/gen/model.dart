@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 enum PossibleValuesType {
   none,
@@ -11,22 +11,6 @@ abstract class PossibleValues {}
 class OneOf extends PossibleValues implements Comparable<OneOf> {
   OneOf({this.data});
   final Map<String, dynamic>? data;
-
-  Map<String, dynamic>? sanitize() {
-    if (data == null) {
-      return null;
-    }
-    if (isAnyNumKeys!) {
-      return swapKV(data);
-    } else {
-      return data;
-    }
-  }
-
-  bool? get isBool => data?.keys.every((e) => e == 'true' || e == 'false');
-
-  bool? get isAnyNumKeys =>
-      data?.keys.any((element) => num.tryParse(element) != null);
 
   @override
   bool operator ==(Object other) =>
@@ -120,46 +104,4 @@ class Props implements Comparable<Props> {
   String toString() {
     return 'Props(address: $address, format: $format, pattern: $pattern, type: $type, possibleValuesType: $possibleValuesType, isExact: $isExact, isObject: $isObject, isList: $isList, isListOfObject: $isListOfObject, possibleValues: $possibleValues, comment: $comment)';
   }
-
-  Props copyWith({
-    String? address,
-    String? comment,
-    Type? format,
-    String? pattern,
-    PossibleValues? possibleValues,
-    Type? type,
-    bool? isExact,
-    bool? isObject,
-    bool? isListOfObject,
-    PossibleValuesType? possibleValuesType,
-    Props? childObject,
-    List<Props>? listChildObject,
-    List<String>? listProperties,
-    bool? isList,
-  }) {
-    return Props(
-      address ?? this.address,
-      comment: comment ?? this.comment,
-      format: format ?? this.format,
-      pattern: pattern ?? this.pattern,
-      possibleValues: possibleValues ?? this.possibleValues,
-      type: type ?? this.type,
-      isExact: isExact ?? this.isExact,
-      isObject: isObject ?? this.isObject,
-      isListOfObject: isListOfObject ?? this.isListOfObject,
-      possibleValuesType: possibleValuesType ?? this.possibleValuesType,
-      isList: isList ?? this.isList,
-    );
-  }
-}
-
-Map<String, dynamic>? swapKV(Map<String, dynamic>? data) {
-  if (data == null) {
-    return null;
-  }
-  final newMap = <String, dynamic>{};
-  data.forEach((key, value) {
-    newMap.addAll({value.toString(): key});
-  });
-  return newMap;
 }

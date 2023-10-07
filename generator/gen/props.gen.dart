@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 Props getProps(String address, Map<dynamic, dynamic> value) {
   final typeValue = value['type'];

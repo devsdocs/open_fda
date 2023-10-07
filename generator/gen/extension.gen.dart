@@ -1,4 +1,4 @@
-part of 'gen.dart';
+part of '_gen.dart';
 
 extension Int on int {
   String get numToWords {
