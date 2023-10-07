@@ -441,7 +441,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: '30-day Notice and 135 PMA Supplement',
   ),
-  supplementType$30dayNoticeAnd135PmaSupplementExact._(
+  supplementTypeExact$30dayNoticeAnd135PmaSupplement._(
     'supplement_type.exact',
     possibleValue: '30-day Notice and 135 PMA Supplement',
   ),
@@ -456,7 +456,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'Annual (periodic) Report or 30-day Supplements',
   ),
-  supplementType$AnnualPeriodicReportOr30daySupplementsExact._(
+  supplementTypeExact$AnnualPeriodicReportOr30daySupplements._(
     'supplement_type.exact',
     possibleValue: 'Annual (periodic) Report or 30-day Supplements',
   ),
@@ -467,7 +467,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'PMA',
   ),
-  supplementType$PmaExact._(
+  supplementTypeExact$Pma._(
     'supplement_type.exact',
     possibleValue: 'PMA',
   ),
@@ -482,7 +482,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'PMA Manufacturing Site Change Supplement',
   ),
-  supplementType$PmaManufacturingSiteChangeSupplementExact._(
+  supplementTypeExact$PmaManufacturingSiteChangeSupplement._(
     'supplement_type.exact',
     possibleValue: 'PMA Manufacturing Site Change Supplement',
   ),
@@ -496,7 +496,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'PMA supplement (180 days)',
   ),
-  supplementType$PmaSupplement180DaysExact._(
+  supplementTypeExact$PmaSupplement180Days._(
     'supplement_type.exact',
     possibleValue: 'PMA supplement (180 days)',
   ),
@@ -518,7 +518,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'Special PMA Supplement',
   ),
-  supplementType$SpecialPmaSupplementExact._(
+  supplementTypeExact$SpecialPmaSupplement._(
     'supplement_type.exact',
     possibleValue: 'Special PMA Supplement',
   ),
@@ -529,7 +529,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'Subpart B',
   ),
-  supplementType$SubpartBExact._(
+  supplementTypeExact$SubpartB._(
     'supplement_type.exact',
     possibleValue: 'Subpart B',
   ),
@@ -546,7 +546,7 @@ enum DevPreMarket {
     'supplement_type',
     possibleValue: 'Subpart E',
   ),
-  supplementType$SubpartEExact._(
+  supplementTypeExact$SubpartE._(
     'supplement_type.exact',
     possibleValue: 'Subpart E',
   ),

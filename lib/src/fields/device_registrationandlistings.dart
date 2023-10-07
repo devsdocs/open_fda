@@ -38,7 +38,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Complaint File Establishment per 21 CFR 820.198',
   ),
-  establishmentType$ComplaintFileEstablishmentPer21Cfr820198Exact._(
+  establishmentTypeExact$ComplaintFileEstablishmentPer21Cfr820198._(
     'establishment_type.exact',
     possibleValue: 'Complaint File Establishment per 21 CFR 820.198',
   ),
@@ -49,7 +49,7 @@ enum DevRegList {
     possibleValue:
         'Develop Specifications But Do Not Manufacture At This Facility',
   ),
-  establishmentType$DevelopSpecificationsButDoNotManufactureAtThisFacilityExact._(
+  establishmentTypeExact$DevelopSpecificationsButDoNotManufactureAtThisFacility._(
     'establishment_type.exact',
     possibleValue:
         'Develop Specifications But Do Not Manufacture At This Facility',
@@ -61,7 +61,7 @@ enum DevRegList {
     possibleValue:
         'Export Device to the United States But Perform No Other Operation on Device',
   ),
-  establishmentType$ExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDeviceExact._(
+  establishmentTypeExact$ExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice._(
     'establishment_type.exact',
     possibleValue:
         'Export Device to the United States But Perform No Other Operation on Device',
@@ -72,7 +72,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Foreign Private Label Distributor',
   ),
-  establishmentType$ForeignPrivateLabelDistributorExact._(
+  establishmentTypeExact$ForeignPrivateLabelDistributor._(
     'establishment_type.exact',
     possibleValue: 'Foreign Private Label Distributor',
   ),
@@ -82,7 +82,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Manufacture Device in the United States for Export Only',
   ),
-  establishmentType$ManufactureDeviceInTheUnitedStatesForExportOnlyExact._(
+  establishmentTypeExact$ManufactureDeviceInTheUnitedStatesForExportOnly._(
     'establishment_type.exact',
     possibleValue: 'Manufacture Device in the United States for Export Only',
   ),
@@ -92,7 +92,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Manufacture Medical Device',
   ),
-  establishmentType$ManufactureMedicalDeviceExact._(
+  establishmentTypeExact$ManufactureMedicalDevice._(
     'establishment_type.exact',
     possibleValue: 'Manufacture Medical Device',
   ),
@@ -103,7 +103,7 @@ enum DevRegList {
     possibleValue:
         'Manufacture Medical Device for Another Party (Contract Manufacturer)',
   ),
-  establishmentType$ManufactureMedicalDeviceForAnotherPartyContractManufacturerExact._(
+  establishmentTypeExact$ManufactureMedicalDeviceForAnotherPartyContractManufacturer._(
     'establishment_type.exact',
     possibleValue:
         'Manufacture Medical Device for Another Party (Contract Manufacturer)',
@@ -114,7 +114,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Remanufacture Medical Device',
   ),
-  establishmentType$RemanufactureMedicalDeviceExact._(
+  establishmentTypeExact$RemanufactureMedicalDevice._(
     'establishment_type.exact',
     possibleValue: 'Remanufacture Medical Device',
   ),
@@ -124,7 +124,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Repack or Relabel Medical Device',
   ),
-  establishmentType$RepackOrRelabelMedicalDeviceExact._(
+  establishmentTypeExact$RepackOrRelabelMedicalDevice._(
     'establishment_type.exact',
     possibleValue: 'Repack or Relabel Medical Device',
   ),
@@ -134,7 +134,7 @@ enum DevRegList {
     'establishment_type',
     possibleValue: 'Reprocess Single-Use Device',
   ),
-  establishmentType$ReprocessSingleuseDeviceExact._(
+  establishmentTypeExact$ReprocessSingleuseDevice._(
     'establishment_type.exact',
     possibleValue: 'Reprocess Single-Use Device',
   ),
@@ -145,7 +145,7 @@ enum DevRegList {
     possibleValue:
         'Sterilize Medical Device for Another Party (Contract Sterilizer)',
   ),
-  establishmentType$SterilizeMedicalDeviceForAnotherPartyContractSterilizerExact._(
+  establishmentTypeExact$SterilizeMedicalDeviceForAnotherPartyContractSterilizer._(
     'establishment_type.exact',
     possibleValue:
         'Sterilize Medical Device for Another Party (Contract Sterilizer)',

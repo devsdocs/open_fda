@@ -22,7 +22,7 @@ String getDescendantObjectName(
   return descObjectName;
 }
 
-String formatKeyForEnum(String key) {
+String formatKeyForEnum(String key, bool isExact) {
   final cleanKey = key.clean;
   final formatKey = (key == 'true' || key == 'false')
       ? key.toMainCase
@@ -38,7 +38,7 @@ String formatKeyForEnum(String key) {
                           .join('/')
                       : cleanKey.capitalizeWord
                   : cleanKey;
-  return '\$$formatKey';
+  return '${isExact ? 'Exact' : ''}\$$formatKey';
 }
 
 String getEnumName(String key) {

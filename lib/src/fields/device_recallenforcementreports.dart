@@ -69,7 +69,7 @@ enum DevEnforce {
     'classification',
     possibleValue: 'Class I',
   ),
-  classification$ClassIExact._(
+  classificationExact$ClassI._(
     'classification.exact',
     possibleValue: 'Class I',
   ),
@@ -81,7 +81,7 @@ enum DevEnforce {
     'classification',
     possibleValue: 'Class II',
   ),
-  classification$ClassIiExact._(
+  classificationExact$ClassIi._(
     'classification.exact',
     possibleValue: 'Class II',
   ),
@@ -93,7 +93,7 @@ enum DevEnforce {
     'classification',
     possibleValue: 'Class III',
   ),
-  classification$ClassIiiExact._(
+  classificationExact$ClassIii._(
     'classification.exact',
     possibleValue: 'Class III',
   ),
@@ -251,7 +251,7 @@ enum DevEnforce {
     'openfda.product_type',
     possibleValue: 'Devices',
   ),
-  openfdaProductType$DevicesExact._(
+  openfdaProductTypeExact$Devices._(
     'openfda.product_type.exact',
     possibleValue: 'Devices',
   ),
@@ -261,7 +261,7 @@ enum DevEnforce {
     'openfda.product_type',
     possibleValue: 'Drugs',
   ),
-  openfdaProductType$DrugsExact._(
+  openfdaProductTypeExact$Drugs._(
     'openfda.product_type.exact',
     possibleValue: 'Drugs',
   ),
@@ -271,7 +271,7 @@ enum DevEnforce {
     'openfda.product_type',
     possibleValue: 'Food',
   ),
-  openfdaProductType$FoodExact._(
+  openfdaProductTypeExact$Food._(
     'openfda.product_type.exact',
     possibleValue: 'Food',
   ),
@@ -411,7 +411,7 @@ enum DevEnforce {
     'status',
     possibleValue: 'Completed',
   ),
-  status$CompletedExact._(
+  statusExact$Completed._(
     'status.exact',
     possibleValue: 'Completed',
   ),
@@ -421,7 +421,7 @@ enum DevEnforce {
     'status',
     possibleValue: 'On-Going',
   ),
-  status$OnGoingExact._(
+  statusExact$OnGoing._(
     'status.exact',
     possibleValue: 'On-Going',
   ),
@@ -432,7 +432,7 @@ enum DevEnforce {
     'status',
     possibleValue: 'Pending',
   ),
-  status$PendingExact._(
+  statusExact$Pending._(
     'status.exact',
     possibleValue: 'Pending',
   ),
@@ -444,7 +444,7 @@ enum DevEnforce {
     'status',
     possibleValue: 'Terminated',
   ),
-  status$TerminatedExact._(
+  statusExact$Terminated._(
     'status.exact',
     possibleValue: 'Terminated',
   ),

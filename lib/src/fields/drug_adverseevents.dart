@@ -169,7 +169,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '001',
   ),
-  patientDrugDrugadministrationroute$001Exact._(
+  patientDrugDrugadministrationrouteExact$001._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '001',
   ),
@@ -179,7 +179,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '002',
   ),
-  patientDrugDrugadministrationroute$002Exact._(
+  patientDrugDrugadministrationrouteExact$002._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '002',
   ),
@@ -189,7 +189,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '003',
   ),
-  patientDrugDrugadministrationroute$003Exact._(
+  patientDrugDrugadministrationrouteExact$003._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '003',
   ),
@@ -199,7 +199,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '004',
   ),
-  patientDrugDrugadministrationroute$004Exact._(
+  patientDrugDrugadministrationrouteExact$004._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '004',
   ),
@@ -209,7 +209,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '005',
   ),
-  patientDrugDrugadministrationroute$005Exact._(
+  patientDrugDrugadministrationrouteExact$005._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '005',
   ),
@@ -219,7 +219,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '006',
   ),
-  patientDrugDrugadministrationroute$006Exact._(
+  patientDrugDrugadministrationrouteExact$006._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '006',
   ),
@@ -229,7 +229,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '007',
   ),
-  patientDrugDrugadministrationroute$007Exact._(
+  patientDrugDrugadministrationrouteExact$007._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '007',
   ),
@@ -239,7 +239,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '008',
   ),
-  patientDrugDrugadministrationroute$008Exact._(
+  patientDrugDrugadministrationrouteExact$008._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '008',
   ),
@@ -249,7 +249,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '009',
   ),
-  patientDrugDrugadministrationroute$009Exact._(
+  patientDrugDrugadministrationrouteExact$009._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '009',
   ),
@@ -259,7 +259,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '010',
   ),
-  patientDrugDrugadministrationroute$010Exact._(
+  patientDrugDrugadministrationrouteExact$010._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '010',
   ),
@@ -269,7 +269,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '011',
   ),
-  patientDrugDrugadministrationroute$011Exact._(
+  patientDrugDrugadministrationrouteExact$011._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '011',
   ),
@@ -279,7 +279,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '012',
   ),
-  patientDrugDrugadministrationroute$012Exact._(
+  patientDrugDrugadministrationrouteExact$012._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '012',
   ),
@@ -289,7 +289,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '013',
   ),
-  patientDrugDrugadministrationroute$013Exact._(
+  patientDrugDrugadministrationrouteExact$013._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '013',
   ),
@@ -299,7 +299,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '014',
   ),
-  patientDrugDrugadministrationroute$014Exact._(
+  patientDrugDrugadministrationrouteExact$014._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '014',
   ),
@@ -309,7 +309,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '015',
   ),
-  patientDrugDrugadministrationroute$015Exact._(
+  patientDrugDrugadministrationrouteExact$015._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '015',
   ),
@@ -319,7 +319,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '016',
   ),
-  patientDrugDrugadministrationroute$016Exact._(
+  patientDrugDrugadministrationrouteExact$016._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '016',
   ),
@@ -329,7 +329,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '017',
   ),
-  patientDrugDrugadministrationroute$017Exact._(
+  patientDrugDrugadministrationrouteExact$017._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '017',
   ),
@@ -339,7 +339,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '018',
   ),
-  patientDrugDrugadministrationroute$018Exact._(
+  patientDrugDrugadministrationrouteExact$018._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '018',
   ),
@@ -349,7 +349,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '019',
   ),
-  patientDrugDrugadministrationroute$019Exact._(
+  patientDrugDrugadministrationrouteExact$019._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '019',
   ),
@@ -359,7 +359,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '020',
   ),
-  patientDrugDrugadministrationroute$020Exact._(
+  patientDrugDrugadministrationrouteExact$020._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '020',
   ),
@@ -369,7 +369,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '021',
   ),
-  patientDrugDrugadministrationroute$021Exact._(
+  patientDrugDrugadministrationrouteExact$021._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '021',
   ),
@@ -379,7 +379,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '022',
   ),
-  patientDrugDrugadministrationroute$022Exact._(
+  patientDrugDrugadministrationrouteExact$022._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '022',
   ),
@@ -389,7 +389,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '023',
   ),
-  patientDrugDrugadministrationroute$023Exact._(
+  patientDrugDrugadministrationrouteExact$023._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '023',
   ),
@@ -399,7 +399,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '024',
   ),
-  patientDrugDrugadministrationroute$024Exact._(
+  patientDrugDrugadministrationrouteExact$024._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '024',
   ),
@@ -409,7 +409,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '025',
   ),
-  patientDrugDrugadministrationroute$025Exact._(
+  patientDrugDrugadministrationrouteExact$025._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '025',
   ),
@@ -419,7 +419,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '026',
   ),
-  patientDrugDrugadministrationroute$026Exact._(
+  patientDrugDrugadministrationrouteExact$026._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '026',
   ),
@@ -429,7 +429,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '027',
   ),
-  patientDrugDrugadministrationroute$027Exact._(
+  patientDrugDrugadministrationrouteExact$027._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '027',
   ),
@@ -439,7 +439,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '028',
   ),
-  patientDrugDrugadministrationroute$028Exact._(
+  patientDrugDrugadministrationrouteExact$028._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '028',
   ),
@@ -449,7 +449,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '029',
   ),
-  patientDrugDrugadministrationroute$029Exact._(
+  patientDrugDrugadministrationrouteExact$029._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '029',
   ),
@@ -459,7 +459,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '030',
   ),
-  patientDrugDrugadministrationroute$030Exact._(
+  patientDrugDrugadministrationrouteExact$030._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '030',
   ),
@@ -469,7 +469,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '031',
   ),
-  patientDrugDrugadministrationroute$031Exact._(
+  patientDrugDrugadministrationrouteExact$031._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '031',
   ),
@@ -479,7 +479,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '032',
   ),
-  patientDrugDrugadministrationroute$032Exact._(
+  patientDrugDrugadministrationrouteExact$032._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '032',
   ),
@@ -489,7 +489,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '033',
   ),
-  patientDrugDrugadministrationroute$033Exact._(
+  patientDrugDrugadministrationrouteExact$033._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '033',
   ),
@@ -499,7 +499,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '034',
   ),
-  patientDrugDrugadministrationroute$034Exact._(
+  patientDrugDrugadministrationrouteExact$034._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '034',
   ),
@@ -509,7 +509,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '035',
   ),
-  patientDrugDrugadministrationroute$035Exact._(
+  patientDrugDrugadministrationrouteExact$035._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '035',
   ),
@@ -519,7 +519,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '036',
   ),
-  patientDrugDrugadministrationroute$036Exact._(
+  patientDrugDrugadministrationrouteExact$036._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '036',
   ),
@@ -529,7 +529,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '037',
   ),
-  patientDrugDrugadministrationroute$037Exact._(
+  patientDrugDrugadministrationrouteExact$037._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '037',
   ),
@@ -539,7 +539,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '038',
   ),
-  patientDrugDrugadministrationroute$038Exact._(
+  patientDrugDrugadministrationrouteExact$038._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '038',
   ),
@@ -549,7 +549,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '039',
   ),
-  patientDrugDrugadministrationroute$039Exact._(
+  patientDrugDrugadministrationrouteExact$039._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '039',
   ),
@@ -559,7 +559,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '040',
   ),
-  patientDrugDrugadministrationroute$040Exact._(
+  patientDrugDrugadministrationrouteExact$040._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '040',
   ),
@@ -569,7 +569,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '041',
   ),
-  patientDrugDrugadministrationroute$041Exact._(
+  patientDrugDrugadministrationrouteExact$041._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '041',
   ),
@@ -579,7 +579,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '042',
   ),
-  patientDrugDrugadministrationroute$042Exact._(
+  patientDrugDrugadministrationrouteExact$042._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '042',
   ),
@@ -589,7 +589,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '043',
   ),
-  patientDrugDrugadministrationroute$043Exact._(
+  patientDrugDrugadministrationrouteExact$043._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '043',
   ),
@@ -599,7 +599,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '044',
   ),
-  patientDrugDrugadministrationroute$044Exact._(
+  patientDrugDrugadministrationrouteExact$044._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '044',
   ),
@@ -609,7 +609,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '045',
   ),
-  patientDrugDrugadministrationroute$045Exact._(
+  patientDrugDrugadministrationrouteExact$045._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '045',
   ),
@@ -619,7 +619,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '046',
   ),
-  patientDrugDrugadministrationroute$046Exact._(
+  patientDrugDrugadministrationrouteExact$046._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '046',
   ),
@@ -629,7 +629,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '047',
   ),
-  patientDrugDrugadministrationroute$047Exact._(
+  patientDrugDrugadministrationrouteExact$047._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '047',
   ),
@@ -639,7 +639,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '048',
   ),
-  patientDrugDrugadministrationroute$048Exact._(
+  patientDrugDrugadministrationrouteExact$048._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '048',
   ),
@@ -649,7 +649,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '049',
   ),
-  patientDrugDrugadministrationroute$049Exact._(
+  patientDrugDrugadministrationrouteExact$049._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '049',
   ),
@@ -659,7 +659,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '050',
   ),
-  patientDrugDrugadministrationroute$050Exact._(
+  patientDrugDrugadministrationrouteExact$050._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '050',
   ),
@@ -669,7 +669,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '051',
   ),
-  patientDrugDrugadministrationroute$051Exact._(
+  patientDrugDrugadministrationrouteExact$051._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '051',
   ),
@@ -679,7 +679,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '052',
   ),
-  patientDrugDrugadministrationroute$052Exact._(
+  patientDrugDrugadministrationrouteExact$052._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '052',
   ),
@@ -689,7 +689,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '053',
   ),
-  patientDrugDrugadministrationroute$053Exact._(
+  patientDrugDrugadministrationrouteExact$053._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '053',
   ),
@@ -699,7 +699,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '054',
   ),
-  patientDrugDrugadministrationroute$054Exact._(
+  patientDrugDrugadministrationrouteExact$054._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '054',
   ),
@@ -709,7 +709,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '055',
   ),
-  patientDrugDrugadministrationroute$055Exact._(
+  patientDrugDrugadministrationrouteExact$055._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '055',
   ),
@@ -719,7 +719,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '056',
   ),
-  patientDrugDrugadministrationroute$056Exact._(
+  patientDrugDrugadministrationrouteExact$056._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '056',
   ),
@@ -729,7 +729,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '057',
   ),
-  patientDrugDrugadministrationroute$057Exact._(
+  patientDrugDrugadministrationrouteExact$057._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '057',
   ),
@@ -739,7 +739,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '058',
   ),
-  patientDrugDrugadministrationroute$058Exact._(
+  patientDrugDrugadministrationrouteExact$058._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '058',
   ),
@@ -749,7 +749,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '059',
   ),
-  patientDrugDrugadministrationroute$059Exact._(
+  patientDrugDrugadministrationrouteExact$059._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '059',
   ),
@@ -759,7 +759,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '060',
   ),
-  patientDrugDrugadministrationroute$060Exact._(
+  patientDrugDrugadministrationrouteExact$060._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '060',
   ),
@@ -769,7 +769,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '061',
   ),
-  patientDrugDrugadministrationroute$061Exact._(
+  patientDrugDrugadministrationrouteExact$061._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '061',
   ),
@@ -779,7 +779,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '062',
   ),
-  patientDrugDrugadministrationroute$062Exact._(
+  patientDrugDrugadministrationrouteExact$062._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '062',
   ),
@@ -789,7 +789,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '063',
   ),
-  patientDrugDrugadministrationroute$063Exact._(
+  patientDrugDrugadministrationrouteExact$063._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '063',
   ),
@@ -799,7 +799,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '064',
   ),
-  patientDrugDrugadministrationroute$064Exact._(
+  patientDrugDrugadministrationrouteExact$064._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '064',
   ),
@@ -809,7 +809,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '065',
   ),
-  patientDrugDrugadministrationroute$065Exact._(
+  patientDrugDrugadministrationrouteExact$065._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '065',
   ),
@@ -819,7 +819,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '066',
   ),
-  patientDrugDrugadministrationroute$066Exact._(
+  patientDrugDrugadministrationrouteExact$066._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '066',
   ),
@@ -829,7 +829,7 @@ enum DrugEvent {
     'patient.drug.drugadministrationroute',
     possibleValue: '067',
   ),
-  patientDrugDrugadministrationroute$067Exact._(
+  patientDrugDrugadministrationrouteExact$067._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '067',
   ),

@@ -39,7 +39,7 @@ enum DevEvent {
     'adverse_event_flag',
     possibleValue: 'N',
   ),
-  adverseEventFlag$NExact._(
+  adverseEventFlagExact$N._(
     'adverse_event_flag.exact',
     possibleValue: 'N',
   ),
@@ -49,7 +49,7 @@ enum DevEvent {
     'adverse_event_flag',
     possibleValue: 'Y',
   ),
-  adverseEventFlag$YExact._(
+  adverseEventFlagExact$Y._(
     'adverse_event_flag.exact',
     possibleValue: 'Y',
   ),
@@ -135,7 +135,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: '*',
   ),
-  deviceDateRemovedFlag$AsterixExact._(
+  deviceDateRemovedFlagExact$Asterix._(
     'device.date_removed_flag.exact',
     possibleValue: '*',
   ),
@@ -145,7 +145,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'B',
   ),
-  deviceDateRemovedFlag$BExact._(
+  deviceDateRemovedFlagExact$B._(
     'device.date_removed_flag.exact',
     possibleValue: 'B',
   ),
@@ -155,7 +155,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'Month and year provided only day defaults to 01',
   ),
-  deviceDateRemovedFlag$MonthAndYearProvidedOnlyDayDefaultsTo01Exact._(
+  deviceDateRemovedFlagExact$MonthAndYearProvidedOnlyDayDefaultsTo01._(
     'device.date_removed_flag.exact',
     possibleValue: 'Month and year provided only day defaults to 01',
   ),
@@ -165,7 +165,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'No information at this time',
   ),
-  deviceDateRemovedFlag$NoInformationAtThisTimeExact._(
+  deviceDateRemovedFlagExact$NoInformationAtThisTime._(
     'device.date_removed_flag.exact',
     possibleValue: 'No information at this time',
   ),
@@ -175,7 +175,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'Not available',
   ),
-  deviceDateRemovedFlag$NotAvailableExact._(
+  deviceDateRemovedFlagExact$NotAvailable._(
     'device.date_removed_flag.exact',
     possibleValue: 'Not available',
   ),
@@ -185,7 +185,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'Unknown',
   ),
-  deviceDateRemovedFlag$UnknownExact._(
+  deviceDateRemovedFlagExact$Unknown._(
     'device.date_removed_flag.exact',
     possibleValue: 'Unknown',
   ),
@@ -195,7 +195,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'V',
   ),
-  deviceDateRemovedFlag$VExact._(
+  deviceDateRemovedFlagExact$V._(
     'device.date_removed_flag.exact',
     possibleValue: 'V',
   ),
@@ -205,7 +205,7 @@ enum DevEvent {
     'device.date_removed_flag',
     possibleValue: 'Year provided only',
   ),
-  deviceDateRemovedFlag$YearProvidedOnlyExact._(
+  deviceDateRemovedFlagExact$YearProvidedOnly._(
     'device.date_removed_flag.exact',
     possibleValue: 'Year provided only',
   ),
@@ -232,7 +232,7 @@ enum DevEvent {
     'device.device_availability',
     possibleValue: 'Device was returned to manufacturer',
   ),
-  deviceDeviceAvailability$DeviceWasReturnedToManufacturerExact._(
+  deviceDeviceAvailabilityExact$DeviceWasReturnedToManufacturer._(
     'device.device_availability.exact',
     possibleValue: 'Device was returned to manufacturer',
   ),
@@ -242,7 +242,7 @@ enum DevEvent {
     'device.device_availability',
     possibleValue: 'I',
   ),
-  deviceDeviceAvailability$IExact._(
+  deviceDeviceAvailabilityExact$I._(
     'device.device_availability.exact',
     possibleValue: 'I',
   ),
@@ -252,7 +252,7 @@ enum DevEvent {
     'device.device_availability',
     possibleValue: 'No',
   ),
-  deviceDeviceAvailability$NoExact._(
+  deviceDeviceAvailabilityExact$No._(
     'device.device_availability.exact',
     possibleValue: 'No',
   ),
@@ -262,7 +262,7 @@ enum DevEvent {
     'device.device_availability',
     possibleValue: 'No answer provided',
   ),
-  deviceDeviceAvailability$NoAnswerProvidedExact._(
+  deviceDeviceAvailabilityExact$NoAnswerProvided._(
     'device.device_availability.exact',
     possibleValue: 'No answer provided',
   ),
@@ -272,7 +272,7 @@ enum DevEvent {
     'device.device_availability',
     possibleValue: 'Yes',
   ),
-  deviceDeviceAvailability$YesExact._(
+  deviceDeviceAvailabilityExact$Yes._(
     'device.device_availability.exact',
     possibleValue: 'Yes',
   ),
@@ -284,7 +284,7 @@ enum DevEvent {
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'Device not returned to manufacturer',
   ),
-  deviceDeviceEvaluatedByManufacturer$DeviceNotReturnedToManufacturerExact._(
+  deviceDeviceEvaluatedByManufacturerExact$DeviceNotReturnedToManufacturer._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'Device not returned to manufacturer',
   ),
@@ -295,7 +295,7 @@ enum DevEvent {
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'No',
   ),
-  deviceDeviceEvaluatedByManufacturer$NoExact._(
+  deviceDeviceEvaluatedByManufacturerExact$No._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'No',
   ),
@@ -305,7 +305,7 @@ enum DevEvent {
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'No answer provided or empty',
   ),
-  deviceDeviceEvaluatedByManufacturer$NoAnswerProvidedOrEmptyExact._(
+  deviceDeviceEvaluatedByManufacturerExact$NoAnswerProvidedOrEmpty._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'No answer provided or empty',
   ),
@@ -315,7 +315,7 @@ enum DevEvent {
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'Yes',
   ),
-  deviceDeviceEvaluatedByManufacturer$YesExact._(
+  deviceDeviceEvaluatedByManufacturerExact$Yes._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'Yes',
   ),
@@ -335,7 +335,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Attorney',
   ),
-  deviceDeviceOperator$AttorneyExact._(
+  deviceDeviceOperatorExact$Attorney._(
     'device.device_operator.exact',
     possibleValue: 'Attorney',
   ),
@@ -345,7 +345,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Audiologist',
   ),
-  deviceDeviceOperator$AudiologistExact._(
+  deviceDeviceOperatorExact$Audiologist._(
     'device.device_operator.exact',
     possibleValue: 'Audiologist',
   ),
@@ -355,7 +355,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Biomedical engineer',
   ),
-  deviceDeviceOperator$BiomedicalEngineerExact._(
+  deviceDeviceOperatorExact$BiomedicalEngineer._(
     'device.device_operator.exact',
     possibleValue: 'Biomedical engineer',
   ),
@@ -365,7 +365,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Dental assistant',
   ),
-  deviceDeviceOperator$DentalAssistantExact._(
+  deviceDeviceOperatorExact$DentalAssistant._(
     'device.device_operator.exact',
     possibleValue: 'Dental assistant',
   ),
@@ -375,7 +375,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Dental hygienist',
   ),
-  deviceDeviceOperator$DentalHygienistExact._(
+  deviceDeviceOperatorExact$DentalHygienist._(
     'device.device_operator.exact',
     possibleValue: 'Dental hygienist',
   ),
@@ -385,7 +385,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Dentist',
   ),
-  deviceDeviceOperator$DentistExact._(
+  deviceDeviceOperatorExact$Dentist._(
     'device.device_operator.exact',
     possibleValue: 'Dentist',
   ),
@@ -395,7 +395,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Device unattended',
   ),
-  deviceDeviceOperator$DeviceUnattendedExact._(
+  deviceDeviceOperatorExact$DeviceUnattended._(
     'device.device_operator.exact',
     possibleValue: 'Device unattended',
   ),
@@ -405,7 +405,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Dietician',
   ),
-  deviceDeviceOperator$DieticianExact._(
+  deviceDeviceOperatorExact$Dietician._(
     'device.device_operator.exact',
     possibleValue: 'Dietician',
   ),
@@ -415,7 +415,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Emergency medical technician',
   ),
-  deviceDeviceOperator$EmergencyMedicalTechnicianExact._(
+  deviceDeviceOperatorExact$EmergencyMedicalTechnician._(
     'device.device_operator.exact',
     possibleValue: 'Emergency medical technician',
   ),
@@ -425,7 +425,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Health professional',
   ),
-  deviceDeviceOperator$HealthProfessionalExact._(
+  deviceDeviceOperatorExact$HealthProfessional._(
     'device.device_operator.exact',
     possibleValue: 'Health professional',
   ),
@@ -435,7 +435,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Home health aide',
   ),
-  deviceDeviceOperator$HomeHealthAideExact._(
+  deviceDeviceOperatorExact$HomeHealthAide._(
     'device.device_operator.exact',
     possibleValue: 'Home health aide',
   ),
@@ -445,7 +445,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Hospital service technician',
   ),
-  deviceDeviceOperator$HospitalServiceTechnicianExact._(
+  deviceDeviceOperatorExact$HospitalServiceTechnician._(
     'device.device_operator.exact',
     possibleValue: 'Hospital service technician',
   ),
@@ -455,7 +455,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Invalid data',
   ),
-  deviceDeviceOperator$InvalidDataExact._(
+  deviceDeviceOperatorExact$InvalidData._(
     'device.device_operator.exact',
     possibleValue: 'Invalid data',
   ),
@@ -465,7 +465,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Lay user/patient',
   ),
-  deviceDeviceOperator$LayUserOrpatientExact._(
+  deviceDeviceOperatorExact$LayUserOrpatient._(
     'device.device_operator.exact',
     possibleValue: 'Lay user/patient',
   ),
@@ -475,7 +475,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Medical assistant',
   ),
-  deviceDeviceOperator$MedicalAssistantExact._(
+  deviceDeviceOperatorExact$MedicalAssistant._(
     'device.device_operator.exact',
     possibleValue: 'Medical assistant',
   ),
@@ -485,7 +485,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Medical equipment company technician/representative',
   ),
-  deviceDeviceOperator$MedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
+  deviceDeviceOperatorExact$MedicalEquipmentCompanyTechnicianOrrepresentative._(
     'device.device_operator.exact',
     possibleValue: 'Medical equipment company technician/representative',
   ),
@@ -495,7 +495,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Medical technologist',
   ),
-  deviceDeviceOperator$MedicalTechnologistExact._(
+  deviceDeviceOperatorExact$MedicalTechnologist._(
     'device.device_operator.exact',
     possibleValue: 'Medical technologist',
   ),
@@ -505,7 +505,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'No information',
   ),
-  deviceDeviceOperator$NoInformationExact._(
+  deviceDeviceOperatorExact$NoInformation._(
     'device.device_operator.exact',
     possibleValue: 'No information',
   ),
@@ -515,7 +515,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Not applicable',
   ),
-  deviceDeviceOperator$NotApplicableExact._(
+  deviceDeviceOperatorExact$NotApplicable._(
     'device.device_operator.exact',
     possibleValue: 'Not applicable',
   ),
@@ -525,7 +525,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Nuclear medicine technologist',
   ),
-  deviceDeviceOperator$NuclearMedicineTechnologistExact._(
+  deviceDeviceOperatorExact$NuclearMedicineTechnologist._(
     'device.device_operator.exact',
     possibleValue: 'Nuclear medicine technologist',
   ),
@@ -535,7 +535,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Nurse',
   ),
-  deviceDeviceOperator$NurseExact._(
+  deviceDeviceOperatorExact$Nurse._(
     'device.device_operator.exact',
     possibleValue: 'Nurse',
   ),
@@ -545,7 +545,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Nursing assistant',
   ),
-  deviceDeviceOperator$NursingAssistantExact._(
+  deviceDeviceOperatorExact$NursingAssistant._(
     'device.device_operator.exact',
     possibleValue: 'Nursing assistant',
   ),
@@ -555,7 +555,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Occupational therapist',
   ),
-  deviceDeviceOperator$OccupationalTherapistExact._(
+  deviceDeviceOperatorExact$OccupationalTherapist._(
     'device.device_operator.exact',
     possibleValue: 'Occupational therapist',
   ),
@@ -565,7 +565,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Other',
   ),
-  deviceDeviceOperator$OtherExact._(
+  deviceDeviceOperatorExact$Other._(
     'device.device_operator.exact',
     possibleValue: 'Other',
   ),
@@ -575,7 +575,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Other caregivers',
   ),
-  deviceDeviceOperator$OtherCaregiversExact._(
+  deviceDeviceOperatorExact$OtherCaregivers._(
     'device.device_operator.exact',
     possibleValue: 'Other caregivers',
   ),
@@ -585,7 +585,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Other health care professional',
   ),
-  deviceDeviceOperator$OtherHealthCareProfessionalExact._(
+  deviceDeviceOperatorExact$OtherHealthCareProfessional._(
     'device.device_operator.exact',
     possibleValue: 'Other health care professional',
   ),
@@ -595,7 +595,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Paramedic',
   ),
-  deviceDeviceOperator$ParamedicExact._(
+  deviceDeviceOperatorExact$Paramedic._(
     'device.device_operator.exact',
     possibleValue: 'Paramedic',
   ),
@@ -605,7 +605,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Patient',
   ),
-  deviceDeviceOperator$PatientExact._(
+  deviceDeviceOperatorExact$Patient._(
     'device.device_operator.exact',
     possibleValue: 'Patient',
   ),
@@ -615,7 +615,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Patient family member or friend',
   ),
-  deviceDeviceOperator$PatientFamilyMemberOrFriendExact._(
+  deviceDeviceOperatorExact$PatientFamilyMemberOrFriend._(
     'device.device_operator.exact',
     possibleValue: 'Patient family member or friend',
   ),
@@ -625,7 +625,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Personal care assistant',
   ),
-  deviceDeviceOperator$PersonalCareAssistantExact._(
+  deviceDeviceOperatorExact$PersonalCareAssistant._(
     'device.device_operator.exact',
     possibleValue: 'Personal care assistant',
   ),
@@ -635,7 +635,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Pharmacist',
   ),
-  deviceDeviceOperator$PharmacistExact._(
+  deviceDeviceOperatorExact$Pharmacist._(
     'device.device_operator.exact',
     possibleValue: 'Pharmacist',
   ),
@@ -645,7 +645,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Phlebotomist',
   ),
-  deviceDeviceOperator$PhlebotomistExact._(
+  deviceDeviceOperatorExact$Phlebotomist._(
     'device.device_operator.exact',
     possibleValue: 'Phlebotomist',
   ),
@@ -655,7 +655,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Physical therapist',
   ),
-  deviceDeviceOperator$PhysicalTherapistExact._(
+  deviceDeviceOperatorExact$PhysicalTherapist._(
     'device.device_operator.exact',
     possibleValue: 'Physical therapist',
   ),
@@ -665,7 +665,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Physician',
   ),
-  deviceDeviceOperator$PhysicianExact._(
+  deviceDeviceOperatorExact$Physician._(
     'device.device_operator.exact',
     possibleValue: 'Physician',
   ),
@@ -675,7 +675,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Physician assistant',
   ),
-  deviceDeviceOperator$PhysicianAssistantExact._(
+  deviceDeviceOperatorExact$PhysicianAssistant._(
     'device.device_operator.exact',
     possibleValue: 'Physician assistant',
   ),
@@ -685,7 +685,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Physicist',
   ),
-  deviceDeviceOperator$PhysicistExact._(
+  deviceDeviceOperatorExact$Physicist._(
     'device.device_operator.exact',
     possibleValue: 'Physicist',
   ),
@@ -695,7 +695,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Radiologic technologist',
   ),
-  deviceDeviceOperator$RadiologicTechnologistExact._(
+  deviceDeviceOperatorExact$RadiologicTechnologist._(
     'device.device_operator.exact',
     possibleValue: 'Radiologic technologist',
   ),
@@ -705,7 +705,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Respiratory therapist',
   ),
-  deviceDeviceOperator$RespiratoryTherapistExact._(
+  deviceDeviceOperatorExact$RespiratoryTherapist._(
     'device.device_operator.exact',
     possibleValue: 'Respiratory therapist',
   ),
@@ -715,7 +715,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Risk manager',
   ),
-  deviceDeviceOperator$RiskManagerExact._(
+  deviceDeviceOperatorExact$RiskManager._(
     'device.device_operator.exact',
     possibleValue: 'Risk manager',
   ),
@@ -725,7 +725,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Service and testing personnel',
   ),
-  deviceDeviceOperator$ServiceAndTestingPersonnelExact._(
+  deviceDeviceOperatorExact$ServiceAndTestingPersonnel._(
     'device.device_operator.exact',
     possibleValue: 'Service and testing personnel',
   ),
@@ -735,7 +735,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Service personnel',
   ),
-  deviceDeviceOperator$ServicePersonnelExact._(
+  deviceDeviceOperatorExact$ServicePersonnel._(
     'device.device_operator.exact',
     possibleValue: 'Service personnel',
   ),
@@ -745,7 +745,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Speech therapist',
   ),
-  deviceDeviceOperator$SpeechTherapistExact._(
+  deviceDeviceOperatorExact$SpeechTherapist._(
     'device.device_operator.exact',
     possibleValue: 'Speech therapist',
   ),
@@ -755,7 +755,7 @@ enum DevEvent {
     'device.device_operator',
     possibleValue: 'Unknown',
   ),
-  deviceDeviceOperator$UnknownExact._(
+  deviceDeviceOperatorExact$Unknown._(
     'device.device_operator.exact',
     possibleValue: 'Unknown',
   ),
@@ -1083,7 +1083,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Ambulatory health care facility',
   ),
-  eventLocation$AmbulatoryHealthCareFacilityExact._(
+  eventLocationExact$AmbulatoryHealthCareFacility._(
     'event_location.exact',
     possibleValue: 'Ambulatory health care facility',
   ),
@@ -1093,7 +1093,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Ambulatory surgical center',
   ),
-  eventLocation$AmbulatorySurgicalCenterExact._(
+  eventLocationExact$AmbulatorySurgicalCenter._(
     'event_location.exact',
     possibleValue: 'Ambulatory surgical center',
   ),
@@ -1103,7 +1103,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Ambulatory surgical facility',
   ),
-  eventLocation$AmbulatorySurgicalFacilityExact._(
+  eventLocationExact$AmbulatorySurgicalFacility._(
     'event_location.exact',
     possibleValue: 'Ambulatory surgical facility',
   ),
@@ -1113,7 +1113,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Blood bank',
   ),
-  eventLocation$BloodBankExact._(
+  eventLocationExact$BloodBank._(
     'event_location.exact',
     possibleValue: 'Blood bank',
   ),
@@ -1123,7 +1123,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Bloodmobile',
   ),
-  eventLocation$BloodmobileExact._(
+  eventLocationExact$Bloodmobile._(
     'event_location.exact',
     possibleValue: 'Bloodmobile',
   ),
@@ -1133,7 +1133,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Catheterization lab - free standing',
   ),
-  eventLocation$CatheterizationLabFreeStandingExact._(
+  eventLocationExact$CatheterizationLabFreeStanding._(
     'event_location.exact',
     possibleValue: 'Catheterization lab - free standing',
   ),
@@ -1143,7 +1143,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Catheterization suite',
   ),
-  eventLocation$CatheterizationSuiteExact._(
+  eventLocationExact$CatheterizationSuite._(
     'event_location.exact',
     possibleValue: 'Catheterization suite',
   ),
@@ -1153,7 +1153,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Chemotherapy center',
   ),
-  eventLocation$ChemotherapyCenterExact._(
+  eventLocationExact$ChemotherapyCenter._(
     'event_location.exact',
     possibleValue: 'Chemotherapy center',
   ),
@@ -1163,7 +1163,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Clinic - walk in, other',
   ),
-  eventLocation$ClinicWalkInOtherExact._(
+  eventLocationExact$ClinicWalkInOther._(
     'event_location.exact',
     possibleValue: 'Clinic - walk in, other',
   ),
@@ -1173,7 +1173,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Critical care unit',
   ),
-  eventLocation$CriticalCareUnitExact._(
+  eventLocationExact$CriticalCareUnit._(
     'event_location.exact',
     possibleValue: 'Critical care unit',
   ),
@@ -1183,7 +1183,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Dialysis center',
   ),
-  eventLocation$DialysisCenterExact._(
+  eventLocationExact$DialysisCenter._(
     'event_location.exact',
     possibleValue: 'Dialysis center',
   ),
@@ -1193,7 +1193,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Dialysis unit',
   ),
-  eventLocation$DialysisUnitExact._(
+  eventLocationExact$DialysisUnit._(
     'event_location.exact',
     possibleValue: 'Dialysis unit',
   ),
@@ -1203,7 +1203,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Drug clinic',
   ),
-  eventLocation$DrugClinicExact._(
+  eventLocationExact$DrugClinic._(
     'event_location.exact',
     possibleValue: 'Drug clinic',
   ),
@@ -1213,7 +1213,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Emergency room',
   ),
-  eventLocation$EmergencyRoomExact._(
+  eventLocationExact$EmergencyRoom._(
     'event_location.exact',
     possibleValue: 'Emergency room',
   ),
@@ -1223,7 +1223,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Examination room',
   ),
-  eventLocation$ExaminationRoomExact._(
+  eventLocationExact$ExaminationRoom._(
     'event_location.exact',
     possibleValue: 'Examination room',
   ),
@@ -1233,7 +1233,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Home',
   ),
-  eventLocation$HomeExact._(
+  eventLocationExact$Home._(
     'event_location.exact',
     possibleValue: 'Home',
   ),
@@ -1243,7 +1243,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Hospice',
   ),
-  eventLocation$HospiceExact._(
+  eventLocationExact$Hospice._(
     'event_location.exact',
     possibleValue: 'Hospice',
   ),
@@ -1253,7 +1253,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Hospital',
   ),
-  eventLocation$HospitalExact._(
+  eventLocationExact$Hospital._(
     'event_location.exact',
     possibleValue: 'Hospital',
   ),
@@ -1263,7 +1263,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Imaging center - mobile',
   ),
-  eventLocation$ImagingCenterMobileExact._(
+  eventLocationExact$ImagingCenterMobile._(
     'event_location.exact',
     possibleValue: 'Imaging center - mobile',
   ),
@@ -1273,7 +1273,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Imaging center - stationary',
   ),
-  eventLocation$ImagingCenterStationaryExact._(
+  eventLocationExact$ImagingCenterStationary._(
     'event_location.exact',
     possibleValue: 'Imaging center - stationary',
   ),
@@ -1283,7 +1283,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'In transit to user/medical facility',
   ),
-  eventLocation$InTransitToUserOrmedicalFacilityExact._(
+  eventLocationExact$InTransitToUserOrmedicalFacility._(
     'event_location.exact',
     possibleValue: 'In transit to user/medical facility',
   ),
@@ -1293,7 +1293,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Invalid data',
   ),
-  eventLocation$InvalidDataExact._(
+  eventLocationExact$InvalidData._(
     'event_location.exact',
     possibleValue: 'Invalid data',
   ),
@@ -1303,7 +1303,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Laboratory',
   ),
-  eventLocation$LaboratoryExact._(
+  eventLocationExact$Laboratory._(
     'event_location.exact',
     possibleValue: 'Laboratory',
   ),
@@ -1313,7 +1313,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Laboratory/pathology department',
   ),
-  eventLocation$LaboratoryOrpathologyDepartmentExact._(
+  eventLocationExact$LaboratoryOrpathologyDepartment._(
     'event_location.exact',
     possibleValue: 'Laboratory/pathology department',
   ),
@@ -1323,7 +1323,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Long-term care facility',
   ),
-  eventLocation$LongtermCareFacilityExact._(
+  eventLocationExact$LongtermCareFacility._(
     'event_location.exact',
     possibleValue: 'Long-term care facility',
   ),
@@ -1333,7 +1333,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Maternity ward - nursery',
   ),
-  eventLocation$MaternityWardNurseryExact._(
+  eventLocationExact$MaternityWardNursery._(
     'event_location.exact',
     possibleValue: 'Maternity ward - nursery',
   ),
@@ -1343,7 +1343,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Mobile health unit',
   ),
-  eventLocation$MobileHealthUnitExact._(
+  eventLocationExact$MobileHealthUnit._(
     'event_location.exact',
     possibleValue: 'Mobile health unit',
   ),
@@ -1353,7 +1353,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Mri centers',
   ),
-  eventLocation$MriCentersExact._(
+  eventLocationExact$MriCenters._(
     'event_location.exact',
     possibleValue: 'Mri centers',
   ),
@@ -1363,7 +1363,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'No information',
   ),
-  eventLocation$NoInformationExact._(
+  eventLocationExact$NoInformation._(
     'event_location.exact',
     possibleValue: 'No information',
   ),
@@ -1373,7 +1373,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Not applicable',
   ),
-  eventLocation$NotApplicableExact._(
+  eventLocationExact$NotApplicable._(
     'event_location.exact',
     possibleValue: 'Not applicable',
   ),
@@ -1383,7 +1383,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Nursing home',
   ),
-  eventLocation$NursingHomeExact._(
+  eventLocationExact$NursingHome._(
     'event_location.exact',
     possibleValue: 'Nursing home',
   ),
@@ -1393,7 +1393,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Operating room',
   ),
-  eventLocation$OperatingRoomExact._(
+  eventLocationExact$OperatingRoom._(
     'event_location.exact',
     possibleValue: 'Operating room',
   ),
@@ -1403,7 +1403,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Other',
   ),
-  eventLocation$OtherExact._(
+  eventLocationExact$Other._(
     'event_location.exact',
     possibleValue: 'Other',
   ),
@@ -1413,7 +1413,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Outdoors',
   ),
-  eventLocation$OutdoorsExact._(
+  eventLocationExact$Outdoors._(
     'event_location.exact',
     possibleValue: 'Outdoors',
   ),
@@ -1423,7 +1423,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Outpatient clinic/surgery',
   ),
-  eventLocation$OutpatientClinicOrsurgeryExact._(
+  eventLocationExact$OutpatientClinicOrsurgery._(
     'event_location.exact',
     possibleValue: 'Outpatient clinic/surgery',
   ),
@@ -1433,7 +1433,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Outpatient diagnostic facility',
   ),
-  eventLocation$OutpatientDiagnosticFacilityExact._(
+  eventLocationExact$OutpatientDiagnosticFacility._(
     'event_location.exact',
     possibleValue: 'Outpatient diagnostic facility',
   ),
@@ -1443,7 +1443,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Outpatient treatment facility',
   ),
-  eventLocation$OutpatientTreatmentFacilityExact._(
+  eventLocationExact$OutpatientTreatmentFacility._(
     'event_location.exact',
     possibleValue: 'Outpatient treatment facility',
   ),
@@ -1453,7 +1453,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Park',
   ),
-  eventLocation$ParkExact._(
+  eventLocationExact$Park._(
     'event_location.exact',
     possibleValue: 'Park',
   ),
@@ -1463,7 +1463,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Patients home',
   ),
-  eventLocation$PatientsHomeExact._(
+  eventLocationExact$PatientsHome._(
     'event_location.exact',
     possibleValue: 'Patients home',
   ),
@@ -1473,7 +1473,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Patients room or ward',
   ),
-  eventLocation$PatientsRoomOrWardExact._(
+  eventLocationExact$PatientsRoomOrWard._(
     'event_location.exact',
     possibleValue: 'Patients room or ward',
   ),
@@ -1483,7 +1483,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Playground',
   ),
-  eventLocation$PlaygroundExact._(
+  eventLocationExact$Playground._(
     'event_location.exact',
     possibleValue: 'Playground',
   ),
@@ -1493,7 +1493,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Psychiatric center - walk in, other',
   ),
-  eventLocation$PsychiatricCenterWalkInOtherExact._(
+  eventLocationExact$PsychiatricCenterWalkInOther._(
     'event_location.exact',
     possibleValue: 'Psychiatric center - walk in, other',
   ),
@@ -1503,7 +1503,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Psychiatric facility',
   ),
-  eventLocation$PsychiatricFacilityExact._(
+  eventLocationExact$PsychiatricFacility._(
     'event_location.exact',
     possibleValue: 'Psychiatric facility',
   ),
@@ -1513,7 +1513,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Public building',
   ),
-  eventLocation$PublicBuildingExact._(
+  eventLocationExact$PublicBuilding._(
     'event_location.exact',
     possibleValue: 'Public building',
   ),
@@ -1523,7 +1523,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Public venue',
   ),
-  eventLocation$PublicVenueExact._(
+  eventLocationExact$PublicVenue._(
     'event_location.exact',
     possibleValue: 'Public venue',
   ),
@@ -1533,7 +1533,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Radiology department',
   ),
-  eventLocation$RadiologyDepartmentExact._(
+  eventLocationExact$RadiologyDepartment._(
     'event_location.exact',
     possibleValue: 'Radiology department',
   ),
@@ -1543,7 +1543,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Rehabilitation center',
   ),
-  eventLocation$RehabilitationCenterExact._(
+  eventLocationExact$RehabilitationCenter._(
     'event_location.exact',
     possibleValue: 'Rehabilitation center',
   ),
@@ -1553,7 +1553,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Retirement home',
   ),
-  eventLocation$RetirementHomeExact._(
+  eventLocationExact$RetirementHome._(
     'event_location.exact',
     possibleValue: 'Retirement home',
   ),
@@ -1563,7 +1563,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'School',
   ),
-  eventLocation$SchoolExact._(
+  eventLocationExact$School._(
     'event_location.exact',
     possibleValue: 'School',
   ),
@@ -1573,7 +1573,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Street',
   ),
-  eventLocation$StreetExact._(
+  eventLocationExact$Street._(
     'event_location.exact',
     possibleValue: 'Street',
   ),
@@ -1583,7 +1583,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Tuberculosis clinic',
   ),
-  eventLocation$TuberculosisClinicExact._(
+  eventLocationExact$TuberculosisClinic._(
     'event_location.exact',
     possibleValue: 'Tuberculosis clinic',
   ),
@@ -1593,7 +1593,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Unknown',
   ),
-  eventLocation$UnknownExact._(
+  eventLocationExact$Unknown._(
     'event_location.exact',
     possibleValue: 'Unknown',
   ),
@@ -1603,7 +1603,7 @@ enum DevEvent {
     'event_location',
     possibleValue: 'Urgent care center',
   ),
-  eventLocation$UrgentCareCenterExact._(
+  eventLocationExact$UrgentCareCenter._(
     'event_location.exact',
     possibleValue: 'Urgent care center',
   ),
@@ -1614,7 +1614,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Death',
   ),
-  eventType$DeathExact._(
+  eventTypeExact$Death._(
     'event_type.exact',
     possibleValue: 'Death',
   ),
@@ -1624,7 +1624,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Injury (IJ)',
   ),
-  eventType$InjuryIjExact._(
+  eventTypeExact$InjuryIj._(
     'event_type.exact',
     possibleValue: 'Injury (IJ)',
   ),
@@ -1634,7 +1634,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Injury (IL)',
   ),
-  eventType$InjuryIlExact._(
+  eventTypeExact$InjuryIl._(
     'event_type.exact',
     possibleValue: 'Injury (IL)',
   ),
@@ -1644,7 +1644,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Injury (IN)',
   ),
-  eventType$InjuryInExact._(
+  eventTypeExact$InjuryIn._(
     'event_type.exact',
     possibleValue: 'Injury (IN)',
   ),
@@ -1654,7 +1654,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Malfunction',
   ),
-  eventType$MalfunctionExact._(
+  eventTypeExact$Malfunction._(
     'event_type.exact',
     possibleValue: 'Malfunction',
   ),
@@ -1664,7 +1664,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'No answer provided',
   ),
-  eventType$NoAnswerProvidedExact._(
+  eventTypeExact$NoAnswerProvided._(
     'event_type.exact',
     possibleValue: 'No answer provided',
   ),
@@ -1674,7 +1674,7 @@ enum DevEvent {
     'event_type',
     possibleValue: 'Other',
   ),
-  eventType$OtherExact._(
+  eventTypeExact$Other._(
     'event_type.exact',
     possibleValue: 'Other',
   ),
@@ -1692,7 +1692,7 @@ enum DevEvent {
     'health_professional',
     possibleValue: 'N',
   ),
-  healthProfessional$NExact._(
+  healthProfessionalExact$N._(
     'health_professional.exact',
     possibleValue: 'N',
   ),
@@ -1702,7 +1702,7 @@ enum DevEvent {
     'health_professional',
     possibleValue: 'Y',
   ),
-  healthProfessional$YExact._(
+  healthProfessionalExact$Y._(
     'health_professional.exact',
     possibleValue: 'Y',
   ),
@@ -1714,7 +1714,7 @@ enum DevEvent {
     'initial_report_to_fda',
     possibleValue: 'No',
   ),
-  initialReportToFda$NoExact._(
+  initialReportToFdaExact$No._(
     'initial_report_to_fda.exact',
     possibleValue: 'No',
   ),
@@ -1724,7 +1724,7 @@ enum DevEvent {
     'initial_report_to_fda',
     possibleValue: 'No answer provided or empty',
   ),
-  initialReportToFda$NoAnswerProvidedOrEmptyExact._(
+  initialReportToFdaExact$NoAnswerProvidedOrEmpty._(
     'initial_report_to_fda.exact',
     possibleValue: 'No answer provided or empty',
   ),
@@ -1734,7 +1734,7 @@ enum DevEvent {
     'initial_report_to_fda',
     possibleValue: 'Unknown',
   ),
-  initialReportToFda$UnknownExact._(
+  initialReportToFdaExact$Unknown._(
     'initial_report_to_fda.exact',
     possibleValue: 'Unknown',
   ),
@@ -1744,7 +1744,7 @@ enum DevEvent {
     'initial_report_to_fda',
     possibleValue: 'Yes',
   ),
-  initialReportToFda$YesExact._(
+  initialReportToFdaExact$Yes._(
     'initial_report_to_fda.exact',
     possibleValue: 'Yes',
   ),
@@ -2013,7 +2013,7 @@ enum DevEvent {
     'manufacturer_link_flag',
     possibleValue: 'N',
   ),
-  manufacturerLinkFlag$NExact._(
+  manufacturerLinkFlagExact$N._(
     'manufacturer_link_flag.exact',
     possibleValue: 'N',
   ),
@@ -2023,7 +2023,7 @@ enum DevEvent {
     'manufacturer_link_flag',
     possibleValue: 'Y',
   ),
-  manufacturerLinkFlag$YExact._(
+  manufacturerLinkFlagExact$Y._(
     'manufacturer_link_flag.exact',
     possibleValue: 'Y',
   ),
@@ -2122,7 +2122,7 @@ enum DevEvent {
     'mdr_text.text_type_code',
     possibleValue: 'Additional Manufacturer Narrative',
   ),
-  mdrTextTextTypeCode$AdditionalManufacturerNarrativeExact._(
+  mdrTextTextTypeCodeExact$AdditionalManufacturerNarrative._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Additional Manufacturer Narrative',
   ),
@@ -2142,7 +2142,7 @@ enum DevEvent {
     'mdr_text.text_type_code',
     possibleValue: 'Description of Event or Problem',
   ),
-  mdrTextTextTypeCode$DescriptionOfEventOrProblemExact._(
+  mdrTextTextTypeCodeExact$DescriptionOfEventOrProblem._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Description of Event or Problem',
   ),
@@ -2154,7 +2154,7 @@ enum DevEvent {
     'mdr_text.text_type_code',
     possibleValue: 'Manufacturer Evaluation Summary',
   ),
-  mdrTextTextTypeCode$ManufacturerEvaluationSummaryExact._(
+  mdrTextTextTypeCodeExact$ManufacturerEvaluationSummary._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Manufacturer Evaluation Summary',
   ),
@@ -2252,7 +2252,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Congenital Anomaly',
   ),
-  patientSequenceNumberOutcome$CongenitalAnomalyExact._(
+  patientSequenceNumberOutcomeExact$CongenitalAnomaly._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Congenital Anomaly',
   ),
@@ -2262,7 +2262,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Death',
   ),
-  patientSequenceNumberOutcome$DeathExact._(
+  patientSequenceNumberOutcomeExact$Death._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Death',
   ),
@@ -2272,7 +2272,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Disability',
   ),
-  patientSequenceNumberOutcome$DisabilityExact._(
+  patientSequenceNumberOutcomeExact$Disability._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Disability',
   ),
@@ -2282,7 +2282,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Hospitalization',
   ),
-  patientSequenceNumberOutcome$HospitalizationExact._(
+  patientSequenceNumberOutcomeExact$Hospitalization._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Hospitalization',
   ),
@@ -2292,7 +2292,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Invalid Data',
   ),
-  patientSequenceNumberOutcome$InvalidDataExact._(
+  patientSequenceNumberOutcomeExact$InvalidData._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Invalid Data',
   ),
@@ -2302,7 +2302,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Life Threatening',
   ),
-  patientSequenceNumberOutcome$LifeThreateningExact._(
+  patientSequenceNumberOutcomeExact$LifeThreatening._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Life Threatening',
   ),
@@ -2312,7 +2312,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'No Information',
   ),
-  patientSequenceNumberOutcome$NoInformationExact._(
+  patientSequenceNumberOutcomeExact$NoInformation._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'No Information',
   ),
@@ -2322,7 +2322,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Not Applicable',
   ),
-  patientSequenceNumberOutcome$NotApplicableExact._(
+  patientSequenceNumberOutcomeExact$NotApplicable._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Not Applicable',
   ),
@@ -2332,7 +2332,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Other',
   ),
-  patientSequenceNumberOutcome$OtherExact._(
+  patientSequenceNumberOutcomeExact$Other._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Other',
   ),
@@ -2342,7 +2342,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Required Intervention',
   ),
-  patientSequenceNumberOutcome$RequiredInterventionExact._(
+  patientSequenceNumberOutcomeExact$RequiredIntervention._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Required Intervention',
   ),
@@ -2352,7 +2352,7 @@ enum DevEvent {
     'patient.sequence_number_outcome',
     possibleValue: 'Unknown',
   ),
-  patientSequenceNumberOutcome$UnknownExact._(
+  patientSequenceNumberOutcomeExact$Unknown._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Unknown',
   ),
@@ -2372,7 +2372,7 @@ enum DevEvent {
     'previous_use_code',
     possibleValue: '*',
   ),
-  previousUseCode$AsterixExact._(
+  previousUseCodeExact$Asterix._(
     'previous_use_code.exact',
     possibleValue: '*',
   ),
@@ -2382,7 +2382,7 @@ enum DevEvent {
     'previous_use_code',
     possibleValue: 'I',
   ),
-  previousUseCode$IExact._(
+  previousUseCodeExact$I._(
     'previous_use_code.exact',
     possibleValue: 'I',
   ),
@@ -2392,7 +2392,7 @@ enum DevEvent {
     'previous_use_code',
     possibleValue: 'R',
   ),
-  previousUseCode$RExact._(
+  previousUseCodeExact$R._(
     'previous_use_code.exact',
     possibleValue: 'R',
   ),
@@ -2402,7 +2402,7 @@ enum DevEvent {
     'previous_use_code',
     possibleValue: 'U',
   ),
-  previousUseCode$UExact._(
+  previousUseCodeExact$U._(
     'previous_use_code.exact',
     possibleValue: 'U',
   ),
@@ -2414,7 +2414,7 @@ enum DevEvent {
     'product_problem_flag',
     possibleValue: 'N',
   ),
-  productProblemFlag$NExact._(
+  productProblemFlagExact$N._(
     'product_problem_flag.exact',
     possibleValue: 'N',
   ),
@@ -2427,7 +2427,7 @@ enum DevEvent {
     'product_problem_flag',
     possibleValue: 'Y',
   ),
-  productProblemFlag$YExact._(
+  productProblemFlagExact$Y._(
     'product_problem_flag.exact',
     possibleValue: 'Y',
   ),
@@ -2446,7 +2446,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Inspection',
   ),
-  remedialAction$InspectionExact._(
+  remedialActionExact$Inspection._(
     'remedial_action.exact',
     possibleValue: 'Inspection',
   ),
@@ -2456,7 +2456,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Invalid Data',
   ),
-  remedialAction$InvalidDataExact._(
+  remedialActionExact$InvalidData._(
     'remedial_action.exact',
     possibleValue: 'Invalid Data',
   ),
@@ -2466,7 +2466,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Modification/Adjustment',
   ),
-  remedialAction$ModificationOrAdjustmentExact._(
+  remedialActionExact$ModificationOrAdjustment._(
     'remedial_action.exact',
     possibleValue: 'Modification/Adjustment',
   ),
@@ -2476,7 +2476,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Notification',
   ),
-  remedialAction$NotificationExact._(
+  remedialActionExact$Notification._(
     'remedial_action.exact',
     possibleValue: 'Notification',
   ),
@@ -2486,7 +2486,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Other',
   ),
-  remedialAction$OtherExact._(
+  remedialActionExact$Other._(
     'remedial_action.exact',
     possibleValue: 'Other',
   ),
@@ -2496,7 +2496,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Patient Monitoring',
   ),
-  remedialAction$PatientMonitoringExact._(
+  remedialActionExact$PatientMonitoring._(
     'remedial_action.exact',
     possibleValue: 'Patient Monitoring',
   ),
@@ -2506,7 +2506,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Recall',
   ),
-  remedialAction$RecallExact._(
+  remedialActionExact$Recall._(
     'remedial_action.exact',
     possibleValue: 'Recall',
   ),
@@ -2516,7 +2516,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Relabeling',
   ),
-  remedialAction$RelabelingExact._(
+  remedialActionExact$Relabeling._(
     'remedial_action.exact',
     possibleValue: 'Relabeling',
   ),
@@ -2526,7 +2526,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Repair',
   ),
-  remedialAction$RepairExact._(
+  remedialActionExact$Repair._(
     'remedial_action.exact',
     possibleValue: 'Repair',
   ),
@@ -2536,7 +2536,7 @@ enum DevEvent {
     'remedial_action',
     possibleValue: 'Replace',
   ),
-  remedialAction$ReplaceExact._(
+  remedialActionExact$Replace._(
     'remedial_action.exact',
     possibleValue: 'Replace',
   ),
@@ -2585,7 +2585,7 @@ enum DevEvent {
     'report_source_code',
     possibleValue: 'Distributor report',
   ),
-  reportSourceCode$DistributorReportExact._(
+  reportSourceCodeExact$DistributorReport._(
     'report_source_code.exact',
     possibleValue: 'Distributor report',
   ),
@@ -2595,7 +2595,7 @@ enum DevEvent {
     'report_source_code',
     possibleValue: 'Manufacturer report',
   ),
-  reportSourceCode$ManufacturerReportExact._(
+  reportSourceCodeExact$ManufacturerReport._(
     'report_source_code.exact',
     possibleValue: 'Manufacturer report',
   ),
@@ -2605,7 +2605,7 @@ enum DevEvent {
     'report_source_code',
     possibleValue: 'User facility report',
   ),
-  reportSourceCode$UserFacilityReportExact._(
+  reportSourceCodeExact$UserFacilityReport._(
     'report_source_code.exact',
     possibleValue: 'User facility report',
   ),
@@ -2615,7 +2615,7 @@ enum DevEvent {
     'report_source_code',
     possibleValue: 'Voluntary report',
   ),
-  reportSourceCode$VoluntaryReportExact._(
+  reportSourceCodeExact$VoluntaryReport._(
     'report_source_code.exact',
     possibleValue: 'Voluntary report',
   ),
@@ -2629,7 +2629,7 @@ enum DevEvent {
     'report_to_fda',
     possibleValue: 'N',
   ),
-  reportToFda$NExact._(
+  reportToFdaExact$N._(
     'report_to_fda.exact',
     possibleValue: 'N',
   ),
@@ -2639,7 +2639,7 @@ enum DevEvent {
     'report_to_fda',
     possibleValue: 'Y',
   ),
-  reportToFda$YExact._(
+  reportToFdaExact$Y._(
     'report_to_fda.exact',
     possibleValue: 'Y',
   ),
@@ -2655,7 +2655,7 @@ enum DevEvent {
     'report_to_manufacturer',
     possibleValue: 'N',
   ),
-  reportToManufacturer$NExact._(
+  reportToManufacturerExact$N._(
     'report_to_manufacturer.exact',
     possibleValue: 'N',
   ),
@@ -2665,7 +2665,7 @@ enum DevEvent {
     'report_to_manufacturer',
     possibleValue: 'Y',
   ),
-  reportToManufacturer$YExact._(
+  reportToManufacturerExact$Y._(
     'report_to_manufacturer.exact',
     possibleValue: 'Y',
   ),
@@ -2676,7 +2676,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Attorney',
   ),
-  reporterOccupationCode$AttorneyExact._(
+  reporterOccupationCodeExact$Attorney._(
     'reporter_occupation_code.exact',
     possibleValue: 'Attorney',
   ),
@@ -2686,7 +2686,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Audiologist',
   ),
-  reporterOccupationCode$AudiologistExact._(
+  reporterOccupationCodeExact$Audiologist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Audiologist',
   ),
@@ -2696,7 +2696,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Biomedical engineer',
   ),
-  reporterOccupationCode$BiomedicalEngineerExact._(
+  reporterOccupationCodeExact$BiomedicalEngineer._(
     'reporter_occupation_code.exact',
     possibleValue: 'Biomedical engineer',
   ),
@@ -2706,7 +2706,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Dental assistant',
   ),
-  reporterOccupationCode$DentalAssistantExact._(
+  reporterOccupationCodeExact$DentalAssistant._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dental assistant',
   ),
@@ -2716,7 +2716,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Dental hygienist',
   ),
-  reporterOccupationCode$DentalHygienistExact._(
+  reporterOccupationCodeExact$DentalHygienist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dental hygienist',
   ),
@@ -2726,7 +2726,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Dentist',
   ),
-  reporterOccupationCode$DentistExact._(
+  reporterOccupationCodeExact$Dentist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dentist',
   ),
@@ -2736,7 +2736,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Device unattended',
   ),
-  reporterOccupationCode$DeviceUnattendedExact._(
+  reporterOccupationCodeExact$DeviceUnattended._(
     'reporter_occupation_code.exact',
     possibleValue: 'Device unattended',
   ),
@@ -2746,7 +2746,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Dietician',
   ),
-  reporterOccupationCode$DieticianExact._(
+  reporterOccupationCodeExact$Dietician._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dietician',
   ),
@@ -2756,7 +2756,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Emergency medical technician',
   ),
-  reporterOccupationCode$EmergencyMedicalTechnicianExact._(
+  reporterOccupationCodeExact$EmergencyMedicalTechnician._(
     'reporter_occupation_code.exact',
     possibleValue: 'Emergency medical technician',
   ),
@@ -2766,7 +2766,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Health professional',
   ),
-  reporterOccupationCode$HealthProfessionalExact._(
+  reporterOccupationCodeExact$HealthProfessional._(
     'reporter_occupation_code.exact',
     possibleValue: 'Health professional',
   ),
@@ -2776,7 +2776,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Home health aide',
   ),
-  reporterOccupationCode$HomeHealthAideExact._(
+  reporterOccupationCodeExact$HomeHealthAide._(
     'reporter_occupation_code.exact',
     possibleValue: 'Home health aide',
   ),
@@ -2786,7 +2786,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Hospital service technician',
   ),
-  reporterOccupationCode$HospitalServiceTechnicianExact._(
+  reporterOccupationCodeExact$HospitalServiceTechnician._(
     'reporter_occupation_code.exact',
     possibleValue: 'Hospital service technician',
   ),
@@ -2796,7 +2796,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Invalid data',
   ),
-  reporterOccupationCode$InvalidDataExact._(
+  reporterOccupationCodeExact$InvalidData._(
     'reporter_occupation_code.exact',
     possibleValue: 'Invalid data',
   ),
@@ -2806,7 +2806,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Lay user/patient',
   ),
-  reporterOccupationCode$LayUserOrpatientExact._(
+  reporterOccupationCodeExact$LayUserOrpatient._(
     'reporter_occupation_code.exact',
     possibleValue: 'Lay user/patient',
   ),
@@ -2816,7 +2816,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Medical assistant',
   ),
-  reporterOccupationCode$MedicalAssistantExact._(
+  reporterOccupationCodeExact$MedicalAssistant._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical assistant',
   ),
@@ -2826,7 +2826,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Medical equipment company technician/representative',
   ),
-  reporterOccupationCode$MedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
+  reporterOccupationCodeExact$MedicalEquipmentCompanyTechnicianOrrepresentative._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical equipment company technician/representative',
   ),
@@ -2836,7 +2836,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Medical technologist',
   ),
-  reporterOccupationCode$MedicalTechnologistExact._(
+  reporterOccupationCodeExact$MedicalTechnologist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical technologist',
   ),
@@ -2846,7 +2846,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'No information',
   ),
-  reporterOccupationCode$NoInformationExact._(
+  reporterOccupationCodeExact$NoInformation._(
     'reporter_occupation_code.exact',
     possibleValue: 'No information',
   ),
@@ -2856,7 +2856,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Not applicable',
   ),
-  reporterOccupationCode$NotApplicableExact._(
+  reporterOccupationCodeExact$NotApplicable._(
     'reporter_occupation_code.exact',
     possibleValue: 'Not applicable',
   ),
@@ -2866,7 +2866,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Nuclear medicine technologist',
   ),
-  reporterOccupationCode$NuclearMedicineTechnologistExact._(
+  reporterOccupationCodeExact$NuclearMedicineTechnologist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nuclear medicine technologist',
   ),
@@ -2876,7 +2876,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Nurse',
   ),
-  reporterOccupationCode$NurseExact._(
+  reporterOccupationCodeExact$Nurse._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nurse',
   ),
@@ -2886,7 +2886,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Nursing assistant',
   ),
-  reporterOccupationCode$NursingAssistantExact._(
+  reporterOccupationCodeExact$NursingAssistant._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nursing assistant',
   ),
@@ -2896,7 +2896,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Occupational therapist',
   ),
-  reporterOccupationCode$OccupationalTherapistExact._(
+  reporterOccupationCodeExact$OccupationalTherapist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Occupational therapist',
   ),
@@ -2906,7 +2906,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Other',
   ),
-  reporterOccupationCode$OtherExact._(
+  reporterOccupationCodeExact$Other._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other',
   ),
@@ -2916,7 +2916,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Other caregivers',
   ),
-  reporterOccupationCode$OtherCaregiversExact._(
+  reporterOccupationCodeExact$OtherCaregivers._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other caregivers',
   ),
@@ -2926,7 +2926,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Other health care professional',
   ),
-  reporterOccupationCode$OtherHealthCareProfessionalExact._(
+  reporterOccupationCodeExact$OtherHealthCareProfessional._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other health care professional',
   ),
@@ -2936,7 +2936,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Paramedic',
   ),
-  reporterOccupationCode$ParamedicExact._(
+  reporterOccupationCodeExact$Paramedic._(
     'reporter_occupation_code.exact',
     possibleValue: 'Paramedic',
   ),
@@ -2946,7 +2946,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Patient',
   ),
-  reporterOccupationCode$PatientExact._(
+  reporterOccupationCodeExact$Patient._(
     'reporter_occupation_code.exact',
     possibleValue: 'Patient',
   ),
@@ -2956,7 +2956,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Patient family member or friend',
   ),
-  reporterOccupationCode$PatientFamilyMemberOrFriendExact._(
+  reporterOccupationCodeExact$PatientFamilyMemberOrFriend._(
     'reporter_occupation_code.exact',
     possibleValue: 'Patient family member or friend',
   ),
@@ -2966,7 +2966,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Personal care assistant',
   ),
-  reporterOccupationCode$PersonalCareAssistantExact._(
+  reporterOccupationCodeExact$PersonalCareAssistant._(
     'reporter_occupation_code.exact',
     possibleValue: 'Personal care assistant',
   ),
@@ -2976,7 +2976,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Pharmacist',
   ),
-  reporterOccupationCode$PharmacistExact._(
+  reporterOccupationCodeExact$Pharmacist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Pharmacist',
   ),
@@ -2986,7 +2986,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Phlebotomist',
   ),
-  reporterOccupationCode$PhlebotomistExact._(
+  reporterOccupationCodeExact$Phlebotomist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Phlebotomist',
   ),
@@ -2996,7 +2996,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Physical therapist',
   ),
-  reporterOccupationCode$PhysicalTherapistExact._(
+  reporterOccupationCodeExact$PhysicalTherapist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physical therapist',
   ),
@@ -3006,7 +3006,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Physician',
   ),
-  reporterOccupationCode$PhysicianExact._(
+  reporterOccupationCodeExact$Physician._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physician',
   ),
@@ -3016,7 +3016,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Physician assistant',
   ),
-  reporterOccupationCode$PhysicianAssistantExact._(
+  reporterOccupationCodeExact$PhysicianAssistant._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physician assistant',
   ),
@@ -3026,7 +3026,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Physicist',
   ),
-  reporterOccupationCode$PhysicistExact._(
+  reporterOccupationCodeExact$Physicist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physicist',
   ),
@@ -3036,7 +3036,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Radiologic technologist',
   ),
-  reporterOccupationCode$RadiologicTechnologistExact._(
+  reporterOccupationCodeExact$RadiologicTechnologist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Radiologic technologist',
   ),
@@ -3046,7 +3046,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Respiratory therapist',
   ),
-  reporterOccupationCode$RespiratoryTherapistExact._(
+  reporterOccupationCodeExact$RespiratoryTherapist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Respiratory therapist',
   ),
@@ -3056,7 +3056,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Risk manager',
   ),
-  reporterOccupationCode$RiskManagerExact._(
+  reporterOccupationCodeExact$RiskManager._(
     'reporter_occupation_code.exact',
     possibleValue: 'Risk manager',
   ),
@@ -3066,7 +3066,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Service and testing personnel',
   ),
-  reporterOccupationCode$ServiceAndTestingPersonnelExact._(
+  reporterOccupationCodeExact$ServiceAndTestingPersonnel._(
     'reporter_occupation_code.exact',
     possibleValue: 'Service and testing personnel',
   ),
@@ -3076,7 +3076,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Service personnel',
   ),
-  reporterOccupationCode$ServicePersonnelExact._(
+  reporterOccupationCodeExact$ServicePersonnel._(
     'reporter_occupation_code.exact',
     possibleValue: 'Service personnel',
   ),
@@ -3086,7 +3086,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Speech therapist',
   ),
-  reporterOccupationCode$SpeechTherapistExact._(
+  reporterOccupationCodeExact$SpeechTherapist._(
     'reporter_occupation_code.exact',
     possibleValue: 'Speech therapist',
   ),
@@ -3096,7 +3096,7 @@ enum DevEvent {
     'reporter_occupation_code',
     possibleValue: 'Unknown',
   ),
-  reporterOccupationCode$UnknownExact._(
+  reporterOccupationCodeExact$Unknown._(
     'reporter_occupation_code.exact',
     possibleValue: 'Unknown',
   ),
@@ -3108,7 +3108,7 @@ enum DevEvent {
     'reprocessed_and_reused_flag',
     possibleValue: 'N',
   ),
-  reprocessedAndReusedFlag$NExact._(
+  reprocessedAndReusedFlagExact$N._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'N',
   ),
@@ -3119,7 +3119,7 @@ enum DevEvent {
     'reprocessed_and_reused_flag',
     possibleValue: 'UNK',
   ),
-  reprocessedAndReusedFlag$UnkExact._(
+  reprocessedAndReusedFlagExact$Unk._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'UNK',
   ),
@@ -3129,7 +3129,7 @@ enum DevEvent {
     'reprocessed_and_reused_flag',
     possibleValue: 'Y',
   ),
-  reprocessedAndReusedFlag$YExact._(
+  reprocessedAndReusedFlagExact$Y._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'Y',
   ),
@@ -3141,7 +3141,7 @@ enum DevEvent {
     'single_use_flag',
     possibleValue: 'No',
   ),
-  singleUseFlag$NoExact._(
+  singleUseFlagExact$No._(
     'single_use_flag.exact',
     possibleValue: 'No',
   ),
@@ -3151,7 +3151,7 @@ enum DevEvent {
     'single_use_flag',
     possibleValue: 'Yes',
   ),
-  singleUseFlag$YesExact._(
+  singleUseFlagExact$Yes._(
     'single_use_flag.exact',
     possibleValue: 'Yes',
   ),
@@ -3162,7 +3162,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Company representation',
   ),
-  sourceType$CompanyRepresentationExact._(
+  sourceTypeExact$CompanyRepresentation._(
     'source_type.exact',
     possibleValue: 'Company representation',
   ),
@@ -3172,7 +3172,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Consumer',
   ),
-  sourceType$ConsumerExact._(
+  sourceTypeExact$Consumer._(
     'source_type.exact',
     possibleValue: 'Consumer',
   ),
@@ -3182,7 +3182,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Distributor',
   ),
-  sourceType$DistributorExact._(
+  sourceTypeExact$Distributor._(
     'source_type.exact',
     possibleValue: 'Distributor',
   ),
@@ -3192,7 +3192,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Foreign',
   ),
-  sourceType$ForeignExact._(
+  sourceTypeExact$Foreign._(
     'source_type.exact',
     possibleValue: 'Foreign',
   ),
@@ -3202,7 +3202,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Health Professional',
   ),
-  sourceType$HealthProfessionalExact._(
+  sourceTypeExact$HealthProfessional._(
     'source_type.exact',
     possibleValue: 'Health Professional',
   ),
@@ -3212,7 +3212,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Invalid data',
   ),
-  sourceType$InvalidDataExact._(
+  sourceTypeExact$InvalidData._(
     'source_type.exact',
     possibleValue: 'Invalid data',
   ),
@@ -3222,7 +3222,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Literature',
   ),
-  sourceType$LiteratureExact._(
+  sourceTypeExact$Literature._(
     'source_type.exact',
     possibleValue: 'Literature',
   ),
@@ -3232,7 +3232,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Other',
   ),
-  sourceType$OtherExact._(
+  sourceTypeExact$Other._(
     'source_type.exact',
     possibleValue: 'Other',
   ),
@@ -3242,7 +3242,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Study',
   ),
-  sourceType$StudyExact._(
+  sourceTypeExact$Study._(
     'source_type.exact',
     possibleValue: 'Study',
   ),
@@ -3252,7 +3252,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'Unknown',
   ),
-  sourceType$UnknownExact._(
+  sourceTypeExact$Unknown._(
     'source_type.exact',
     possibleValue: 'Unknown',
   ),
@@ -3262,7 +3262,7 @@ enum DevEvent {
     'source_type',
     possibleValue: 'User facility',
   ),
-  sourceType$UserFacilityExact._(
+  sourceTypeExact$UserFacility._(
     'source_type.exact',
     possibleValue: 'User facility',
   ),
@@ -3273,7 +3273,7 @@ enum DevEvent {
     'type_of_report',
     possibleValue: 'Extra copy received',
   ),
-  typeOfReport$ExtraCopyReceivedExact._(
+  typeOfReportExact$ExtraCopyReceived._(
     'type_of_report.exact',
     possibleValue: 'Extra copy received',
   ),
@@ -3283,7 +3283,7 @@ enum DevEvent {
     'type_of_report',
     possibleValue: 'Followup',
   ),
-  typeOfReport$FollowupExact._(
+  typeOfReportExact$Followup._(
     'type_of_report.exact',
     possibleValue: 'Followup',
   ),
@@ -3293,7 +3293,7 @@ enum DevEvent {
     'type_of_report',
     possibleValue: 'Initial submission',
   ),
-  typeOfReport$InitialSubmissionExact._(
+  typeOfReportExact$InitialSubmission._(
     'type_of_report.exact',
     possibleValue: 'Initial submission',
   ),
@@ -3303,7 +3303,7 @@ enum DevEvent {
     'type_of_report',
     possibleValue: 'Other information submitted',
   ),
-  typeOfReport$OtherInformationSubmittedExact._(
+  typeOfReportExact$OtherInformationSubmitted._(
     'type_of_report.exact',
     possibleValue: 'Other information submitted',
   ),

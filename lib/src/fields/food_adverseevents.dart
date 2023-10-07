@@ -114,7 +114,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'CONGENITAL ANOMALY',
   ),
-  outcomes$CongenitalAnomalyExact._(
+  outcomesExact$CongenitalAnomaly._(
     'outcomes.exact',
     possibleValue: 'CONGENITAL ANOMALY',
   ),
@@ -124,7 +124,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'DEATH',
   ),
-  outcomes$DeathExact._(
+  outcomesExact$Death._(
     'outcomes.exact',
     possibleValue: 'DEATH',
   ),
@@ -134,7 +134,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'DISABILITY',
   ),
-  outcomes$DisabilityExact._(
+  outcomesExact$Disability._(
     'outcomes.exact',
     possibleValue: 'DISABILITY',
   ),
@@ -144,7 +144,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'HOSPITALIZATION',
   ),
-  outcomes$HospitalizationExact._(
+  outcomesExact$Hospitalization._(
     'outcomes.exact',
     possibleValue: 'HOSPITALIZATION',
   ),
@@ -154,7 +154,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'LIFE THREATENING',
   ),
-  outcomes$LifeThreateningExact._(
+  outcomesExact$LifeThreatening._(
     'outcomes.exact',
     possibleValue: 'LIFE THREATENING',
   ),
@@ -164,7 +164,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'NON-SERIOUS INJURIES/ ILLNESS',
   ),
-  outcomes$NonseriousInjuriesOrIllnessExact._(
+  outcomesExact$NonseriousInjuriesOrIllness._(
     'outcomes.exact',
     possibleValue: 'NON-SERIOUS INJURIES/ ILLNESS',
   ),
@@ -174,7 +174,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'NONE',
   ),
-  outcomes$NoneExact._(
+  outcomesExact$None._(
     'outcomes.exact',
     possibleValue: 'NONE',
   ),
@@ -184,7 +184,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'OTHER',
   ),
-  outcomes$OtherExact._(
+  outcomesExact$Other._(
     'outcomes.exact',
     possibleValue: 'OTHER',
   ),
@@ -194,7 +194,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'OTHER SERIOUS (IMPORTANT MEDICAL EVENTS)',
   ),
-  outcomes$OtherSeriousImportantMedicalEventsExact._(
+  outcomesExact$OtherSeriousImportantMedicalEvents._(
     'outcomes.exact',
     possibleValue: 'OTHER SERIOUS (IMPORTANT MEDICAL EVENTS)',
   ),
@@ -205,7 +205,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'REQ. INTERVENTION TO PRVNT PERM. IMPRMNT.',
   ),
-  outcomes$ReqInterventionToPrvntPermImprmntExact._(
+  outcomesExact$ReqInterventionToPrvntPermImprmnt._(
     'outcomes.exact',
     possibleValue: 'REQ. INTERVENTION TO PRVNT PERM. IMPRMNT.',
   ),
@@ -215,7 +215,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'SERIOUS INJURIES/ ILLNESS',
   ),
-  outcomes$SeriousInjuriesOrIllnessExact._(
+  outcomesExact$SeriousInjuriesOrIllness._(
     'outcomes.exact',
     possibleValue: 'SERIOUS INJURIES/ ILLNESS',
   ),
@@ -226,7 +226,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'VISITED A HEALTH CARE PROVIDER',
   ),
-  outcomes$VisitedAHealthCareProviderExact._(
+  outcomesExact$VisitedAHealthCareProvider._(
     'outcomes.exact',
     possibleValue: 'VISITED A HEALTH CARE PROVIDER',
   ),
@@ -236,7 +236,7 @@ enum FoodEvent {
     'outcomes',
     possibleValue: 'VISITED AN ER',
   ),
-  outcomes$VisitedAnErExact._(
+  outcomesExact$VisitedAnEr._(
     'outcomes.exact',
     possibleValue: 'VISITED AN ER',
   ),
@@ -793,7 +793,7 @@ enum FoodEvent {
     'products.role',
     possibleValue: 'Concomitant',
   ),
-  productsRole$ConcomitantExact._(
+  productsRoleExact$Concomitant._(
     'products.role.exact',
     possibleValue: 'Concomitant',
   ),
@@ -803,7 +803,7 @@ enum FoodEvent {
     'products.role',
     possibleValue: 'Not Available',
   ),
-  productsRole$NotAvailableExact._(
+  productsRoleExact$NotAvailable._(
     'products.role.exact',
     possibleValue: 'Not Available',
   ),
@@ -813,7 +813,7 @@ enum FoodEvent {
     'products.role',
     possibleValue: 'Suspect',
   ),
-  productsRole$SuspectExact._(
+  productsRoleExact$Suspect._(
     'products.role.exact',
     possibleValue: 'Suspect',
   ),

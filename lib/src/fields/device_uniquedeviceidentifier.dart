@@ -68,7 +68,7 @@ enum DevUnique {
     'commercial_distribution_status',
     possibleValue: 'In Commercial Distribution',
   ),
-  commercialDistributionStatus$InCommercialDistributionExact._(
+  commercialDistributionStatusExact$InCommercialDistribution._(
     'commercial_distribution_status.exact',
     possibleValue: 'In Commercial Distribution',
   ),
@@ -78,7 +78,7 @@ enum DevUnique {
     'commercial_distribution_status',
     possibleValue: 'Not in Commercial Distribution',
   ),
-  commercialDistributionStatus$NotInCommercialDistributionExact._(
+  commercialDistributionStatusExact$NotInCommercialDistribution._(
     'commercial_distribution_status.exact',
     possibleValue: 'Not in Commercial Distribution',
   ),
@@ -136,7 +136,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Angle',
   ),
-  deviceSizesType$AngleExact._(
+  deviceSizesTypeExact$Angle._(
     'device_sizes.type.exact',
     possibleValue: 'Angle',
   ),
@@ -146,7 +146,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Area/Surface Area',
   ),
-  deviceSizesType$AreaOrsurfaceAreaExact._(
+  deviceSizesTypeExact$AreaOrsurfaceArea._(
     'device_sizes.type.exact',
     possibleValue: 'Area/Surface Area',
   ),
@@ -156,7 +156,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Catheter Gauge',
   ),
-  deviceSizesType$CatheterGaugeExact._(
+  deviceSizesTypeExact$CatheterGauge._(
     'device_sizes.type.exact',
     possibleValue: 'Catheter Gauge',
   ),
@@ -166,7 +166,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Circumference',
   ),
-  deviceSizesType$CircumferenceExact._(
+  deviceSizesTypeExact$Circumference._(
     'device_sizes.type.exact',
     possibleValue: 'Circumference',
   ),
@@ -176,7 +176,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Depth; Device Size Text, specify;',
   ),
-  deviceSizesType$DepthDeviceSizeTextSpecifyExact._(
+  deviceSizesTypeExact$DepthDeviceSizeTextSpecify._(
     'device_sizes.type.exact',
     possibleValue: 'Depth; Device Size Text, specify;',
   ),
@@ -186,7 +186,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Height',
   ),
-  deviceSizesType$HeightExact._(
+  deviceSizesTypeExact$Height._(
     'device_sizes.type.exact',
     possibleValue: 'Height',
   ),
@@ -196,7 +196,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Length',
   ),
-  deviceSizesType$LengthExact._(
+  deviceSizesTypeExact$Length._(
     'device_sizes.type.exact',
     possibleValue: 'Length',
   ),
@@ -206,7 +206,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Lumen/Inner Diameter',
   ),
-  deviceSizesType$LumenOrinnerDiameterExact._(
+  deviceSizesTypeExact$LumenOrinnerDiameter._(
     'device_sizes.type.exact',
     possibleValue: 'Lumen/Inner Diameter',
   ),
@@ -216,7 +216,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Needle Gauge',
   ),
-  deviceSizesType$NeedleGaugeExact._(
+  deviceSizesTypeExact$NeedleGauge._(
     'device_sizes.type.exact',
     possibleValue: 'Needle Gauge',
   ),
@@ -226,7 +226,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Outer Diameter',
   ),
-  deviceSizesType$OuterDiameterExact._(
+  deviceSizesTypeExact$OuterDiameter._(
     'device_sizes.type.exact',
     possibleValue: 'Outer Diameter',
   ),
@@ -236,7 +236,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Pore Size',
   ),
-  deviceSizesType$PoreSizeExact._(
+  deviceSizesTypeExact$PoreSize._(
     'device_sizes.type.exact',
     possibleValue: 'Pore Size',
   ),
@@ -246,7 +246,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Pressure',
   ),
-  deviceSizesType$PressureExact._(
+  deviceSizesTypeExact$Pressure._(
     'device_sizes.type.exact',
     possibleValue: 'Pressure',
   ),
@@ -256,7 +256,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Total Volume',
   ),
-  deviceSizesType$TotalVolumeExact._(
+  deviceSizesTypeExact$TotalVolume._(
     'device_sizes.type.exact',
     possibleValue: 'Total Volume',
   ),
@@ -266,7 +266,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Weight',
   ),
-  deviceSizesType$WeightExact._(
+  deviceSizesTypeExact$Weight._(
     'device_sizes.type.exact',
     possibleValue: 'Weight',
   ),
@@ -276,7 +276,7 @@ enum DevUnique {
     'device_sizes.type',
     possibleValue: 'Width',
   ),
-  deviceSizesType$WidthExact._(
+  deviceSizesTypeExact$Width._(
     'device_sizes.type.exact',
     possibleValue: 'Width',
   ),
@@ -709,7 +709,7 @@ enum DevUnique {
     'identifiers.issuing_agency',
     possibleValue: 'GS1',
   ),
-  identifiersIssuingAgency$Gs1Exact._(
+  identifiersIssuingAgencyExact$Gs1._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'GS1',
   ),
@@ -719,7 +719,7 @@ enum DevUnique {
     'identifiers.issuing_agency',
     possibleValue: 'HIBCC',
   ),
-  identifiersIssuingAgency$HibccExact._(
+  identifiersIssuingAgencyExact$Hibcc._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'HIBCC',
   ),
@@ -729,7 +729,7 @@ enum DevUnique {
     'identifiers.issuing_agency',
     possibleValue: 'ICCBBA',
   ),
-  identifiersIssuingAgency$IccbbaExact._(
+  identifiersIssuingAgencyExact$Iccbba._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'ICCBBA',
   ),
@@ -739,7 +739,7 @@ enum DevUnique {
     'identifiers.issuing_agency',
     possibleValue: 'NDC/NHRIC',
   ),
-  identifiersIssuingAgency$NdcOrNhricExact._(
+  identifiersIssuingAgencyExact$NdcOrNhric._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'NDC/NHRIC',
   ),
@@ -757,7 +757,7 @@ enum DevUnique {
     'identifiers.package_status',
     possibleValue: 'In Commercial Distribution',
   ),
-  identifiersPackageStatus$InCommercialDistributionExact._(
+  identifiersPackageStatusExact$InCommercialDistribution._(
     'identifiers.package_status.exact',
     possibleValue: 'In Commercial Distribution',
   ),
@@ -767,7 +767,7 @@ enum DevUnique {
     'identifiers.package_status',
     possibleValue: 'Not in Commercial Distribution',
   ),
-  identifiersPackageStatus$NotInCommercialDistributionExact._(
+  identifiersPackageStatusExact$NotInCommercialDistribution._(
     'identifiers.package_status.exact',
     possibleValue: 'Not in Commercial Distribution',
   ),
@@ -1019,7 +1019,7 @@ enum DevUnique {
     'mri_safety',
     possibleValue: 'Labeling does not contain MRI Safety Information',
   ),
-  mriSafety$LabelingDoesNotContainMriSafetyInformationExact._(
+  mriSafetyExact$LabelingDoesNotContainMriSafetyInformation._(
     'mri_safety.exact',
     possibleValue: 'Labeling does not contain MRI Safety Information',
   ),
@@ -1029,7 +1029,7 @@ enum DevUnique {
     'mri_safety',
     possibleValue: 'MR Conditional',
   ),
-  mriSafety$MrConditionalExact._(
+  mriSafetyExact$MrConditional._(
     'mri_safety.exact',
     possibleValue: 'MR Conditional',
   ),
@@ -1039,7 +1039,7 @@ enum DevUnique {
     'mri_safety',
     possibleValue: 'MR Safe',
   ),
-  mriSafety$MrSafeExact._(
+  mriSafetyExact$MrSafe._(
     'mri_safety.exact',
     possibleValue: 'MR Safe',
   ),
@@ -1049,7 +1049,7 @@ enum DevUnique {
     'mri_safety',
     possibleValue: 'MR Unsafe',
   ),
-  mriSafety$MrUnsafeExact._(
+  mriSafetyExact$MrUnsafe._(
     'mri_safety.exact',
     possibleValue: 'MR Unsafe',
   ),
@@ -1478,7 +1478,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Handling Environment Atmospheric Pressure',
   ),
-  storageType$HandlingEnvironmentAtmosphericPressureExact._(
+  storageTypeExact$HandlingEnvironmentAtmosphericPressure._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Atmospheric Pressure',
   ),
@@ -1488,7 +1488,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Handling Environment Humidity',
   ),
-  storageType$HandlingEnvironmentHumidityExact._(
+  storageTypeExact$HandlingEnvironmentHumidity._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Humidity',
   ),
@@ -1498,7 +1498,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Handling Environment Temperature',
   ),
-  storageType$HandlingEnvironmentTemperatureExact._(
+  storageTypeExact$HandlingEnvironmentTemperature._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Temperature',
   ),
@@ -1508,7 +1508,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Special Storage Conditions',
   ),
-  storageType$SpecialStorageConditionsExact._(
+  storageTypeExact$SpecialStorageConditions._(
     'storage.type.exact',
     possibleValue: 'Special Storage Conditions',
   ),
@@ -1518,7 +1518,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Storage Environment Atmospheric Pressure',
   ),
-  storageType$StorageEnvironmentAtmosphericPressureExact._(
+  storageTypeExact$StorageEnvironmentAtmosphericPressure._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Atmospheric Pressure',
   ),
@@ -1528,7 +1528,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Storage Environment Humidity',
   ),
-  storageType$StorageEnvironmentHumidityExact._(
+  storageTypeExact$StorageEnvironmentHumidity._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Humidity',
   ),
@@ -1538,7 +1538,7 @@ enum DevUnique {
     'storage.type',
     possibleValue: 'Storage Environment Temperature',
   ),
-  storageType$StorageEnvironmentTemperatureExact._(
+  storageTypeExact$StorageEnvironmentTemperature._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Temperature',
   ),

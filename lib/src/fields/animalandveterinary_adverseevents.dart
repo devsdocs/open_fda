@@ -509,7 +509,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Died',
   ),
-  outcomeMedicalStatus$DiedExact._(
+  outcomeMedicalStatusExact$Died._(
     'outcome.medical_status.exact',
     possibleValue: 'Died',
   ),
@@ -519,7 +519,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Euthanized',
   ),
-  outcomeMedicalStatus$EuthanizedExact._(
+  outcomeMedicalStatusExact$Euthanized._(
     'outcome.medical_status.exact',
     possibleValue: 'Euthanized',
   ),
@@ -529,7 +529,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Ongoing',
   ),
-  outcomeMedicalStatus$OngoingExact._(
+  outcomeMedicalStatusExact$Ongoing._(
     'outcome.medical_status.exact',
     possibleValue: 'Ongoing',
   ),
@@ -539,7 +539,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Recovered with Sequela',
   ),
-  outcomeMedicalStatus$RecoveredWithSequelaExact._(
+  outcomeMedicalStatusExact$RecoveredWithSequela._(
     'outcome.medical_status.exact',
     possibleValue: 'Recovered with Sequela',
   ),
@@ -549,7 +549,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Recovered/Normal',
   ),
-  outcomeMedicalStatus$RecoveredOrNormalExact._(
+  outcomeMedicalStatusExact$RecoveredOrNormal._(
     'outcome.medical_status.exact',
     possibleValue: 'Recovered/Normal',
   ),
@@ -559,7 +559,7 @@ enum AVEvent {
     'outcome.medical_status',
     possibleValue: 'Unknown',
   ),
-  outcomeMedicalStatus$UnknownExact._(
+  outcomeMedicalStatusExact$Unknown._(
     'outcome.medical_status.exact',
     possibleValue: 'Unknown',
   ),

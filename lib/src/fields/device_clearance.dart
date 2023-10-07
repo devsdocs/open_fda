@@ -52,7 +52,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'AN',
   ),
-  advisoryCommittee$AnExact._(
+  advisoryCommitteeExact$An._(
     'advisory_committee.exact',
     possibleValue: 'AN',
   ),
@@ -62,7 +62,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'CH',
   ),
-  advisoryCommittee$ChExact._(
+  advisoryCommitteeExact$Ch._(
     'advisory_committee.exact',
     possibleValue: 'CH',
   ),
@@ -72,7 +72,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'CV',
   ),
-  advisoryCommittee$CvExact._(
+  advisoryCommitteeExact$Cv._(
     'advisory_committee.exact',
     possibleValue: 'CV',
   ),
@@ -82,7 +82,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'DE',
   ),
-  advisoryCommittee$DeExact._(
+  advisoryCommitteeExact$De._(
     'advisory_committee.exact',
     possibleValue: 'DE',
   ),
@@ -92,7 +92,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'EN',
   ),
-  advisoryCommittee$EnExact._(
+  advisoryCommitteeExact$En._(
     'advisory_committee.exact',
     possibleValue: 'EN',
   ),
@@ -102,7 +102,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'GU',
   ),
-  advisoryCommittee$GuExact._(
+  advisoryCommitteeExact$Gu._(
     'advisory_committee.exact',
     possibleValue: 'GU',
   ),
@@ -112,7 +112,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'HE',
   ),
-  advisoryCommittee$HeExact._(
+  advisoryCommitteeExact$He._(
     'advisory_committee.exact',
     possibleValue: 'HE',
   ),
@@ -122,7 +122,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'HO',
   ),
-  advisoryCommittee$HoExact._(
+  advisoryCommitteeExact$Ho._(
     'advisory_committee.exact',
     possibleValue: 'HO',
   ),
@@ -132,7 +132,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'IM',
   ),
-  advisoryCommittee$ImExact._(
+  advisoryCommitteeExact$Im._(
     'advisory_committee.exact',
     possibleValue: 'IM',
   ),
@@ -142,7 +142,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'MG',
   ),
-  advisoryCommittee$MgExact._(
+  advisoryCommitteeExact$Mg._(
     'advisory_committee.exact',
     possibleValue: 'MG',
   ),
@@ -152,7 +152,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'MI',
   ),
-  advisoryCommittee$MiExact._(
+  advisoryCommitteeExact$Mi._(
     'advisory_committee.exact',
     possibleValue: 'MI',
   ),
@@ -162,7 +162,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'NE',
   ),
-  advisoryCommittee$NeExact._(
+  advisoryCommitteeExact$Ne._(
     'advisory_committee.exact',
     possibleValue: 'NE',
   ),
@@ -172,7 +172,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'OB',
   ),
-  advisoryCommittee$ObExact._(
+  advisoryCommitteeExact$Ob._(
     'advisory_committee.exact',
     possibleValue: 'OB',
   ),
@@ -182,7 +182,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'OP',
   ),
-  advisoryCommittee$OpExact._(
+  advisoryCommitteeExact$Op._(
     'advisory_committee.exact',
     possibleValue: 'OP',
   ),
@@ -192,7 +192,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'OR',
   ),
-  advisoryCommittee$OrExact._(
+  advisoryCommitteeExact$Or._(
     'advisory_committee.exact',
     possibleValue: 'OR',
   ),
@@ -202,7 +202,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'PA',
   ),
-  advisoryCommittee$PaExact._(
+  advisoryCommitteeExact$Pa._(
     'advisory_committee.exact',
     possibleValue: 'PA',
   ),
@@ -212,7 +212,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'PM',
   ),
-  advisoryCommittee$PmExact._(
+  advisoryCommitteeExact$Pm._(
     'advisory_committee.exact',
     possibleValue: 'PM',
   ),
@@ -222,7 +222,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'RA',
   ),
-  advisoryCommittee$RaExact._(
+  advisoryCommitteeExact$Ra._(
     'advisory_committee.exact',
     possibleValue: 'RA',
   ),
@@ -232,7 +232,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'SU',
   ),
-  advisoryCommittee$SuExact._(
+  advisoryCommitteeExact$Su._(
     'advisory_committee.exact',
     possibleValue: 'SU',
   ),
@@ -242,7 +242,7 @@ enum DevClear {
     'advisory_committee',
     possibleValue: 'TX',
   ),
-  advisoryCommittee$TxExact._(
+  advisoryCommitteeExact$Tx._(
     'advisory_committee.exact',
     possibleValue: 'TX',
   ),
@@ -283,7 +283,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'direct',
   ),
-  clearanceType$directExact._(
+  clearanceTypeExact$direct._(
     'clearance_type.exact',
     possibleValue: 'direct',
   ),
@@ -293,7 +293,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'dual',
   ),
-  clearanceType$dualExact._(
+  clearanceTypeExact$dual._(
     'clearance_type.exact',
     possibleValue: 'dual',
   ),
@@ -303,7 +303,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'nse',
   ),
-  clearanceType$nseExact._(
+  clearanceTypeExact$nse._(
     'clearance_type.exact',
     possibleValue: 'nse',
   ),
@@ -313,7 +313,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'post',
   ),
-  clearanceType$postExact._(
+  clearanceTypeExact$post._(
     'clearance_type.exact',
     possibleValue: 'post',
   ),
@@ -323,7 +323,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'special',
   ),
-  clearanceType$specialExact._(
+  clearanceTypeExact$special._(
     'clearance_type.exact',
     possibleValue: 'special',
   ),
@@ -333,7 +333,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'track',
   ),
-  clearanceType$trackExact._(
+  clearanceTypeExact$track._(
     'clearance_type.exact',
     possibleValue: 'track',
   ),
@@ -343,7 +343,7 @@ enum DevClear {
     'clearance_type',
     possibleValue: 'traditional',
   ),
-  clearanceType$traditionalExact._(
+  clearanceTypeExact$traditional._(
     'clearance_type.exact',
     possibleValue: 'traditional',
   ),
@@ -390,7 +390,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SEKD',
   ),
-  decisionCode$SekdExact._(
+  decisionCodeExact$Sekd._(
     'decision_code.exact',
     possibleValue: 'SEKD',
   ),
@@ -400,7 +400,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESD',
   ),
-  decisionCode$SesdExact._(
+  decisionCodeExact$Sesd._(
     'decision_code.exact',
     possibleValue: 'SESD',
   ),
@@ -410,7 +410,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESE',
   ),
-  decisionCode$SeseExact._(
+  decisionCodeExact$Sese._(
     'decision_code.exact',
     possibleValue: 'SESE',
   ),
@@ -420,7 +420,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESK',
   ),
-  decisionCode$SeskExact._(
+  decisionCodeExact$Sesk._(
     'decision_code.exact',
     possibleValue: 'SESK',
   ),
@@ -430,7 +430,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESP',
   ),
-  decisionCode$SespExact._(
+  decisionCodeExact$Sesp._(
     'decision_code.exact',
     possibleValue: 'SESP',
   ),
@@ -440,7 +440,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESR',
   ),
-  decisionCode$SesrExact._(
+  decisionCodeExact$Sesr._(
     'decision_code.exact',
     possibleValue: 'SESR',
   ),
@@ -450,7 +450,7 @@ enum DevClear {
     'decision_code',
     possibleValue: 'SESU',
   ),
-  decisionCode$SesuExact._(
+  decisionCodeExact$Sesu._(
     'decision_code.exact',
     possibleValue: 'SESU',
   ),

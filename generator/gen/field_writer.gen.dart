@@ -64,7 +64,7 @@ part of '_gen.dart';
             poss.data!.forEach((key, value) {
               buff.writeln(docWriterFromString(value.toString()));
 
-              final formatKey = formatKeyForEnum(key);
+              final formatKey = formatKeyForEnum(key, false);
 
               final enumType =
                   getEnumName(p.address.toSnakeCase.toSnakeCase + formatKey);
@@ -74,8 +74,13 @@ part of '_gen.dart';
               );
               if (p.isExact != null) {
                 if (p.isExact!) {
+                  final exactFormatKey = formatKeyForEnum(key, true);
+
+                  final enumType = getEnumName(
+                    p.address.toSnakeCase.toSnakeCase + exactFormatKey,
+                  );
                   buff.writeln(
-                    "${enumType.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValue: '$key',),",
+                    "${enumType.toSnakeCase.toSnakeCase}._('${p.address}.exact', possibleValue: '$key',),",
                   );
                 }
               }

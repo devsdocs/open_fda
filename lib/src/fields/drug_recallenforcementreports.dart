@@ -69,7 +69,7 @@ enum DrugEnforce {
     'classification',
     possibleValue: 'Class I',
   ),
-  classification$ClassIExact._(
+  classificationExact$ClassI._(
     'classification.exact',
     possibleValue: 'Class I',
   ),
@@ -81,7 +81,7 @@ enum DrugEnforce {
     'classification',
     possibleValue: 'Class II',
   ),
-  classification$ClassIiExact._(
+  classificationExact$ClassIi._(
     'classification.exact',
     possibleValue: 'Class II',
   ),
@@ -93,7 +93,7 @@ enum DrugEnforce {
     'classification',
     possibleValue: 'Class III',
   ),
-  classification$ClassIiiExact._(
+  classificationExact$ClassIii._(
     'classification.exact',
     possibleValue: 'Class III',
   ),
@@ -421,7 +421,7 @@ enum DrugEnforce {
     'product_type',
     possibleValue: 'Devices',
   ),
-  productType$DevicesExact._(
+  productTypeExact$Devices._(
     'product_type.exact',
     possibleValue: 'Devices',
   ),
@@ -431,7 +431,7 @@ enum DrugEnforce {
     'product_type',
     possibleValue: 'Drugs',
   ),
-  productType$DrugsExact._(
+  productTypeExact$Drugs._(
     'product_type.exact',
     possibleValue: 'Drugs',
   ),
@@ -441,7 +441,7 @@ enum DrugEnforce {
     'product_type',
     possibleValue: 'Food',
   ),
-  productType$FoodExact._(
+  productTypeExact$Food._(
     'product_type.exact',
     possibleValue: 'Food',
   ),
@@ -497,7 +497,7 @@ enum DrugEnforce {
     'status',
     possibleValue: 'Completed',
   ),
-  status$CompletedExact._(
+  statusExact$Completed._(
     'status.exact',
     possibleValue: 'Completed',
   ),
@@ -507,7 +507,7 @@ enum DrugEnforce {
     'status',
     possibleValue: 'On-Going',
   ),
-  status$OnGoingExact._(
+  statusExact$OnGoing._(
     'status.exact',
     possibleValue: 'On-Going',
   ),
@@ -518,7 +518,7 @@ enum DrugEnforce {
     'status',
     possibleValue: 'Pending',
   ),
-  status$PendingExact._(
+  statusExact$Pending._(
     'status.exact',
     possibleValue: 'Pending',
   ),
@@ -530,7 +530,7 @@ enum DrugEnforce {
     'status',
     possibleValue: 'Terminated',
   ),
-  status$TerminatedExact._(
+  statusExact$Terminated._(
     'status.exact',
     possibleValue: 'Terminated',
   ),
