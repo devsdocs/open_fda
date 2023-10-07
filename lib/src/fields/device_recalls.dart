@@ -1,64 +1,117 @@
+// ignore_for_file: unused_element
+
 part of '../main.dart';
 
-final class DeviceRecalls extends _OpenFDAEndpointer {
-  DeviceRecalls()
-      : super(
+final class DeviceRecallsFields extends Endpointer {
+  factory DeviceRecallsFields(
+    DevRecall data,
+  ) =>
+      DeviceRecallsFields._(
+        data,
+      );
+  DeviceRecallsFields._(
+    this._data,
+  ) : super(
           _Endpoints.deviceRecalls,
+          _data.address,
+          possValue: _data.possibleValue,
+          possValueReference: _data.possibleValueReference,
         );
+  final DevRecall _data;
+  @override
+  String get address => _data.address;
+  @override
+  String? get possValue => _data.possibleValue;
+  @override
+  PossibleValueReference? get possValueReference =>
+      _data.possibleValueReference;
+}
 
+/// Total Endpoints: 36, Top Endpoints: 29, Endpoints with exact: 7,
+/// Without Possible Value: 34, Reference Possible Value: 1,
+/// One-Of Possible Value: 1,
+enum DevRecall {
   /// Action taken as part of the recall.
-  final action = 'action';
+  action._(
+    'action',
+  ),
 
   /// Contact information of the party that can be used to request additional
   /// information about the recall.
-  final additionalInfoContact = 'additional_info_contact';
+  additionalInfoContact._(
+    'additional_info_contact',
+  ),
 
   /// Street address (Line 1) of the Recalling Firm, if available.
-  final address1 = 'address_1';
+  address1._(
+    'address_1',
+  ),
 
   /// Street address (Line 2) of the Recalling Firm, if available.
-  final address2 = 'address_2';
+  address2._(
+    'address_2',
+  ),
 
   /// cfRes internal recall identifier
-  final cfresId = 'cfres_id';
+  cfresId._(
+    'cfres_id',
+  ),
 
   /// City of the Recalling Firm, if available.
-  final city = 'city';
+  city._(
+    'city',
+  ),
 
   /// A list of all lot and/or serial numbers, product numbers, packer or
   /// manufacturer numbers, sell or use by dates, etc., which appear on the
   /// product or its labeling.
-  final codeInfo = 'code_info';
+  codeInfo._(
+    'code_info',
+  ),
 
   /// Country of the Recalling Firm, if available.
-  final country = 'country';
+  country._(
+    'country',
+  ),
 
   /// General area of initial distribution such as, “Distributors in 6 states:
   /// NY, VA, TX, GA, FL and MA; the Virgin Islands; Canada and Japan”. The term
   /// “nationwide” is defined to mean the fifty states or a significant portion.
   /// Note that subsequent distribution by the consignees to other parties may
   /// not be included.
-  final distributionPattern = 'distribution_pattern';
+  distributionPattern._(
+    'distribution_pattern',
+  ),
 
   /// Date on which the recall record was created in the FDA database.
-  final eventDateCreated = 'event_date_created';
+  eventDateCreated._(
+    'event_date_created',
+  ),
 
   /// Date that the firm first began notifying the public or their consignees of
   /// the recall.
-  final eventDateInitiated = 'event_date_initiated';
+  eventDateInitiated._(
+    'event_date_initiated',
+  ),
 
   /// Indicates the date FDA classified the recall, but it does not necessarily
   /// mean that the recall is new.
-  final eventDatePosted = 'event_date_posted';
+  eventDatePosted._(
+    'event_date_posted',
+  ),
 
   /// Date that FDA determined recall actions were completed and terminated the
   /// recall. For details about termination of a recall see
   /// [here](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm?fr=7.55).
-  final eventDateTerminated = 'event_date_terminated';
+  eventDateTerminated._(
+    'event_date_terminated',
+  ),
 
   /// Facility identifier assigned to facility by the FDA Office of Regulatory
   /// Affairs.
-  final firmFeiNumber = 'firm_fei_number';
+  firmFeiNumber._(
+    'firm_fei_number',
+  ),
 
   /// FDA-assigned premarket notification number, including leading letters.
   /// Leading letters “BK” indicates 510(k) clearance, or Premarket
@@ -66,61 +119,65 @@ final class DeviceRecalls extends _OpenFDAEndpointer {
   /// Leading letters “DEN” indicates De Novo, or Evaluation of Automatic Class
   /// III Designation. Leading letter “K” indicates 510(k) clearance, or
   /// Premarket Notification. `Source`: 510(k)
-  final kNumbers = 'k_numbers';
+  kNumbers._(
+    'k_numbers',
+  ),
 
-  final openfda = 'openfda';
+  openfda._(
+    'openfda',
+  ),
 
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513)
   /// Class I (low to moderate risk): general controls
-  final openfdaDeviceClassOne = (
+  openfdaDeviceClass1._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.one,
-  );
+    possibleValue: '1',
+  ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  final openfdaDeviceClassTwo = (
+  openfdaDeviceClass2._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.two,
-  );
+    possibleValue: '2',
+  ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  final openfdaDeviceClassThree = (
+  openfdaDeviceClass3._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.three,
-  );
+    possibleValue: '3',
+  ),
 
   /// HDE
-  final openfdaDeviceClassF = (
+  openfdaDeviceClassF._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.f,
-  );
+    possibleValue: 'F',
+  ),
 
   /// Not classified
-  final openfdaDeviceClassN = (
+  openfdaDeviceClassN._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.n,
-  );
+    possibleValue: 'N',
+  ),
 
   /// Unclassified
-  final openfdaDeviceClassU = (
+  openfdaDeviceClassU._(
     'openfda.device_class',
-    PossibleValueType.oneOf,
-    _DeviceRecallsOpenfdaDeviceClass.u,
-  );
+    possibleValue: 'U',
+  ),
 
   /// This is the proprietary name, or trade name, of the cleared device.
-  final openfdaDeviceName = 'openfda.device_name';
-  final openfdaDeviceNameExact = 'openfda.device_name.exact';
+  openfdaDeviceName._(
+    'openfda.device_name',
+  ),
+  openfdaDeviceNameExact._(
+    'openfda.device_name.exact',
+  ),
 
   /// Facility identifier assigned to facility by the FDA Office of Regulatory
   /// Affairs.
-  final openfdaFeiNumber = 'openfda.fei_number';
+  openfdaFeiNumber._(
+    'openfda.fei_number',
+  ),
 
   /// FDA-assigned premarket notification number, including leading letters.
   /// Leading letters “BK” indicates 510(k) clearance, or Premarket
@@ -128,17 +185,23 @@ final class DeviceRecalls extends _OpenFDAEndpointer {
   /// Leading letters “DEN” indicates De Novo, or Evaluation of Automatic Class
   /// III Designation. Leading letter “K” indicates 510(k) clearance, or
   /// Premarket Notification. `Source`: 510(k)
-  final openfdaKNumber = 'openfda.k_number';
+  openfdaKNumber._(
+    'openfda.k_number',
+  ),
 
   /// Regulation Medical Specialty is assigned based on the regulation (e.g. 21
   /// CFR Part 888 is Orthopedic Devices) which is why Class 3 devices lack the
   /// “Regulation Medical Specialty” field.
-  final openfdaMedicalSpecialtyDescription =
-      'openfda.medical_specialty_description';
-  final openfdaMedicalSpecialtyDescriptionExact =
-      'openfda.medical_specialty_description.exact';
+  openfdaMedicalSpecialtyDescription._(
+    'openfda.medical_specialty_description',
+  ),
+  openfdaMedicalSpecialtyDescriptionExact._(
+    'openfda.medical_specialty_description.exact',
+  ),
 
-  final openfdaRegistrationNumber = 'openfda.registration_number';
+  openfdaRegistrationNumber._(
+    'openfda.registration_number',
+  ),
 
   /// The classification regulation in the Code of Federal Regulations (CFR)
   /// under which the device is identified, described, and formally classified
@@ -146,28 +209,28 @@ final class DeviceRecalls extends _OpenFDAEndpointer {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  final openfdaRegulationNumber = (
+  openfdaRegulationNumber._(
     'openfda.regulation_number',
-    PossibleValueType.reference,
-    OpenFDAPossibleValueReference(
+    possibleValueReference: PossibleValueReference(
       'CFR database',
       link:
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
-    )
-  );
-  final openfdaRegulationNumberExact = (
+    ),
+  ),
+  openfdaRegulationNumberExact._(
     'openfda.regulation_number.exact',
-    PossibleValueType.reference,
-    OpenFDAPossibleValueReference(
+    possibleValueReference: PossibleValueReference(
       'CFR database',
       link:
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
-    )
-  );
+    ),
+  ),
 
   /// If 510(k) or PMA numbers are not applicable to the device recalled, the
   /// recall may contain other regulatory descriptions, such as `exempt`.
-  final otherSubmissionDescription = 'other_submission_description';
+  otherSubmissionDescription._(
+    'other_submission_description',
+  ),
 
   /// FDA-assigned premarket application number, including leading letters.
   /// Leading letter “D” indicates Product Development Protocol type of
@@ -176,95 +239,97 @@ final class DeviceRecalls extends _OpenFDAEndpointer {
   /// Humanitarian Device Exemption approval. Leading letter “N” indicates New
   /// Drug Application. Early PMAs were approved as NDAs. Leading letter “P”
   /// indicates Premarket Approval.
-  final pmaNumbers = 'pma_numbers';
-  final pmaNumbersExact = 'pma_numbers.exact';
+  pmaNumbers._(
+    'pma_numbers',
+  ),
+  pmaNumbersExact._(
+    'pma_numbers.exact',
+  ),
 
   /// ZIP or postal code of the Recalling Firm, if available.
-  final postalCode = 'postal_code';
+  postalCode._(
+    'postal_code',
+  ),
 
   /// A three-letter identifier assigned to a device category. Assignment is
   /// based upon the medical device classification designated under 21 CFR Parts
   /// 862-892, and the technology and intended use of the device. Occasionally
   /// these codes are changed over time.
-  final productCode = 'product_code';
+  productCode._(
+    'product_code',
+  ),
 
   /// Brief description of the product being recalled.
-  final productDescription = 'product_description';
+  productDescription._(
+    'product_description',
+  ),
 
   /// The amount of defective product subject to recall.
-  final productQuantity = 'product_quantity';
+  productQuantity._(
+    'product_quantity',
+  ),
 
-  final productResNumber = 'product_res_number';
-  final productResNumberExact = 'product_res_number.exact';
+  productResNumber._(
+    'product_res_number',
+  ),
+  productResNumberExact._(
+    'product_res_number.exact',
+  ),
 
   /// Information describing how the product is defective and violates the FD&C
   /// Act or related statutes.
-  final reasonForRecall = 'reason_for_recall';
+  reasonForRecall._(
+    'reason_for_recall',
+  ),
 
   /// Current status of the recall. A record in the database is created when a
   /// firm initiates a correction or removal action. The record is updated if
   /// the FDA identifies a violation and classifies the action as a recall, and
   /// it is updated for a final time when the recall is terminated.
-  final recallStatus = 'recall_status';
+  recallStatus._(
+    'recall_status',
+  ),
 
   /// The firm that initiates a recall or, in the case of an FDA requested
   /// recall or FDA mandated recall, the firm that has primary responsibility
   /// for the manufacture and (or) marketing of the product to be recalled. This
   /// field may also include the firm's full address (normally in case of
   /// international addresses)
-  final recallingFirm = 'recalling_firm';
-  final recallingFirmExact = 'recalling_firm.exact';
+  recallingFirm._(
+    'recalling_firm',
+  ),
+  recallingFirmExact._(
+    'recalling_firm.exact',
+  ),
 
   /// A five digit, numerical designation assigned by FDA to a specific recall
   /// event used for tracking purposes.
-  final resEventNumber = 'res_event_number';
+  resEventNumber._(
+    'res_event_number',
+  ),
 
   /// FDA determined general type of recall cause. Per FDA policy, recall cause
   /// determinations are subject to modification up to the point of termination
   /// of the recall.
-  final rootCauseDescription = 'root_cause_description';
-  final rootCauseDescriptionExact = 'root_cause_description.exact';
+  rootCauseDescription._(
+    'root_cause_description',
+  ),
+  rootCauseDescriptionExact._(
+    'root_cause_description.exact',
+  ),
 
   /// US state of the Recalling Firm, if available.
-  final state = 'state';
-}
-
-/// A risk based classification system for all medical devices ((Federal Food,
-/// Drug, and Cosmetic Act, section 513)
-enum _DeviceRecallsOpenfdaDeviceClass {
-  /// Class I (low to moderate risk): general controls
-  one._(
-    '1',
-  ),
-
-  /// Class II (moderate to high risk): general controls and special controls
-  two._(
-    '2',
-  ),
-
-  /// Class III (high risk): general controls and Premarket Approval (PMA)
-  three._(
-    '3',
-  ),
-
-  /// HDE
-  f._(
-    'F',
-  ),
-
-  /// Not classified
-  n._(
-    'N',
-  ),
-
-  /// Unclassified
-  u._(
-    'U',
+  state._(
+    'state',
   ),
   ;
 
-  const _DeviceRecallsOpenfdaDeviceClass._(
-    this.value,
-  );
-  final String value;
+  const DevRecall._(
+    this.address, {
+    this.possibleValue,
+    this.possibleValueReference,
+  });
+  final String address;
+  final String? possibleValue;
+  final PossibleValueReference? possibleValueReference;
 }

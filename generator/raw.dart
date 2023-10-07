@@ -18,6 +18,7 @@ const linkOpenFda = [
       'maincase': 'AnimalAndVeterinary',
       'snakecase': 'animalAndVeterinary',
     },
+    'short': 'AVEvent',
     'suffix': 'AdverseEvents',
     'endpoint': {
       'base': 'animalandveterinary',
@@ -31,6 +32,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevClass',
     'suffix': 'Classification',
     'endpoint': {
       'base': 'device',
@@ -44,6 +46,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevClear',
     'suffix': 'Clearance',
     'endpoint': {
       'base': 'device',
@@ -57,6 +60,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevCovid',
     'suffix': 'Covid19SerologicalTestingEvaluations',
     'endpoint': {
       'base': 'device',
@@ -70,6 +74,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevEnforce',
     'suffix': 'RecallEnforcementReports',
     'endpoint': {
       'base': 'device',
@@ -83,6 +88,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevEvent',
     'suffix': 'AdverseEvents',
     'endpoint': {
       'base': 'device',
@@ -96,6 +102,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevPreMarket',
     'suffix': 'PreMarketApproval',
     'endpoint': {
       'base': 'device',
@@ -109,6 +116,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevRecall',
     'suffix': 'Recalls',
     'endpoint': {
       'base': 'device',
@@ -122,6 +130,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevRegList',
     'suffix': 'RegistrationAndListings',
     'endpoint': {
       'base': 'device',
@@ -135,6 +144,7 @@ const linkOpenFda = [
       'maincase': 'Device',
       'snakecase': 'device',
     },
+    'short': 'DevUnique',
     'suffix': 'UniqueDeviceIdentifier',
     'endpoint': {
       'base': 'device',
@@ -148,6 +158,7 @@ const linkOpenFda = [
       'maincase': 'Drug',
       'snakecase': 'drug',
     },
+    'short': 'DrugEnforce',
     'suffix': 'RecallEnforcementReports',
     'endpoint': {
       'base': 'drug',
@@ -161,6 +172,7 @@ const linkOpenFda = [
       'maincase': 'Drug',
       'snakecase': 'drug',
     },
+    'short': 'DrugEvent',
     'suffix': 'AdverseEvents',
     'endpoint': {
       'base': 'drug',
@@ -174,6 +186,7 @@ const linkOpenFda = [
       'maincase': 'Drug',
       'snakecase': 'drug',
     },
+    'short': 'DrugLabel',
     'suffix': 'ProductLabeling',
     'endpoint': {
       'base': 'drug',
@@ -187,6 +200,7 @@ const linkOpenFda = [
       'maincase': 'Drug',
       'snakecase': 'drug',
     },
+    'short': 'DrugCode',
     'suffix': 'NationalDrugCodeDirectory',
     'endpoint': {
       'base': 'drug',
@@ -200,6 +214,7 @@ const linkOpenFda = [
       'maincase': 'Drug',
       'snakecase': 'drug',
     },
+    'short': 'DrugFDA',
     'suffix': 'AtFDA',
     'endpoint': {
       'base': 'drug',
@@ -213,6 +228,7 @@ const linkOpenFda = [
       'maincase': 'Food',
       'snakecase': 'food',
     },
+    'short': 'FoodRecall',
     'suffix': 'RecallEnforcementReports',
     'endpoint': {
       'base': 'food',
@@ -226,6 +242,7 @@ const linkOpenFda = [
       'maincase': 'Food',
       'snakecase': 'food',
     },
+    'short': 'FoodEvent',
     'suffix': 'AdverseEvents',
     'endpoint': {
       'base': 'food',
@@ -239,6 +256,7 @@ const linkOpenFda = [
       'maincase': 'Other',
       'snakecase': 'other',
     },
+    'short': 'OtherSPL',
     'suffix': 'NationalDrugCodeStructuredProductLabelingDataElements',
     'endpoint': {
       'base': 'other',
@@ -252,6 +270,7 @@ const linkOpenFda = [
       'maincase': 'Other',
       'snakecase': 'other',
     },
+    'short': 'OtherSubstance',
     'suffix': 'SubstanceDataReports',
     'endpoint': {
       'base': 'other',
@@ -265,6 +284,7 @@ const linkOpenFda = [
       'maincase': 'Other',
       'snakecase': 'other',
     },
+    'short': 'OtherUNII',
     'suffix': 'UniqueIngredienIdentifiers',
     'endpoint': {
       'base': 'other',
@@ -278,6 +298,7 @@ const linkOpenFda = [
       'maincase': 'Tobacco',
       'snakecase': 'tobacco',
     },
+    'short': 'TobaccoProb',
     'suffix': 'ProblemReports',
     'endpoint': {
       'base': 'tobacco',

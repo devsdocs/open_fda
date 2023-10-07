@@ -3,7 +3,7 @@ part of 'main.dart';
 /// With no API key: 240 requests per minute, per IP address. 1,000 requests per day, per IP address.
 ///
 /// With an API key: 240 requests per minute, per key. 120,000 requests per day, per key.
-abstract class OpenFDA {
+class OpenFDA {
   OpenFDA(this._query, [this._apiKey]);
 
   final String? _apiKey;
@@ -36,16 +36,18 @@ final class OpenFDAQuery {
     this.limit,
     this.skip,
   }) {
+    // if (!_fields.any((e) => e.runtimeType != _fields[0].runtimeType)) {
+    //   throw ArgumentError('All fields must be of the same type.');
+    // }
     if (limit != null && limit! > 1000) {
       throw ArgumentError('Limit cannot exceed 1000.');
     }
-
     if (skip != null && skip! > 25000) {
       throw ArgumentError('Skip cannot exceed 25000.');
     }
   }
 
-  final _OpenFDAEndpointer _fields;
+  final Endpointer _fields;
   final String? search;
   final SortType? sortType;
   final int? count;
@@ -74,6 +76,23 @@ final class OpenFDAQuery {
   }
 }
 
+// final class OpenFDAFieldSearch {
+//   OpenFDAFieldSearch(this.endpoints, this.querys);
+//   final Endpointer endpoints;
+//   final List<String> querys;
+// }
+
+// final class OpenFDAFieldSort {
+//   OpenFDAFieldSort(this.endpoints, this.sortType);
+//   final Endpointer endpoints;
+//   final SortType sortType;
+// }
+
+// final class OpenFDAFieldCount {
+//   OpenFDAFieldCount(this.endpoints);
+//   final Endpointer endpoints;
+// }
+
 enum SortType {
   ascending._('asc'),
   descending._('desc'),
@@ -83,33 +102,51 @@ enum SortType {
   final String value;
 }
 
-abstract final interface class _OpenFDAEndpointer {
-  _OpenFDAEndpointer(this._endPointBase);
+abstract final class Endpointer {
+  Endpointer(
+    this._endPointBase,
+    this.address, {
+    this.possValue,
+    this.possValueReference,
+  }) {
+    if (possValue != null && possValueReference != null) {
+      throw ArgumentError(
+        "Only one or both of 'possibleValue' or 'possibleValueReference' should be null, both can not be not null",
+      );
+    }
+  }
   final _Endpoints _endPointBase;
+  final String address;
+  final String? possValue;
+  final PossibleValueReference? possValueReference;
+
+  String operator +(Endpointer other) {
+    if ((runtimeType != other.runtimeType) ||
+        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
+      throw ArgumentError('Different type of field detected');
+    }
+    return '';
+  }
+
+  String operator /(Endpointer other) {
+    if ((runtimeType != other.runtimeType) ||
+        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
+      throw ArgumentError('Different type of field detected');
+    }
+    return '';
+  }
+
+  String operator &(Endpointer other) {
+    if ((runtimeType != other.runtimeType) ||
+        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
+      throw ArgumentError('Different type of field detected');
+    }
+    return '';
+  }
 }
 
-final class OpenFDAPossibleValueReference {
-  OpenFDAPossibleValueReference(this.name, {this.link});
+final class PossibleValueReference {
+  const PossibleValueReference(this.name, {this.link});
   final String? name;
   final String? link;
-}
-
-enum PossibleValueType {
-  bool,
-  oneOf,
-  reference,
-}
-
-
-abstract final class _OpenFDAFieldSearch{
-_OpenFDAFieldSearch(this.endpoints);
-final _OpenFDAEndpointer endpoints;
-}
-abstract final class _OpenFDAFieldSort{
-_OpenFDAFieldSort(this.endpoints);
-final _OpenFDAEndpointer endpoints;
-}
-abstract final class _OpenFDAFieldCount{
-_OpenFDAFieldCount(this.endpoints);
-final _OpenFDAEndpointer endpoints;
 }

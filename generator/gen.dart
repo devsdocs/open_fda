@@ -104,6 +104,7 @@ void go() {
     final prefixLowerCase = prefix['lowercase']! as String;
     final prefixMainCase = prefix['maincase']! as String;
     final prefixSnakeCase = prefix['snakecase']! as String;
+    final shortName = e['short']! as String;
 
     final fileName = '${prefixLowerCase}_$suffix';
 
@@ -118,18 +119,21 @@ void go() {
     final getProperties = getListOfProps(newJson);
 
     final buff = StringBuffer();
+    buff.writeln('// ignore_for_file: unused_element');
+    buff.writeln();
     buff.writeln("part of '../main.dart';");
     final getProdData = superClassWriter(
       prefixMainCase,
       prefixSnakeCase,
       suffix,
+      shortName,
       getProperties,
       isProduction: true,
     );
     buff.writeln(getProdData);
 
     writeToFile(
-      'lib/src/models/${fileName.toLowerCase()}.dart',
+      'lib/src/fields/${fileName.toLowerCase()}.dart',
       buff.toString(),
     );
   }
@@ -142,18 +146,38 @@ String superClassWriter(
   String prefixMainCase,
   String prefixSnakeCase,
   String suffix,
+  String shortName,
   List<Props> props, {
   String? childSuffix,
   bool isProduction = false,
 }) {
   final buff = StringBuffer();
 
-  // final superClassName = '$prefixMainCase${suffix}Fields';
+  final superClassName = '$prefixMainCase${suffix}Fields';
+
   if (childSuffix == null) {
-    // buff.writeln(
-    //   'abstract final class $superClassName {',
-    // );
-    // buff.writeln('}');
+    buff.writeln(
+      'final class $superClassName extends Endpointer {',
+    );
+    buff.writeln(
+      'factory $superClassName($shortName data,) => $superClassName._(data,);',
+    );
+    buff.writeln(
+      '$superClassName._(this._data,) : super(_Endpoints.$prefixSnakeCase$suffix, _data.address, possValue: _data.possibleValue, possValueReference: _data.possibleValueReference,);',
+    );
+    buff.writeln('final $shortName _data;');
+
+    buff.writeln('@override');
+    buff.writeln('String get address => _data.address;');
+
+    buff.writeln('@override');
+    buff.writeln('String? get possValue => _data.possibleValue;');
+
+    buff.writeln('@override');
+    buff.writeln(
+      'PossibleValueReference? get possValueReference => _data.possibleValueReference;',
+    );
+    buff.writeln('}');
   }
 
   buff.writeln(
@@ -161,6 +185,7 @@ String superClassWriter(
       prefixMainCase,
       prefixSnakeCase,
       suffix,
+      shortName,
       props,
       childSuffix: childSuffix,
       isProduction: isProduction,
@@ -174,45 +199,87 @@ String classWriter(
   String prefixMainCase,
   String prefixSnakeCase,
   String suffix,
+  String shortName,
   List<Props> props, {
   String? childSuffix,
   bool isProduction = false,
 }) {
   final buff = StringBuffer();
 
-  // final superClassName = '$prefixMainCase${suffix}Fields';
+  if (isProduction) {
+    final totalEndpoint = props.length;
+    final withExact =
+        props.where((e) => e.isExact != null).where((ec) => ec.isExact!).length;
+    final withoutPossibleValue = props
+        .where(
+          (e) => e.possibleValuesType == PossibleValuesType.none,
+        )
+        .length;
+    final referencePossibleValue = props
+        .where(
+          (e) => e.possibleValuesType == PossibleValuesType.reference,
+        )
+        .length;
+    final oneOfPossibleValue = props
+        .where(
+          (e) => e.possibleValuesType == PossibleValuesType.oneOf,
+        )
+        .length;
+    final topEndpoint = props.where((e) => !e.address.containsDot).length;
 
-  final className = '$prefixMainCase${childSuffix ?? suffix}';
+    final docs = [
+      'Total Endpoints: $totalEndpoint,',
+      'Top Endpoints: $topEndpoint,',
+      'Endpoints with exact: $withExact,',
+      'Without Possible Value: $withoutPossibleValue,',
+      'Reference Possible Value: $referencePossibleValue,',
+      'One-Of Possible Value: $oneOfPossibleValue,',
+    ];
 
-  buff.writeln(
-    'final class $className extends _OpenFDAEndpointer {',
-  );
-  buff.writeln(
-    constructorWriter(
-      prefixMainCase,
-      prefixSnakeCase,
-      suffix,
-      props,
-      childSuffix: childSuffix,
-      isProduction: isProduction,
-    ),
-  );
+    buff.writeln(docWriterFromList(docs));
+    buff.writeln(
+      'enum $shortName {',
+    );
+  } else {
+    // final superClassName = '$prefixMainCase${suffix}Fields';
+    final className = '$prefixMainCase${childSuffix ?? suffix}';
+    buff.writeln(
+      'final class $className extends OpenFDAEndpointer {',
+    );
+  }
 
   // buff.writeln();
   // buff.writeln('@override');
   // buff.writeln(
   //   'final endPointBase = _Endpoints.$prefixSnakeCase$suffix;',
   // );
-  buff.writeln();
   final fieldsData = fieldWriter(
     prefixMainCase,
     prefixSnakeCase,
     suffix,
+    shortName,
     props,
     childSuffix: childSuffix,
     isProduction: isProduction,
   );
+  buff.writeln();
+
+  buff.writeln();
   buff.writeln(fieldsData.$1);
+  if (isProduction) {
+    buff.writeln(';');
+  }
+  buff.writeln(
+    constructorWriter(
+      prefixMainCase,
+      prefixSnakeCase,
+      suffix,
+      shortName,
+      props,
+      childSuffix: childSuffix,
+      isProduction: isProduction,
+    ),
+  );
   buff.writeln();
   buff.writeln('}');
 
@@ -229,6 +296,7 @@ String constructorWriter(
   String prefixMainCase,
   String prefixSnakeCase,
   String suffix,
+  String shortName,
   List<Props> props, {
   String? childSuffix,
   bool isProduction = false,
@@ -251,8 +319,14 @@ String constructorWriter(
     }
     buff.writeln('});');
   } else {
-    final className = '$prefixMainCase${childSuffix ?? suffix}';
-    buff.writeln('$className() : super(_Endpoints.$prefixSnakeCase$suffix,);');
+    // final className = '$prefixMainCase${childSuffix ?? suffix}';
+    // buff.writeln('$className() : super(_Endpoints.$prefixSnakeCase$suffix,);');
+    buff.writeln(
+      'const $shortName._(this.address, {this.possibleValue, this.possibleValueReference,});',
+    );
+    buff.writeln('final String address;');
+    buff.writeln('final String? possibleValue;');
+    buff.writeln('final PossibleValueReference? possibleValueReference;');
   }
 
   return buff.toString();
@@ -262,6 +336,7 @@ String constructorWriter(
   String prefixMainCase,
   String prefixSnakeCase,
   String suffix,
+  String shortName,
   List<Props> props, {
   String? childSuffix,
   bool isProduction = false,
@@ -295,27 +370,16 @@ String constructorWriter(
         continue;
       }
       if (p.comment != null) {
-        buff.writeln(docWriter(p.comment!));
+        buff.writeln(docWriterFromString(p.comment!));
       }
-      // if (p.possibleValues != null) {
-      //   buff.writeln(
-      //     '///',
-      //   );
-      //   buff.writeln(
-      //     '/// ${p.possibleValues}',
-      //   );
-      // }
-      // buff.writeln(
-      //   '/// $p',
-      // );
       if (p.possibleValues == null) {
         buff.writeln(
-          "final ${p.address.toSnakeCase.toSnakeCase} = '${p.address}';",
+          "${p.address.toSnakeCase.toSnakeCase}._('${p.address}',),",
         );
         if (p.isExact != null) {
           if (p.isExact!) {
             buff.writeln(
-              "final ${p.address.toSnakeCase.toSnakeCase}Exact = '${p.address}.exact';",
+              "${p.address.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact',),",
             );
           }
         }
@@ -323,51 +387,81 @@ String constructorWriter(
         if (p.possibleValuesType == PossibleValuesType.reference) {
           final poss = p.possibleValues! as Reference;
           buff.writeln(
-            "final ${p.address.toSnakeCase.toSnakeCase} = ('${p.address}', PossibleValueType.reference, OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+            "${p.address.toSnakeCase.toSnakeCase}._('${p.address}', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
           );
           if (p.isExact != null) {
             if (p.isExact!) {
               buff.writeln(
-                "final ${p.address.toSnakeCase.toSnakeCase}Exact = ('${p.address}.exact', PossibleValueType.reference, OpenFDAPossibleValueReference('${poss.name}', link: '${poss.link}',));",
+                "${p.address.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
               );
             }
           }
         } else {
           final poss = p.possibleValues! as OneOf;
           if (poss.data != null) {
-            final writeEnum = enumWriter(
-              descObjectName,
-              p,
-              childSuffix: childSuffix,
-              isProduction: isProduction,
-            );
-            dataListOfObject.add(writeEnum);
+            // final writeEnum = enumWriter(
+            //   descObjectName,
+            //   p,
+            //   childSuffix: childSuffix,
+            //   isProduction: isProduction,
+            // );
+            // dataListOfObject.add(writeEnum);
+
             poss.data!.forEach((key, value) {
-              buff.writeln(docWriter(value.toString()));
-              if (!poss.isBool!) {
-                final enumType = getEnumType(key);
-                buff.writeln(
-                  "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
-                );
-                if (p.isExact != null) {
-                  if (p.isExact!) {
-                    buff.writeln(
-                      "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
-                    );
-                  }
-                }
-              } else {
-                buff.writeln(
-                  "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.bool, $key,);",
-                );
-                if (p.isExact != null) {
-                  if (p.isExact!) {
-                    buff.writeln(
-                      "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', PossibleValueType.bool, $key,);",
-                    );
-                  }
+              buff.writeln(docWriterFromString(value.toString()));
+
+              final cleanKey = key.clean;
+              final formatKey = key == '*'
+                  ? 'Asterix'
+                  : cleanKey.contains(' ')
+                      ? cleanKey.capitalizeEachWordInSentence
+                      : cleanKey == cleanKey.toUpperCase()
+                          ? cleanKey.contains('/')
+                              ? cleanKey
+                                  .split('/')
+                                  .map((e) => e.capitalizeWord)
+                                  .join('/')
+                              : cleanKey.capitalizeWord
+                          : cleanKey;
+
+              final enumType =
+                  getEnumType(p.address.toSnakeCase.toSnakeCase + formatKey);
+
+              buff.writeln(
+                "${enumType.toSnakeCase.toSnakeCase}._('${p.address}', possibleValue: '$key',),",
+              );
+              if (p.isExact != null) {
+                if (p.isExact!) {
+                  buff.writeln(
+                    "${enumType.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValue: '$key',),",
+                  );
                 }
               }
+
+              // if (!poss.isBool!) {
+              //   final enumType = getEnumType(key);
+              //   buff.writeln(
+              //     "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
+              //   );
+              //   if (p.isExact != null) {
+              //     if (p.isExact!) {
+              //       buff.writeln(
+              //         "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
+              //       );
+              //     }
+              //   }
+              // } else {
+              //   buff.writeln(
+              //     "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.bool, $key,);",
+              //   );
+              //   if (p.isExact != null) {
+              //     if (p.isExact!) {
+              //       buff.writeln(
+              //         "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', PossibleValueType.bool, $key,);",
+              //       );
+              //     }
+              //   }
+              // }
             });
           } else {
             throw Exception('Empty One Of');
@@ -379,12 +473,13 @@ String constructorWriter(
         prefixMainCase,
         prefixSnakeCase,
         suffix,
+        shortName,
         listOfObjectChild,
         childSuffix: childSuffix,
         isProduction: isProduction,
       );
-
       buff.writeln();
+
       buff.writeln(getChild.$1);
       buff.writeln();
       dataListOfObject.addAll(getChild.$2);
@@ -408,6 +503,7 @@ String constructorWriter(
           prefixMainCase,
           prefixSnakeCase,
           suffix,
+          shortName,
           listOfObjectChild,
           childSuffix: newChildSuffix,
           isProduction: isProduction,
@@ -425,6 +521,7 @@ String constructorWriter(
             prefixMainCase,
             prefixSnakeCase,
             suffix,
+            shortName,
             listOfObjectChild,
             childSuffix: newChildSuffix,
             isProduction: isProduction,
@@ -457,41 +554,41 @@ String getEnumType(String key) {
   return enumType;
 }
 
-String enumWriter(
-  String descObjectName,
-  Props props, {
-  String? childSuffix,
-  bool isProduction = false,
-}) {
-  final poss = props.possibleValues! as OneOf;
+// String enumWriter(
+//   String descObjectName,
+//   Props props, {
+//   String? childSuffix,
+//   bool isProduction = false,
+// }) {
+//   final poss = props.possibleValues! as OneOf;
 
-  final buff = StringBuffer();
+//   final buff = StringBuffer();
 
-  if (poss.data != null) {
-    if (!poss.isBool!) {
-      if (props.comment != null) {
-        buff.writeln(docWriter(props.comment!));
-      }
-      buff.writeln('enum _$descObjectName {');
+//   if (poss.data != null) {
+//     if (!poss.isBool!) {
+//       if (props.comment != null) {
+//         buff.writeln(docWriter(props.comment!));
+//       }
+//       buff.writeln('enum _$descObjectName {');
 
-      poss.data!.forEach((key, value) {
-        final enumType = getEnumType(key);
+//       poss.data!.forEach((key, value) {
+//         final enumType = getEnumType(key);
 
-        buff.writeln(docWriter(value.toString()));
-        buff.writeln("${enumType.toSnakeCase}._('$key',),");
-      });
+//         buff.writeln(docWriter(value.toString()));
+//         buff.writeln("${enumType.toSnakeCase}._('$key',),");
+//       });
 
-      buff.writeln(';');
-      buff.writeln('const _$descObjectName._(this.value,);');
-      buff.writeln('final String value;');
-      buff.writeln('}');
-    }
-  } else {
-    throw Exception('Empty One Of');
-  }
+//       buff.writeln(';');
+//       buff.writeln('const _$descObjectName._(this.value,);');
+//       buff.writeln('final String value;');
+//       buff.writeln('}');
+//     }
+//   } else {
+//     throw Exception('Empty One Of');
+//   }
 
-  return buff.toString();
-}
+//   return buff.toString();
+// }
 
 List<Props> getListOfProps(
   Map<String, dynamic> map, {
@@ -580,7 +677,32 @@ List<Props> getListOfProps(
   return pool.toSet().toList()..sort();
 }
 
-String docWriter(String source) {
+String docWriterFromList(List source) {
+  final docBuff = StringBuffer();
+  final sanitize = source.map((e) => e.toString().clean);
+  final types = "/// ${sanitize.join(' ')}";
+  if (types.length >= 80) {
+    docBuff.write('///');
+    int len = 3;
+    for (final e in sanitize) {
+      if (e.length + len + 1 > 78) {
+        docBuff.writeln();
+        docBuff.write('///');
+        docBuff.write(' $e');
+        len = 4 + e.length;
+      } else {
+        len += e.length + 1;
+        docBuff.write(' $e');
+      }
+    }
+  } else {
+    docBuff.write(types);
+  }
+
+  return docBuff.toString();
+}
+
+String docWriterFromString(String source) {
   final docBuff = StringBuffer();
   final sanitize = source.clean;
   final types = '/// $sanitize';
@@ -636,7 +758,7 @@ Props getProps(String address, Map<dynamic, dynamic> value) {
                     'one_of'
                 ? PossibleValuesType.oneOf
                 : PossibleValuesType.reference
-            : null,
+            : PossibleValuesType.none,
     possibleValues: isStringList
         ? getProps(address, value['items'] as Map<String, dynamic>)
             .possibleValues
@@ -881,11 +1003,12 @@ extension Str on String {
 
   String get removeNonAlph {
     final alphs = RegExp(r'[a-zA-Z0-9\*]');
-    final res = !contains(' ')
-        ? !contains(alphs)
+    final format = replaceAll('/', 'Or');
+    final res = !format.contains(' ')
+        ? !format.contains(alphs)
             ? throw Exception('Empty!')
-            : toSnakeCase
-        : (clean.split(' ')
+            : format.toSnakeCase
+        : (format.clean.split(' ')
               ..retainWhere(
                 (e) => e.contains(alphs),
               ))

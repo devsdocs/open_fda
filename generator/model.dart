@@ -1,4 +1,5 @@
 enum PossibleValuesType {
+  none,
   oneOf,
   reference;
 }
