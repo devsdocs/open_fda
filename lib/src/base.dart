@@ -128,7 +128,7 @@ abstract final class Endpointer {
     return '';
   }
 
-  String operator /(Endpointer other) {
+  String operator |(Endpointer other) {
     if ((runtimeType != other.runtimeType) ||
         (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
       throw ArgumentError('Different type of field detected');
