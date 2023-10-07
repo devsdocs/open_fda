@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DrugNationalDrugCodeDirectoryFields extends Endpointer {
+final class DrugNationalDrugCodeDirectoryFields
+    extends Endpointer<DrugNationalDrugCodeDirectoryFields> {
   factory DrugNationalDrugCodeDirectoryFields(
     DrugCode data,
   ) =>
@@ -19,7 +20,7 @@ final class DrugNationalDrugCodeDirectoryFields extends Endpointer {
         );
   final DrugCode _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -88,31 +89,31 @@ enum DrugCode {
   /// This is the assigned DEA Schedule number as reported by the labeler.
   /// Values are CI, CII, CIII, CIV, and CV.
   /// CI
-  deaSchedule1._(
+  deaSchedule$1._(
     'dea_schedule',
     possibleValue: '1',
   ),
 
   /// CII
-  deaSchedule2._(
+  deaSchedule$2._(
     'dea_schedule',
     possibleValue: '2',
   ),
 
   /// CIII
-  deaSchedule3._(
+  deaSchedule$3._(
     'dea_schedule',
     possibleValue: '3',
   ),
 
   /// CIV
-  deaSchedule4._(
+  deaSchedule$4._(
     'dea_schedule',
     possibleValue: '4',
   ),
 
   /// CV
-  deaSchedule5._(
+  deaSchedule$5._(
     'dea_schedule',
     possibleValue: '5',
   ),

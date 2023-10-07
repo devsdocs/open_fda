@@ -38,7 +38,7 @@ String formatKeyForEnum(String key) {
                           .join('/')
                       : cleanKey.capitalizeWord
                   : cleanKey;
-  return formatKey;
+  return '\$$formatKey';
 }
 
 String getEnumName(String key) {

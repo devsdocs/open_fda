@@ -2,7 +2,7 @@
 
 part of '../main.dart';
 
-final class DeviceRecallsFields extends Endpointer {
+final class DeviceRecallsFields extends Endpointer<DeviceRecallsFields> {
   factory DeviceRecallsFields(
     DevRecall data,
   ) =>
@@ -19,7 +19,7 @@ final class DeviceRecallsFields extends Endpointer {
         );
   final DevRecall _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -130,37 +130,37 @@ enum DevRecall {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513)
   /// Class I (low to moderate risk): general controls
-  openfdaDeviceClass1._(
+  openfdaDeviceClass$1._(
     'openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  openfdaDeviceClass2._(
+  openfdaDeviceClass$2._(
     'openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  openfdaDeviceClass3._(
+  openfdaDeviceClass$3._(
     'openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  openfdaDeviceClassF._(
+  openfdaDeviceClass$F._(
     'openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  openfdaDeviceClassN._(
+  openfdaDeviceClass$N._(
     'openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  openfdaDeviceClassU._(
+  openfdaDeviceClass$U._(
     'openfda.device_class',
     possibleValue: 'U',
   ),
@@ -209,7 +209,7 @@ enum DevRecall {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  openfdaRegulationNumber._(
+  openfdaRegulationNumber$$._(
     'openfda.regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -217,7 +217,7 @@ enum DevRecall {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  openfdaRegulationNumberExact._(
+  openfdaRegulationNumberExact$$._(
     'openfda.regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',

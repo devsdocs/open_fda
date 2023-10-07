@@ -77,7 +77,7 @@ extension Str on String {
   }
 
   String get removeNonAlph {
-    final alphs = RegExp(r'[a-zA-Z0-9\*]');
+    final alphs = RegExp(r'[a-zA-Z0-9\*\$]');
     final format = replaceAll('/', 'Or');
     final res = !format.contains(' ')
         ? !format.contains(alphs)

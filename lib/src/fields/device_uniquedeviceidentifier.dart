@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DeviceUniqueDeviceIdentifierFields extends Endpointer {
+final class DeviceUniqueDeviceIdentifierFields
+    extends Endpointer<DeviceUniqueDeviceIdentifierFields> {
   factory DeviceUniqueDeviceIdentifierFields(
     DevUnique data,
   ) =>
@@ -19,7 +20,7 @@ final class DeviceUniqueDeviceIdentifierFields extends Endpointer {
         );
   final DevUnique _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -63,21 +64,21 @@ enum DevUnique {
   /// Indicates whether the device is in commercial distribution as defined
   /// under 21 CFR 807.3(b).
   /// In Commercial Distribution
-  commercialDistributionStatusInCommercialDistribution._(
+  commercialDistributionStatus$InCommercialDistribution._(
     'commercial_distribution_status',
     possibleValue: 'In Commercial Distribution',
   ),
-  commercialDistributionStatusInCommercialDistributionExact._(
+  commercialDistributionStatus$InCommercialDistributionExact._(
     'commercial_distribution_status.exact',
     possibleValue: 'In Commercial Distribution',
   ),
 
   /// Not in Commercial Distribution
-  commercialDistributionStatusNotInCommercialDistribution._(
+  commercialDistributionStatus$NotInCommercialDistribution._(
     'commercial_distribution_status',
     possibleValue: 'Not in Commercial Distribution',
   ),
-  commercialDistributionStatusNotInCommercialDistributionExact._(
+  commercialDistributionStatus$NotInCommercialDistributionExact._(
     'commercial_distribution_status.exact',
     possibleValue: 'Not in Commercial Distribution',
   ),
@@ -131,416 +132,416 @@ enum DevUnique {
   /// Dimension type for the clinically relevant measurement of the medical
   /// device.
   /// Angle
-  deviceSizesTypeAngle._(
+  deviceSizesType$Angle._(
     'device_sizes.type',
     possibleValue: 'Angle',
   ),
-  deviceSizesTypeAngleExact._(
+  deviceSizesType$AngleExact._(
     'device_sizes.type.exact',
     possibleValue: 'Angle',
   ),
 
   /// Area/Surface Area
-  deviceSizesTypeAreaOrsurfaceArea._(
+  deviceSizesType$AreaOrsurfaceArea._(
     'device_sizes.type',
     possibleValue: 'Area/Surface Area',
   ),
-  deviceSizesTypeAreaOrsurfaceAreaExact._(
+  deviceSizesType$AreaOrsurfaceAreaExact._(
     'device_sizes.type.exact',
     possibleValue: 'Area/Surface Area',
   ),
 
   /// Catheter Gauge
-  deviceSizesTypeCatheterGauge._(
+  deviceSizesType$CatheterGauge._(
     'device_sizes.type',
     possibleValue: 'Catheter Gauge',
   ),
-  deviceSizesTypeCatheterGaugeExact._(
+  deviceSizesType$CatheterGaugeExact._(
     'device_sizes.type.exact',
     possibleValue: 'Catheter Gauge',
   ),
 
   /// Circumference
-  deviceSizesTypeCircumference._(
+  deviceSizesType$Circumference._(
     'device_sizes.type',
     possibleValue: 'Circumference',
   ),
-  deviceSizesTypeCircumferenceExact._(
+  deviceSizesType$CircumferenceExact._(
     'device_sizes.type.exact',
     possibleValue: 'Circumference',
   ),
 
   /// Depth; Device Size Text, specify;
-  deviceSizesTypeDepthDeviceSizeTextSpecify._(
+  deviceSizesType$DepthDeviceSizeTextSpecify._(
     'device_sizes.type',
     possibleValue: 'Depth; Device Size Text, specify;',
   ),
-  deviceSizesTypeDepthDeviceSizeTextSpecifyExact._(
+  deviceSizesType$DepthDeviceSizeTextSpecifyExact._(
     'device_sizes.type.exact',
     possibleValue: 'Depth; Device Size Text, specify;',
   ),
 
   /// Height
-  deviceSizesTypeHeight._(
+  deviceSizesType$Height._(
     'device_sizes.type',
     possibleValue: 'Height',
   ),
-  deviceSizesTypeHeightExact._(
+  deviceSizesType$HeightExact._(
     'device_sizes.type.exact',
     possibleValue: 'Height',
   ),
 
   /// Length
-  deviceSizesTypeLength._(
+  deviceSizesType$Length._(
     'device_sizes.type',
     possibleValue: 'Length',
   ),
-  deviceSizesTypeLengthExact._(
+  deviceSizesType$LengthExact._(
     'device_sizes.type.exact',
     possibleValue: 'Length',
   ),
 
   /// Lumen/Inner Diameter
-  deviceSizesTypeLumenOrinnerDiameter._(
+  deviceSizesType$LumenOrinnerDiameter._(
     'device_sizes.type',
     possibleValue: 'Lumen/Inner Diameter',
   ),
-  deviceSizesTypeLumenOrinnerDiameterExact._(
+  deviceSizesType$LumenOrinnerDiameterExact._(
     'device_sizes.type.exact',
     possibleValue: 'Lumen/Inner Diameter',
   ),
 
   /// Needle Gauge
-  deviceSizesTypeNeedleGauge._(
+  deviceSizesType$NeedleGauge._(
     'device_sizes.type',
     possibleValue: 'Needle Gauge',
   ),
-  deviceSizesTypeNeedleGaugeExact._(
+  deviceSizesType$NeedleGaugeExact._(
     'device_sizes.type.exact',
     possibleValue: 'Needle Gauge',
   ),
 
   /// Outer Diameter
-  deviceSizesTypeOuterDiameter._(
+  deviceSizesType$OuterDiameter._(
     'device_sizes.type',
     possibleValue: 'Outer Diameter',
   ),
-  deviceSizesTypeOuterDiameterExact._(
+  deviceSizesType$OuterDiameterExact._(
     'device_sizes.type.exact',
     possibleValue: 'Outer Diameter',
   ),
 
   /// Pore Size
-  deviceSizesTypePoreSize._(
+  deviceSizesType$PoreSize._(
     'device_sizes.type',
     possibleValue: 'Pore Size',
   ),
-  deviceSizesTypePoreSizeExact._(
+  deviceSizesType$PoreSizeExact._(
     'device_sizes.type.exact',
     possibleValue: 'Pore Size',
   ),
 
   /// Pressure
-  deviceSizesTypePressure._(
+  deviceSizesType$Pressure._(
     'device_sizes.type',
     possibleValue: 'Pressure',
   ),
-  deviceSizesTypePressureExact._(
+  deviceSizesType$PressureExact._(
     'device_sizes.type.exact',
     possibleValue: 'Pressure',
   ),
 
   /// Total Volume
-  deviceSizesTypeTotalVolume._(
+  deviceSizesType$TotalVolume._(
     'device_sizes.type',
     possibleValue: 'Total Volume',
   ),
-  deviceSizesTypeTotalVolumeExact._(
+  deviceSizesType$TotalVolumeExact._(
     'device_sizes.type.exact',
     possibleValue: 'Total Volume',
   ),
 
   /// Weight
-  deviceSizesTypeWeight._(
+  deviceSizesType$Weight._(
     'device_sizes.type',
     possibleValue: 'Weight',
   ),
-  deviceSizesTypeWeightExact._(
+  deviceSizesType$WeightExact._(
     'device_sizes.type.exact',
     possibleValue: 'Weight',
   ),
 
   /// Width
-  deviceSizesTypeWidth._(
+  deviceSizesType$Width._(
     'device_sizes.type',
     possibleValue: 'Width',
   ),
-  deviceSizesTypeWidthExact._(
+  deviceSizesType$WidthExact._(
     'device_sizes.type.exact',
     possibleValue: 'Width',
   ),
 
   /// The unit of measure associated with each clinically relevant size.
   /// Centiliter
-  deviceSizesUnitCentiliter._(
+  deviceSizesUnit$Centiliter._(
     'device_sizes.unit',
     possibleValue: 'Centiliter',
   ),
 
   /// Centimeter
-  deviceSizesUnitCentimeter._(
+  deviceSizesUnit$Centimeter._(
     'device_sizes.unit',
     possibleValue: 'Centimeter',
   ),
 
   /// Cubic Inch
-  deviceSizesUnitCubicInch._(
+  deviceSizesUnit$CubicInch._(
     'device_sizes.unit',
     possibleValue: 'Cubic Inch',
   ),
 
   /// Cup
-  deviceSizesUnitCup._(
+  deviceSizesUnit$Cup._(
     'device_sizes.unit',
     possibleValue: 'Cup',
   ),
 
   /// Deciliter
-  deviceSizesUnitDeciliter._(
+  deviceSizesUnit$Deciliter._(
     'device_sizes.unit',
     possibleValue: 'Deciliter',
   ),
 
   /// Decimeter
-  deviceSizesUnitDecimeter._(
+  deviceSizesUnit$Decimeter._(
     'device_sizes.unit',
     possibleValue: 'Decimeter',
   ),
 
   /// Feet
-  deviceSizesUnitFeet._(
+  deviceSizesUnit$Feet._(
     'device_sizes.unit',
     possibleValue: 'Feet',
   ),
 
   /// Femtoliter
-  deviceSizesUnitFemtoliter._(
+  deviceSizesUnit$Femtoliter._(
     'device_sizes.unit',
     possibleValue: 'Femtoliter',
   ),
 
   /// Femtometer
-  deviceSizesUnitFemtometer._(
+  deviceSizesUnit$Femtometer._(
     'device_sizes.unit',
     possibleValue: 'Femtometer',
   ),
 
   /// Fluid Ounce
-  deviceSizesUnitFluidOunce._(
+  deviceSizesUnit$FluidOunce._(
     'device_sizes.unit',
     possibleValue: 'Fluid Ounce',
   ),
 
   /// French
-  deviceSizesUnitFrench._(
+  deviceSizesUnit$French._(
     'device_sizes.unit',
     possibleValue: 'French',
   ),
 
   /// Gallon
-  deviceSizesUnitGallon._(
+  deviceSizesUnit$Gallon._(
     'device_sizes.unit',
     possibleValue: 'Gallon',
   ),
 
   /// Gauge
-  deviceSizesUnitGauge._(
+  deviceSizesUnit$Gauge._(
     'device_sizes.unit',
     possibleValue: 'Gauge',
   ),
 
   /// Gram
-  deviceSizesUnitGram._(
+  deviceSizesUnit$Gram._(
     'device_sizes.unit',
     possibleValue: 'Gram',
   ),
 
   /// Hertz
-  deviceSizesUnitHertz._(
+  deviceSizesUnit$Hertz._(
     'device_sizes.unit',
     possibleValue: 'Hertz',
   ),
 
   /// Inch
-  deviceSizesUnitInch._(
+  deviceSizesUnit$Inch._(
     'device_sizes.unit',
     possibleValue: 'Inch',
   ),
 
   /// KiloPascal
-  deviceSizesUnitKiloPascal._(
+  deviceSizesUnit$KiloPascal._(
     'device_sizes.unit',
     possibleValue: 'KiloPascal',
   ),
 
   /// Kilogram
-  deviceSizesUnitKilogram._(
+  deviceSizesUnit$Kilogram._(
     'device_sizes.unit',
     possibleValue: 'Kilogram',
   ),
 
   /// Kiloliter
-  deviceSizesUnitKiloliter._(
+  deviceSizesUnit$Kiloliter._(
     'device_sizes.unit',
     possibleValue: 'Kiloliter',
   ),
 
   /// Kilometer
-  deviceSizesUnitKilometer._(
+  deviceSizesUnit$Kilometer._(
     'device_sizes.unit',
     possibleValue: 'Kilometer',
   ),
 
   /// Liter
-  deviceSizesUnitLiter._(
+  deviceSizesUnit$Liter._(
     'device_sizes.unit',
     possibleValue: 'Liter',
   ),
 
   /// Meter
-  deviceSizesUnitMeter._(
+  deviceSizesUnit$Meter._(
     'device_sizes.unit',
     possibleValue: 'Meter',
   ),
 
   /// Microgram
-  deviceSizesUnitMicrogram._(
+  deviceSizesUnit$Microgram._(
     'device_sizes.unit',
     possibleValue: 'Microgram',
   ),
 
   /// Microliter
-  deviceSizesUnitMicroliter._(
+  deviceSizesUnit$Microliter._(
     'device_sizes.unit',
     possibleValue: 'Microliter',
   ),
 
   /// Micrometer
-  deviceSizesUnitMicrometer._(
+  deviceSizesUnit$Micrometer._(
     'device_sizes.unit',
     possibleValue: 'Micrometer',
   ),
 
   /// Milligram
-  deviceSizesUnitMilligram._(
+  deviceSizesUnit$Milligram._(
     'device_sizes.unit',
     possibleValue: 'Milligram',
   ),
 
   /// Milliliter
-  deviceSizesUnitMilliliter._(
+  deviceSizesUnit$Milliliter._(
     'device_sizes.unit',
     possibleValue: 'Milliliter',
   ),
 
   /// Millimeter
-  deviceSizesUnitMillimeter._(
+  deviceSizesUnit$Millimeter._(
     'device_sizes.unit',
     possibleValue: 'Millimeter',
   ),
 
   /// Nanoliter
-  deviceSizesUnitNanoliter._(
+  deviceSizesUnit$Nanoliter._(
     'device_sizes.unit',
     possibleValue: 'Nanoliter',
   ),
 
   /// Nanometer
-  deviceSizesUnitNanometer._(
+  deviceSizesUnit$Nanometer._(
     'device_sizes.unit',
     possibleValue: 'Nanometer',
   ),
 
   /// Picoliter
-  deviceSizesUnitPicoliter._(
+  deviceSizesUnit$Picoliter._(
     'device_sizes.unit',
     possibleValue: 'Picoliter',
   ),
 
   /// Picometer
-  deviceSizesUnitPicometer._(
+  deviceSizesUnit$Picometer._(
     'device_sizes.unit',
     possibleValue: 'Picometer',
   ),
 
   /// Pint
-  deviceSizesUnitPint._(
+  deviceSizesUnit$Pint._(
     'device_sizes.unit',
     possibleValue: 'Pint',
   ),
 
   /// Pound
-  deviceSizesUnitPound._(
+  deviceSizesUnit$Pound._(
     'device_sizes.unit',
     possibleValue: 'Pound',
   ),
 
   /// Pound per Square Inch
-  deviceSizesUnitPoundPerSquareInch._(
+  deviceSizesUnit$PoundPerSquareInch._(
     'device_sizes.unit',
     possibleValue: 'Pound per Square Inch',
   ),
 
   /// Quart
-  deviceSizesUnitQuart._(
+  deviceSizesUnit$Quart._(
     'device_sizes.unit',
     possibleValue: 'Quart',
   ),
 
   /// Square centimeter
-  deviceSizesUnitSquareCentimeter._(
+  deviceSizesUnit$SquareCentimeter._(
     'device_sizes.unit',
     possibleValue: 'Square centimeter',
   ),
 
   /// Square foot
-  deviceSizesUnitSquareFoot._(
+  deviceSizesUnit$SquareFoot._(
     'device_sizes.unit',
     possibleValue: 'Square foot',
   ),
 
   /// Square inch
-  deviceSizesUnitSquareInch._(
+  deviceSizesUnit$SquareInch._(
     'device_sizes.unit',
     possibleValue: 'Square inch',
   ),
 
   /// Square meter
-  deviceSizesUnitSquareMeter._(
+  deviceSizesUnit$SquareMeter._(
     'device_sizes.unit',
     possibleValue: 'Square meter',
   ),
 
   /// Ton
-  deviceSizesUnitTon._(
+  deviceSizesUnit$Ton._(
     'device_sizes.unit',
     possibleValue: 'Ton',
   ),
 
   /// Yard
-  deviceSizesUnitYard._(
+  deviceSizesUnit$Yard._(
     'device_sizes.unit',
     possibleValue: 'Yard',
   ),
 
   /// degree
-  deviceSizesUnitdegree._(
+  deviceSizesUnit$degree._(
     'device_sizes.unit',
     possibleValue: 'degree',
   ),
 
   /// millibar
-  deviceSizesUnitmillibar._(
+  deviceSizesUnit$millibar._(
     'device_sizes.unit',
     possibleValue: 'millibar',
   ),
@@ -563,13 +564,13 @@ enum DevUnique {
 
   /// GMDN Term Status, Active or Obsolete.
   /// Active
-  gmdnTermsCodeStatusActive._(
+  gmdnTermsCodeStatus$Active._(
     'gmdn_terms.code_status',
     possibleValue: 'Active',
   ),
 
   /// Obsolete
-  gmdnTermsCodeStatusObsolete._(
+  gmdnTermsCodeStatus$Obsolete._(
     'gmdn_terms.code_status',
     possibleValue: 'Obsolete',
   ),
@@ -582,13 +583,13 @@ enum DevUnique {
 
   /// GMDN Implantable flag.
   /// false
-  gmdnTermsImplantableFalse._(
+  gmdnTermsImplantable$False._(
     'gmdn_terms.implantable',
     possibleValue: 'false',
   ),
 
   /// true
-  gmdnTermsImplantableTrue._(
+  gmdnTermsImplantable$True._(
     'gmdn_terms.implantable',
     possibleValue: 'true',
   ),
@@ -609,13 +610,13 @@ enum DevUnique {
   /// manufacturing source or otherwise allow the history of the device
   /// manufacturing, packaging, labeling, distribution and use to be determined.
   /// false
-  hasDonationIdNumberFalse._(
+  hasDonationIdNumber$False._(
     'has_donation_id_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasDonationIdNumberTrue._(
+  hasDonationIdNumber$True._(
     'has_donation_id_number',
     possibleValue: 'true',
   ),
@@ -626,13 +627,13 @@ enum DevUnique {
   /// manufacturing source or otherwise allow the history of the device
   /// manufacturing, packaging, labeling, distribution and use to be determined.
   /// false
-  hasExpirationDateFalse._(
+  hasExpirationDate$False._(
     'has_expiration_date',
     possibleValue: 'false',
   ),
 
   /// true
-  hasExpirationDateTrue._(
+  hasExpirationDate$True._(
     'has_expiration_date',
     possibleValue: 'true',
   ),
@@ -646,13 +647,13 @@ enum DevUnique {
   /// source or otherwise allow the history of the device manufacturing,
   /// packaging, labeling, distribution and use to be determined.
   /// false
-  hasLotOrBatchNumberFalse._(
+  hasLotOrBatchNumber$False._(
     'has_lot_or_batch_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasLotOrBatchNumberTrue._(
+  hasLotOrBatchNumber$True._(
     'has_lot_or_batch_number',
     possibleValue: 'true',
   ),
@@ -663,13 +664,13 @@ enum DevUnique {
   /// the history of the device manufacturing, packaging, labeling, distribution
   /// and use to be determined.
   /// false
-  hasManufacturingDateFalse._(
+  hasManufacturingDate$False._(
     'has_manufacturing_date',
     possibleValue: 'false',
   ),
 
   /// true
-  hasManufacturingDateTrue._(
+  hasManufacturingDate$True._(
     'has_manufacturing_date',
     possibleValue: 'true',
   ),
@@ -681,13 +682,13 @@ enum DevUnique {
   /// the device manufacturing, packaging, labeling, distribution and use to be
   /// determined.
   /// false
-  hasSerialNumberFalse._(
+  hasSerialNumber$False._(
     'has_serial_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasSerialNumberTrue._(
+  hasSerialNumber$True._(
     'has_serial_number',
     possibleValue: 'true',
   ),
@@ -704,41 +705,41 @@ enum DevUnique {
 
   /// Organization accredited by FDA to operate a system for the issuance of UDIs
   /// GS1
-  identifiersIssuingAgencyGs1._(
+  identifiersIssuingAgency$Gs1._(
     'identifiers.issuing_agency',
     possibleValue: 'GS1',
   ),
-  identifiersIssuingAgencyGs1Exact._(
+  identifiersIssuingAgency$Gs1Exact._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'GS1',
   ),
 
   /// HIBCC
-  identifiersIssuingAgencyHibcc._(
+  identifiersIssuingAgency$Hibcc._(
     'identifiers.issuing_agency',
     possibleValue: 'HIBCC',
   ),
-  identifiersIssuingAgencyHibccExact._(
+  identifiersIssuingAgency$HibccExact._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'HIBCC',
   ),
 
   /// ICCBBA
-  identifiersIssuingAgencyIccbba._(
+  identifiersIssuingAgency$Iccbba._(
     'identifiers.issuing_agency',
     possibleValue: 'ICCBBA',
   ),
-  identifiersIssuingAgencyIccbbaExact._(
+  identifiersIssuingAgency$IccbbaExact._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'ICCBBA',
   ),
 
   /// NDC/NHRIC
-  identifiersIssuingAgencyNdcOrNhric._(
+  identifiersIssuingAgency$NdcOrNhric._(
     'identifiers.issuing_agency',
     possibleValue: 'NDC/NHRIC',
   ),
-  identifiersIssuingAgencyNdcOrNhricExact._(
+  identifiersIssuingAgency$NdcOrNhricExact._(
     'identifiers.issuing_agency.exact',
     possibleValue: 'NDC/NHRIC',
   ),
@@ -752,21 +753,21 @@ enum DevUnique {
   /// Indicates whether the package is in commercial distribution as defined
   /// under 21 CFR 807.3(b).
   /// In Commercial Distribution
-  identifiersPackageStatusInCommercialDistribution._(
+  identifiersPackageStatus$InCommercialDistribution._(
     'identifiers.package_status',
     possibleValue: 'In Commercial Distribution',
   ),
-  identifiersPackageStatusInCommercialDistributionExact._(
+  identifiersPackageStatus$InCommercialDistributionExact._(
     'identifiers.package_status.exact',
     possibleValue: 'In Commercial Distribution',
   ),
 
   /// Not in Commercial Distribution
-  identifiersPackageStatusNotInCommercialDistribution._(
+  identifiersPackageStatus$NotInCommercialDistribution._(
     'identifiers.package_status',
     possibleValue: 'Not in Commercial Distribution',
   ),
-  identifiersPackageStatusNotInCommercialDistributionExact._(
+  identifiersPackageStatus$NotInCommercialDistributionExact._(
     'identifiers.package_status.exact',
     possibleValue: 'Not in Commercial Distribution',
   ),
@@ -787,7 +788,7 @@ enum DevUnique {
   /// Direct Marking DI. An identifier that is marked directly on the medical
   /// device and is different than the Primary DI Number; only applicable to
   /// devices subject to Direct Marking requirements under 21 CFR 801.45.
-  identifiersTypeDirectMarking._(
+  identifiersType$DirectMarking._(
     'identifiers.type',
     possibleValue: 'Direct Marking',
   ),
@@ -795,13 +796,13 @@ enum DevUnique {
   /// Package DI. A device identifier for the package configuration that
   /// contains multiple units of the base package (does not include shipping
   /// containers).
-  identifiersTypePackage._(
+  identifiersType$Package._(
     'identifiers.type',
     possibleValue: 'Package',
   ),
 
   /// Previous DI
-  identifiersTypePreviousDi._(
+  identifiersType$PreviousDi._(
     'identifiers.type',
     possibleValue: 'Previous DI',
   ),
@@ -812,7 +813,7 @@ enum DevUnique {
   /// base package, which is the lowest package level of a medical device
   /// containing a full UDI. For medical devices without packaging, the primary
   /// DI number and full UDI may be on the device itself.
-  identifiersTypePrimary._(
+  identifiersType$Primary._(
     'identifiers.type',
     possibleValue: 'Primary',
   ),
@@ -822,7 +823,7 @@ enum DevUnique {
   /// primary DI. Under 21 CFR 830.40(a), only one device identifier from any
   /// particular system for the issuance of UDIs may be used to identify a
   /// particular version or model of a device.
-  identifiersTypeSecondary._(
+  identifiersType$Secondary._(
     'identifiers.type',
     possibleValue: 'Secondary',
   ),
@@ -831,7 +832,7 @@ enum DevUnique {
   /// when a UDI is not labeled on the individual device at the level of its
   /// unit of use. Its purpose is to associate the use of a device to/on a
   /// patient.
-  identifiersTypeUnitOfUse._(
+  identifiersType$UnitOfUse._(
     'identifiers.type',
     possibleValue: 'Unit of Use',
   ),
@@ -854,26 +855,26 @@ enum DevUnique {
   /// 3.2(e). At least one of the products in the combination product must be a
   /// device in this case.
   /// false
-  isCombinationProductFalse._(
+  isCombinationProduct$False._(
     'is_combination_product',
     possibleValue: 'false',
   ),
 
   /// true
-  isCombinationProductTrue._(
+  isCombinationProduct$True._(
     'is_combination_product',
     possibleValue: 'true',
   ),
 
   /// The device is exempt from Direct Marking requirements under 21 CFR 801.45.
   /// false
-  isDirectMarkingExemptFalse._(
+  isDirectMarkingExempt$False._(
     'is_direct_marking_exempt',
     possibleValue: 'false',
   ),
 
   /// true
-  isDirectMarkingExemptTrue._(
+  isDirectMarkingExempt$True._(
     'is_direct_marking_exempt',
     possibleValue: 'true',
   ),
@@ -882,13 +883,13 @@ enum DevUnique {
   /// that are intended for implantation, transplantation, infusion, or transfer
   /// into a human recipient as defined under 21 CFR 1271.3.
   /// false
-  isHctPFalse._(
+  isHctP$False._(
     'is_hct_p',
     possibleValue: 'false',
   ),
 
   /// true
-  isHctPTrue._(
+  isHctP$True._(
     'is_hct_p',
     possibleValue: 'true',
   ),
@@ -898,13 +899,13 @@ enum DevUnique {
   /// products, including medical devices, that are packaged together to achieve
   /// a common intended use and are being distributed as a medical device.
   /// false
-  isKitFalse._(
+  isKit$False._(
     'is_kit',
     possibleValue: 'false',
   ),
 
   /// true
-  isKitTrue._(
+  isKit$True._(
     'is_kit',
     possibleValue: 'true',
   ),
@@ -915,13 +916,13 @@ enum DevUnique {
   /// requirements under 21 CFR 801.437. Not all medical products that are NOT
   /// made with natural rubber latex will be marked.
   /// false
-  isLabeledAsNoNrlFalse._(
+  isLabeledAsNoNrl$False._(
     'is_labeled_as_no_nrl',
     possibleValue: 'false',
   ),
 
   /// true
-  isLabeledAsNoNrlTrue._(
+  isLabeledAsNoNrl$True._(
     'is_labeled_as_no_nrl',
     possibleValue: 'true',
   ),
@@ -935,13 +936,13 @@ enum DevUnique {
   /// Rubber Latex Which May Cause Allergic Reactions' or (4) 'The Packaging of
   /// This Product Contains Dry Natural Rubber'.
   /// false
-  isLabeledAsNrlFalse._(
+  isLabeledAsNrl$False._(
     'is_labeled_as_nrl',
     possibleValue: 'false',
   ),
 
   /// true
-  isLabeledAsNrlTrue._(
+  isLabeledAsNrl$True._(
     'is_labeled_as_nrl',
     possibleValue: 'true',
   ),
@@ -949,13 +950,13 @@ enum DevUnique {
   /// Indicates that the device does not require a prescription to use and can
   /// be purchased over the counter.
   /// false
-  isOtcFalse._(
+  isOtc$False._(
     'is_otc',
     possibleValue: 'false',
   ),
 
   /// true
-  isOtcTrue._(
+  isOtc$True._(
     'is_otc',
     possibleValue: 'true',
   ),
@@ -963,26 +964,26 @@ enum DevUnique {
   /// Indicates whether the device is exempt from premarket notification
   /// requirements.
   /// false
-  isPmExemptFalse._(
+  isPmExempt$False._(
     'is_pm_exempt',
     possibleValue: 'false',
   ),
 
   /// true
-  isPmExemptTrue._(
+  isPmExempt$True._(
     'is_pm_exempt',
     possibleValue: 'true',
   ),
 
   /// Indicates whether the device requires a prescription.
   /// false
-  isRxFalse._(
+  isRx$False._(
     'is_rx',
     possibleValue: 'false',
   ),
 
   /// true
-  isRxTrue._(
+  isRx$True._(
     'is_rx',
     possibleValue: 'true',
   ),
@@ -990,13 +991,13 @@ enum DevUnique {
   /// Indicates that the device is intended for one use or on a single patient
   /// during a single procedure.
   /// false
-  isSingleUseFalse._(
+  isSingleUse$False._(
     'is_single_use',
     possibleValue: 'false',
   ),
 
   /// true
-  isSingleUseTrue._(
+  isSingleUse$True._(
     'is_single_use',
     possibleValue: 'true',
   ),
@@ -1014,41 +1015,41 @@ enum DevUnique {
   /// device labeling. Please see the ASTM F2503-13 standard for more
   /// information.
   /// Labeling does not contain MRI Safety Information
-  mriSafetyLabelingDoesNotContainMriSafetyInformation._(
+  mriSafety$LabelingDoesNotContainMriSafetyInformation._(
     'mri_safety',
     possibleValue: 'Labeling does not contain MRI Safety Information',
   ),
-  mriSafetyLabelingDoesNotContainMriSafetyInformationExact._(
+  mriSafety$LabelingDoesNotContainMriSafetyInformationExact._(
     'mri_safety.exact',
     possibleValue: 'Labeling does not contain MRI Safety Information',
   ),
 
   /// MR Conditional
-  mriSafetyMrConditional._(
+  mriSafety$MrConditional._(
     'mri_safety',
     possibleValue: 'MR Conditional',
   ),
-  mriSafetyMrConditionalExact._(
+  mriSafety$MrConditionalExact._(
     'mri_safety.exact',
     possibleValue: 'MR Conditional',
   ),
 
   /// MR Safe
-  mriSafetyMrSafe._(
+  mriSafety$MrSafe._(
     'mri_safety',
     possibleValue: 'MR Safe',
   ),
-  mriSafetyMrSafeExact._(
+  mriSafety$MrSafeExact._(
     'mri_safety.exact',
     possibleValue: 'MR Safe',
   ),
 
   /// MR Unsafe
-  mriSafetyMrUnsafe._(
+  mriSafety$MrUnsafe._(
     'mri_safety',
     possibleValue: 'MR Unsafe',
   ),
-  mriSafetyMrUnsafeExact._(
+  mriSafety$MrUnsafeExact._(
     'mri_safety.exact',
     possibleValue: 'MR Unsafe',
   ),
@@ -1066,37 +1067,37 @@ enum DevUnique {
 
   /// Indicates the premarket submission type.
   /// 510(k)
-  premarketSubmissionsSubmissionType510k._(
+  premarketSubmissionsSubmissionType$510k._(
     'premarket_submissions.submission_type',
     possibleValue: '510(k)',
   ),
 
   /// BLA
-  premarketSubmissionsSubmissionTypeBla._(
+  premarketSubmissionsSubmissionType$Bla._(
     'premarket_submissions.submission_type',
     possibleValue: 'BLA',
   ),
 
   /// HDE
-  premarketSubmissionsSubmissionTypeHde._(
+  premarketSubmissionsSubmissionType$Hde._(
     'premarket_submissions.submission_type',
     possibleValue: 'HDE',
   ),
 
   /// NDA
-  premarketSubmissionsSubmissionTypeNda._(
+  premarketSubmissionsSubmissionType$Nda._(
     'premarket_submissions.submission_type',
     possibleValue: 'NDA',
   ),
 
   /// PDP
-  premarketSubmissionsSubmissionTypePdp._(
+  premarketSubmissionsSubmissionType$Pdp._(
     'premarket_submissions.submission_type',
     possibleValue: 'PDP',
   ),
 
   /// PMA
-  premarketSubmissionsSubmissionTypePma._(
+  premarketSubmissionsSubmissionType$Pma._(
     'premarket_submissions.submission_type',
     possibleValue: 'PMA',
   ),
@@ -1131,37 +1132,37 @@ enum DevUnique {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513).
   /// Class I (low to moderate risk): general controls
-  productCodesOpenfdaDeviceClass1._(
+  productCodesOpenfdaDeviceClass$1._(
     'product_codes.openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  productCodesOpenfdaDeviceClass2._(
+  productCodesOpenfdaDeviceClass$2._(
     'product_codes.openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  productCodesOpenfdaDeviceClass3._(
+  productCodesOpenfdaDeviceClass$3._(
     'product_codes.openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  productCodesOpenfdaDeviceClassF._(
+  productCodesOpenfdaDeviceClass$F._(
     'product_codes.openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  productCodesOpenfdaDeviceClassN._(
+  productCodesOpenfdaDeviceClass$N._(
     'product_codes.openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  productCodesOpenfdaDeviceClassU._(
+  productCodesOpenfdaDeviceClass$U._(
     'product_codes.openfda.device_class',
     possibleValue: 'U',
   ),
@@ -1231,19 +1232,19 @@ enum DevUnique {
 
   /// Indicates the status of the DI Record.
   /// Deactivated
-  recordStatusDeactivated._(
+  recordStatus$Deactivated._(
     'record_status',
     possibleValue: 'Deactivated',
   ),
 
   /// Published
-  recordStatusPublished._(
+  recordStatus$Published._(
     'record_status',
     possibleValue: 'Published',
   ),
 
   /// Unpublished
-  recordStatusUnpublished._(
+  recordStatus$Unpublished._(
     'record_status',
     possibleValue: 'Unpublished',
   ),
@@ -1255,123 +1256,123 @@ enum DevUnique {
   /// Indicates the medical device is free from viable microorganisms. See
   /// ISO/TS 11139.
   /// false
-  sterilizationIsSterileFalse._(
+  sterilizationIsSterile$False._(
     'sterilization.is_sterile',
     possibleValue: 'false',
   ),
 
   /// true
-  sterilizationIsSterileTrue._(
+  sterilizationIsSterile$True._(
     'sterilization.is_sterile',
     possibleValue: 'true',
   ),
 
   /// Indicates that the device requires sterilization prior to use.
   /// false
-  sterilizationIsSterilizationPriorUseFalse._(
+  sterilizationIsSterilizationPriorUse$False._(
     'sterilization.is_sterilization_prior_use',
     possibleValue: 'false',
   ),
 
   /// true
-  sterilizationIsSterilizationPriorUseTrue._(
+  sterilizationIsSterilizationPriorUse$True._(
     'sterilization.is_sterilization_prior_use',
     possibleValue: 'true',
   ),
 
   /// Indicates the method(s) of sterilization that can be used for this device.
   /// Chlorine Dioxide
-  sterilizationSterilizationMethodsChlorineDioxide._(
+  sterilizationSterilizationMethods$ChlorineDioxide._(
     'sterilization.sterilization_methods',
     possibleValue: 'Chlorine Dioxide',
   ),
 
   /// Dry Heat Sterilization
-  sterilizationSterilizationMethodsDryHeatSterilization._(
+  sterilizationSterilizationMethods$DryHeatSterilization._(
     'sterilization.sterilization_methods',
     possibleValue: 'Dry Heat Sterilization',
   ),
 
   /// Ethylene Oxide
-  sterilizationSterilizationMethodsEthyleneOxide._(
+  sterilizationSterilizationMethods$EthyleneOxide._(
     'sterilization.sterilization_methods',
     possibleValue: 'Ethylene Oxide',
   ),
 
   /// High Intensity Light or Pulse Light
-  sterilizationSterilizationMethodsHighIntensityLightOrPulseLight._(
+  sterilizationSterilizationMethods$HighIntensityLightOrPulseLight._(
     'sterilization.sterilization_methods',
     possibleValue: 'High Intensity Light or Pulse Light',
   ),
 
   /// High-level Disinfectant
-  sterilizationSterilizationMethodsHighlevelDisinfectant._(
+  sterilizationSterilizationMethods$HighlevelDisinfectant._(
     'sterilization.sterilization_methods',
     possibleValue: 'High-level Disinfectant',
   ),
 
   /// Hydrogen Peroxide
-  sterilizationSterilizationMethodsHydrogenPeroxide._(
+  sterilizationSterilizationMethods$HydrogenPeroxide._(
     'sterilization.sterilization_methods',
     possibleValue: 'Hydrogen Peroxide',
   ),
 
   /// Liquid Chemical
-  sterilizationSterilizationMethodsLiquidChemical._(
+  sterilizationSterilizationMethods$LiquidChemical._(
     'sterilization.sterilization_methods',
     possibleValue: 'Liquid Chemical',
   ),
 
   /// Microwave Radiation
-  sterilizationSterilizationMethodsMicrowaveRadiation._(
+  sterilizationSterilizationMethods$MicrowaveRadiation._(
     'sterilization.sterilization_methods',
     possibleValue: 'Microwave Radiation',
   ),
 
   /// Moist Heat or Steam Sterilization
-  sterilizationSterilizationMethodsMoistHeatOrSteamSterilization._(
+  sterilizationSterilizationMethods$MoistHeatOrSteamSterilization._(
     'sterilization.sterilization_methods',
     possibleValue: 'Moist Heat or Steam Sterilization',
   ),
 
   /// Nitrogen Dioxide
-  sterilizationSterilizationMethodsNitrogenDioxide._(
+  sterilizationSterilizationMethods$NitrogenDioxide._(
     'sterilization.sterilization_methods',
     possibleValue: 'Nitrogen Dioxide',
   ),
 
   /// Ozone
-  sterilizationSterilizationMethodsOzone._(
+  sterilizationSterilizationMethods$Ozone._(
     'sterilization.sterilization_methods',
     possibleValue: 'Ozone',
   ),
 
   /// Peracetic Acid
-  sterilizationSterilizationMethodsPeraceticAcid._(
+  sterilizationSterilizationMethods$PeraceticAcid._(
     'sterilization.sterilization_methods',
     possibleValue: 'Peracetic Acid',
   ),
 
   /// Radiation Sterilization
-  sterilizationSterilizationMethodsRadiationSterilization._(
+  sterilizationSterilizationMethods$RadiationSterilization._(
     'sterilization.sterilization_methods',
     possibleValue: 'Radiation Sterilization',
   ),
 
   /// Sound Waves
-  sterilizationSterilizationMethodsSoundWaves._(
+  sterilizationSterilizationMethods$SoundWaves._(
     'sterilization.sterilization_methods',
     possibleValue: 'Sound Waves',
   ),
 
   /// Supercritical Carbon Dioxide
-  sterilizationSterilizationMethodsSupercriticalCarbonDioxide._(
+  sterilizationSterilizationMethods$SupercriticalCarbonDioxide._(
     'sterilization.sterilization_methods',
     possibleValue: 'Supercritical Carbon Dioxide',
   ),
 
   /// Ultraviolet Light
-  sterilizationSterilizationMethodsUltravioletLight._(
+  sterilizationSterilizationMethods$UltravioletLight._(
     'sterilization.sterilization_methods',
     possibleValue: 'Ultraviolet Light',
   ),
@@ -1387,31 +1388,31 @@ enum DevUnique {
   /// The high value unit of measure associated with the storage and handling
   /// conditions.
   /// Degrees Celsius
-  storageHighUnitDegreesCelsius._(
+  storageHighUnit$DegreesCelsius._(
     'storage.high.unit',
     possibleValue: 'Degrees Celsius',
   ),
 
   /// Degrees Fahrenheit
-  storageHighUnitDegreesFahrenheit._(
+  storageHighUnit$DegreesFahrenheit._(
     'storage.high.unit',
     possibleValue: 'Degrees Fahrenheit',
   ),
 
   /// Degrees Kelvin
-  storageHighUnitDegreesKelvin._(
+  storageHighUnit$DegreesKelvin._(
     'storage.high.unit',
     possibleValue: 'Degrees Kelvin',
   ),
 
   /// Kilo Pascal
-  storageHighUnitKiloPascal._(
+  storageHighUnit$KiloPascal._(
     'storage.high.unit',
     possibleValue: 'Kilo Pascal',
   ),
 
   /// Percent (%) Relative Humidity,Millibar
-  storageHighUnitPercentRelativeHumidityMillibar._(
+  storageHighUnit$PercentRelativeHumidityMillibar._(
     'storage.high.unit',
     possibleValue: 'Percent (%) Relative Humidity, Millibar',
   ),
@@ -1433,31 +1434,31 @@ enum DevUnique {
 
   /// Indicates the low value for storage and handling requirements.
   /// Degrees Celsius
-  storageLowValueDegreesCelsius._(
+  storageLowValue$DegreesCelsius._(
     'storage.low.value',
     possibleValue: 'Degrees Celsius',
   ),
 
   /// Degrees Fahrenheit
-  storageLowValueDegreesFahrenheit._(
+  storageLowValue$DegreesFahrenheit._(
     'storage.low.value',
     possibleValue: 'Degrees Fahrenheit',
   ),
 
   /// Degrees Kelvin
-  storageLowValueDegreesKelvin._(
+  storageLowValue$DegreesKelvin._(
     'storage.low.value',
     possibleValue: 'Degrees Kelvin',
   ),
 
   /// Kilo Pascal
-  storageLowValueKiloPascal._(
+  storageLowValue$KiloPascal._(
     'storage.low.value',
     possibleValue: 'Kilo Pascal',
   ),
 
   /// Percent (%) Relative Humidity,Millibar
-  storageLowValuePercentRelativeHumidityMillibar._(
+  storageLowValue$PercentRelativeHumidityMillibar._(
     'storage.low.value',
     possibleValue: 'Percent (%) Relative Humidity, Millibar',
   ),
@@ -1473,71 +1474,71 @@ enum DevUnique {
   /// Indicates storage and handling requirements for the device including
   /// temperature, humidity, and atmospheric pressure.
   /// Handling Environment Atmospheric Pressure
-  storageTypeHandlingEnvironmentAtmosphericPressure._(
+  storageType$HandlingEnvironmentAtmosphericPressure._(
     'storage.type',
     possibleValue: 'Handling Environment Atmospheric Pressure',
   ),
-  storageTypeHandlingEnvironmentAtmosphericPressureExact._(
+  storageType$HandlingEnvironmentAtmosphericPressureExact._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Atmospheric Pressure',
   ),
 
   /// Handling Environment Humidity
-  storageTypeHandlingEnvironmentHumidity._(
+  storageType$HandlingEnvironmentHumidity._(
     'storage.type',
     possibleValue: 'Handling Environment Humidity',
   ),
-  storageTypeHandlingEnvironmentHumidityExact._(
+  storageType$HandlingEnvironmentHumidityExact._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Humidity',
   ),
 
   /// Handling Environment Temperature
-  storageTypeHandlingEnvironmentTemperature._(
+  storageType$HandlingEnvironmentTemperature._(
     'storage.type',
     possibleValue: 'Handling Environment Temperature',
   ),
-  storageTypeHandlingEnvironmentTemperatureExact._(
+  storageType$HandlingEnvironmentTemperatureExact._(
     'storage.type.exact',
     possibleValue: 'Handling Environment Temperature',
   ),
 
   /// Special Storage Conditions
-  storageTypeSpecialStorageConditions._(
+  storageType$SpecialStorageConditions._(
     'storage.type',
     possibleValue: 'Special Storage Conditions',
   ),
-  storageTypeSpecialStorageConditionsExact._(
+  storageType$SpecialStorageConditionsExact._(
     'storage.type.exact',
     possibleValue: 'Special Storage Conditions',
   ),
 
   /// Storage Environment Atmospheric Pressure
-  storageTypeStorageEnvironmentAtmosphericPressure._(
+  storageType$StorageEnvironmentAtmosphericPressure._(
     'storage.type',
     possibleValue: 'Storage Environment Atmospheric Pressure',
   ),
-  storageTypeStorageEnvironmentAtmosphericPressureExact._(
+  storageType$StorageEnvironmentAtmosphericPressureExact._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Atmospheric Pressure',
   ),
 
   /// Storage Environment Humidity
-  storageTypeStorageEnvironmentHumidity._(
+  storageType$StorageEnvironmentHumidity._(
     'storage.type',
     possibleValue: 'Storage Environment Humidity',
   ),
-  storageTypeStorageEnvironmentHumidityExact._(
+  storageType$StorageEnvironmentHumidityExact._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Humidity',
   ),
 
   /// Storage Environment Temperature
-  storageTypeStorageEnvironmentTemperature._(
+  storageType$StorageEnvironmentTemperature._(
     'storage.type',
     possibleValue: 'Storage Environment Temperature',
   ),
-  storageTypeStorageEnvironmentTemperatureExact._(
+  storageType$StorageEnvironmentTemperatureExact._(
     'storage.type.exact',
     possibleValue: 'Storage Environment Temperature',
   ),

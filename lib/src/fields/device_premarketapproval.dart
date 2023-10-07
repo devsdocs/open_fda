@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DevicePreMarketApprovalFields extends Endpointer {
+final class DevicePreMarketApprovalFields
+    extends Endpointer<DevicePreMarketApprovalFields> {
   factory DevicePreMarketApprovalFields(
     DevPreMarket data,
   ) =>
@@ -19,7 +20,7 @@ final class DevicePreMarketApprovalFields extends Endpointer {
         );
   final DevPreMarket _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -36,121 +37,121 @@ enum DevPreMarket {
   /// is always same as the “Review Panel” field in the Device Classification
   /// database (e.g. GU).
   /// Anesthesiology
-  advisoryCommitteeAn._(
+  advisoryCommittee$An._(
     'advisory_committee',
     possibleValue: 'AN',
   ),
 
   /// Clinical Chemistry
-  advisoryCommitteeCh._(
+  advisoryCommittee$Ch._(
     'advisory_committee',
     possibleValue: 'CH',
   ),
 
   /// Cardiovascular
-  advisoryCommitteeCv._(
+  advisoryCommittee$Cv._(
     'advisory_committee',
     possibleValue: 'CV',
   ),
 
   /// Dental
-  advisoryCommitteeDe._(
+  advisoryCommittee$De._(
     'advisory_committee',
     possibleValue: 'DE',
   ),
 
   /// Ear, Nose, Throat
-  advisoryCommitteeEn._(
+  advisoryCommittee$En._(
     'advisory_committee',
     possibleValue: 'EN',
   ),
 
   /// Gastroenterology, Urology
-  advisoryCommitteeGu._(
+  advisoryCommittee$Gu._(
     'advisory_committee',
     possibleValue: 'GU',
   ),
 
   /// Hematology
-  advisoryCommitteeHe._(
+  advisoryCommittee$He._(
     'advisory_committee',
     possibleValue: 'HE',
   ),
 
   /// General Hospital
-  advisoryCommitteeHo._(
+  advisoryCommittee$Ho._(
     'advisory_committee',
     possibleValue: 'HO',
   ),
 
   /// Immunology
-  advisoryCommitteeIm._(
+  advisoryCommittee$Im._(
     'advisory_committee',
     possibleValue: 'IM',
   ),
 
   /// Medical Genetics
-  advisoryCommitteeMg._(
+  advisoryCommittee$Mg._(
     'advisory_committee',
     possibleValue: 'MG',
   ),
 
   /// Microbiology
-  advisoryCommitteeMi._(
+  advisoryCommittee$Mi._(
     'advisory_committee',
     possibleValue: 'MI',
   ),
 
   /// Neurology
-  advisoryCommitteeNe._(
+  advisoryCommittee$Ne._(
     'advisory_committee',
     possibleValue: 'NE',
   ),
 
   /// Obstetrics/Gynecology
-  advisoryCommitteeOb._(
+  advisoryCommittee$Ob._(
     'advisory_committee',
     possibleValue: 'OB',
   ),
 
   /// Ophthalmic
-  advisoryCommitteeOp._(
+  advisoryCommittee$Op._(
     'advisory_committee',
     possibleValue: 'OP',
   ),
 
   /// Orthopedic
-  advisoryCommitteeOr._(
+  advisoryCommittee$Or._(
     'advisory_committee',
     possibleValue: 'OR',
   ),
 
   /// Pathology
-  advisoryCommitteePa._(
+  advisoryCommittee$Pa._(
     'advisory_committee',
     possibleValue: 'PA',
   ),
 
   /// Physical Medicine
-  advisoryCommitteePm._(
+  advisoryCommittee$Pm._(
     'advisory_committee',
     possibleValue: 'PM',
   ),
 
   /// Radiology
-  advisoryCommitteeRa._(
+  advisoryCommittee$Ra._(
     'advisory_committee',
     possibleValue: 'RA',
   ),
 
   /// General, Plastic Surgery
-  advisoryCommitteeSu._(
+  advisoryCommittee$Su._(
     'advisory_committee',
     possibleValue: 'SU',
   ),
 
   /// Clinical Toxicology
-  advisoryCommitteeTx._(
+  advisoryCommittee$Tx._(
     'advisory_committee',
     possibleValue: 'TX',
   ),
@@ -194,49 +195,49 @@ enum DevPreMarket {
 
   /// A four digit code reflecting the final decision for a PMA submission.
   /// Conversion after approval.
-  decisionCodeApcv._(
+  decisionCode$Apcv._(
     'decision_code',
     possibleValue: 'APCV',
   ),
 
   /// Approval: PMA has been approved.
-  decisionCodeAppr._(
+  decisionCode$Appr._(
     'decision_code',
     possibleValue: 'APPR',
   ),
 
   /// Reclassification after approval.
-  decisionCodeAprl._(
+  decisionCode$Aprl._(
     'decision_code',
     possibleValue: 'APRL',
   ),
 
   /// Withdrawal after approval.
-  decisionCodeApwd._(
+  decisionCode$Apwd._(
     'decision_code',
     possibleValue: 'APWD',
   ),
 
   /// Denial: PMA has been denied.
-  decisionCodeDeny._(
+  decisionCode$Deny._(
     'decision_code',
     possibleValue: 'DENY',
   ),
 
   /// No decision made in 30 days.
-  decisionCodeGt30._(
+  decisionCode$Gt30._(
     'decision_code',
     possibleValue: 'GT30',
   ),
 
   /// 30 day notice acceptance (decision made in ≤30 days).
-  decisionCodeLe30._(
+  decisionCode$Le30._(
     'decision_code',
     possibleValue: 'LE30',
   ),
 
   /// Withdrawal: PMA has been withdrawn.
-  decisionCodeWtdr._(
+  decisionCode$Wtdr._(
     'decision_code',
     possibleValue: 'WTDR',
   ),
@@ -254,13 +255,13 @@ enum DevPreMarket {
 
   /// Flag indicating that the approval review process was expidited.
   /// No
-  expeditedReviewFlagN._(
+  expeditedReviewFlag$N._(
     'expedited_review_flag',
     possibleValue: 'N',
   ),
 
   /// Yes
-  expeditedReviewFlagY._(
+  expeditedReviewFlag$Y._(
     'expedited_review_flag',
     possibleValue: 'Y',
   ),
@@ -286,37 +287,37 @@ enum DevPreMarket {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513)
   /// Class I (low to moderate risk): general controls
-  openfdaDeviceClass1._(
+  openfdaDeviceClass$1._(
     'openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  openfdaDeviceClass2._(
+  openfdaDeviceClass$2._(
     'openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  openfdaDeviceClass3._(
+  openfdaDeviceClass$3._(
     'openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  openfdaDeviceClassF._(
+  openfdaDeviceClass$F._(
     'openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  openfdaDeviceClassN._(
+  openfdaDeviceClass$N._(
     'openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  openfdaDeviceClassU._(
+  openfdaDeviceClass$U._(
     'openfda.device_class',
     possibleValue: 'U',
   ),
@@ -357,7 +358,7 @@ enum DevPreMarket {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  openfdaRegulationNumber._(
+  openfdaRegulationNumber$$._(
     'openfda.regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -365,7 +366,7 @@ enum DevPreMarket {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  openfdaRegulationNumberExact._(
+  openfdaRegulationNumberExact$$._(
     'openfda.regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -436,11 +437,11 @@ enum DevPreMarket {
   /// the applicant that the submission has been converted to a 135-day
   /// supplement (21 CFR 814.39(f)), and describes further information or action
   /// that is required for acceptance of the modification.
-  supplementType30dayNoticeAnd135PmaSupplement._(
+  supplementType$30dayNoticeAnd135PmaSupplement._(
     'supplement_type',
     possibleValue: '30-day Notice and 135 PMA Supplement',
   ),
-  supplementType30dayNoticeAnd135PmaSupplementExact._(
+  supplementType$30dayNoticeAnd135PmaSupplementExact._(
     'supplement_type.exact',
     possibleValue: '30-day Notice and 135 PMA Supplement',
   ),
@@ -451,22 +452,22 @@ enum DevPreMarket {
   /// In most cases, after the PMA is approved, the PMA applicant is required to
   /// submit reports to FDA annually unless a different time frame is specified
   /// in the approval order.
-  supplementTypeAnnualPeriodicReportOr30daySupplements._(
+  supplementType$AnnualPeriodicReportOr30daySupplements._(
     'supplement_type',
     possibleValue: 'Annual (periodic) Report or 30-day Supplements',
   ),
-  supplementTypeAnnualPeriodicReportOr30daySupplementsExact._(
+  supplementType$AnnualPeriodicReportOr30daySupplementsExact._(
     'supplement_type.exact',
     possibleValue: 'Annual (periodic) Report or 30-day Supplements',
   ),
 
   /// Any premarket approval application for a class III medical device,
   /// including all information submitted with or incorporated by reference.
-  supplementTypePma._(
+  supplementType$Pma._(
     'supplement_type',
     possibleValue: 'PMA',
   ),
-  supplementTypePmaExact._(
+  supplementType$PmaExact._(
     'supplement_type.exact',
     possibleValue: 'PMA',
   ),
@@ -477,11 +478,11 @@ enum DevPreMarket {
   /// facility or establishment to manufacture, process, or package the device.
   /// Such a PMA supplement for a move to a different facility or establishment
   /// is called a “manufacturing site change supplement.”
-  supplementTypePmaManufacturingSiteChangeSupplement._(
+  supplementType$PmaManufacturingSiteChangeSupplement._(
     'supplement_type',
     possibleValue: 'PMA Manufacturing Site Change Supplement',
   ),
-  supplementTypePmaManufacturingSiteChangeSupplementExact._(
+  supplementType$PmaManufacturingSiteChangeSupplementExact._(
     'supplement_type.exact',
     possibleValue: 'PMA Manufacturing Site Change Supplement',
   ),
@@ -491,11 +492,11 @@ enum DevPreMarket {
   /// section 515 that is not a panel-track supplement and requests a
   /// significant change in components, materials, design, specification,
   /// software, color additives, or labeling.
-  supplementTypePmaSupplement180Days._(
+  supplementType$PmaSupplement180Days._(
     'supplement_type',
     possibleValue: 'PMA supplement (180 days)',
   ),
-  supplementTypePmaSupplement180DaysExact._(
+  supplementType$PmaSupplement180DaysExact._(
     'supplement_type.exact',
     possibleValue: 'PMA supplement (180 days)',
   ),
@@ -513,22 +514,22 @@ enum DevPreMarket {
   /// strengthen a contraindication, warning, precaution, or information about
   /// an adverse reaction for which there is reasonable evidence of a causal
   /// association.
-  supplementTypeSpecialPmaSupplement._(
+  supplementType$SpecialPmaSupplement._(
     'supplement_type',
     possibleValue: 'Special PMA Supplement',
   ),
-  supplementTypeSpecialPmaSupplementExact._(
+  supplementType$SpecialPmaSupplementExact._(
     'supplement_type.exact',
     possibleValue: 'Special PMA Supplement',
   ),
 
   /// “Premarket Approval Application” of the PMA regulation in Part 814
   /// describes PMA amendments and supplements.
-  supplementTypeSubpartB._(
+  supplementType$SubpartB._(
     'supplement_type',
     possibleValue: 'Subpart B',
   ),
-  supplementTypeSubpartBExact._(
+  supplementType$SubpartBExact._(
     'supplement_type.exact',
     possibleValue: 'Subpart B',
   ),
@@ -541,11 +542,11 @@ enum DevPreMarket {
   /// device that has an approved PMA (see section 737(4) of the Act (21 U.S.C.
   /// 379i(4)) for definitions of 180-day supplements, real-time supplements,
   /// panel-track supplements).
-  supplementTypeSubpartE._(
+  supplementType$SubpartE._(
     'supplement_type',
     possibleValue: 'Subpart E',
   ),
-  supplementTypeSubpartEExact._(
+  supplementType$SubpartEExact._(
     'supplement_type.exact',
     possibleValue: 'Subpart E',
   ),

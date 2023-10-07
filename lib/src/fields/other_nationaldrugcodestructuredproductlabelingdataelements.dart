@@ -3,7 +3,8 @@
 part of '../main.dart';
 
 final class OtherNationalDrugCodeStructuredProductLabelingDataElementsFields
-    extends Endpointer {
+    extends Endpointer<
+        OtherNationalDrugCodeStructuredProductLabelingDataElementsFields> {
   factory OtherNationalDrugCodeStructuredProductLabelingDataElementsFields(
     OtherSPL data,
   ) =>
@@ -20,7 +21,7 @@ final class OtherNationalDrugCodeStructuredProductLabelingDataElementsFields
         );
   final OtherSPL _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override

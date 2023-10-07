@@ -102,10 +102,11 @@ enum SortType {
   final String value;
 }
 
-abstract final class Endpointer {
+abstract final class Endpointer<T extends Endpointer<T>>
+    implements Comparable<T> {
   Endpointer(
     this._endPointBase,
-    this.address, {
+    this.fieldAddress, {
     this.possValue,
     this.possValueReference,
   }) {
@@ -116,32 +117,47 @@ abstract final class Endpointer {
     }
   }
   final _Endpoints _endPointBase;
-  final String address;
+  final String fieldAddress;
   final String? possValue;
   final PossibleValueReference? possValueReference;
 
-  String operator +(Endpointer other) {
-    if ((runtimeType != other.runtimeType) ||
-        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
-      throw ArgumentError('Different type of field detected');
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is T &&
+          runtimeType == other.runtimeType &&
+          fieldAddress == other.fieldAddress;
+
+  @override
+  int get hashCode => fieldAddress.hashCode ^ _endPointBase.hashCode;
+
+  @override
+  int compareTo(T other) {
+    if (runtimeType == other.runtimeType) {
+      return fieldAddress.compareTo(other.fieldAddress);
     }
-    return '';
+    throw ArgumentError('Different type of field detected');
   }
 
-  String operator |(Endpointer other) {
+  List<T> operator |(T other) {
     if ((runtimeType != other.runtimeType) ||
-        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
+        (_endPointBase.name != other._endPointBase.name)) {
       throw ArgumentError('Different type of field detected');
     }
-    return '';
+    return [];
   }
 
-  String operator &(Endpointer other) {
+  List<T> operator &(T other) {
     if ((runtimeType != other.runtimeType) ||
-        (_endPointBase.runtimeType != other._endPointBase.runtimeType)) {
+        (_endPointBase.name != other._endPointBase.name)) {
       throw ArgumentError('Different type of field detected');
     }
-    return '';
+    return [];
+  }
+
+  @override
+  String toString() {
+    return '$fieldAddress ${(possValue ?? possValueReference) ?? ''}'.trim();
   }
 }
 
@@ -149,4 +165,11 @@ final class PossibleValueReference {
   const PossibleValueReference(this.name, {this.link});
   final String? name;
   final String? link;
+
+  @override
+  String toString() {
+    return 'PossibleValueReference: $name${link ?? ''}';
+  }
 }
+
+extension ListEndPointer<T extends Endpointer<T>> on List<T> {}

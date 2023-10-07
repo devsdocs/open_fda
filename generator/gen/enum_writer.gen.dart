@@ -1,4 +1,3 @@
-
 // part of 'gen.dart';
 // String enumWriter(
 //   String descObjectName,

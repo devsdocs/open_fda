@@ -15,7 +15,7 @@ String superClassWriter(
 
   if (childSuffix == null) {
     buff.writeln(
-      'final class $superClassName extends Endpointer {',
+      'final class $superClassName extends Endpointer<$superClassName> {',
     );
     buff.writeln(
       'factory $superClassName($shortName data,) => $superClassName._(data,);',
@@ -26,7 +26,7 @@ String superClassWriter(
     buff.writeln('final $shortName _data;');
 
     buff.writeln('@override');
-    buff.writeln('String get address => _data.address;');
+    buff.writeln('String get fieldAddress => _data.address;');
 
     buff.writeln('@override');
     buff.writeln('String? get possValue => _data.possibleValue;');

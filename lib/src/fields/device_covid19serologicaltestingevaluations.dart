@@ -3,7 +3,7 @@
 part of '../main.dart';
 
 final class DeviceCovid19SerologicalTestingEvaluationsFields
-    extends Endpointer {
+    extends Endpointer<DeviceCovid19SerologicalTestingEvaluationsFields> {
   factory DeviceCovid19SerologicalTestingEvaluationsFields(
     DevCovid data,
   ) =>
@@ -20,7 +20,7 @@ final class DeviceCovid19SerologicalTestingEvaluationsFields
         );
   final DevCovid _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -36,25 +36,25 @@ enum DevCovid {
   /// makes the result positive. All results must be negative for the overall
   /// result to be considered negative.
   /// False Negative
-  antibodyAgreeFn._(
+  antibodyAgree$Fn._(
     'antibody_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  antibodyAgreeFp._(
+  antibodyAgree$Fp._(
     'antibody_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  antibodyAgreeTn._(
+  antibodyAgree$Tn._(
     'antibody_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  antibodyAgreeTp._(
+  antibodyAgree$Tp._(
     'antibody_agree',
     possibleValue: 'TP',
   ),
@@ -100,25 +100,25 @@ enum DevCovid {
 
   /// Agreement between iga_result and antibody_truth.
   /// False Negative
-  igaAgreeFn._(
+  igaAgree$Fn._(
     'iga_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  igaAgreeFp._(
+  igaAgree$Fp._(
     'iga_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  igaAgreeTn._(
+  igaAgree$Tn._(
     'iga_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  igaAgreeTp._(
+  igaAgree$Tp._(
     'iga_agree',
     possibleValue: 'TP',
   ),
@@ -130,25 +130,25 @@ enum DevCovid {
 
   /// Agreement between igg_result and igg_truth.
   /// False Negative
-  iggAgreeFn._(
+  iggAgree$Fn._(
     'igg_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  iggAgreeFp._(
+  iggAgree$Fp._(
     'igg_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  iggAgreeTn._(
+  iggAgree$Tn._(
     'igg_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  iggAgreeTp._(
+  iggAgree$Tp._(
     'igg_agree',
     possibleValue: 'TP',
   ),
@@ -170,50 +170,50 @@ enum DevCovid {
 
   /// Agreement between igm_result and igm_truth.
   /// False Negative
-  igmAgreeFn._(
+  igmAgree$Fn._(
     'igm_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  igmAgreeFp._(
+  igmAgree$Fp._(
     'igm_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  igmAgreeTn._(
+  igmAgree$Tn._(
     'igm_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  igmAgreeTp._(
+  igmAgree$Tp._(
     'igm_agree',
     possibleValue: 'TP',
   ),
 
   /// Agreement between igm_iga_result and antibody_truth.
   /// False Negative
-  igmIgaAgreeFn._(
+  igmIgaAgree$Fn._(
     'igm_iga_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  igmIgaAgreeFp._(
+  igmIgaAgree$Fp._(
     'igm_iga_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  igmIgaAgreeTn._(
+  igmIgaAgree$Tn._(
     'igm_iga_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  igmIgaAgreeTp._(
+  igmIgaAgree$Tp._(
     'igm_iga_agree',
     possibleValue: 'TP',
   ),
@@ -226,25 +226,25 @@ enum DevCovid {
 
   /// Agreement between igm_igg_result and antibody_truth.
   /// False Negative
-  igmIggAgreeFn._(
+  igmIggAgree$Fn._(
     'igm_igg_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  igmIggAgreeFp._(
+  igmIggAgree$Fp._(
     'igm_igg_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  igmIggAgreeTn._(
+  igmIggAgree$Tn._(
     'igm_igg_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  igmIggAgreeTp._(
+  igmIggAgree$Tp._(
     'igm_igg_agree',
     possibleValue: 'TP',
   ),
@@ -286,25 +286,25 @@ enum DevCovid {
 
   /// Agreement between pan_result and antibody_truth.
   /// False Negative
-  panAgreeFn._(
+  panAgree$Fn._(
     'pan_agree',
     possibleValue: 'FN',
   ),
 
   /// False Positive
-  panAgreeFp._(
+  panAgree$Fp._(
     'pan_agree',
     possibleValue: 'FP',
   ),
 
   /// True Negative
-  panAgreeTn._(
+  panAgree$Tn._(
     'pan_agree',
     possibleValue: 'TN',
   ),
 
   /// True Positive
-  panAgreeTp._(
+  panAgree$Tp._(
     'pan_agree',
     possibleValue: 'TP',
   ),

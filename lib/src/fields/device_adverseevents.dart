@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DeviceAdverseEventsFields extends Endpointer {
+final class DeviceAdverseEventsFields
+    extends Endpointer<DeviceAdverseEventsFields> {
   factory DeviceAdverseEventsFields(
     DevEvent data,
   ) =>
@@ -19,7 +20,7 @@ final class DeviceAdverseEventsFields extends Endpointer {
         );
   final DevEvent _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -34,21 +35,21 @@ enum DevEvent {
   /// Whether the report is about an incident where the use of the device is
   /// suspected to have resulted in an adverse outcome in a patient.
   /// No
-  adverseEventFlagN._(
+  adverseEventFlag$N._(
     'adverse_event_flag',
     possibleValue: 'N',
   ),
-  adverseEventFlagNExact._(
+  adverseEventFlag$NExact._(
     'adverse_event_flag.exact',
     possibleValue: 'N',
   ),
 
   /// Yes
-  adverseEventFlagY._(
+  adverseEventFlag$Y._(
     'adverse_event_flag',
     possibleValue: 'Y',
   ),
-  adverseEventFlagYExact._(
+  adverseEventFlag$YExact._(
     'adverse_event_flag.exact',
     possibleValue: 'Y',
   ),
@@ -130,81 +131,81 @@ enum DevEvent {
   /// Whether an implanted device was removed from the patient, and if so, what
   /// kind of date was provided.
   /// Documentation forthcoming.
-  deviceDateRemovedFlagAsterix._(
+  deviceDateRemovedFlag$Asterix._(
     'device.date_removed_flag',
     possibleValue: '*',
   ),
-  deviceDateRemovedFlagAsterixExact._(
+  deviceDateRemovedFlag$AsterixExact._(
     'device.date_removed_flag.exact',
     possibleValue: '*',
   ),
 
   /// Documentation forthcoming.
-  deviceDateRemovedFlagB._(
+  deviceDateRemovedFlag$B._(
     'device.date_removed_flag',
     possibleValue: 'B',
   ),
-  deviceDateRemovedFlagBExact._(
+  deviceDateRemovedFlag$BExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'B',
   ),
 
   /// Only a year and month were provided. Day was set to 01.
-  deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsTo01._(
+  deviceDateRemovedFlag$MonthAndYearProvidedOnlyDayDefaultsTo01._(
     'device.date_removed_flag',
     possibleValue: 'Month and year provided only day defaults to 01',
   ),
-  deviceDateRemovedFlagMonthAndYearProvidedOnlyDayDefaultsTo01Exact._(
+  deviceDateRemovedFlag$MonthAndYearProvidedOnlyDayDefaultsTo01Exact._(
     'device.date_removed_flag.exact',
     possibleValue: 'Month and year provided only day defaults to 01',
   ),
 
   /// Documentation forthcoming.
-  deviceDateRemovedFlagNoInformationAtThisTime._(
+  deviceDateRemovedFlag$NoInformationAtThisTime._(
     'device.date_removed_flag',
     possibleValue: 'No information at this time',
   ),
-  deviceDateRemovedFlagNoInformationAtThisTimeExact._(
+  deviceDateRemovedFlag$NoInformationAtThisTimeExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'No information at this time',
   ),
 
   /// Documentation forthcoming.
-  deviceDateRemovedFlagNotAvailable._(
+  deviceDateRemovedFlag$NotAvailable._(
     'device.date_removed_flag',
     possibleValue: 'Not available',
   ),
-  deviceDateRemovedFlagNotAvailableExact._(
+  deviceDateRemovedFlag$NotAvailableExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'Not available',
   ),
 
   /// Documentation forthcoming.
-  deviceDateRemovedFlagUnknown._(
+  deviceDateRemovedFlag$Unknown._(
     'device.date_removed_flag',
     possibleValue: 'Unknown',
   ),
-  deviceDateRemovedFlagUnknownExact._(
+  deviceDateRemovedFlag$UnknownExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'Unknown',
   ),
 
   /// Documentation forthcoming.
-  deviceDateRemovedFlagV._(
+  deviceDateRemovedFlag$V._(
     'device.date_removed_flag',
     possibleValue: 'V',
   ),
-  deviceDateRemovedFlagVExact._(
+  deviceDateRemovedFlag$VExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'V',
   ),
 
   /// Only a year was provided. Month was set to 01 (January) and day set to 01.
-  deviceDateRemovedFlagYearProvidedOnly._(
+  deviceDateRemovedFlag$YearProvidedOnly._(
     'device.date_removed_flag',
     possibleValue: 'Year provided only',
   ),
-  deviceDateRemovedFlagYearProvidedOnlyExact._(
+  deviceDateRemovedFlag$YearProvidedOnlyExact._(
     'device.date_removed_flag.exact',
     possibleValue: 'Year provided only',
   ),
@@ -227,51 +228,51 @@ enum DevEvent {
   /// Whether the device is available for evaluation by the manufacturer, or
   /// whether the device was returned to the manufacturer.
   /// Device was returned to manufacturer
-  deviceDeviceAvailabilityDeviceWasReturnedToManufacturer._(
+  deviceDeviceAvailability$DeviceWasReturnedToManufacturer._(
     'device.device_availability',
     possibleValue: 'Device was returned to manufacturer',
   ),
-  deviceDeviceAvailabilityDeviceWasReturnedToManufacturerExact._(
+  deviceDeviceAvailability$DeviceWasReturnedToManufacturerExact._(
     'device.device_availability.exact',
     possibleValue: 'Device was returned to manufacturer',
   ),
 
   /// Documentation forthcoming.
-  deviceDeviceAvailabilityI._(
+  deviceDeviceAvailability$I._(
     'device.device_availability',
     possibleValue: 'I',
   ),
-  deviceDeviceAvailabilityIExact._(
+  deviceDeviceAvailability$IExact._(
     'device.device_availability.exact',
     possibleValue: 'I',
   ),
 
   /// No
-  deviceDeviceAvailabilityNo._(
+  deviceDeviceAvailability$No._(
     'device.device_availability',
     possibleValue: 'No',
   ),
-  deviceDeviceAvailabilityNoExact._(
+  deviceDeviceAvailability$NoExact._(
     'device.device_availability.exact',
     possibleValue: 'No',
   ),
 
   /// No answer provided
-  deviceDeviceAvailabilityNoAnswerProvided._(
+  deviceDeviceAvailability$NoAnswerProvided._(
     'device.device_availability',
     possibleValue: 'No answer provided',
   ),
-  deviceDeviceAvailabilityNoAnswerProvidedExact._(
+  deviceDeviceAvailability$NoAnswerProvidedExact._(
     'device.device_availability.exact',
     possibleValue: 'No answer provided',
   ),
 
   /// Yes
-  deviceDeviceAvailabilityYes._(
+  deviceDeviceAvailability$Yes._(
     'device.device_availability',
     possibleValue: 'Yes',
   ),
-  deviceDeviceAvailabilityYesExact._(
+  deviceDeviceAvailability$YesExact._(
     'device.device_availability.exact',
     possibleValue: 'Yes',
   ),
@@ -279,42 +280,42 @@ enum DevEvent {
   /// Whether the suspect device was evaluated by the manufacturer.
   /// An evaluation could not be made because the device was not returned to, or
   /// made available to, the manufacturer.
-  deviceDeviceEvaluatedByManufacturerDeviceNotReturnedToManufacturer._(
+  deviceDeviceEvaluatedByManufacturer$DeviceNotReturnedToManufacturer._(
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'Device not returned to manufacturer',
   ),
-  deviceDeviceEvaluatedByManufacturerDeviceNotReturnedToManufacturerExact._(
+  deviceDeviceEvaluatedByManufacturer$DeviceNotReturnedToManufacturerExact._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'Device not returned to manufacturer',
   ),
 
   /// An evaluation of a returned suspect or related medical device was not
   /// conducted.
-  deviceDeviceEvaluatedByManufacturerNo._(
+  deviceDeviceEvaluatedByManufacturer$No._(
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'No',
   ),
-  deviceDeviceEvaluatedByManufacturerNoExact._(
+  deviceDeviceEvaluatedByManufacturer$NoExact._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'No',
   ),
 
   /// No answer was provided or this information was unavailable.
-  deviceDeviceEvaluatedByManufacturerNoAnswerProvidedOrEmpty._(
+  deviceDeviceEvaluatedByManufacturer$NoAnswerProvidedOrEmpty._(
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'No answer provided or empty',
   ),
-  deviceDeviceEvaluatedByManufacturerNoAnswerProvidedOrEmptyExact._(
+  deviceDeviceEvaluatedByManufacturer$NoAnswerProvidedOrEmptyExact._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'No answer provided or empty',
   ),
 
   /// An evaluation was made of the suspect or related medical device.
-  deviceDeviceEvaluatedByManufacturerYes._(
+  deviceDeviceEvaluatedByManufacturer$Yes._(
     'device.device_evaluated_by_manufacturer',
     possibleValue: 'Yes',
   ),
-  deviceDeviceEvaluatedByManufacturerYesExact._(
+  deviceDeviceEvaluatedByManufacturer$YesExact._(
     'device.device_evaluated_by_manufacturer.exact',
     possibleValue: 'Yes',
   ),
@@ -330,431 +331,431 @@ enum DevEvent {
   /// The person using the medical device at the time of the adverse event. This
   /// may be a health professional, a lay person, or may not be applicable.
   /// Attorney
-  deviceDeviceOperatorAttorney._(
+  deviceDeviceOperator$Attorney._(
     'device.device_operator',
     possibleValue: 'Attorney',
   ),
-  deviceDeviceOperatorAttorneyExact._(
+  deviceDeviceOperator$AttorneyExact._(
     'device.device_operator.exact',
     possibleValue: 'Attorney',
   ),
 
   /// Audiologist
-  deviceDeviceOperatorAudiologist._(
+  deviceDeviceOperator$Audiologist._(
     'device.device_operator',
     possibleValue: 'Audiologist',
   ),
-  deviceDeviceOperatorAudiologistExact._(
+  deviceDeviceOperator$AudiologistExact._(
     'device.device_operator.exact',
     possibleValue: 'Audiologist',
   ),
 
   /// Biomedical engineer
-  deviceDeviceOperatorBiomedicalEngineer._(
+  deviceDeviceOperator$BiomedicalEngineer._(
     'device.device_operator',
     possibleValue: 'Biomedical engineer',
   ),
-  deviceDeviceOperatorBiomedicalEngineerExact._(
+  deviceDeviceOperator$BiomedicalEngineerExact._(
     'device.device_operator.exact',
     possibleValue: 'Biomedical engineer',
   ),
 
   /// Dental assistant
-  deviceDeviceOperatorDentalAssistant._(
+  deviceDeviceOperator$DentalAssistant._(
     'device.device_operator',
     possibleValue: 'Dental assistant',
   ),
-  deviceDeviceOperatorDentalAssistantExact._(
+  deviceDeviceOperator$DentalAssistantExact._(
     'device.device_operator.exact',
     possibleValue: 'Dental assistant',
   ),
 
   /// Dental hygienist
-  deviceDeviceOperatorDentalHygienist._(
+  deviceDeviceOperator$DentalHygienist._(
     'device.device_operator',
     possibleValue: 'Dental hygienist',
   ),
-  deviceDeviceOperatorDentalHygienistExact._(
+  deviceDeviceOperator$DentalHygienistExact._(
     'device.device_operator.exact',
     possibleValue: 'Dental hygienist',
   ),
 
   /// Dentist
-  deviceDeviceOperatorDentist._(
+  deviceDeviceOperator$Dentist._(
     'device.device_operator',
     possibleValue: 'Dentist',
   ),
-  deviceDeviceOperatorDentistExact._(
+  deviceDeviceOperator$DentistExact._(
     'device.device_operator.exact',
     possibleValue: 'Dentist',
   ),
 
   /// Device unattended
-  deviceDeviceOperatorDeviceUnattended._(
+  deviceDeviceOperator$DeviceUnattended._(
     'device.device_operator',
     possibleValue: 'Device unattended',
   ),
-  deviceDeviceOperatorDeviceUnattendedExact._(
+  deviceDeviceOperator$DeviceUnattendedExact._(
     'device.device_operator.exact',
     possibleValue: 'Device unattended',
   ),
 
   /// Dietician
-  deviceDeviceOperatorDietician._(
+  deviceDeviceOperator$Dietician._(
     'device.device_operator',
     possibleValue: 'Dietician',
   ),
-  deviceDeviceOperatorDieticianExact._(
+  deviceDeviceOperator$DieticianExact._(
     'device.device_operator.exact',
     possibleValue: 'Dietician',
   ),
 
   /// Emergency medical technician
-  deviceDeviceOperatorEmergencyMedicalTechnician._(
+  deviceDeviceOperator$EmergencyMedicalTechnician._(
     'device.device_operator',
     possibleValue: 'Emergency medical technician',
   ),
-  deviceDeviceOperatorEmergencyMedicalTechnicianExact._(
+  deviceDeviceOperator$EmergencyMedicalTechnicianExact._(
     'device.device_operator.exact',
     possibleValue: 'Emergency medical technician',
   ),
 
   /// Health professional
-  deviceDeviceOperatorHealthProfessional._(
+  deviceDeviceOperator$HealthProfessional._(
     'device.device_operator',
     possibleValue: 'Health professional',
   ),
-  deviceDeviceOperatorHealthProfessionalExact._(
+  deviceDeviceOperator$HealthProfessionalExact._(
     'device.device_operator.exact',
     possibleValue: 'Health professional',
   ),
 
   /// Home health aide
-  deviceDeviceOperatorHomeHealthAide._(
+  deviceDeviceOperator$HomeHealthAide._(
     'device.device_operator',
     possibleValue: 'Home health aide',
   ),
-  deviceDeviceOperatorHomeHealthAideExact._(
+  deviceDeviceOperator$HomeHealthAideExact._(
     'device.device_operator.exact',
     possibleValue: 'Home health aide',
   ),
 
   /// Hospital service technician
-  deviceDeviceOperatorHospitalServiceTechnician._(
+  deviceDeviceOperator$HospitalServiceTechnician._(
     'device.device_operator',
     possibleValue: 'Hospital service technician',
   ),
-  deviceDeviceOperatorHospitalServiceTechnicianExact._(
+  deviceDeviceOperator$HospitalServiceTechnicianExact._(
     'device.device_operator.exact',
     possibleValue: 'Hospital service technician',
   ),
 
   /// Invalid data
-  deviceDeviceOperatorInvalidData._(
+  deviceDeviceOperator$InvalidData._(
     'device.device_operator',
     possibleValue: 'Invalid data',
   ),
-  deviceDeviceOperatorInvalidDataExact._(
+  deviceDeviceOperator$InvalidDataExact._(
     'device.device_operator.exact',
     possibleValue: 'Invalid data',
   ),
 
   /// Lay user/patient
-  deviceDeviceOperatorLayUserOrpatient._(
+  deviceDeviceOperator$LayUserOrpatient._(
     'device.device_operator',
     possibleValue: 'Lay user/patient',
   ),
-  deviceDeviceOperatorLayUserOrpatientExact._(
+  deviceDeviceOperator$LayUserOrpatientExact._(
     'device.device_operator.exact',
     possibleValue: 'Lay user/patient',
   ),
 
   /// Medical assistant
-  deviceDeviceOperatorMedicalAssistant._(
+  deviceDeviceOperator$MedicalAssistant._(
     'device.device_operator',
     possibleValue: 'Medical assistant',
   ),
-  deviceDeviceOperatorMedicalAssistantExact._(
+  deviceDeviceOperator$MedicalAssistantExact._(
     'device.device_operator.exact',
     possibleValue: 'Medical assistant',
   ),
 
   /// Medical equipment company technician/representative
-  deviceDeviceOperatorMedicalEquipmentCompanyTechnicianOrrepresentative._(
+  deviceDeviceOperator$MedicalEquipmentCompanyTechnicianOrrepresentative._(
     'device.device_operator',
     possibleValue: 'Medical equipment company technician/representative',
   ),
-  deviceDeviceOperatorMedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
+  deviceDeviceOperator$MedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
     'device.device_operator.exact',
     possibleValue: 'Medical equipment company technician/representative',
   ),
 
   /// Medical technologist
-  deviceDeviceOperatorMedicalTechnologist._(
+  deviceDeviceOperator$MedicalTechnologist._(
     'device.device_operator',
     possibleValue: 'Medical technologist',
   ),
-  deviceDeviceOperatorMedicalTechnologistExact._(
+  deviceDeviceOperator$MedicalTechnologistExact._(
     'device.device_operator.exact',
     possibleValue: 'Medical technologist',
   ),
 
   /// No information
-  deviceDeviceOperatorNoInformation._(
+  deviceDeviceOperator$NoInformation._(
     'device.device_operator',
     possibleValue: 'No information',
   ),
-  deviceDeviceOperatorNoInformationExact._(
+  deviceDeviceOperator$NoInformationExact._(
     'device.device_operator.exact',
     possibleValue: 'No information',
   ),
 
   /// Not applicable
-  deviceDeviceOperatorNotApplicable._(
+  deviceDeviceOperator$NotApplicable._(
     'device.device_operator',
     possibleValue: 'Not applicable',
   ),
-  deviceDeviceOperatorNotApplicableExact._(
+  deviceDeviceOperator$NotApplicableExact._(
     'device.device_operator.exact',
     possibleValue: 'Not applicable',
   ),
 
   /// Nuclear medicine technologist
-  deviceDeviceOperatorNuclearMedicineTechnologist._(
+  deviceDeviceOperator$NuclearMedicineTechnologist._(
     'device.device_operator',
     possibleValue: 'Nuclear medicine technologist',
   ),
-  deviceDeviceOperatorNuclearMedicineTechnologistExact._(
+  deviceDeviceOperator$NuclearMedicineTechnologistExact._(
     'device.device_operator.exact',
     possibleValue: 'Nuclear medicine technologist',
   ),
 
   /// Nurse
-  deviceDeviceOperatorNurse._(
+  deviceDeviceOperator$Nurse._(
     'device.device_operator',
     possibleValue: 'Nurse',
   ),
-  deviceDeviceOperatorNurseExact._(
+  deviceDeviceOperator$NurseExact._(
     'device.device_operator.exact',
     possibleValue: 'Nurse',
   ),
 
   /// Nursing assistant
-  deviceDeviceOperatorNursingAssistant._(
+  deviceDeviceOperator$NursingAssistant._(
     'device.device_operator',
     possibleValue: 'Nursing assistant',
   ),
-  deviceDeviceOperatorNursingAssistantExact._(
+  deviceDeviceOperator$NursingAssistantExact._(
     'device.device_operator.exact',
     possibleValue: 'Nursing assistant',
   ),
 
   /// Occupational therapist
-  deviceDeviceOperatorOccupationalTherapist._(
+  deviceDeviceOperator$OccupationalTherapist._(
     'device.device_operator',
     possibleValue: 'Occupational therapist',
   ),
-  deviceDeviceOperatorOccupationalTherapistExact._(
+  deviceDeviceOperator$OccupationalTherapistExact._(
     'device.device_operator.exact',
     possibleValue: 'Occupational therapist',
   ),
 
   /// Other
-  deviceDeviceOperatorOther._(
+  deviceDeviceOperator$Other._(
     'device.device_operator',
     possibleValue: 'Other',
   ),
-  deviceDeviceOperatorOtherExact._(
+  deviceDeviceOperator$OtherExact._(
     'device.device_operator.exact',
     possibleValue: 'Other',
   ),
 
   /// Other caregivers
-  deviceDeviceOperatorOtherCaregivers._(
+  deviceDeviceOperator$OtherCaregivers._(
     'device.device_operator',
     possibleValue: 'Other caregivers',
   ),
-  deviceDeviceOperatorOtherCaregiversExact._(
+  deviceDeviceOperator$OtherCaregiversExact._(
     'device.device_operator.exact',
     possibleValue: 'Other caregivers',
   ),
 
   /// Other health care professional
-  deviceDeviceOperatorOtherHealthCareProfessional._(
+  deviceDeviceOperator$OtherHealthCareProfessional._(
     'device.device_operator',
     possibleValue: 'Other health care professional',
   ),
-  deviceDeviceOperatorOtherHealthCareProfessionalExact._(
+  deviceDeviceOperator$OtherHealthCareProfessionalExact._(
     'device.device_operator.exact',
     possibleValue: 'Other health care professional',
   ),
 
   /// Paramedic
-  deviceDeviceOperatorParamedic._(
+  deviceDeviceOperator$Paramedic._(
     'device.device_operator',
     possibleValue: 'Paramedic',
   ),
-  deviceDeviceOperatorParamedicExact._(
+  deviceDeviceOperator$ParamedicExact._(
     'device.device_operator.exact',
     possibleValue: 'Paramedic',
   ),
 
   /// Patient
-  deviceDeviceOperatorPatient._(
+  deviceDeviceOperator$Patient._(
     'device.device_operator',
     possibleValue: 'Patient',
   ),
-  deviceDeviceOperatorPatientExact._(
+  deviceDeviceOperator$PatientExact._(
     'device.device_operator.exact',
     possibleValue: 'Patient',
   ),
 
   /// Patient family member or friend
-  deviceDeviceOperatorPatientFamilyMemberOrFriend._(
+  deviceDeviceOperator$PatientFamilyMemberOrFriend._(
     'device.device_operator',
     possibleValue: 'Patient family member or friend',
   ),
-  deviceDeviceOperatorPatientFamilyMemberOrFriendExact._(
+  deviceDeviceOperator$PatientFamilyMemberOrFriendExact._(
     'device.device_operator.exact',
     possibleValue: 'Patient family member or friend',
   ),
 
   /// Personal care assistant
-  deviceDeviceOperatorPersonalCareAssistant._(
+  deviceDeviceOperator$PersonalCareAssistant._(
     'device.device_operator',
     possibleValue: 'Personal care assistant',
   ),
-  deviceDeviceOperatorPersonalCareAssistantExact._(
+  deviceDeviceOperator$PersonalCareAssistantExact._(
     'device.device_operator.exact',
     possibleValue: 'Personal care assistant',
   ),
 
   /// Pharmacist
-  deviceDeviceOperatorPharmacist._(
+  deviceDeviceOperator$Pharmacist._(
     'device.device_operator',
     possibleValue: 'Pharmacist',
   ),
-  deviceDeviceOperatorPharmacistExact._(
+  deviceDeviceOperator$PharmacistExact._(
     'device.device_operator.exact',
     possibleValue: 'Pharmacist',
   ),
 
   /// Phlebotomist
-  deviceDeviceOperatorPhlebotomist._(
+  deviceDeviceOperator$Phlebotomist._(
     'device.device_operator',
     possibleValue: 'Phlebotomist',
   ),
-  deviceDeviceOperatorPhlebotomistExact._(
+  deviceDeviceOperator$PhlebotomistExact._(
     'device.device_operator.exact',
     possibleValue: 'Phlebotomist',
   ),
 
   /// Physical therapist
-  deviceDeviceOperatorPhysicalTherapist._(
+  deviceDeviceOperator$PhysicalTherapist._(
     'device.device_operator',
     possibleValue: 'Physical therapist',
   ),
-  deviceDeviceOperatorPhysicalTherapistExact._(
+  deviceDeviceOperator$PhysicalTherapistExact._(
     'device.device_operator.exact',
     possibleValue: 'Physical therapist',
   ),
 
   /// Physician
-  deviceDeviceOperatorPhysician._(
+  deviceDeviceOperator$Physician._(
     'device.device_operator',
     possibleValue: 'Physician',
   ),
-  deviceDeviceOperatorPhysicianExact._(
+  deviceDeviceOperator$PhysicianExact._(
     'device.device_operator.exact',
     possibleValue: 'Physician',
   ),
 
   /// Physician assistant
-  deviceDeviceOperatorPhysicianAssistant._(
+  deviceDeviceOperator$PhysicianAssistant._(
     'device.device_operator',
     possibleValue: 'Physician assistant',
   ),
-  deviceDeviceOperatorPhysicianAssistantExact._(
+  deviceDeviceOperator$PhysicianAssistantExact._(
     'device.device_operator.exact',
     possibleValue: 'Physician assistant',
   ),
 
   /// Physicist
-  deviceDeviceOperatorPhysicist._(
+  deviceDeviceOperator$Physicist._(
     'device.device_operator',
     possibleValue: 'Physicist',
   ),
-  deviceDeviceOperatorPhysicistExact._(
+  deviceDeviceOperator$PhysicistExact._(
     'device.device_operator.exact',
     possibleValue: 'Physicist',
   ),
 
   /// Radiologic technologist
-  deviceDeviceOperatorRadiologicTechnologist._(
+  deviceDeviceOperator$RadiologicTechnologist._(
     'device.device_operator',
     possibleValue: 'Radiologic technologist',
   ),
-  deviceDeviceOperatorRadiologicTechnologistExact._(
+  deviceDeviceOperator$RadiologicTechnologistExact._(
     'device.device_operator.exact',
     possibleValue: 'Radiologic technologist',
   ),
 
   /// Respiratory therapist
-  deviceDeviceOperatorRespiratoryTherapist._(
+  deviceDeviceOperator$RespiratoryTherapist._(
     'device.device_operator',
     possibleValue: 'Respiratory therapist',
   ),
-  deviceDeviceOperatorRespiratoryTherapistExact._(
+  deviceDeviceOperator$RespiratoryTherapistExact._(
     'device.device_operator.exact',
     possibleValue: 'Respiratory therapist',
   ),
 
   /// Risk manager
-  deviceDeviceOperatorRiskManager._(
+  deviceDeviceOperator$RiskManager._(
     'device.device_operator',
     possibleValue: 'Risk manager',
   ),
-  deviceDeviceOperatorRiskManagerExact._(
+  deviceDeviceOperator$RiskManagerExact._(
     'device.device_operator.exact',
     possibleValue: 'Risk manager',
   ),
 
   /// Service and testing personnel
-  deviceDeviceOperatorServiceAndTestingPersonnel._(
+  deviceDeviceOperator$ServiceAndTestingPersonnel._(
     'device.device_operator',
     possibleValue: 'Service and testing personnel',
   ),
-  deviceDeviceOperatorServiceAndTestingPersonnelExact._(
+  deviceDeviceOperator$ServiceAndTestingPersonnelExact._(
     'device.device_operator.exact',
     possibleValue: 'Service and testing personnel',
   ),
 
   /// Service personnel
-  deviceDeviceOperatorServicePersonnel._(
+  deviceDeviceOperator$ServicePersonnel._(
     'device.device_operator',
     possibleValue: 'Service personnel',
   ),
-  deviceDeviceOperatorServicePersonnelExact._(
+  deviceDeviceOperator$ServicePersonnelExact._(
     'device.device_operator.exact',
     possibleValue: 'Service personnel',
   ),
 
   /// Speech therapist
-  deviceDeviceOperatorSpeechTherapist._(
+  deviceDeviceOperator$SpeechTherapist._(
     'device.device_operator',
     possibleValue: 'Speech therapist',
   ),
-  deviceDeviceOperatorSpeechTherapistExact._(
+  deviceDeviceOperator$SpeechTherapistExact._(
     'device.device_operator.exact',
     possibleValue: 'Speech therapist',
   ),
 
   /// Unknown
-  deviceDeviceOperatorUnknown._(
+  deviceDeviceOperator$Unknown._(
     'device.device_operator',
     possibleValue: 'Unknown',
   ),
-  deviceDeviceOperatorUnknownExact._(
+  deviceDeviceOperator$UnknownExact._(
     'device.device_operator.exact',
     possibleValue: 'Unknown',
   ),
@@ -763,7 +764,7 @@ enum DevEvent {
   /// classified under <a
   /// href='http://www.fda.gov/medicaldevices/deviceregulationandguidance/overview/classifyyourdevice/default.htm'>21
   /// CFR Parts 862-892</a>.
-  deviceDeviceReportProductCode._(
+  deviceDeviceReportProductCode$$._(
     'device.device_report_product_code',
     possibleValueReference: PossibleValueReference(
       'Product Classification Database',
@@ -771,7 +772,7 @@ enum DevEvent {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPCD/classification.cfm',
     ),
   ),
-  deviceDeviceReportProductCodeExact._(
+  deviceDeviceReportProductCodeExact$$._(
     'device.device_report_product_code.exact',
     possibleValueReference: PossibleValueReference(
       'Product Classification Database',
@@ -910,37 +911,37 @@ enum DevEvent {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513)
   /// Class I (low to moderate risk): general controls
-  deviceOpenfdaDeviceClass1._(
+  deviceOpenfdaDeviceClass$1._(
     'device.openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  deviceOpenfdaDeviceClass2._(
+  deviceOpenfdaDeviceClass$2._(
     'device.openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  deviceOpenfdaDeviceClass3._(
+  deviceOpenfdaDeviceClass$3._(
     'device.openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  deviceOpenfdaDeviceClassF._(
+  deviceOpenfdaDeviceClass$F._(
     'device.openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  deviceOpenfdaDeviceClassN._(
+  deviceOpenfdaDeviceClass$N._(
     'device.openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  deviceOpenfdaDeviceClassU._(
+  deviceOpenfdaDeviceClass$U._(
     'device.openfda.device_class',
     possibleValue: 'U',
   ),
@@ -979,7 +980,7 @@ enum DevEvent {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  deviceOpenfdaRegulationNumber._(
+  deviceOpenfdaRegulationNumber$$._(
     'device.openfda.regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -987,7 +988,7 @@ enum DevEvent {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  deviceOpenfdaRegulationNumberExact._(
+  deviceOpenfdaRegulationNumberExact$$._(
     'device.openfda.regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -1078,602 +1079,602 @@ enum DevEvent {
 
   /// Where the event occurred.
   /// Ambulatory health care facility
-  eventLocationAmbulatoryHealthCareFacility._(
+  eventLocation$AmbulatoryHealthCareFacility._(
     'event_location',
     possibleValue: 'Ambulatory health care facility',
   ),
-  eventLocationAmbulatoryHealthCareFacilityExact._(
+  eventLocation$AmbulatoryHealthCareFacilityExact._(
     'event_location.exact',
     possibleValue: 'Ambulatory health care facility',
   ),
 
   /// Ambulatory surgical center
-  eventLocationAmbulatorySurgicalCenter._(
+  eventLocation$AmbulatorySurgicalCenter._(
     'event_location',
     possibleValue: 'Ambulatory surgical center',
   ),
-  eventLocationAmbulatorySurgicalCenterExact._(
+  eventLocation$AmbulatorySurgicalCenterExact._(
     'event_location.exact',
     possibleValue: 'Ambulatory surgical center',
   ),
 
   /// Ambulatory surgical facility
-  eventLocationAmbulatorySurgicalFacility._(
+  eventLocation$AmbulatorySurgicalFacility._(
     'event_location',
     possibleValue: 'Ambulatory surgical facility',
   ),
-  eventLocationAmbulatorySurgicalFacilityExact._(
+  eventLocation$AmbulatorySurgicalFacilityExact._(
     'event_location.exact',
     possibleValue: 'Ambulatory surgical facility',
   ),
 
   /// Blood bank
-  eventLocationBloodBank._(
+  eventLocation$BloodBank._(
     'event_location',
     possibleValue: 'Blood bank',
   ),
-  eventLocationBloodBankExact._(
+  eventLocation$BloodBankExact._(
     'event_location.exact',
     possibleValue: 'Blood bank',
   ),
 
   /// Bloodmobile
-  eventLocationBloodmobile._(
+  eventLocation$Bloodmobile._(
     'event_location',
     possibleValue: 'Bloodmobile',
   ),
-  eventLocationBloodmobileExact._(
+  eventLocation$BloodmobileExact._(
     'event_location.exact',
     possibleValue: 'Bloodmobile',
   ),
 
   /// Catheterization lab - free standing
-  eventLocationCatheterizationLabFreeStanding._(
+  eventLocation$CatheterizationLabFreeStanding._(
     'event_location',
     possibleValue: 'Catheterization lab - free standing',
   ),
-  eventLocationCatheterizationLabFreeStandingExact._(
+  eventLocation$CatheterizationLabFreeStandingExact._(
     'event_location.exact',
     possibleValue: 'Catheterization lab - free standing',
   ),
 
   /// Catheterization suite
-  eventLocationCatheterizationSuite._(
+  eventLocation$CatheterizationSuite._(
     'event_location',
     possibleValue: 'Catheterization suite',
   ),
-  eventLocationCatheterizationSuiteExact._(
+  eventLocation$CatheterizationSuiteExact._(
     'event_location.exact',
     possibleValue: 'Catheterization suite',
   ),
 
   /// Chemotherapy center
-  eventLocationChemotherapyCenter._(
+  eventLocation$ChemotherapyCenter._(
     'event_location',
     possibleValue: 'Chemotherapy center',
   ),
-  eventLocationChemotherapyCenterExact._(
+  eventLocation$ChemotherapyCenterExact._(
     'event_location.exact',
     possibleValue: 'Chemotherapy center',
   ),
 
   /// Clinic - walk in, other
-  eventLocationClinicWalkInOther._(
+  eventLocation$ClinicWalkInOther._(
     'event_location',
     possibleValue: 'Clinic - walk in, other',
   ),
-  eventLocationClinicWalkInOtherExact._(
+  eventLocation$ClinicWalkInOtherExact._(
     'event_location.exact',
     possibleValue: 'Clinic - walk in, other',
   ),
 
   /// Critical care unit
-  eventLocationCriticalCareUnit._(
+  eventLocation$CriticalCareUnit._(
     'event_location',
     possibleValue: 'Critical care unit',
   ),
-  eventLocationCriticalCareUnitExact._(
+  eventLocation$CriticalCareUnitExact._(
     'event_location.exact',
     possibleValue: 'Critical care unit',
   ),
 
   /// Dialysis center
-  eventLocationDialysisCenter._(
+  eventLocation$DialysisCenter._(
     'event_location',
     possibleValue: 'Dialysis center',
   ),
-  eventLocationDialysisCenterExact._(
+  eventLocation$DialysisCenterExact._(
     'event_location.exact',
     possibleValue: 'Dialysis center',
   ),
 
   /// Dialysis unit
-  eventLocationDialysisUnit._(
+  eventLocation$DialysisUnit._(
     'event_location',
     possibleValue: 'Dialysis unit',
   ),
-  eventLocationDialysisUnitExact._(
+  eventLocation$DialysisUnitExact._(
     'event_location.exact',
     possibleValue: 'Dialysis unit',
   ),
 
   /// Drug clinic
-  eventLocationDrugClinic._(
+  eventLocation$DrugClinic._(
     'event_location',
     possibleValue: 'Drug clinic',
   ),
-  eventLocationDrugClinicExact._(
+  eventLocation$DrugClinicExact._(
     'event_location.exact',
     possibleValue: 'Drug clinic',
   ),
 
   /// Emergency room
-  eventLocationEmergencyRoom._(
+  eventLocation$EmergencyRoom._(
     'event_location',
     possibleValue: 'Emergency room',
   ),
-  eventLocationEmergencyRoomExact._(
+  eventLocation$EmergencyRoomExact._(
     'event_location.exact',
     possibleValue: 'Emergency room',
   ),
 
   /// Examination room
-  eventLocationExaminationRoom._(
+  eventLocation$ExaminationRoom._(
     'event_location',
     possibleValue: 'Examination room',
   ),
-  eventLocationExaminationRoomExact._(
+  eventLocation$ExaminationRoomExact._(
     'event_location.exact',
     possibleValue: 'Examination room',
   ),
 
   /// Home
-  eventLocationHome._(
+  eventLocation$Home._(
     'event_location',
     possibleValue: 'Home',
   ),
-  eventLocationHomeExact._(
+  eventLocation$HomeExact._(
     'event_location.exact',
     possibleValue: 'Home',
   ),
 
   /// Hospice
-  eventLocationHospice._(
+  eventLocation$Hospice._(
     'event_location',
     possibleValue: 'Hospice',
   ),
-  eventLocationHospiceExact._(
+  eventLocation$HospiceExact._(
     'event_location.exact',
     possibleValue: 'Hospice',
   ),
 
   /// Hospital
-  eventLocationHospital._(
+  eventLocation$Hospital._(
     'event_location',
     possibleValue: 'Hospital',
   ),
-  eventLocationHospitalExact._(
+  eventLocation$HospitalExact._(
     'event_location.exact',
     possibleValue: 'Hospital',
   ),
 
   /// Imaging center - mobile
-  eventLocationImagingCenterMobile._(
+  eventLocation$ImagingCenterMobile._(
     'event_location',
     possibleValue: 'Imaging center - mobile',
   ),
-  eventLocationImagingCenterMobileExact._(
+  eventLocation$ImagingCenterMobileExact._(
     'event_location.exact',
     possibleValue: 'Imaging center - mobile',
   ),
 
   /// Imaging center - stationary
-  eventLocationImagingCenterStationary._(
+  eventLocation$ImagingCenterStationary._(
     'event_location',
     possibleValue: 'Imaging center - stationary',
   ),
-  eventLocationImagingCenterStationaryExact._(
+  eventLocation$ImagingCenterStationaryExact._(
     'event_location.exact',
     possibleValue: 'Imaging center - stationary',
   ),
 
   /// In transit to user/medical facility
-  eventLocationInTransitToUserOrmedicalFacility._(
+  eventLocation$InTransitToUserOrmedicalFacility._(
     'event_location',
     possibleValue: 'In transit to user/medical facility',
   ),
-  eventLocationInTransitToUserOrmedicalFacilityExact._(
+  eventLocation$InTransitToUserOrmedicalFacilityExact._(
     'event_location.exact',
     possibleValue: 'In transit to user/medical facility',
   ),
 
   /// Invalid data
-  eventLocationInvalidData._(
+  eventLocation$InvalidData._(
     'event_location',
     possibleValue: 'Invalid data',
   ),
-  eventLocationInvalidDataExact._(
+  eventLocation$InvalidDataExact._(
     'event_location.exact',
     possibleValue: 'Invalid data',
   ),
 
   /// Laboratory
-  eventLocationLaboratory._(
+  eventLocation$Laboratory._(
     'event_location',
     possibleValue: 'Laboratory',
   ),
-  eventLocationLaboratoryExact._(
+  eventLocation$LaboratoryExact._(
     'event_location.exact',
     possibleValue: 'Laboratory',
   ),
 
   /// Laboratory/pathology department
-  eventLocationLaboratoryOrpathologyDepartment._(
+  eventLocation$LaboratoryOrpathologyDepartment._(
     'event_location',
     possibleValue: 'Laboratory/pathology department',
   ),
-  eventLocationLaboratoryOrpathologyDepartmentExact._(
+  eventLocation$LaboratoryOrpathologyDepartmentExact._(
     'event_location.exact',
     possibleValue: 'Laboratory/pathology department',
   ),
 
   /// Long-term care facility
-  eventLocationLongtermCareFacility._(
+  eventLocation$LongtermCareFacility._(
     'event_location',
     possibleValue: 'Long-term care facility',
   ),
-  eventLocationLongtermCareFacilityExact._(
+  eventLocation$LongtermCareFacilityExact._(
     'event_location.exact',
     possibleValue: 'Long-term care facility',
   ),
 
   /// Maternity ward - nursery
-  eventLocationMaternityWardNursery._(
+  eventLocation$MaternityWardNursery._(
     'event_location',
     possibleValue: 'Maternity ward - nursery',
   ),
-  eventLocationMaternityWardNurseryExact._(
+  eventLocation$MaternityWardNurseryExact._(
     'event_location.exact',
     possibleValue: 'Maternity ward - nursery',
   ),
 
   /// Mobile health unit
-  eventLocationMobileHealthUnit._(
+  eventLocation$MobileHealthUnit._(
     'event_location',
     possibleValue: 'Mobile health unit',
   ),
-  eventLocationMobileHealthUnitExact._(
+  eventLocation$MobileHealthUnitExact._(
     'event_location.exact',
     possibleValue: 'Mobile health unit',
   ),
 
   /// Mri centers
-  eventLocationMriCenters._(
+  eventLocation$MriCenters._(
     'event_location',
     possibleValue: 'Mri centers',
   ),
-  eventLocationMriCentersExact._(
+  eventLocation$MriCentersExact._(
     'event_location.exact',
     possibleValue: 'Mri centers',
   ),
 
   /// No information
-  eventLocationNoInformation._(
+  eventLocation$NoInformation._(
     'event_location',
     possibleValue: 'No information',
   ),
-  eventLocationNoInformationExact._(
+  eventLocation$NoInformationExact._(
     'event_location.exact',
     possibleValue: 'No information',
   ),
 
   /// Not applicable
-  eventLocationNotApplicable._(
+  eventLocation$NotApplicable._(
     'event_location',
     possibleValue: 'Not applicable',
   ),
-  eventLocationNotApplicableExact._(
+  eventLocation$NotApplicableExact._(
     'event_location.exact',
     possibleValue: 'Not applicable',
   ),
 
   /// Nursing home
-  eventLocationNursingHome._(
+  eventLocation$NursingHome._(
     'event_location',
     possibleValue: 'Nursing home',
   ),
-  eventLocationNursingHomeExact._(
+  eventLocation$NursingHomeExact._(
     'event_location.exact',
     possibleValue: 'Nursing home',
   ),
 
   /// Operating room
-  eventLocationOperatingRoom._(
+  eventLocation$OperatingRoom._(
     'event_location',
     possibleValue: 'Operating room',
   ),
-  eventLocationOperatingRoomExact._(
+  eventLocation$OperatingRoomExact._(
     'event_location.exact',
     possibleValue: 'Operating room',
   ),
 
   /// Other
-  eventLocationOther._(
+  eventLocation$Other._(
     'event_location',
     possibleValue: 'Other',
   ),
-  eventLocationOtherExact._(
+  eventLocation$OtherExact._(
     'event_location.exact',
     possibleValue: 'Other',
   ),
 
   /// Outdoors
-  eventLocationOutdoors._(
+  eventLocation$Outdoors._(
     'event_location',
     possibleValue: 'Outdoors',
   ),
-  eventLocationOutdoorsExact._(
+  eventLocation$OutdoorsExact._(
     'event_location.exact',
     possibleValue: 'Outdoors',
   ),
 
   /// Outpatient clinic/surgery
-  eventLocationOutpatientClinicOrsurgery._(
+  eventLocation$OutpatientClinicOrsurgery._(
     'event_location',
     possibleValue: 'Outpatient clinic/surgery',
   ),
-  eventLocationOutpatientClinicOrsurgeryExact._(
+  eventLocation$OutpatientClinicOrsurgeryExact._(
     'event_location.exact',
     possibleValue: 'Outpatient clinic/surgery',
   ),
 
   /// Outpatient diagnostic facility
-  eventLocationOutpatientDiagnosticFacility._(
+  eventLocation$OutpatientDiagnosticFacility._(
     'event_location',
     possibleValue: 'Outpatient diagnostic facility',
   ),
-  eventLocationOutpatientDiagnosticFacilityExact._(
+  eventLocation$OutpatientDiagnosticFacilityExact._(
     'event_location.exact',
     possibleValue: 'Outpatient diagnostic facility',
   ),
 
   /// Outpatient treatment facility
-  eventLocationOutpatientTreatmentFacility._(
+  eventLocation$OutpatientTreatmentFacility._(
     'event_location',
     possibleValue: 'Outpatient treatment facility',
   ),
-  eventLocationOutpatientTreatmentFacilityExact._(
+  eventLocation$OutpatientTreatmentFacilityExact._(
     'event_location.exact',
     possibleValue: 'Outpatient treatment facility',
   ),
 
   /// Park
-  eventLocationPark._(
+  eventLocation$Park._(
     'event_location',
     possibleValue: 'Park',
   ),
-  eventLocationParkExact._(
+  eventLocation$ParkExact._(
     'event_location.exact',
     possibleValue: 'Park',
   ),
 
   /// Patients home
-  eventLocationPatientsHome._(
+  eventLocation$PatientsHome._(
     'event_location',
     possibleValue: 'Patients home',
   ),
-  eventLocationPatientsHomeExact._(
+  eventLocation$PatientsHomeExact._(
     'event_location.exact',
     possibleValue: 'Patients home',
   ),
 
   /// Patients room or ward
-  eventLocationPatientsRoomOrWard._(
+  eventLocation$PatientsRoomOrWard._(
     'event_location',
     possibleValue: 'Patients room or ward',
   ),
-  eventLocationPatientsRoomOrWardExact._(
+  eventLocation$PatientsRoomOrWardExact._(
     'event_location.exact',
     possibleValue: 'Patients room or ward',
   ),
 
   /// Playground
-  eventLocationPlayground._(
+  eventLocation$Playground._(
     'event_location',
     possibleValue: 'Playground',
   ),
-  eventLocationPlaygroundExact._(
+  eventLocation$PlaygroundExact._(
     'event_location.exact',
     possibleValue: 'Playground',
   ),
 
   /// Psychiatric center - walk in, other
-  eventLocationPsychiatricCenterWalkInOther._(
+  eventLocation$PsychiatricCenterWalkInOther._(
     'event_location',
     possibleValue: 'Psychiatric center - walk in, other',
   ),
-  eventLocationPsychiatricCenterWalkInOtherExact._(
+  eventLocation$PsychiatricCenterWalkInOtherExact._(
     'event_location.exact',
     possibleValue: 'Psychiatric center - walk in, other',
   ),
 
   /// Psychiatric facility
-  eventLocationPsychiatricFacility._(
+  eventLocation$PsychiatricFacility._(
     'event_location',
     possibleValue: 'Psychiatric facility',
   ),
-  eventLocationPsychiatricFacilityExact._(
+  eventLocation$PsychiatricFacilityExact._(
     'event_location.exact',
     possibleValue: 'Psychiatric facility',
   ),
 
   /// Public building
-  eventLocationPublicBuilding._(
+  eventLocation$PublicBuilding._(
     'event_location',
     possibleValue: 'Public building',
   ),
-  eventLocationPublicBuildingExact._(
+  eventLocation$PublicBuildingExact._(
     'event_location.exact',
     possibleValue: 'Public building',
   ),
 
   /// Public venue
-  eventLocationPublicVenue._(
+  eventLocation$PublicVenue._(
     'event_location',
     possibleValue: 'Public venue',
   ),
-  eventLocationPublicVenueExact._(
+  eventLocation$PublicVenueExact._(
     'event_location.exact',
     possibleValue: 'Public venue',
   ),
 
   /// Radiology department
-  eventLocationRadiologyDepartment._(
+  eventLocation$RadiologyDepartment._(
     'event_location',
     possibleValue: 'Radiology department',
   ),
-  eventLocationRadiologyDepartmentExact._(
+  eventLocation$RadiologyDepartmentExact._(
     'event_location.exact',
     possibleValue: 'Radiology department',
   ),
 
   /// Rehabilitation center
-  eventLocationRehabilitationCenter._(
+  eventLocation$RehabilitationCenter._(
     'event_location',
     possibleValue: 'Rehabilitation center',
   ),
-  eventLocationRehabilitationCenterExact._(
+  eventLocation$RehabilitationCenterExact._(
     'event_location.exact',
     possibleValue: 'Rehabilitation center',
   ),
 
   /// Retirement home
-  eventLocationRetirementHome._(
+  eventLocation$RetirementHome._(
     'event_location',
     possibleValue: 'Retirement home',
   ),
-  eventLocationRetirementHomeExact._(
+  eventLocation$RetirementHomeExact._(
     'event_location.exact',
     possibleValue: 'Retirement home',
   ),
 
   /// School
-  eventLocationSchool._(
+  eventLocation$School._(
     'event_location',
     possibleValue: 'School',
   ),
-  eventLocationSchoolExact._(
+  eventLocation$SchoolExact._(
     'event_location.exact',
     possibleValue: 'School',
   ),
 
   /// Street
-  eventLocationStreet._(
+  eventLocation$Street._(
     'event_location',
     possibleValue: 'Street',
   ),
-  eventLocationStreetExact._(
+  eventLocation$StreetExact._(
     'event_location.exact',
     possibleValue: 'Street',
   ),
 
   /// Tuberculosis clinic
-  eventLocationTuberculosisClinic._(
+  eventLocation$TuberculosisClinic._(
     'event_location',
     possibleValue: 'Tuberculosis clinic',
   ),
-  eventLocationTuberculosisClinicExact._(
+  eventLocation$TuberculosisClinicExact._(
     'event_location.exact',
     possibleValue: 'Tuberculosis clinic',
   ),
 
   /// Unknown
-  eventLocationUnknown._(
+  eventLocation$Unknown._(
     'event_location',
     possibleValue: 'Unknown',
   ),
-  eventLocationUnknownExact._(
+  eventLocation$UnknownExact._(
     'event_location.exact',
     possibleValue: 'Unknown',
   ),
 
   /// Urgent care center
-  eventLocationUrgentCareCenter._(
+  eventLocation$UrgentCareCenter._(
     'event_location',
     possibleValue: 'Urgent care center',
   ),
-  eventLocationUrgentCareCenterExact._(
+  eventLocation$UrgentCareCenterExact._(
     'event_location.exact',
     possibleValue: 'Urgent care center',
   ),
 
   /// Outcomes associated with the adverse event.
   /// Death, either caused by or associated with the adverse event.
-  eventTypeDeath._(
+  eventType$Death._(
     'event_type',
     possibleValue: 'Death',
   ),
-  eventTypeDeathExact._(
+  eventType$DeathExact._(
     'event_type.exact',
     possibleValue: 'Death',
   ),
 
   /// Documentation forthcoming.
-  eventTypeInjuryIj._(
+  eventType$InjuryIj._(
     'event_type',
     possibleValue: 'Injury (IJ)',
   ),
-  eventTypeInjuryIjExact._(
+  eventType$InjuryIjExact._(
     'event_type.exact',
     possibleValue: 'Injury (IJ)',
   ),
 
   /// Documentation forthcoming.
-  eventTypeInjuryIl._(
+  eventType$InjuryIl._(
     'event_type',
     possibleValue: 'Injury (IL)',
   ),
-  eventTypeInjuryIlExact._(
+  eventType$InjuryIlExact._(
     'event_type.exact',
     possibleValue: 'Injury (IL)',
   ),
 
   /// Documentation forthcoming.
-  eventTypeInjuryIn._(
+  eventType$InjuryIn._(
     'event_type',
     possibleValue: 'Injury (IN)',
   ),
-  eventTypeInjuryInExact._(
+  eventType$InjuryInExact._(
     'event_type.exact',
     possibleValue: 'Injury (IN)',
   ),
 
   /// Product malfunction.
-  eventTypeMalfunction._(
+  eventType$Malfunction._(
     'event_type',
     possibleValue: 'Malfunction',
   ),
-  eventTypeMalfunctionExact._(
+  eventType$MalfunctionExact._(
     'event_type.exact',
     possibleValue: 'Malfunction',
   ),
 
   /// No information was provided.
-  eventTypeNoAnswerProvided._(
+  eventType$NoAnswerProvided._(
     'event_type',
     possibleValue: 'No answer provided',
   ),
-  eventTypeNoAnswerProvidedExact._(
+  eventType$NoAnswerProvidedExact._(
     'event_type.exact',
     possibleValue: 'No answer provided',
   ),
 
   /// Other serious/important medical event.
-  eventTypeOther._(
+  eventType$Other._(
     'event_type',
     possibleValue: 'Other',
   ),
-  eventTypeOtherExact._(
+  eventType$OtherExact._(
     'event_type.exact',
     possibleValue: 'Other',
   ),
@@ -1687,21 +1688,21 @@ enum DevEvent {
   /// Whether the initial reporter was a health professional (e.g. physician,
   /// pharmacist, nurse, etc.) or not.
   /// The initial reporter is not a health professional.
-  healthProfessionalN._(
+  healthProfessional$N._(
     'health_professional',
     possibleValue: 'N',
   ),
-  healthProfessionalNExact._(
+  healthProfessional$NExact._(
     'health_professional.exact',
     possibleValue: 'N',
   ),
 
   /// The initial reporter is a health professional.
-  healthProfessionalY._(
+  healthProfessional$Y._(
     'health_professional',
     possibleValue: 'Y',
   ),
-  healthProfessionalYExact._(
+  healthProfessional$YExact._(
     'health_professional.exact',
     possibleValue: 'Y',
   ),
@@ -1709,41 +1710,41 @@ enum DevEvent {
   /// Whether the initial reporter also notified or submitted a copy of this
   /// report to FDA.
   /// FDA was not notified by the initial reporter.
-  initialReportToFdaNo._(
+  initialReportToFda$No._(
     'initial_report_to_fda',
     possibleValue: 'No',
   ),
-  initialReportToFdaNoExact._(
+  initialReportToFda$NoExact._(
     'initial_report_to_fda.exact',
     possibleValue: 'No',
   ),
 
   /// This information was not provided.
-  initialReportToFdaNoAnswerProvidedOrEmpty._(
+  initialReportToFda$NoAnswerProvidedOrEmpty._(
     'initial_report_to_fda',
     possibleValue: 'No answer provided or empty',
   ),
-  initialReportToFdaNoAnswerProvidedOrEmptyExact._(
+  initialReportToFda$NoAnswerProvidedOrEmptyExact._(
     'initial_report_to_fda.exact',
     possibleValue: 'No answer provided or empty',
   ),
 
   /// Unknown whether FDA was also notified by the initial reporter.
-  initialReportToFdaUnknown._(
+  initialReportToFda$Unknown._(
     'initial_report_to_fda',
     possibleValue: 'Unknown',
   ),
-  initialReportToFdaUnknownExact._(
+  initialReportToFda$UnknownExact._(
     'initial_report_to_fda.exact',
     possibleValue: 'Unknown',
   ),
 
   /// FDA was also notified by the initial reporter.
-  initialReportToFdaYes._(
+  initialReportToFda$Yes._(
     'initial_report_to_fda',
     possibleValue: 'Yes',
   ),
-  initialReportToFdaYesExact._(
+  initialReportToFda$YesExact._(
     'initial_report_to_fda.exact',
     possibleValue: 'Yes',
   ),
@@ -2008,21 +2009,21 @@ enum DevEvent {
   /// reports. If so, the distributor information (address, etc.) will also be
   /// present and this field will contain `Y`.
   /// There are no subsequent manufacturer-submitted reports.
-  manufacturerLinkFlagN._(
+  manufacturerLinkFlag$N._(
     'manufacturer_link_flag',
     possibleValue: 'N',
   ),
-  manufacturerLinkFlagNExact._(
+  manufacturerLinkFlag$NExact._(
     'manufacturer_link_flag.exact',
     possibleValue: 'N',
   ),
 
   /// There are subsequent manufacturer-submitted reports.
-  manufacturerLinkFlagY._(
+  manufacturerLinkFlag$Y._(
     'manufacturer_link_flag',
     possibleValue: 'Y',
   ),
-  manufacturerLinkFlagYExact._(
+  manufacturerLinkFlag$YExact._(
     'manufacturer_link_flag.exact',
     possibleValue: 'Y',
   ),
@@ -2117,11 +2118,11 @@ enum DevEvent {
   /// String that describes the type of narrative contained within the text
   /// field.
   /// Documentation forthcoming.
-  mdrTextTextTypeCodeAdditionalManufacturerNarrative._(
+  mdrTextTextTypeCode$AdditionalManufacturerNarrative._(
     'mdr_text.text_type_code',
     possibleValue: 'Additional Manufacturer Narrative',
   ),
-  mdrTextTextTypeCodeAdditionalManufacturerNarrativeExact._(
+  mdrTextTextTypeCode$AdditionalManufacturerNarrativeExact._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Additional Manufacturer Narrative',
   ),
@@ -2137,11 +2138,11 @@ enum DevEvent {
   /// include synopses of any office visit notes or the hospital discharge
   /// summary. This section may also contain information about surgical
   /// procedures and laboratory tests.
-  mdrTextTextTypeCodeDescriptionOfEventOrProblem._(
+  mdrTextTextTypeCode$DescriptionOfEventOrProblem._(
     'mdr_text.text_type_code',
     possibleValue: 'Description of Event or Problem',
   ),
-  mdrTextTextTypeCodeDescriptionOfEventOrProblemExact._(
+  mdrTextTextTypeCode$DescriptionOfEventOrProblemExact._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Description of Event or Problem',
   ),
@@ -2149,11 +2150,11 @@ enum DevEvent {
   /// If available, the results of any evaluation of a malfunctioning device
   /// and, if known, any relevant maintenance/service information should be
   /// included in this section.
-  mdrTextTextTypeCodeManufacturerEvaluationSummary._(
+  mdrTextTextTypeCode$ManufacturerEvaluationSummary._(
     'mdr_text.text_type_code',
     possibleValue: 'Manufacturer Evaluation Summary',
   ),
-  mdrTextTextTypeCodeManufacturerEvaluationSummaryExact._(
+  mdrTextTextTypeCode$ManufacturerEvaluationSummaryExact._(
     'mdr_text.text_type_code.exact',
     possibleValue: 'Manufacturer Evaluation Summary',
   ),
@@ -2247,111 +2248,111 @@ enum DevEvent {
   /// multiple outcomes, separated by commas, and with numbers, which may or may
   /// not be related to the `patient_sequence_number`.
   /// Congenital Anomaly
-  patientSequenceNumberOutcomeCongenitalAnomaly._(
+  patientSequenceNumberOutcome$CongenitalAnomaly._(
     'patient.sequence_number_outcome',
     possibleValue: 'Congenital Anomaly',
   ),
-  patientSequenceNumberOutcomeCongenitalAnomalyExact._(
+  patientSequenceNumberOutcome$CongenitalAnomalyExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Congenital Anomaly',
   ),
 
   /// Death
-  patientSequenceNumberOutcomeDeath._(
+  patientSequenceNumberOutcome$Death._(
     'patient.sequence_number_outcome',
     possibleValue: 'Death',
   ),
-  patientSequenceNumberOutcomeDeathExact._(
+  patientSequenceNumberOutcome$DeathExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Death',
   ),
 
   /// Disability
-  patientSequenceNumberOutcomeDisability._(
+  patientSequenceNumberOutcome$Disability._(
     'patient.sequence_number_outcome',
     possibleValue: 'Disability',
   ),
-  patientSequenceNumberOutcomeDisabilityExact._(
+  patientSequenceNumberOutcome$DisabilityExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Disability',
   ),
 
   /// Hospitalization
-  patientSequenceNumberOutcomeHospitalization._(
+  patientSequenceNumberOutcome$Hospitalization._(
     'patient.sequence_number_outcome',
     possibleValue: 'Hospitalization',
   ),
-  patientSequenceNumberOutcomeHospitalizationExact._(
+  patientSequenceNumberOutcome$HospitalizationExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Hospitalization',
   ),
 
   /// Invalid Data
-  patientSequenceNumberOutcomeInvalidData._(
+  patientSequenceNumberOutcome$InvalidData._(
     'patient.sequence_number_outcome',
     possibleValue: 'Invalid Data',
   ),
-  patientSequenceNumberOutcomeInvalidDataExact._(
+  patientSequenceNumberOutcome$InvalidDataExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Invalid Data',
   ),
 
   /// Life Threatening
-  patientSequenceNumberOutcomeLifeThreatening._(
+  patientSequenceNumberOutcome$LifeThreatening._(
     'patient.sequence_number_outcome',
     possibleValue: 'Life Threatening',
   ),
-  patientSequenceNumberOutcomeLifeThreateningExact._(
+  patientSequenceNumberOutcome$LifeThreateningExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Life Threatening',
   ),
 
   /// No Information
-  patientSequenceNumberOutcomeNoInformation._(
+  patientSequenceNumberOutcome$NoInformation._(
     'patient.sequence_number_outcome',
     possibleValue: 'No Information',
   ),
-  patientSequenceNumberOutcomeNoInformationExact._(
+  patientSequenceNumberOutcome$NoInformationExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'No Information',
   ),
 
   /// Not Applicable
-  patientSequenceNumberOutcomeNotApplicable._(
+  patientSequenceNumberOutcome$NotApplicable._(
     'patient.sequence_number_outcome',
     possibleValue: 'Not Applicable',
   ),
-  patientSequenceNumberOutcomeNotApplicableExact._(
+  patientSequenceNumberOutcome$NotApplicableExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Not Applicable',
   ),
 
   /// Other
-  patientSequenceNumberOutcomeOther._(
+  patientSequenceNumberOutcome$Other._(
     'patient.sequence_number_outcome',
     possibleValue: 'Other',
   ),
-  patientSequenceNumberOutcomeOtherExact._(
+  patientSequenceNumberOutcome$OtherExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Other',
   ),
 
   /// Required Intervention
-  patientSequenceNumberOutcomeRequiredIntervention._(
+  patientSequenceNumberOutcome$RequiredIntervention._(
     'patient.sequence_number_outcome',
     possibleValue: 'Required Intervention',
   ),
-  patientSequenceNumberOutcomeRequiredInterventionExact._(
+  patientSequenceNumberOutcome$RequiredInterventionExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Required Intervention',
   ),
 
   /// Unknown
-  patientSequenceNumberOutcomeUnknown._(
+  patientSequenceNumberOutcome$Unknown._(
     'patient.sequence_number_outcome',
     possibleValue: 'Unknown',
   ),
-  patientSequenceNumberOutcomeUnknownExact._(
+  patientSequenceNumberOutcome$UnknownExact._(
     'patient.sequence_number_outcome.exact',
     possibleValue: 'Unknown',
   ),
@@ -2367,41 +2368,41 @@ enum DevEvent {
   /// Whether the use of the suspect medical device was the initial use, reuse,
   /// or unknown.
   /// Invalid data or this information was not provided.
-  previousUseCodeAsterix._(
+  previousUseCode$Asterix._(
     'previous_use_code',
     possibleValue: '*',
   ),
-  previousUseCodeAsterixExact._(
+  previousUseCode$AsterixExact._(
     'previous_use_code.exact',
     possibleValue: '*',
   ),
 
   /// Initial use.
-  previousUseCodeI._(
+  previousUseCode$I._(
     'previous_use_code',
     possibleValue: 'I',
   ),
-  previousUseCodeIExact._(
+  previousUseCode$IExact._(
     'previous_use_code.exact',
     possibleValue: 'I',
   ),
 
   /// Reuse.
-  previousUseCodeR._(
+  previousUseCode$R._(
     'previous_use_code',
     possibleValue: 'R',
   ),
-  previousUseCodeRExact._(
+  previousUseCode$RExact._(
     'previous_use_code.exact',
     possibleValue: 'R',
   ),
 
   /// Unknown.
-  previousUseCodeU._(
+  previousUseCode$U._(
     'previous_use_code',
     possibleValue: 'U',
   ),
-  previousUseCodeUExact._(
+  previousUseCode$UExact._(
     'previous_use_code.exact',
     possibleValue: 'U',
   ),
@@ -2409,11 +2410,11 @@ enum DevEvent {
   /// Indicates whether or not a report was about the quality, performance or
   /// safety of a device.
   /// The report is not about a defect or malfunction.
-  productProblemFlagN._(
+  productProblemFlag$N._(
     'product_problem_flag',
     possibleValue: 'N',
   ),
-  productProblemFlagNExact._(
+  productProblemFlag$NExact._(
     'product_problem_flag.exact',
     possibleValue: 'N',
   ),
@@ -2422,11 +2423,11 @@ enum DevEvent {
   /// example, defects or malfunctions. This flag is set when a device
   /// malfunction could lead to a death or serious injury if the malfunction
   /// were to recur.
-  productProblemFlagY._(
+  productProblemFlag$Y._(
     'product_problem_flag',
     possibleValue: 'Y',
   ),
-  productProblemFlagYExact._(
+  productProblemFlag$YExact._(
     'product_problem_flag.exact',
     possibleValue: 'Y',
   ),
@@ -2441,101 +2442,101 @@ enum DevEvent {
   /// Follow-up actions taken by the device manufacturer at the time of the
   /// report submission, if applicable.
   /// Inspection
-  remedialActionInspection._(
+  remedialAction$Inspection._(
     'remedial_action',
     possibleValue: 'Inspection',
   ),
-  remedialActionInspectionExact._(
+  remedialAction$InspectionExact._(
     'remedial_action.exact',
     possibleValue: 'Inspection',
   ),
 
   /// Invalid Data
-  remedialActionInvalidData._(
+  remedialAction$InvalidData._(
     'remedial_action',
     possibleValue: 'Invalid Data',
   ),
-  remedialActionInvalidDataExact._(
+  remedialAction$InvalidDataExact._(
     'remedial_action.exact',
     possibleValue: 'Invalid Data',
   ),
 
   /// Modification/Adjustment
-  remedialActionModificationOrAdjustment._(
+  remedialAction$ModificationOrAdjustment._(
     'remedial_action',
     possibleValue: 'Modification/Adjustment',
   ),
-  remedialActionModificationOrAdjustmentExact._(
+  remedialAction$ModificationOrAdjustmentExact._(
     'remedial_action.exact',
     possibleValue: 'Modification/Adjustment',
   ),
 
   /// Notification
-  remedialActionNotification._(
+  remedialAction$Notification._(
     'remedial_action',
     possibleValue: 'Notification',
   ),
-  remedialActionNotificationExact._(
+  remedialAction$NotificationExact._(
     'remedial_action.exact',
     possibleValue: 'Notification',
   ),
 
   /// Other
-  remedialActionOther._(
+  remedialAction$Other._(
     'remedial_action',
     possibleValue: 'Other',
   ),
-  remedialActionOtherExact._(
+  remedialAction$OtherExact._(
     'remedial_action.exact',
     possibleValue: 'Other',
   ),
 
   /// Patient Monitoring
-  remedialActionPatientMonitoring._(
+  remedialAction$PatientMonitoring._(
     'remedial_action',
     possibleValue: 'Patient Monitoring',
   ),
-  remedialActionPatientMonitoringExact._(
+  remedialAction$PatientMonitoringExact._(
     'remedial_action.exact',
     possibleValue: 'Patient Monitoring',
   ),
 
   /// Recall
-  remedialActionRecall._(
+  remedialAction$Recall._(
     'remedial_action',
     possibleValue: 'Recall',
   ),
-  remedialActionRecallExact._(
+  remedialAction$RecallExact._(
     'remedial_action.exact',
     possibleValue: 'Recall',
   ),
 
   /// Relabeling
-  remedialActionRelabeling._(
+  remedialAction$Relabeling._(
     'remedial_action',
     possibleValue: 'Relabeling',
   ),
-  remedialActionRelabelingExact._(
+  remedialAction$RelabelingExact._(
     'remedial_action.exact',
     possibleValue: 'Relabeling',
   ),
 
   /// Repair
-  remedialActionRepair._(
+  remedialAction$Repair._(
     'remedial_action',
     possibleValue: 'Repair',
   ),
-  remedialActionRepairExact._(
+  remedialAction$RepairExact._(
     'remedial_action.exact',
     possibleValue: 'Repair',
   ),
 
   /// Replace
-  remedialActionReplace._(
+  remedialAction$Replace._(
     'remedial_action',
     possibleValue: 'Replace',
   ),
-  remedialActionReplaceExact._(
+  remedialAction$ReplaceExact._(
     'remedial_action.exact',
     possibleValue: 'Replace',
   ),
@@ -2580,41 +2581,41 @@ enum DevEvent {
 
   /// Source of the adverse event report
   /// Distributor report
-  reportSourceCodeDistributorReport._(
+  reportSourceCode$DistributorReport._(
     'report_source_code',
     possibleValue: 'Distributor report',
   ),
-  reportSourceCodeDistributorReportExact._(
+  reportSourceCode$DistributorReportExact._(
     'report_source_code.exact',
     possibleValue: 'Distributor report',
   ),
 
   /// Manufacturer report
-  reportSourceCodeManufacturerReport._(
+  reportSourceCode$ManufacturerReport._(
     'report_source_code',
     possibleValue: 'Manufacturer report',
   ),
-  reportSourceCodeManufacturerReportExact._(
+  reportSourceCode$ManufacturerReportExact._(
     'report_source_code.exact',
     possibleValue: 'Manufacturer report',
   ),
 
   /// User facility report
-  reportSourceCodeUserFacilityReport._(
+  reportSourceCode$UserFacilityReport._(
     'report_source_code',
     possibleValue: 'User facility report',
   ),
-  reportSourceCodeUserFacilityReportExact._(
+  reportSourceCode$UserFacilityReportExact._(
     'report_source_code.exact',
     possibleValue: 'User facility report',
   ),
 
   /// Voluntary report
-  reportSourceCodeVoluntaryReport._(
+  reportSourceCode$VoluntaryReport._(
     'report_source_code',
     possibleValue: 'Voluntary report',
   ),
-  reportSourceCodeVoluntaryReportExact._(
+  reportSourceCode$VoluntaryReportExact._(
     'report_source_code.exact',
     possibleValue: 'Voluntary report',
   ),
@@ -2624,21 +2625,21 @@ enum DevEvent {
   /// device-related deaths. Importers are required to send reports of
   /// device-related deaths and serious injuries.
   /// The report was not sent to the FDA by a user facility or importer.
-  reportToFdaN._(
+  reportToFda$N._(
     'report_to_fda',
     possibleValue: 'N',
   ),
-  reportToFdaNExact._(
+  reportToFda$NExact._(
     'report_to_fda.exact',
     possibleValue: 'N',
   ),
 
   /// The report was sent to the FDA by a user facility or importer.
-  reportToFdaY._(
+  reportToFda$Y._(
     'report_to_fda',
     possibleValue: 'Y',
   ),
-  reportToFdaYExact._(
+  reportToFda$YExact._(
     'report_to_fda.exact',
     possibleValue: 'Y',
   ),
@@ -2650,452 +2651,452 @@ enum DevEvent {
   /// device-related serious injuries, and device-related malfunctions that
   /// could cause or contribute to a death or serious injury.
   /// The report was not sent to the manufacturer by a user facility or importer.
-  reportToManufacturerN._(
+  reportToManufacturer$N._(
     'report_to_manufacturer',
     possibleValue: 'N',
   ),
-  reportToManufacturerNExact._(
+  reportToManufacturer$NExact._(
     'report_to_manufacturer.exact',
     possibleValue: 'N',
   ),
 
   /// The report was sent to the manufacturer by a user facility or importer.
-  reportToManufacturerY._(
+  reportToManufacturer$Y._(
     'report_to_manufacturer',
     possibleValue: 'Y',
   ),
-  reportToManufacturerYExact._(
+  reportToManufacturer$YExact._(
     'report_to_manufacturer.exact',
     possibleValue: 'Y',
   ),
 
   /// Initial reporter occupation.
   /// Attorney
-  reporterOccupationCodeAttorney._(
+  reporterOccupationCode$Attorney._(
     'reporter_occupation_code',
     possibleValue: 'Attorney',
   ),
-  reporterOccupationCodeAttorneyExact._(
+  reporterOccupationCode$AttorneyExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Attorney',
   ),
 
   /// Audiologist
-  reporterOccupationCodeAudiologist._(
+  reporterOccupationCode$Audiologist._(
     'reporter_occupation_code',
     possibleValue: 'Audiologist',
   ),
-  reporterOccupationCodeAudiologistExact._(
+  reporterOccupationCode$AudiologistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Audiologist',
   ),
 
   /// Biomedical engineer
-  reporterOccupationCodeBiomedicalEngineer._(
+  reporterOccupationCode$BiomedicalEngineer._(
     'reporter_occupation_code',
     possibleValue: 'Biomedical engineer',
   ),
-  reporterOccupationCodeBiomedicalEngineerExact._(
+  reporterOccupationCode$BiomedicalEngineerExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Biomedical engineer',
   ),
 
   /// Dental assistant
-  reporterOccupationCodeDentalAssistant._(
+  reporterOccupationCode$DentalAssistant._(
     'reporter_occupation_code',
     possibleValue: 'Dental assistant',
   ),
-  reporterOccupationCodeDentalAssistantExact._(
+  reporterOccupationCode$DentalAssistantExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dental assistant',
   ),
 
   /// Dental hygienist
-  reporterOccupationCodeDentalHygienist._(
+  reporterOccupationCode$DentalHygienist._(
     'reporter_occupation_code',
     possibleValue: 'Dental hygienist',
   ),
-  reporterOccupationCodeDentalHygienistExact._(
+  reporterOccupationCode$DentalHygienistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dental hygienist',
   ),
 
   /// Dentist
-  reporterOccupationCodeDentist._(
+  reporterOccupationCode$Dentist._(
     'reporter_occupation_code',
     possibleValue: 'Dentist',
   ),
-  reporterOccupationCodeDentistExact._(
+  reporterOccupationCode$DentistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dentist',
   ),
 
   /// Device unattended
-  reporterOccupationCodeDeviceUnattended._(
+  reporterOccupationCode$DeviceUnattended._(
     'reporter_occupation_code',
     possibleValue: 'Device unattended',
   ),
-  reporterOccupationCodeDeviceUnattendedExact._(
+  reporterOccupationCode$DeviceUnattendedExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Device unattended',
   ),
 
   /// Dietician
-  reporterOccupationCodeDietician._(
+  reporterOccupationCode$Dietician._(
     'reporter_occupation_code',
     possibleValue: 'Dietician',
   ),
-  reporterOccupationCodeDieticianExact._(
+  reporterOccupationCode$DieticianExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Dietician',
   ),
 
   /// Emergency medical technician
-  reporterOccupationCodeEmergencyMedicalTechnician._(
+  reporterOccupationCode$EmergencyMedicalTechnician._(
     'reporter_occupation_code',
     possibleValue: 'Emergency medical technician',
   ),
-  reporterOccupationCodeEmergencyMedicalTechnicianExact._(
+  reporterOccupationCode$EmergencyMedicalTechnicianExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Emergency medical technician',
   ),
 
   /// Health professional
-  reporterOccupationCodeHealthProfessional._(
+  reporterOccupationCode$HealthProfessional._(
     'reporter_occupation_code',
     possibleValue: 'Health professional',
   ),
-  reporterOccupationCodeHealthProfessionalExact._(
+  reporterOccupationCode$HealthProfessionalExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Health professional',
   ),
 
   /// Home health aide
-  reporterOccupationCodeHomeHealthAide._(
+  reporterOccupationCode$HomeHealthAide._(
     'reporter_occupation_code',
     possibleValue: 'Home health aide',
   ),
-  reporterOccupationCodeHomeHealthAideExact._(
+  reporterOccupationCode$HomeHealthAideExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Home health aide',
   ),
 
   /// Hospital service technician
-  reporterOccupationCodeHospitalServiceTechnician._(
+  reporterOccupationCode$HospitalServiceTechnician._(
     'reporter_occupation_code',
     possibleValue: 'Hospital service technician',
   ),
-  reporterOccupationCodeHospitalServiceTechnicianExact._(
+  reporterOccupationCode$HospitalServiceTechnicianExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Hospital service technician',
   ),
 
   /// Invalid data
-  reporterOccupationCodeInvalidData._(
+  reporterOccupationCode$InvalidData._(
     'reporter_occupation_code',
     possibleValue: 'Invalid data',
   ),
-  reporterOccupationCodeInvalidDataExact._(
+  reporterOccupationCode$InvalidDataExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Invalid data',
   ),
 
   /// Lay user/patient
-  reporterOccupationCodeLayUserOrpatient._(
+  reporterOccupationCode$LayUserOrpatient._(
     'reporter_occupation_code',
     possibleValue: 'Lay user/patient',
   ),
-  reporterOccupationCodeLayUserOrpatientExact._(
+  reporterOccupationCode$LayUserOrpatientExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Lay user/patient',
   ),
 
   /// Medical assistant
-  reporterOccupationCodeMedicalAssistant._(
+  reporterOccupationCode$MedicalAssistant._(
     'reporter_occupation_code',
     possibleValue: 'Medical assistant',
   ),
-  reporterOccupationCodeMedicalAssistantExact._(
+  reporterOccupationCode$MedicalAssistantExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical assistant',
   ),
 
   /// Medical equipment company technician/representative
-  reporterOccupationCodeMedicalEquipmentCompanyTechnicianOrrepresentative._(
+  reporterOccupationCode$MedicalEquipmentCompanyTechnicianOrrepresentative._(
     'reporter_occupation_code',
     possibleValue: 'Medical equipment company technician/representative',
   ),
-  reporterOccupationCodeMedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
+  reporterOccupationCode$MedicalEquipmentCompanyTechnicianOrrepresentativeExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical equipment company technician/representative',
   ),
 
   /// Medical technologist
-  reporterOccupationCodeMedicalTechnologist._(
+  reporterOccupationCode$MedicalTechnologist._(
     'reporter_occupation_code',
     possibleValue: 'Medical technologist',
   ),
-  reporterOccupationCodeMedicalTechnologistExact._(
+  reporterOccupationCode$MedicalTechnologistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Medical technologist',
   ),
 
   /// No information
-  reporterOccupationCodeNoInformation._(
+  reporterOccupationCode$NoInformation._(
     'reporter_occupation_code',
     possibleValue: 'No information',
   ),
-  reporterOccupationCodeNoInformationExact._(
+  reporterOccupationCode$NoInformationExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'No information',
   ),
 
   /// Not applicable
-  reporterOccupationCodeNotApplicable._(
+  reporterOccupationCode$NotApplicable._(
     'reporter_occupation_code',
     possibleValue: 'Not applicable',
   ),
-  reporterOccupationCodeNotApplicableExact._(
+  reporterOccupationCode$NotApplicableExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Not applicable',
   ),
 
   /// Nuclear medicine technologist
-  reporterOccupationCodeNuclearMedicineTechnologist._(
+  reporterOccupationCode$NuclearMedicineTechnologist._(
     'reporter_occupation_code',
     possibleValue: 'Nuclear medicine technologist',
   ),
-  reporterOccupationCodeNuclearMedicineTechnologistExact._(
+  reporterOccupationCode$NuclearMedicineTechnologistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nuclear medicine technologist',
   ),
 
   /// Nurse
-  reporterOccupationCodeNurse._(
+  reporterOccupationCode$Nurse._(
     'reporter_occupation_code',
     possibleValue: 'Nurse',
   ),
-  reporterOccupationCodeNurseExact._(
+  reporterOccupationCode$NurseExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nurse',
   ),
 
   /// Nursing assistant
-  reporterOccupationCodeNursingAssistant._(
+  reporterOccupationCode$NursingAssistant._(
     'reporter_occupation_code',
     possibleValue: 'Nursing assistant',
   ),
-  reporterOccupationCodeNursingAssistantExact._(
+  reporterOccupationCode$NursingAssistantExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Nursing assistant',
   ),
 
   /// Occupational therapist
-  reporterOccupationCodeOccupationalTherapist._(
+  reporterOccupationCode$OccupationalTherapist._(
     'reporter_occupation_code',
     possibleValue: 'Occupational therapist',
   ),
-  reporterOccupationCodeOccupationalTherapistExact._(
+  reporterOccupationCode$OccupationalTherapistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Occupational therapist',
   ),
 
   /// Other
-  reporterOccupationCodeOther._(
+  reporterOccupationCode$Other._(
     'reporter_occupation_code',
     possibleValue: 'Other',
   ),
-  reporterOccupationCodeOtherExact._(
+  reporterOccupationCode$OtherExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other',
   ),
 
   /// Other caregivers
-  reporterOccupationCodeOtherCaregivers._(
+  reporterOccupationCode$OtherCaregivers._(
     'reporter_occupation_code',
     possibleValue: 'Other caregivers',
   ),
-  reporterOccupationCodeOtherCaregiversExact._(
+  reporterOccupationCode$OtherCaregiversExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other caregivers',
   ),
 
   /// Other health care professional
-  reporterOccupationCodeOtherHealthCareProfessional._(
+  reporterOccupationCode$OtherHealthCareProfessional._(
     'reporter_occupation_code',
     possibleValue: 'Other health care professional',
   ),
-  reporterOccupationCodeOtherHealthCareProfessionalExact._(
+  reporterOccupationCode$OtherHealthCareProfessionalExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Other health care professional',
   ),
 
   /// Paramedic
-  reporterOccupationCodeParamedic._(
+  reporterOccupationCode$Paramedic._(
     'reporter_occupation_code',
     possibleValue: 'Paramedic',
   ),
-  reporterOccupationCodeParamedicExact._(
+  reporterOccupationCode$ParamedicExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Paramedic',
   ),
 
   /// Patient
-  reporterOccupationCodePatient._(
+  reporterOccupationCode$Patient._(
     'reporter_occupation_code',
     possibleValue: 'Patient',
   ),
-  reporterOccupationCodePatientExact._(
+  reporterOccupationCode$PatientExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Patient',
   ),
 
   /// Patient family member or friend
-  reporterOccupationCodePatientFamilyMemberOrFriend._(
+  reporterOccupationCode$PatientFamilyMemberOrFriend._(
     'reporter_occupation_code',
     possibleValue: 'Patient family member or friend',
   ),
-  reporterOccupationCodePatientFamilyMemberOrFriendExact._(
+  reporterOccupationCode$PatientFamilyMemberOrFriendExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Patient family member or friend',
   ),
 
   /// Personal care assistant
-  reporterOccupationCodePersonalCareAssistant._(
+  reporterOccupationCode$PersonalCareAssistant._(
     'reporter_occupation_code',
     possibleValue: 'Personal care assistant',
   ),
-  reporterOccupationCodePersonalCareAssistantExact._(
+  reporterOccupationCode$PersonalCareAssistantExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Personal care assistant',
   ),
 
   /// Pharmacist
-  reporterOccupationCodePharmacist._(
+  reporterOccupationCode$Pharmacist._(
     'reporter_occupation_code',
     possibleValue: 'Pharmacist',
   ),
-  reporterOccupationCodePharmacistExact._(
+  reporterOccupationCode$PharmacistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Pharmacist',
   ),
 
   /// Phlebotomist
-  reporterOccupationCodePhlebotomist._(
+  reporterOccupationCode$Phlebotomist._(
     'reporter_occupation_code',
     possibleValue: 'Phlebotomist',
   ),
-  reporterOccupationCodePhlebotomistExact._(
+  reporterOccupationCode$PhlebotomistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Phlebotomist',
   ),
 
   /// Physical therapist
-  reporterOccupationCodePhysicalTherapist._(
+  reporterOccupationCode$PhysicalTherapist._(
     'reporter_occupation_code',
     possibleValue: 'Physical therapist',
   ),
-  reporterOccupationCodePhysicalTherapistExact._(
+  reporterOccupationCode$PhysicalTherapistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physical therapist',
   ),
 
   /// Physician
-  reporterOccupationCodePhysician._(
+  reporterOccupationCode$Physician._(
     'reporter_occupation_code',
     possibleValue: 'Physician',
   ),
-  reporterOccupationCodePhysicianExact._(
+  reporterOccupationCode$PhysicianExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physician',
   ),
 
   /// Physician assistant
-  reporterOccupationCodePhysicianAssistant._(
+  reporterOccupationCode$PhysicianAssistant._(
     'reporter_occupation_code',
     possibleValue: 'Physician assistant',
   ),
-  reporterOccupationCodePhysicianAssistantExact._(
+  reporterOccupationCode$PhysicianAssistantExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physician assistant',
   ),
 
   /// Physicist
-  reporterOccupationCodePhysicist._(
+  reporterOccupationCode$Physicist._(
     'reporter_occupation_code',
     possibleValue: 'Physicist',
   ),
-  reporterOccupationCodePhysicistExact._(
+  reporterOccupationCode$PhysicistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Physicist',
   ),
 
   /// Radiologic technologist
-  reporterOccupationCodeRadiologicTechnologist._(
+  reporterOccupationCode$RadiologicTechnologist._(
     'reporter_occupation_code',
     possibleValue: 'Radiologic technologist',
   ),
-  reporterOccupationCodeRadiologicTechnologistExact._(
+  reporterOccupationCode$RadiologicTechnologistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Radiologic technologist',
   ),
 
   /// Respiratory therapist
-  reporterOccupationCodeRespiratoryTherapist._(
+  reporterOccupationCode$RespiratoryTherapist._(
     'reporter_occupation_code',
     possibleValue: 'Respiratory therapist',
   ),
-  reporterOccupationCodeRespiratoryTherapistExact._(
+  reporterOccupationCode$RespiratoryTherapistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Respiratory therapist',
   ),
 
   /// Risk manager
-  reporterOccupationCodeRiskManager._(
+  reporterOccupationCode$RiskManager._(
     'reporter_occupation_code',
     possibleValue: 'Risk manager',
   ),
-  reporterOccupationCodeRiskManagerExact._(
+  reporterOccupationCode$RiskManagerExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Risk manager',
   ),
 
   /// Service and testing personnel
-  reporterOccupationCodeServiceAndTestingPersonnel._(
+  reporterOccupationCode$ServiceAndTestingPersonnel._(
     'reporter_occupation_code',
     possibleValue: 'Service and testing personnel',
   ),
-  reporterOccupationCodeServiceAndTestingPersonnelExact._(
+  reporterOccupationCode$ServiceAndTestingPersonnelExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Service and testing personnel',
   ),
 
   /// Service personnel
-  reporterOccupationCodeServicePersonnel._(
+  reporterOccupationCode$ServicePersonnel._(
     'reporter_occupation_code',
     possibleValue: 'Service personnel',
   ),
-  reporterOccupationCodeServicePersonnelExact._(
+  reporterOccupationCode$ServicePersonnelExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Service personnel',
   ),
 
   /// Speech therapist
-  reporterOccupationCodeSpeechTherapist._(
+  reporterOccupationCode$SpeechTherapist._(
     'reporter_occupation_code',
     possibleValue: 'Speech therapist',
   ),
-  reporterOccupationCodeSpeechTherapistExact._(
+  reporterOccupationCode$SpeechTherapistExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Speech therapist',
   ),
 
   /// Unknown
-  reporterOccupationCodeUnknown._(
+  reporterOccupationCode$Unknown._(
     'reporter_occupation_code',
     possibleValue: 'Unknown',
   ),
-  reporterOccupationCodeUnknownExact._(
+  reporterOccupationCode$UnknownExact._(
     'reporter_occupation_code.exact',
     possibleValue: 'Unknown',
   ),
@@ -3103,32 +3104,32 @@ enum DevEvent {
   /// Indicates whether the suspect device was a single-use device that was
   /// reprocessed and reused on a patient.
   /// Was not a single-use device that was reprocessed and reused.
-  reprocessedAndReusedFlagN._(
+  reprocessedAndReusedFlag$N._(
     'reprocessed_and_reused_flag',
     possibleValue: 'N',
   ),
-  reprocessedAndReusedFlagNExact._(
+  reprocessedAndReusedFlag$NExact._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'N',
   ),
 
   /// The original equipment manufacturer was unable to determine if their
   /// single-use device was reprocessed and reused.
-  reprocessedAndReusedFlagUnk._(
+  reprocessedAndReusedFlag$Unk._(
     'reprocessed_and_reused_flag',
     possibleValue: 'UNK',
   ),
-  reprocessedAndReusedFlagUnkExact._(
+  reprocessedAndReusedFlag$UnkExact._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'UNK',
   ),
 
   /// Was a single-use device that was reprocessed and reused.
-  reprocessedAndReusedFlagY._(
+  reprocessedAndReusedFlag$Y._(
     'reprocessed_and_reused_flag',
     possibleValue: 'Y',
   ),
-  reprocessedAndReusedFlagYExact._(
+  reprocessedAndReusedFlag$YExact._(
     'reprocessed_and_reused_flag.exact',
     possibleValue: 'Y',
   ),
@@ -3136,173 +3137,173 @@ enum DevEvent {
   /// Whether the device was labeled for single use or not.
   /// The device was not labeled for single use, or this is irrelevant to the
   /// device being reported (e.g. an X-ray machine).
-  singleUseFlagNo._(
+  singleUseFlag$No._(
     'single_use_flag',
     possibleValue: 'No',
   ),
-  singleUseFlagNoExact._(
+  singleUseFlag$NoExact._(
     'single_use_flag.exact',
     possibleValue: 'No',
   ),
 
   /// The device was labeled for single use.
-  singleUseFlagYes._(
+  singleUseFlag$Yes._(
     'single_use_flag',
     possibleValue: 'Yes',
   ),
-  singleUseFlagYesExact._(
+  singleUseFlag$YesExact._(
     'single_use_flag.exact',
     possibleValue: 'Yes',
   ),
 
   /// The manufacturer-reported source of the adverse event report.
   /// Company representation
-  sourceTypeCompanyRepresentation._(
+  sourceType$CompanyRepresentation._(
     'source_type',
     possibleValue: 'Company representation',
   ),
-  sourceTypeCompanyRepresentationExact._(
+  sourceType$CompanyRepresentationExact._(
     'source_type.exact',
     possibleValue: 'Company representation',
   ),
 
   /// Consumer
-  sourceTypeConsumer._(
+  sourceType$Consumer._(
     'source_type',
     possibleValue: 'Consumer',
   ),
-  sourceTypeConsumerExact._(
+  sourceType$ConsumerExact._(
     'source_type.exact',
     possibleValue: 'Consumer',
   ),
 
   /// Distributor
-  sourceTypeDistributor._(
+  sourceType$Distributor._(
     'source_type',
     possibleValue: 'Distributor',
   ),
-  sourceTypeDistributorExact._(
+  sourceType$DistributorExact._(
     'source_type.exact',
     possibleValue: 'Distributor',
   ),
 
   /// Foreign
-  sourceTypeForeign._(
+  sourceType$Foreign._(
     'source_type',
     possibleValue: 'Foreign',
   ),
-  sourceTypeForeignExact._(
+  sourceType$ForeignExact._(
     'source_type.exact',
     possibleValue: 'Foreign',
   ),
 
   /// Health Professional
-  sourceTypeHealthProfessional._(
+  sourceType$HealthProfessional._(
     'source_type',
     possibleValue: 'Health Professional',
   ),
-  sourceTypeHealthProfessionalExact._(
+  sourceType$HealthProfessionalExact._(
     'source_type.exact',
     possibleValue: 'Health Professional',
   ),
 
   /// Invalid data
-  sourceTypeInvalidData._(
+  sourceType$InvalidData._(
     'source_type',
     possibleValue: 'Invalid data',
   ),
-  sourceTypeInvalidDataExact._(
+  sourceType$InvalidDataExact._(
     'source_type.exact',
     possibleValue: 'Invalid data',
   ),
 
   /// Literature
-  sourceTypeLiterature._(
+  sourceType$Literature._(
     'source_type',
     possibleValue: 'Literature',
   ),
-  sourceTypeLiteratureExact._(
+  sourceType$LiteratureExact._(
     'source_type.exact',
     possibleValue: 'Literature',
   ),
 
   /// Other
-  sourceTypeOther._(
+  sourceType$Other._(
     'source_type',
     possibleValue: 'Other',
   ),
-  sourceTypeOtherExact._(
+  sourceType$OtherExact._(
     'source_type.exact',
     possibleValue: 'Other',
   ),
 
   /// Study
-  sourceTypeStudy._(
+  sourceType$Study._(
     'source_type',
     possibleValue: 'Study',
   ),
-  sourceTypeStudyExact._(
+  sourceType$StudyExact._(
     'source_type.exact',
     possibleValue: 'Study',
   ),
 
   /// Unknown
-  sourceTypeUnknown._(
+  sourceType$Unknown._(
     'source_type',
     possibleValue: 'Unknown',
   ),
-  sourceTypeUnknownExact._(
+  sourceType$UnknownExact._(
     'source_type.exact',
     possibleValue: 'Unknown',
   ),
 
   /// User facility
-  sourceTypeUserFacility._(
+  sourceType$UserFacility._(
     'source_type',
     possibleValue: 'User facility',
   ),
-  sourceTypeUserFacilityExact._(
+  sourceType$UserFacilityExact._(
     'source_type.exact',
     possibleValue: 'User facility',
   ),
 
   /// The type of report.
   /// Documentation forthcoming.
-  typeOfReportExtraCopyReceived._(
+  typeOfReport$ExtraCopyReceived._(
     'type_of_report',
     possibleValue: 'Extra copy received',
   ),
-  typeOfReportExtraCopyReceivedExact._(
+  typeOfReport$ExtraCopyReceivedExact._(
     'type_of_report.exact',
     possibleValue: 'Extra copy received',
   ),
 
   /// Additional or corrected information.
-  typeOfReportFollowup._(
+  typeOfReport$Followup._(
     'type_of_report',
     possibleValue: 'Followup',
   ),
-  typeOfReportFollowupExact._(
+  typeOfReport$FollowupExact._(
     'type_of_report.exact',
     possibleValue: 'Followup',
   ),
 
   /// Initial report of an event.
-  typeOfReportInitialSubmission._(
+  typeOfReport$InitialSubmission._(
     'type_of_report',
     possibleValue: 'Initial submission',
   ),
-  typeOfReportInitialSubmissionExact._(
+  typeOfReport$InitialSubmissionExact._(
     'type_of_report.exact',
     possibleValue: 'Initial submission',
   ),
 
   /// Documentation forthcoming.
-  typeOfReportOtherInformationSubmitted._(
+  typeOfReport$OtherInformationSubmitted._(
     'type_of_report',
     possibleValue: 'Other information submitted',
   ),
-  typeOfReportOtherInformationSubmittedExact._(
+  typeOfReport$OtherInformationSubmittedExact._(
     'type_of_report.exact',
     possibleValue: 'Other information submitted',
   ),

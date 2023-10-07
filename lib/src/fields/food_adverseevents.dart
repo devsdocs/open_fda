@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class FoodAdverseEventsFields extends Endpointer {
+final class FoodAdverseEventsFields
+    extends Endpointer<FoodAdverseEventsFields> {
   factory FoodAdverseEventsFields(
     FoodEvent data,
   ) =>
@@ -19,7 +20,7 @@ final class FoodAdverseEventsFields extends Endpointer {
         );
   final FoodEvent _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -43,56 +44,56 @@ enum FoodEvent {
 
   /// Encodes the unit in which the age of the consumer is expressed.
   /// age is expressed in days
-  consumerAgeUnitDays._(
+  consumerAgeUnit$Days._(
     'consumer.age_unit',
     possibleValue: 'Day(s)',
   ),
 
   /// age is expressed in decades
-  consumerAgeUnitDecades._(
+  consumerAgeUnit$Decades._(
     'consumer.age_unit',
     possibleValue: 'Decade(s)',
   ),
 
   /// age is expressed in months
-  consumerAgeUnitMonths._(
+  consumerAgeUnit$Months._(
     'consumer.age_unit',
     possibleValue: 'Month(s)',
   ),
 
   /// Unknown
-  consumerAgeUnitNotAvailable._(
+  consumerAgeUnit$NotAvailable._(
     'consumer.age_unit',
     possibleValue: 'Not Available',
   ),
 
   /// age is expressed in weeks
-  consumerAgeUnitWeeks._(
+  consumerAgeUnit$Weeks._(
     'consumer.age_unit',
     possibleValue: 'Week(s)',
   ),
 
   /// age is expressed in years
-  consumerAgeUnitYears._(
+  consumerAgeUnit$Years._(
     'consumer.age_unit',
     possibleValue: 'Year(s)',
   ),
 
   /// The reported gender of the consumer.
   /// Female
-  consumerGenderFemale._(
+  consumerGender$Female._(
     'consumer.gender',
     possibleValue: 'Female',
   ),
 
   /// Male
-  consumerGenderMale._(
+  consumerGender$Male._(
     'consumer.gender',
     possibleValue: 'Male',
   ),
 
   /// Unknown
-  consumerGenderNotAvailable._(
+  consumerGender$NotAvailable._(
     'consumer.gender',
     possibleValue: 'Not Available',
   ),
@@ -109,133 +110,133 @@ enum FoodEvent {
 
   /// The outcome or consequence of the adverse event.
   /// The adverse event caused a birth defect in a baby
-  outcomesCongenitalAnomaly._(
+  outcomes$CongenitalAnomaly._(
     'outcomes',
     possibleValue: 'CONGENITAL ANOMALY',
   ),
-  outcomesCongenitalAnomalyExact._(
+  outcomes$CongenitalAnomalyExact._(
     'outcomes.exact',
     possibleValue: 'CONGENITAL ANOMALY',
   ),
 
   /// The adverse event was the death of the consumer
-  outcomesDeath._(
+  outcomes$Death._(
     'outcomes',
     possibleValue: 'DEATH',
   ),
-  outcomesDeathExact._(
+  outcomes$DeathExact._(
     'outcomes.exact',
     possibleValue: 'DEATH',
   ),
 
   /// The adverse event caused the permanent disability
-  outcomesDisability._(
+  outcomes$Disability._(
     'outcomes',
     possibleValue: 'DISABILITY',
   ),
-  outcomesDisabilityExact._(
+  outcomes$DisabilityExact._(
     'outcomes.exact',
     possibleValue: 'DISABILITY',
   ),
 
   /// The consumer was hospitalized
-  outcomesHospitalization._(
+  outcomes$Hospitalization._(
     'outcomes',
     possibleValue: 'HOSPITALIZATION',
   ),
-  outcomesHospitalizationExact._(
+  outcomes$HospitalizationExact._(
     'outcomes.exact',
     possibleValue: 'HOSPITALIZATION',
   ),
 
   /// The adverse event was life threatening
-  outcomesLifeThreatening._(
+  outcomes$LifeThreatening._(
     'outcomes',
     possibleValue: 'LIFE THREATENING',
   ),
-  outcomesLifeThreateningExact._(
+  outcomes$LifeThreateningExact._(
     'outcomes.exact',
     possibleValue: 'LIFE THREATENING',
   ),
 
   /// The outcome wasn’t serious
-  outcomesNonseriousInjuriesOrIllness._(
+  outcomes$NonseriousInjuriesOrIllness._(
     'outcomes',
     possibleValue: 'NON-SERIOUS INJURIES/ ILLNESS',
   ),
-  outcomesNonseriousInjuriesOrIllnessExact._(
+  outcomes$NonseriousInjuriesOrIllnessExact._(
     'outcomes.exact',
     possibleValue: 'NON-SERIOUS INJURIES/ ILLNESS',
   ),
 
   /// The outcome was not reported
-  outcomesNone._(
+  outcomes$None._(
     'outcomes',
     possibleValue: 'NONE',
   ),
-  outcomesNoneExact._(
+  outcomes$NoneExact._(
     'outcomes.exact',
     possibleValue: 'NONE',
   ),
 
   /// The outcome was not one of the specified types
-  outcomesOther._(
+  outcomes$Other._(
     'outcomes',
     possibleValue: 'OTHER',
   ),
-  outcomesOtherExact._(
+  outcomes$OtherExact._(
     'outcomes.exact',
     possibleValue: 'OTHER',
   ),
 
   /// The outcome included non-specified serious medical events
-  outcomesOtherSeriousImportantMedicalEvents._(
+  outcomes$OtherSeriousImportantMedicalEvents._(
     'outcomes',
     possibleValue: 'OTHER SERIOUS (IMPORTANT MEDICAL EVENTS)',
   ),
-  outcomesOtherSeriousImportantMedicalEventsExact._(
+  outcomes$OtherSeriousImportantMedicalEventsExact._(
     'outcomes.exact',
     possibleValue: 'OTHER SERIOUS (IMPORTANT MEDICAL EVENTS)',
   ),
 
   /// The adverse event caused an illness or injury serious enough to require
   /// intervention to prevent permanent impairment or disability
-  outcomesReqInterventionToPrvntPermImprmnt._(
+  outcomes$ReqInterventionToPrvntPermImprmnt._(
     'outcomes',
     possibleValue: 'REQ. INTERVENTION TO PRVNT PERM. IMPRMNT.',
   ),
-  outcomesReqInterventionToPrvntPermImprmntExact._(
+  outcomes$ReqInterventionToPrvntPermImprmntExact._(
     'outcomes.exact',
     possibleValue: 'REQ. INTERVENTION TO PRVNT PERM. IMPRMNT.',
   ),
 
   /// The adverse event caused serious injuries or illness
-  outcomesSeriousInjuriesOrIllness._(
+  outcomes$SeriousInjuriesOrIllness._(
     'outcomes',
     possibleValue: 'SERIOUS INJURIES/ ILLNESS',
   ),
-  outcomesSeriousInjuriesOrIllnessExact._(
+  outcomes$SeriousInjuriesOrIllnessExact._(
     'outcomes.exact',
     possibleValue: 'SERIOUS INJURIES/ ILLNESS',
   ),
 
   /// The adverse event was serious enough to cause the consumer to visit a
   /// health care provider
-  outcomesVisitedAHealthCareProvider._(
+  outcomes$VisitedAHealthCareProvider._(
     'outcomes',
     possibleValue: 'VISITED A HEALTH CARE PROVIDER',
   ),
-  outcomesVisitedAHealthCareProviderExact._(
+  outcomes$VisitedAHealthCareProviderExact._(
     'outcomes.exact',
     possibleValue: 'VISITED A HEALTH CARE PROVIDER',
   ),
 
   /// The consumer visited an ER
-  outcomesVisitedAnEr._(
+  outcomes$VisitedAnEr._(
     'outcomes',
     possibleValue: 'VISITED AN ER',
   ),
-  outcomesVisitedAnErExact._(
+  outcomes$VisitedAnErExact._(
     'outcomes.exact',
     possibleValue: 'VISITED AN ER',
   ),
@@ -248,523 +249,523 @@ enum FoodEvent {
   /// generally limited to products tagged with industry codes related to human
   /// food and nutritional supplements or cosmetics.
   /// Cheese/Cheese Prod
-  productsIndustryCode12._(
+  productsIndustryCode$12._(
     'products.industry_code',
     possibleValue: '12',
   ),
 
   /// Ice Cream Prod
-  productsIndustryCode13._(
+  productsIndustryCode$13._(
     'products.industry_code',
     possibleValue: '13',
   ),
 
   /// Filled Milk/Imit Milk Prod
-  productsIndustryCode14._(
+  productsIndustryCode$14._(
     'products.industry_code',
     possibleValue: '14',
   ),
 
   /// Egg/Egg Prod
-  productsIndustryCode15._(
+  productsIndustryCode$15._(
     'products.industry_code',
     possibleValue: '15',
   ),
 
   /// Fishery/Seafood Prod
-  productsIndustryCode16._(
+  productsIndustryCode$16._(
     'products.industry_code',
     possibleValue: '16',
   ),
 
   /// Meat, Meat Products and Poultry
-  productsIndustryCode17._(
+  productsIndustryCode$17._(
     'products.industry_code',
     possibleValue: '17',
   ),
 
   /// Vegetable Protein Prod
-  productsIndustryCode18._(
+  productsIndustryCode$18._(
     'products.industry_code',
     possibleValue: '18',
   ),
 
   /// Whole Grain/Milled Grain Prod/Starch
-  productsIndustryCode2._(
+  productsIndustryCode$2._(
     'products.industry_code',
     possibleValue: '2',
   ),
 
   /// Fruit/Fruit Prod
-  productsIndustryCode20._(
+  productsIndustryCode$20._(
     'products.industry_code',
     possibleValue: '20',
   ),
 
   /// Fruit/Fruit Prod
-  productsIndustryCode21._(
+  productsIndustryCode$21._(
     'products.industry_code',
     possibleValue: '21',
   ),
 
   /// Fruit/Fruit Prod
-  productsIndustryCode22._(
+  productsIndustryCode$22._(
     'products.industry_code',
     possibleValue: '22',
   ),
 
   /// Nuts/Edible Seed
-  productsIndustryCode23._(
+  productsIndustryCode$23._(
     'products.industry_code',
     possibleValue: '23',
   ),
 
   /// Vegetables/Vegetable Products
-  productsIndustryCode24._(
+  productsIndustryCode$24._(
     'products.industry_code',
     possibleValue: '24',
   ),
 
   /// Vegetables/Vegetable Products
-  productsIndustryCode25._(
+  productsIndustryCode$25._(
     'products.industry_code',
     possibleValue: '25',
   ),
 
   /// Vegetable Oils
-  productsIndustryCode26._(
+  productsIndustryCode$26._(
     'products.industry_code',
     possibleValue: '26',
   ),
 
   /// Dressing/Condiment
-  productsIndustryCode27._(
+  productsIndustryCode$27._(
     'products.industry_code',
     possibleValue: '27',
   ),
 
   /// Spices, Flavors And Salts
-  productsIndustryCode28._(
+  productsIndustryCode$28._(
     'products.industry_code',
     possibleValue: '28',
   ),
 
   /// Soft Drink/Water
-  productsIndustryCode29._(
+  productsIndustryCode$29._(
     'products.industry_code',
     possibleValue: '29',
   ),
 
   /// Bakery Prod/Dough/Mix/Icing
-  productsIndustryCode3._(
+  productsIndustryCode$3._(
     'products.industry_code',
     possibleValue: '3',
   ),
 
   /// Beverage Bases/Conc/Nectar
-  productsIndustryCode30._(
+  productsIndustryCode$30._(
     'products.industry_code',
     possibleValue: '30',
   ),
 
   /// Coffee/Tea
-  productsIndustryCode31._(
+  productsIndustryCode$31._(
     'products.industry_code',
     possibleValue: '31',
   ),
 
   /// Alcoholic Beverage
-  productsIndustryCode32._(
+  productsIndustryCode$32._(
     'products.industry_code',
     possibleValue: '32',
   ),
 
   /// Candy W/O Choc/Special/Chew Gum
-  productsIndustryCode33._(
+  productsIndustryCode$33._(
     'products.industry_code',
     possibleValue: '33',
   ),
 
   /// Choc/Cocoa Prod
-  productsIndustryCode34._(
+  productsIndustryCode$34._(
     'products.industry_code',
     possibleValue: '34',
   ),
 
   /// Gelatin/Rennet/Pudding Mix/Pie Filling
-  productsIndustryCode35._(
+  productsIndustryCode$35._(
     'products.industry_code',
     possibleValue: '35',
   ),
 
   /// Food Sweeteners (Nutritive)
-  productsIndustryCode36._(
+  productsIndustryCode$36._(
     'products.industry_code',
     possibleValue: '36',
   ),
 
   /// Mult Food Dinner/Grav/Sauce/Special
-  productsIndustryCode37._(
+  productsIndustryCode$37._(
     'products.industry_code',
     possibleValue: '37',
   ),
 
   /// Soup
-  productsIndustryCode38._(
+  productsIndustryCode$38._(
     'products.industry_code',
     possibleValue: '38',
   ),
 
   /// Prep Salad Prod
-  productsIndustryCode39._(
+  productsIndustryCode$39._(
     'products.industry_code',
     possibleValue: '39',
   ),
 
   /// Macaroni/Noodle Prod
-  productsIndustryCode4._(
+  productsIndustryCode$4._(
     'products.industry_code',
     possibleValue: '4',
   ),
 
   /// Baby Food Prod
-  productsIndustryCode40._(
+  productsIndustryCode$40._(
     'products.industry_code',
     possibleValue: '40',
   ),
 
   /// Dietary Conv Food/Meal Replacements
-  productsIndustryCode41._(
+  productsIndustryCode$41._(
     'products.industry_code',
     possibleValue: '41',
   ),
 
   /// Edible Insects And Insect-derived Foods (Arthropods And Annelids)
-  productsIndustryCode42._(
+  productsIndustryCode$42._(
     'products.industry_code',
     possibleValue: '42',
   ),
 
   /// Food Additives (Human Use)
-  productsIndustryCode45._(
+  productsIndustryCode$45._(
     'products.industry_code',
     possibleValue: '45',
   ),
 
   /// Food Additives (Human Use)
-  productsIndustryCode46._(
+  productsIndustryCode$46._(
     'products.industry_code',
     possibleValue: '46',
   ),
 
   /// Multiple Food Warehouses
-  productsIndustryCode47._(
+  productsIndustryCode$47._(
     'products.industry_code',
     possibleValue: '47',
   ),
 
   /// Cereal Prep/Breakfast Food
-  productsIndustryCode5._(
+  productsIndustryCode$5._(
     'products.industry_code',
     possibleValue: '5',
   ),
 
   /// Color Additiv Food/Drug/Cosmetic
-  productsIndustryCode50._(
+  productsIndustryCode$50._(
     'products.industry_code',
     possibleValue: '50',
   ),
 
   /// Food Service/Conveyance
-  productsIndustryCode51._(
+  productsIndustryCode$51._(
     'products.industry_code',
     possibleValue: '51',
   ),
 
   /// Miscellaneous Food Related Items
-  productsIndustryCode52._(
+  productsIndustryCode$52._(
     'products.industry_code',
     possibleValue: '52',
   ),
 
   /// Cosmetics
-  productsIndustryCode53._(
+  productsIndustryCode$53._(
     'products.industry_code',
     possibleValue: '53',
   ),
 
   /// Vit/Min/Prot/Unconv Diet(Human/Animal)
-  productsIndustryCode54._(
+  productsIndustryCode$54._(
     'products.industry_code',
     possibleValue: '54',
   ),
 
   /// Pharm Necess & Ctnr For Drug/Bio
-  productsIndustryCode55._(
+  productsIndustryCode$55._(
     'products.industry_code',
     possibleValue: '55',
   ),
 
   /// Antibiotics (Human/Animal)
-  productsIndustryCode56._(
+  productsIndustryCode$56._(
     'products.industry_code',
     possibleValue: '56',
   ),
 
   /// Bio & Licensed In-Vivo & In-Vitro Diag
-  productsIndustryCode57._(
+  productsIndustryCode$57._(
     'products.industry_code',
     possibleValue: '57',
   ),
 
   /// Multiple Drug Warehouses
-  productsIndustryCode59._(
+  productsIndustryCode$59._(
     'products.industry_code',
     possibleValue: '59',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode60._(
+  productsIndustryCode$60._(
     'products.industry_code',
     possibleValue: '60',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode61._(
+  productsIndustryCode$61._(
     'products.industry_code',
     possibleValue: '61',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode62._(
+  productsIndustryCode$62._(
     'products.industry_code',
     possibleValue: '62',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode63._(
+  productsIndustryCode$63._(
     'products.industry_code',
     possibleValue: '63',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode64._(
+  productsIndustryCode$64._(
     'products.industry_code',
     possibleValue: '64',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode65._(
+  productsIndustryCode$65._(
     'products.industry_code',
     possibleValue: '65',
   ),
 
   /// Human and Animal Drugs
-  productsIndustryCode66._(
+  productsIndustryCode$66._(
     'products.industry_code',
     possibleValue: '66',
   ),
 
   /// Type A Medicated Articles
-  productsIndustryCode67._(
+  productsIndustryCode$67._(
     'products.industry_code',
     possibleValue: '67',
   ),
 
   /// Animal Devices and Diagnostic Products
-  productsIndustryCode68._(
+  productsIndustryCode$68._(
     'products.industry_code',
     possibleValue: '68',
   ),
 
   /// Medicated Animal Feeds
-  productsIndustryCode69._(
+  productsIndustryCode$69._(
     'products.industry_code',
     possibleValue: '69',
   ),
 
   /// Snack Food Item
-  productsIndustryCode7._(
+  productsIndustryCode$7._(
     'products.industry_code',
     possibleValue: '7',
   ),
 
   /// Animal Food(Non-Medicated Feed and Feed Ingreds)
-  productsIndustryCode70._(
+  productsIndustryCode$70._(
     'products.industry_code',
     possibleValue: '70',
   ),
 
   /// Byprodcts For Animal Foods
-  productsIndustryCode71._(
+  productsIndustryCode$71._(
     'products.industry_code',
     possibleValue: '71',
   ),
 
   /// Pet/Laboratory Animal Food
-  productsIndustryCode72._(
+  productsIndustryCode$72._(
     'products.industry_code',
     possibleValue: '72',
   ),
 
   /// Anesthesiology
-  productsIndustryCode73._(
+  productsIndustryCode$73._(
     'products.industry_code',
     possibleValue: '73',
   ),
 
   /// Cardiovascular
-  productsIndustryCode74._(
+  productsIndustryCode$74._(
     'products.industry_code',
     possibleValue: '74',
   ),
 
   /// Chemistry
-  productsIndustryCode75._(
+  productsIndustryCode$75._(
     'products.industry_code',
     possibleValue: '75',
   ),
 
   /// Dental
-  productsIndustryCode76._(
+  productsIndustryCode$76._(
     'products.industry_code',
     possibleValue: '76',
   ),
 
   /// Ear, Nose And Throat
-  productsIndustryCode77._(
+  productsIndustryCode$77._(
     'products.industry_code',
     possibleValue: '77',
   ),
 
   /// Gastroenterological & Urological
-  productsIndustryCode78._(
+  productsIndustryCode$78._(
     'products.industry_code',
     possibleValue: '78',
   ),
 
   /// General & Plastic Surgery
-  productsIndustryCode79._(
+  productsIndustryCode$79._(
     'products.industry_code',
     possibleValue: '79',
   ),
 
   /// General Hospital/Personal Use
-  productsIndustryCode80._(
+  productsIndustryCode$80._(
     'products.industry_code',
     possibleValue: '80',
   ),
 
   /// Hematology
-  productsIndustryCode81._(
+  productsIndustryCode$81._(
     'products.industry_code',
     possibleValue: '81',
   ),
 
   /// Immunology
-  productsIndustryCode82._(
+  productsIndustryCode$82._(
     'products.industry_code',
     possibleValue: '82',
   ),
 
   /// Microbiology
-  productsIndustryCode83._(
+  productsIndustryCode$83._(
     'products.industry_code',
     possibleValue: '83',
   ),
 
   /// Neurological
-  productsIndustryCode84._(
+  productsIndustryCode$84._(
     'products.industry_code',
     possibleValue: '84',
   ),
 
   /// Obstetrical & Gynecological
-  productsIndustryCode85._(
+  productsIndustryCode$85._(
     'products.industry_code',
     possibleValue: '85',
   ),
 
   /// Ophthalmic
-  productsIndustryCode86._(
+  productsIndustryCode$86._(
     'products.industry_code',
     possibleValue: '86',
   ),
 
   /// Orthopedic
-  productsIndustryCode87._(
+  productsIndustryCode$87._(
     'products.industry_code',
     possibleValue: '87',
   ),
 
   /// Pathology
-  productsIndustryCode88._(
+  productsIndustryCode$88._(
     'products.industry_code',
     possibleValue: '88',
   ),
 
   /// Physical Medicine
-  productsIndustryCode89._(
+  productsIndustryCode$89._(
     'products.industry_code',
     possibleValue: '89',
   ),
 
   /// Milk/Butter/Dried Milk Prod
-  productsIndustryCode9._(
+  productsIndustryCode$9._(
     'products.industry_code',
     possibleValue: '9',
   ),
 
   /// Radiological
-  productsIndustryCode90._(
+  productsIndustryCode$90._(
     'products.industry_code',
     possibleValue: '90',
   ),
 
   /// Toxicology
-  productsIndustryCode91._(
+  productsIndustryCode$91._(
     'products.industry_code',
     possibleValue: '91',
   ),
 
   /// Molecular Genetics
-  productsIndustryCode92._(
+  productsIndustryCode$92._(
     'products.industry_code',
     possibleValue: '92',
   ),
 
   /// Ionizing Non-Medical Devices and Components
-  productsIndustryCode94._(
+  productsIndustryCode$94._(
     'products.industry_code',
     possibleValue: '94',
   ),
 
   /// Light Emitting Non-Device Products
-  productsIndustryCode95._(
+  productsIndustryCode$95._(
     'products.industry_code',
     possibleValue: '95',
   ),
 
   /// Radio Frequency Emitting Products
-  productsIndustryCode96._(
+  productsIndustryCode$96._(
     'products.industry_code',
     possibleValue: '96',
   ),
 
   /// Sound Emitting Products
-  productsIndustryCode97._(
+  productsIndustryCode$97._(
     'products.industry_code',
     possibleValue: '97',
   ),
 
   /// Tobacco Products
-  productsIndustryCode98._(
+  productsIndustryCode$98._(
     'products.industry_code',
     possibleValue: '98',
   ),
 
   /// Bio/Anim Drug/Feed&Food/Med Dev/Rh Whse
-  productsIndustryCode99._(
+  productsIndustryCode$99._(
     'products.industry_code',
     possibleValue: '99',
   ),
@@ -788,45 +789,45 @@ enum FoodEvent {
   /// The reported role of the product in the adverse event report.
   /// The product was not suspected of causing the adverse event, but was being
   /// consumed or used at the same time when the adverse event started
-  productsRoleConcomitant._(
+  productsRole$Concomitant._(
     'products.role',
     possibleValue: 'Concomitant',
   ),
-  productsRoleConcomitantExact._(
+  productsRole$ConcomitantExact._(
     'products.role.exact',
     possibleValue: 'Concomitant',
   ),
 
   /// The suspected role of the product was not reported
-  productsRoleNotAvailable._(
+  productsRole$NotAvailable._(
     'products.role',
     possibleValue: 'Not Available',
   ),
-  productsRoleNotAvailableExact._(
+  productsRole$NotAvailableExact._(
     'products.role.exact',
     possibleValue: 'Not Available',
   ),
 
   /// The product was suspected of causing the adverse event
-  productsRoleSuspect._(
+  productsRole$Suspect._(
     'products.role',
     possibleValue: 'Suspect',
   ),
-  productsRoleSuspectExact._(
+  productsRole$SuspectExact._(
     'products.role.exact',
     possibleValue: 'Suspect',
   ),
 
   /// MedDRA terms for the reactions. Note that these terms are encoded in
   /// British English. For instance, *diarrhea* is recorded as `DIARRHOEA`
-  reactions._(
+  reactions$$._(
     'reactions',
     possibleValueReference: PossibleValueReference(
       'MedDRA',
       link: 'http://www.meddra.org/',
     ),
   ),
-  reactionsExact._(
+  reactionsExact$$._(
     'reactions.exact',
     possibleValueReference: PossibleValueReference(
       'MedDRA',

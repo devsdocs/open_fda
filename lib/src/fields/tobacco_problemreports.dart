@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class TobaccoProblemReportsFields extends Endpointer {
+final class TobaccoProblemReportsFields
+    extends Endpointer<TobaccoProblemReportsFields> {
   factory TobaccoProblemReportsFields(
     TobaccoProb data,
   ) =>
@@ -19,7 +20,7 @@ final class TobaccoProblemReportsFields extends Endpointer {
         );
   final TobaccoProb _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override

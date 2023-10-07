@@ -2,7 +2,7 @@
 
 part of '../main.dart';
 
-final class DrugAtFDAFields extends Endpointer {
+final class DrugAtFDAFields extends Endpointer<DrugAtFDAFields> {
   factory DrugAtFDAFields(
     DrugFDA data,
   ) =>
@@ -19,7 +19,7 @@ final class DrugAtFDAFields extends Endpointer {
         );
   final DrugFDA _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -85,7 +85,7 @@ enum DrugFDA {
 
   /// Unique identifier applied to a drug concept within the National Drug File
   /// Reference Terminology (NDF-RT).
-  openfdaNui._(
+  openfdaNui$$._(
     'openfda.nui',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -93,7 +93,7 @@ enum DrugFDA {
           'https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/',
     ),
   ),
-  openfdaNuiExact._(
+  openfdaNuiExact$$._(
     'openfda.nui.exact',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -169,7 +169,7 @@ enum DrugFDA {
   ),
 
   /// The route of administation of the drug product.
-  openfdaRoute._(
+  openfdaRoute$$._(
     'openfda.route',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -177,7 +177,7 @@ enum DrugFDA {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162034.htm',
     ),
   ),
-  openfdaRouteExact._(
+  openfdaRouteExact$$._(
     'openfda.route.exact',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -189,7 +189,7 @@ enum DrugFDA {
   /// The RxNorm Concept Unique Identifier. RxCUI is a unique number that
   /// describes a semantic concept about the drug product, including its
   /// ingredients, strength, and dose forms.
-  openfdaRxcui._(
+  openfdaRxcui$$._(
     'openfda.rxcui',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -197,7 +197,7 @@ enum DrugFDA {
           'https://www.nlm.nih.gov/research/umls/rxnorm/docs/2012/rxnorm_doco_full_2012-3.html',
     ),
   ),
-  openfdaRxcuiExact._(
+  openfdaRxcuiExact$$._(
     'openfda.rxcui.exact',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -235,14 +235,14 @@ enum DrugFDA {
   /// Unique Ingredient Identifier, which is a non-proprietary, free, unique,
   /// unambiguous, non-semantic, alphanumeric identifier based on a substance’s
   /// molecular structure and/or descriptive information.
-  openfdaUnii._(
+  openfdaUnii$$._(
     'openfda.unii',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
     ),
   ),
-  openfdaUniiExact._(
+  openfdaUniiExact$$._(
     'openfda.unii.exact',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
@@ -291,25 +291,25 @@ enum DrugFDA {
 
   /// Indicates how a drug product is sold in the United States.
   /// Prescription
-  productsMarketingStatus1._(
+  productsMarketingStatus$1._(
     'products.marketing_status',
     possibleValue: '1',
   ),
 
   /// Discontinued
-  productsMarketingStatus2._(
+  productsMarketingStatus$2._(
     'products.marketing_status',
     possibleValue: '2',
   ),
 
   /// None (Tentative Approval)
-  productsMarketingStatus3._(
+  productsMarketingStatus$3._(
     'products.marketing_status',
     possibleValue: '3',
   ),
 
   /// Over-the-counter
-  productsMarketingStatus4._(
+  productsMarketingStatus$4._(
     'products.marketing_status',
     possibleValue: '4',
   ),

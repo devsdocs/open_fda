@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class AnimalAndVeterinaryAdverseEventsFields extends Endpointer {
+final class AnimalAndVeterinaryAdverseEventsFields
+    extends Endpointer<AnimalAndVeterinaryAdverseEventsFields> {
   factory AnimalAndVeterinaryAdverseEventsFields(
     AVEvent data,
   ) =>
@@ -19,7 +20,7 @@ final class AnimalAndVeterinaryAdverseEventsFields extends Endpointer {
         );
   final AVEvent _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -56,19 +57,19 @@ enum AVEvent {
   /// animal(s).
   /// The age of the animal(s) is not known, but an estimation of the age can be
   /// made.
-  animalAgeQualifierEstimated._(
+  animalAgeQualifier$Estimated._(
     'animal.age.qualifier',
     possibleValue: 'Estimated',
   ),
 
   /// The age of the animal(s) is known.
-  animalAgeQualifierMeasured._(
+  animalAgeQualifier$Measured._(
     'animal.age.qualifier',
     possibleValue: 'Measured',
   ),
 
   /// The age of the animal(s) is not known.
-  animalAgeQualifierUnknown._(
+  animalAgeQualifier$Unknown._(
     'animal.age.qualifier',
     possibleValue: 'Unknown',
   ),
@@ -138,19 +139,19 @@ enum AVEvent {
   /// This list describes how the weight of the affected animal(s) was
   /// determined.
   /// The animal was not weighed but an estimation of the age can be made.
-  animalWeightQualifierEstimated._(
+  animalWeightQualifier$Estimated._(
     'animal.weight.qualifier',
     possibleValue: 'Estimated',
   ),
 
   /// The animal was weighed.
-  animalWeightQualifierMeasured._(
+  animalWeightQualifier$Measured._(
     'animal.weight.qualifier',
     possibleValue: 'Measured',
   ),
 
   /// The animal's weight is not known.
-  animalWeightQualifierUnknown._(
+  animalWeightQualifier$Unknown._(
     'animal.weight.qualifier',
     possibleValue: 'Unknown',
   ),
@@ -189,25 +190,25 @@ enum AVEvent {
   /// A list of values (Yes, No, Unknown, or Not Applicable) describing whether
   /// the adverse event abated after stopping the veterinary medicinal product.
   /// Adverse event did not abate.
-  drugAeAbatedAfterStoppingDrugNo._(
+  drugAeAbatedAfterStoppingDrug$No._(
     'drug.ae_abated_after_stopping_drug',
     possibleValue: 'No',
   ),
 
   /// The veterinary medicinal product was neither stopped nor re-introduced.
-  drugAeAbatedAfterStoppingDrugNotApplicable._(
+  drugAeAbatedAfterStoppingDrug$NotApplicable._(
     'drug.ae_abated_after_stopping_drug',
     possibleValue: 'Not Applicable',
   ),
 
   /// Information is not available.
-  drugAeAbatedAfterStoppingDrugUnknown._(
+  drugAeAbatedAfterStoppingDrug$Unknown._(
     'drug.ae_abated_after_stopping_drug',
     possibleValue: 'Unknown',
   ),
 
   /// Adverse event abated.
-  drugAeAbatedAfterStoppingDrugYes._(
+  drugAeAbatedAfterStoppingDrug$Yes._(
     'drug.ae_abated_after_stopping_drug',
     possibleValue: 'Yes',
   ),
@@ -216,25 +217,25 @@ enum AVEvent {
   /// the adverse event reappeared after re-introduction of the veterinary
   /// medicinal product.
   /// Adverse event did not reappear.
-  drugAeReappearedAfterResumingDrugNo._(
+  drugAeReappearedAfterResumingDrug$No._(
     'drug.ae_reappeared_after_resuming_drug',
     possibleValue: 'No',
   ),
 
   /// The veterinary medicinal product was neither stopped nor re-introduced.
-  drugAeReappearedAfterResumingDrugNotApplicable._(
+  drugAeReappearedAfterResumingDrug$NotApplicable._(
     'drug.ae_reappeared_after_resuming_drug',
     possibleValue: 'Not Applicable',
   ),
 
   /// Information is not available.
-  drugAeReappearedAfterResumingDrugUnknown._(
+  drugAeReappearedAfterResumingDrug$Unknown._(
     'drug.ae_reappeared_after_resuming_drug',
     possibleValue: 'Unknown',
   ),
 
   /// Adverse event reappeared.
-  drugAeReappearedAfterResumingDrugYes._(
+  drugAeReappearedAfterResumingDrug$Yes._(
     'drug.ae_reappeared_after_resuming_drug',
     possibleValue: 'Yes',
   ),
@@ -354,25 +355,25 @@ enum AVEvent {
   /// the veterinary medicinal product on a date previous to this adverse event
   /// report.
   /// There was no previous adverse event.
-  drugPreviousAeToDrugNo._(
+  drugPreviousAeToDrug$No._(
     'drug.previous_ae_to_drug',
     possibleValue: 'No',
   ),
 
   /// There was no previous exposure to the veterinary medicinal product.
-  drugPreviousAeToDrugNotApplicable._(
+  drugPreviousAeToDrug$NotApplicable._(
     'drug.previous_ae_to_drug',
     possibleValue: 'Not Applicable',
   ),
 
   /// Information is not available.
-  drugPreviousAeToDrugUnknown._(
+  drugPreviousAeToDrug$Unknown._(
     'drug.previous_ae_to_drug',
     possibleValue: 'Unknown',
   ),
 
   /// There was a previous adverse event.
-  drugPreviousAeToDrugYes._(
+  drugPreviousAeToDrug$Yes._(
     'drug.previous_ae_to_drug',
     possibleValue: 'Yes',
   ),
@@ -381,19 +382,19 @@ enum AVEvent {
   /// affected animal(s) had been exposed to the veterinary medicinal product on
   /// a date previous to the adverse event report.
   /// There was no previous exposure.
-  drugPreviousExposureToDrugNo._(
+  drugPreviousExposureToDrug$No._(
     'drug.previous_exposure_to_drug',
     possibleValue: 'No',
   ),
 
   /// Information is not available.
-  drugPreviousExposureToDrugUnknown._(
+  drugPreviousExposureToDrug$Unknown._(
     'drug.previous_exposure_to_drug',
     possibleValue: 'Unknown',
   ),
 
   /// There was a previous exposure.
-  drugPreviousExposureToDrugYes._(
+  drugPreviousExposureToDrug$Yes._(
     'drug.previous_exposure_to_drug',
     possibleValue: 'Yes',
   ),
@@ -413,20 +414,20 @@ enum AVEvent {
   /// medicinal product was used according to its labeled
   /// recommendations/directions of use.
   /// The veterinary medicinal product was used in an off-label use manner.
-  drugUsedAccordingToLabelNo._(
+  drugUsedAccordingToLabel$No._(
     'drug.used_according_to_label',
     possibleValue: 'No',
   ),
 
   /// Information is not available.
-  drugUsedAccordingToLabelUnknown._(
+  drugUsedAccordingToLabel$Unknown._(
     'drug.used_according_to_label',
     possibleValue: 'Unknown',
   ),
 
   /// The veterinary medicinal product was used according to its labeled
   /// recommendations/directions of use.
-  drugUsedAccordingToLabelYes._(
+  drugUsedAccordingToLabel$Yes._(
     'drug.used_according_to_label',
     possibleValue: 'Yes',
   ),
@@ -504,61 +505,61 @@ enum AVEvent {
 
   /// The animal's medical status after treatment.
   /// Died
-  outcomeMedicalStatusDied._(
+  outcomeMedicalStatus$Died._(
     'outcome.medical_status',
     possibleValue: 'Died',
   ),
-  outcomeMedicalStatusDiedExact._(
+  outcomeMedicalStatus$DiedExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Died',
   ),
 
   /// Euthanized
-  outcomeMedicalStatusEuthanized._(
+  outcomeMedicalStatus$Euthanized._(
     'outcome.medical_status',
     possibleValue: 'Euthanized',
   ),
-  outcomeMedicalStatusEuthanizedExact._(
+  outcomeMedicalStatus$EuthanizedExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Euthanized',
   ),
 
   /// Ongoing
-  outcomeMedicalStatusOngoing._(
+  outcomeMedicalStatus$Ongoing._(
     'outcome.medical_status',
     possibleValue: 'Ongoing',
   ),
-  outcomeMedicalStatusOngoingExact._(
+  outcomeMedicalStatus$OngoingExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Ongoing',
   ),
 
   /// Recovered with Sequela
-  outcomeMedicalStatusRecoveredWithSequela._(
+  outcomeMedicalStatus$RecoveredWithSequela._(
     'outcome.medical_status',
     possibleValue: 'Recovered with Sequela',
   ),
-  outcomeMedicalStatusRecoveredWithSequelaExact._(
+  outcomeMedicalStatus$RecoveredWithSequelaExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Recovered with Sequela',
   ),
 
   /// Recovered/Normal
-  outcomeMedicalStatusRecoveredOrNormal._(
+  outcomeMedicalStatus$RecoveredOrNormal._(
     'outcome.medical_status',
     possibleValue: 'Recovered/Normal',
   ),
-  outcomeMedicalStatusRecoveredOrNormalExact._(
+  outcomeMedicalStatus$RecoveredOrNormalExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Recovered/Normal',
   ),
 
   /// Unknown
-  outcomeMedicalStatusUnknown._(
+  outcomeMedicalStatus$Unknown._(
     'outcome.medical_status',
     possibleValue: 'Unknown',
   ),
-  outcomeMedicalStatusUnknownExact._(
+  outcomeMedicalStatus$UnknownExact._(
     'outcome.medical_status.exact',
     possibleValue: 'Unknown',
   ),
@@ -615,19 +616,19 @@ enum AVEvent {
   /// The version of VeDDRA from which the veddra codes and terms have been
   /// supplied for use in this adverse event report.
   /// VeDDRA Version 11
-  reactionVeddraVersion11._(
+  reactionVeddraVersion$11._(
     'reaction.veddra_version',
     possibleValue: '11',
   ),
 
   /// VeDDRA Version 2
-  reactionVeddraVersion2._(
+  reactionVeddraVersion$2._(
     'reaction.veddra_version',
     possibleValue: '2',
   ),
 
   /// VeDDRA Version 3
-  reactionVeddraVersion3._(
+  reactionVeddraVersion$3._(
     'reaction.veddra_version',
     possibleValue: '3',
   ),
@@ -708,7 +709,7 @@ enum AVEvent {
   /// A list of values (Yes or No) characterizing the seriousness of the adverse
   /// event.
   /// The adverse event is none of the above.
-  seriousAeNo._(
+  seriousAe$No._(
     'serious_ae',
     possibleValue: 'No',
   ),
@@ -717,7 +718,7 @@ enum AVEvent {
   /// intervention, or causes an abortion, or stillbirth, or infertility, or
   /// congenital anomaly, or prolonged or permanent disability, or
   /// disfigurement.
-  seriousAeYes._(
+  seriousAe$Yes._(
     'serious_ae',
     possibleValue: 'Yes',
   ),
@@ -731,13 +732,13 @@ enum AVEvent {
   /// A list of values (T or F) describing whether or not the human or animal
   /// affected received treatment in response to the adverse event.
   /// Human or animal was not treated.
-  treatedForAeF._(
+  treatedForAe$F._(
     'treated_for_ae',
     possibleValue: 'F',
   ),
 
   /// Human or animal was treated.
-  treatedForAeT._(
+  treatedForAe$T._(
     'treated_for_ae',
     possibleValue: 'T',
   ),

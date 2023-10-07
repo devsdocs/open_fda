@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DrugAdverseEventsFields extends Endpointer {
+final class DrugAdverseEventsFields
+    extends Endpointer<DrugAdverseEventsFields> {
   factory DrugAdverseEventsFields(
     DrugEvent data,
   ) =>
@@ -19,7 +20,7 @@ final class DrugAdverseEventsFields extends Endpointer {
         );
   final DrugEvent _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -56,26 +57,26 @@ enum DrugEvent {
 
   /// Identifies expedited reports (those that were processed within 15 days).
   /// Yes
-  fulfillexpeditecriteria1._(
+  fulfillexpeditecriteria$1._(
     'fulfillexpeditecriteria',
     possibleValue: '1',
   ),
 
   /// No
-  fulfillexpeditecriteria2._(
+  fulfillexpeditecriteria$2._(
     'fulfillexpeditecriteria',
     possibleValue: '2',
   ),
 
   /// The name of the country where the event occurred.
-  occurcountry._(
+  occurcountry$$._(
     'occurcountry',
     possibleValueReference: PossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
     ),
   ),
-  occurcountryExact._(
+  occurcountryExact$$._(
     'occurcountry.exact',
     possibleValueReference: PossibleValueReference(
       'Country codes',
@@ -93,37 +94,37 @@ enum DrugEvent {
 
   /// Actions taken with the drug.
   /// Drug withdrawn
-  patientDrugActiondrug1._(
+  patientDrugActiondrug$1._(
     'patient.drug.actiondrug',
     possibleValue: '1',
   ),
 
   /// Dose reduced
-  patientDrugActiondrug2._(
+  patientDrugActiondrug$2._(
     'patient.drug.actiondrug',
     possibleValue: '2',
   ),
 
   /// Dose increased
-  patientDrugActiondrug3._(
+  patientDrugActiondrug$3._(
     'patient.drug.actiondrug',
     possibleValue: '3',
   ),
 
   /// Dose not changed
-  patientDrugActiondrug4._(
+  patientDrugActiondrug$4._(
     'patient.drug.actiondrug',
     possibleValue: '4',
   ),
 
   /// Unknown
-  patientDrugActiondrug5._(
+  patientDrugActiondrug$5._(
     'patient.drug.actiondrug',
     possibleValue: '5',
   ),
 
   /// Not applicable
-  patientDrugActiondrug6._(
+  patientDrugActiondrug$6._(
     'patient.drug.actiondrug',
     possibleValue: '6',
   ),
@@ -145,690 +146,690 @@ enum DrugEvent {
   /// stopped or the dose was reduced. Only present when this was attempted and
   /// the data was provided.
   /// Yes
-  patientDrugDrugadditional1._(
+  patientDrugDrugadditional$1._(
     'patient.drug.drugadditional',
     possibleValue: '1',
   ),
 
   /// No
-  patientDrugDrugadditional2._(
+  patientDrugDrugadditional$2._(
     'patient.drug.drugadditional',
     possibleValue: '2',
   ),
 
   /// Does not apply
-  patientDrugDrugadditional3._(
+  patientDrugDrugadditional$3._(
     'patient.drug.drugadditional',
     possibleValue: '3',
   ),
 
   /// The drug’s route of administration.
   /// Auricular (otic)
-  patientDrugDrugadministrationroute001._(
+  patientDrugDrugadministrationroute$001._(
     'patient.drug.drugadministrationroute',
     possibleValue: '001',
   ),
-  patientDrugDrugadministrationroute001Exact._(
+  patientDrugDrugadministrationroute$001Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '001',
   ),
 
   /// Buccal
-  patientDrugDrugadministrationroute002._(
+  patientDrugDrugadministrationroute$002._(
     'patient.drug.drugadministrationroute',
     possibleValue: '002',
   ),
-  patientDrugDrugadministrationroute002Exact._(
+  patientDrugDrugadministrationroute$002Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '002',
   ),
 
   /// Cutaneous
-  patientDrugDrugadministrationroute003._(
+  patientDrugDrugadministrationroute$003._(
     'patient.drug.drugadministrationroute',
     possibleValue: '003',
   ),
-  patientDrugDrugadministrationroute003Exact._(
+  patientDrugDrugadministrationroute$003Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '003',
   ),
 
   /// Dental
-  patientDrugDrugadministrationroute004._(
+  patientDrugDrugadministrationroute$004._(
     'patient.drug.drugadministrationroute',
     possibleValue: '004',
   ),
-  patientDrugDrugadministrationroute004Exact._(
+  patientDrugDrugadministrationroute$004Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '004',
   ),
 
   /// Endocervical
-  patientDrugDrugadministrationroute005._(
+  patientDrugDrugadministrationroute$005._(
     'patient.drug.drugadministrationroute',
     possibleValue: '005',
   ),
-  patientDrugDrugadministrationroute005Exact._(
+  patientDrugDrugadministrationroute$005Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '005',
   ),
 
   /// Endosinusial
-  patientDrugDrugadministrationroute006._(
+  patientDrugDrugadministrationroute$006._(
     'patient.drug.drugadministrationroute',
     possibleValue: '006',
   ),
-  patientDrugDrugadministrationroute006Exact._(
+  patientDrugDrugadministrationroute$006Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '006',
   ),
 
   /// Endotracheal
-  patientDrugDrugadministrationroute007._(
+  patientDrugDrugadministrationroute$007._(
     'patient.drug.drugadministrationroute',
     possibleValue: '007',
   ),
-  patientDrugDrugadministrationroute007Exact._(
+  patientDrugDrugadministrationroute$007Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '007',
   ),
 
   /// Epidural
-  patientDrugDrugadministrationroute008._(
+  patientDrugDrugadministrationroute$008._(
     'patient.drug.drugadministrationroute',
     possibleValue: '008',
   ),
-  patientDrugDrugadministrationroute008Exact._(
+  patientDrugDrugadministrationroute$008Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '008',
   ),
 
   /// Extra-amniotic
-  patientDrugDrugadministrationroute009._(
+  patientDrugDrugadministrationroute$009._(
     'patient.drug.drugadministrationroute',
     possibleValue: '009',
   ),
-  patientDrugDrugadministrationroute009Exact._(
+  patientDrugDrugadministrationroute$009Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '009',
   ),
 
   /// Hemodialysis
-  patientDrugDrugadministrationroute010._(
+  patientDrugDrugadministrationroute$010._(
     'patient.drug.drugadministrationroute',
     possibleValue: '010',
   ),
-  patientDrugDrugadministrationroute010Exact._(
+  patientDrugDrugadministrationroute$010Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '010',
   ),
 
   /// Intra corpus cavernosum
-  patientDrugDrugadministrationroute011._(
+  patientDrugDrugadministrationroute$011._(
     'patient.drug.drugadministrationroute',
     possibleValue: '011',
   ),
-  patientDrugDrugadministrationroute011Exact._(
+  patientDrugDrugadministrationroute$011Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '011',
   ),
 
   /// Intra-amniotic
-  patientDrugDrugadministrationroute012._(
+  patientDrugDrugadministrationroute$012._(
     'patient.drug.drugadministrationroute',
     possibleValue: '012',
   ),
-  patientDrugDrugadministrationroute012Exact._(
+  patientDrugDrugadministrationroute$012Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '012',
   ),
 
   /// Intra-arterial
-  patientDrugDrugadministrationroute013._(
+  patientDrugDrugadministrationroute$013._(
     'patient.drug.drugadministrationroute',
     possibleValue: '013',
   ),
-  patientDrugDrugadministrationroute013Exact._(
+  patientDrugDrugadministrationroute$013Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '013',
   ),
 
   /// Intra-articular
-  patientDrugDrugadministrationroute014._(
+  patientDrugDrugadministrationroute$014._(
     'patient.drug.drugadministrationroute',
     possibleValue: '014',
   ),
-  patientDrugDrugadministrationroute014Exact._(
+  patientDrugDrugadministrationroute$014Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '014',
   ),
 
   /// Intra-uterine
-  patientDrugDrugadministrationroute015._(
+  patientDrugDrugadministrationroute$015._(
     'patient.drug.drugadministrationroute',
     possibleValue: '015',
   ),
-  patientDrugDrugadministrationroute015Exact._(
+  patientDrugDrugadministrationroute$015Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '015',
   ),
 
   /// Intracardiac
-  patientDrugDrugadministrationroute016._(
+  patientDrugDrugadministrationroute$016._(
     'patient.drug.drugadministrationroute',
     possibleValue: '016',
   ),
-  patientDrugDrugadministrationroute016Exact._(
+  patientDrugDrugadministrationroute$016Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '016',
   ),
 
   /// Intracavernous
-  patientDrugDrugadministrationroute017._(
+  patientDrugDrugadministrationroute$017._(
     'patient.drug.drugadministrationroute',
     possibleValue: '017',
   ),
-  patientDrugDrugadministrationroute017Exact._(
+  patientDrugDrugadministrationroute$017Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '017',
   ),
 
   /// Intracerebral
-  patientDrugDrugadministrationroute018._(
+  patientDrugDrugadministrationroute$018._(
     'patient.drug.drugadministrationroute',
     possibleValue: '018',
   ),
-  patientDrugDrugadministrationroute018Exact._(
+  patientDrugDrugadministrationroute$018Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '018',
   ),
 
   /// Intracervical
-  patientDrugDrugadministrationroute019._(
+  patientDrugDrugadministrationroute$019._(
     'patient.drug.drugadministrationroute',
     possibleValue: '019',
   ),
-  patientDrugDrugadministrationroute019Exact._(
+  patientDrugDrugadministrationroute$019Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '019',
   ),
 
   /// Intracisternal
-  patientDrugDrugadministrationroute020._(
+  patientDrugDrugadministrationroute$020._(
     'patient.drug.drugadministrationroute',
     possibleValue: '020',
   ),
-  patientDrugDrugadministrationroute020Exact._(
+  patientDrugDrugadministrationroute$020Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '020',
   ),
 
   /// Intracorneal
-  patientDrugDrugadministrationroute021._(
+  patientDrugDrugadministrationroute$021._(
     'patient.drug.drugadministrationroute',
     possibleValue: '021',
   ),
-  patientDrugDrugadministrationroute021Exact._(
+  patientDrugDrugadministrationroute$021Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '021',
   ),
 
   /// Intracoronary
-  patientDrugDrugadministrationroute022._(
+  patientDrugDrugadministrationroute$022._(
     'patient.drug.drugadministrationroute',
     possibleValue: '022',
   ),
-  patientDrugDrugadministrationroute022Exact._(
+  patientDrugDrugadministrationroute$022Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '022',
   ),
 
   /// Intradermal
-  patientDrugDrugadministrationroute023._(
+  patientDrugDrugadministrationroute$023._(
     'patient.drug.drugadministrationroute',
     possibleValue: '023',
   ),
-  patientDrugDrugadministrationroute023Exact._(
+  patientDrugDrugadministrationroute$023Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '023',
   ),
 
   /// Intradiscal (intraspinal)
-  patientDrugDrugadministrationroute024._(
+  patientDrugDrugadministrationroute$024._(
     'patient.drug.drugadministrationroute',
     possibleValue: '024',
   ),
-  patientDrugDrugadministrationroute024Exact._(
+  patientDrugDrugadministrationroute$024Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '024',
   ),
 
   /// Intrahepatic
-  patientDrugDrugadministrationroute025._(
+  patientDrugDrugadministrationroute$025._(
     'patient.drug.drugadministrationroute',
     possibleValue: '025',
   ),
-  patientDrugDrugadministrationroute025Exact._(
+  patientDrugDrugadministrationroute$025Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '025',
   ),
 
   /// Intralesional
-  patientDrugDrugadministrationroute026._(
+  patientDrugDrugadministrationroute$026._(
     'patient.drug.drugadministrationroute',
     possibleValue: '026',
   ),
-  patientDrugDrugadministrationroute026Exact._(
+  patientDrugDrugadministrationroute$026Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '026',
   ),
 
   /// Intralymphatic
-  patientDrugDrugadministrationroute027._(
+  patientDrugDrugadministrationroute$027._(
     'patient.drug.drugadministrationroute',
     possibleValue: '027',
   ),
-  patientDrugDrugadministrationroute027Exact._(
+  patientDrugDrugadministrationroute$027Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '027',
   ),
 
   /// Intramedullar (bone marrow)
-  patientDrugDrugadministrationroute028._(
+  patientDrugDrugadministrationroute$028._(
     'patient.drug.drugadministrationroute',
     possibleValue: '028',
   ),
-  patientDrugDrugadministrationroute028Exact._(
+  patientDrugDrugadministrationroute$028Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '028',
   ),
 
   /// Intrameningeal
-  patientDrugDrugadministrationroute029._(
+  patientDrugDrugadministrationroute$029._(
     'patient.drug.drugadministrationroute',
     possibleValue: '029',
   ),
-  patientDrugDrugadministrationroute029Exact._(
+  patientDrugDrugadministrationroute$029Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '029',
   ),
 
   /// Intramuscular
-  patientDrugDrugadministrationroute030._(
+  patientDrugDrugadministrationroute$030._(
     'patient.drug.drugadministrationroute',
     possibleValue: '030',
   ),
-  patientDrugDrugadministrationroute030Exact._(
+  patientDrugDrugadministrationroute$030Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '030',
   ),
 
   /// Intraocular
-  patientDrugDrugadministrationroute031._(
+  patientDrugDrugadministrationroute$031._(
     'patient.drug.drugadministrationroute',
     possibleValue: '031',
   ),
-  patientDrugDrugadministrationroute031Exact._(
+  patientDrugDrugadministrationroute$031Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '031',
   ),
 
   /// Intrapericardial
-  patientDrugDrugadministrationroute032._(
+  patientDrugDrugadministrationroute$032._(
     'patient.drug.drugadministrationroute',
     possibleValue: '032',
   ),
-  patientDrugDrugadministrationroute032Exact._(
+  patientDrugDrugadministrationroute$032Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '032',
   ),
 
   /// Intraperitoneal
-  patientDrugDrugadministrationroute033._(
+  patientDrugDrugadministrationroute$033._(
     'patient.drug.drugadministrationroute',
     possibleValue: '033',
   ),
-  patientDrugDrugadministrationroute033Exact._(
+  patientDrugDrugadministrationroute$033Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '033',
   ),
 
   /// Intrapleural
-  patientDrugDrugadministrationroute034._(
+  patientDrugDrugadministrationroute$034._(
     'patient.drug.drugadministrationroute',
     possibleValue: '034',
   ),
-  patientDrugDrugadministrationroute034Exact._(
+  patientDrugDrugadministrationroute$034Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '034',
   ),
 
   /// Intrasynovial
-  patientDrugDrugadministrationroute035._(
+  patientDrugDrugadministrationroute$035._(
     'patient.drug.drugadministrationroute',
     possibleValue: '035',
   ),
-  patientDrugDrugadministrationroute035Exact._(
+  patientDrugDrugadministrationroute$035Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '035',
   ),
 
   /// Intratumor
-  patientDrugDrugadministrationroute036._(
+  patientDrugDrugadministrationroute$036._(
     'patient.drug.drugadministrationroute',
     possibleValue: '036',
   ),
-  patientDrugDrugadministrationroute036Exact._(
+  patientDrugDrugadministrationroute$036Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '036',
   ),
 
   /// Intrathecal
-  patientDrugDrugadministrationroute037._(
+  patientDrugDrugadministrationroute$037._(
     'patient.drug.drugadministrationroute',
     possibleValue: '037',
   ),
-  patientDrugDrugadministrationroute037Exact._(
+  patientDrugDrugadministrationroute$037Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '037',
   ),
 
   /// Intrathoracic
-  patientDrugDrugadministrationroute038._(
+  patientDrugDrugadministrationroute$038._(
     'patient.drug.drugadministrationroute',
     possibleValue: '038',
   ),
-  patientDrugDrugadministrationroute038Exact._(
+  patientDrugDrugadministrationroute$038Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '038',
   ),
 
   /// Intratracheal
-  patientDrugDrugadministrationroute039._(
+  patientDrugDrugadministrationroute$039._(
     'patient.drug.drugadministrationroute',
     possibleValue: '039',
   ),
-  patientDrugDrugadministrationroute039Exact._(
+  patientDrugDrugadministrationroute$039Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '039',
   ),
 
   /// Intravenous bolus
-  patientDrugDrugadministrationroute040._(
+  patientDrugDrugadministrationroute$040._(
     'patient.drug.drugadministrationroute',
     possibleValue: '040',
   ),
-  patientDrugDrugadministrationroute040Exact._(
+  patientDrugDrugadministrationroute$040Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '040',
   ),
 
   /// Intravenous drip
-  patientDrugDrugadministrationroute041._(
+  patientDrugDrugadministrationroute$041._(
     'patient.drug.drugadministrationroute',
     possibleValue: '041',
   ),
-  patientDrugDrugadministrationroute041Exact._(
+  patientDrugDrugadministrationroute$041Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '041',
   ),
 
   /// Intravenous (not otherwise specified)
-  patientDrugDrugadministrationroute042._(
+  patientDrugDrugadministrationroute$042._(
     'patient.drug.drugadministrationroute',
     possibleValue: '042',
   ),
-  patientDrugDrugadministrationroute042Exact._(
+  patientDrugDrugadministrationroute$042Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '042',
   ),
 
   /// Intravesical
-  patientDrugDrugadministrationroute043._(
+  patientDrugDrugadministrationroute$043._(
     'patient.drug.drugadministrationroute',
     possibleValue: '043',
   ),
-  patientDrugDrugadministrationroute043Exact._(
+  patientDrugDrugadministrationroute$043Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '043',
   ),
 
   /// Iontophoresis
-  patientDrugDrugadministrationroute044._(
+  patientDrugDrugadministrationroute$044._(
     'patient.drug.drugadministrationroute',
     possibleValue: '044',
   ),
-  patientDrugDrugadministrationroute044Exact._(
+  patientDrugDrugadministrationroute$044Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '044',
   ),
 
   /// Nasal
-  patientDrugDrugadministrationroute045._(
+  patientDrugDrugadministrationroute$045._(
     'patient.drug.drugadministrationroute',
     possibleValue: '045',
   ),
-  patientDrugDrugadministrationroute045Exact._(
+  patientDrugDrugadministrationroute$045Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '045',
   ),
 
   /// Occlusive dressing technique
-  patientDrugDrugadministrationroute046._(
+  patientDrugDrugadministrationroute$046._(
     'patient.drug.drugadministrationroute',
     possibleValue: '046',
   ),
-  patientDrugDrugadministrationroute046Exact._(
+  patientDrugDrugadministrationroute$046Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '046',
   ),
 
   /// Ophthalmic
-  patientDrugDrugadministrationroute047._(
+  patientDrugDrugadministrationroute$047._(
     'patient.drug.drugadministrationroute',
     possibleValue: '047',
   ),
-  patientDrugDrugadministrationroute047Exact._(
+  patientDrugDrugadministrationroute$047Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '047',
   ),
 
   /// Oral
-  patientDrugDrugadministrationroute048._(
+  patientDrugDrugadministrationroute$048._(
     'patient.drug.drugadministrationroute',
     possibleValue: '048',
   ),
-  patientDrugDrugadministrationroute048Exact._(
+  patientDrugDrugadministrationroute$048Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '048',
   ),
 
   /// Oropharingeal
-  patientDrugDrugadministrationroute049._(
+  patientDrugDrugadministrationroute$049._(
     'patient.drug.drugadministrationroute',
     possibleValue: '049',
   ),
-  patientDrugDrugadministrationroute049Exact._(
+  patientDrugDrugadministrationroute$049Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '049',
   ),
 
   /// Other
-  patientDrugDrugadministrationroute050._(
+  patientDrugDrugadministrationroute$050._(
     'patient.drug.drugadministrationroute',
     possibleValue: '050',
   ),
-  patientDrugDrugadministrationroute050Exact._(
+  patientDrugDrugadministrationroute$050Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '050',
   ),
 
   /// Parenteral
-  patientDrugDrugadministrationroute051._(
+  patientDrugDrugadministrationroute$051._(
     'patient.drug.drugadministrationroute',
     possibleValue: '051',
   ),
-  patientDrugDrugadministrationroute051Exact._(
+  patientDrugDrugadministrationroute$051Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '051',
   ),
 
   /// Periarticular
-  patientDrugDrugadministrationroute052._(
+  patientDrugDrugadministrationroute$052._(
     'patient.drug.drugadministrationroute',
     possibleValue: '052',
   ),
-  patientDrugDrugadministrationroute052Exact._(
+  patientDrugDrugadministrationroute$052Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '052',
   ),
 
   /// Perineural
-  patientDrugDrugadministrationroute053._(
+  patientDrugDrugadministrationroute$053._(
     'patient.drug.drugadministrationroute',
     possibleValue: '053',
   ),
-  patientDrugDrugadministrationroute053Exact._(
+  patientDrugDrugadministrationroute$053Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '053',
   ),
 
   /// Rectal
-  patientDrugDrugadministrationroute054._(
+  patientDrugDrugadministrationroute$054._(
     'patient.drug.drugadministrationroute',
     possibleValue: '054',
   ),
-  patientDrugDrugadministrationroute054Exact._(
+  patientDrugDrugadministrationroute$054Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '054',
   ),
 
   /// Respiratory (inhalation)
-  patientDrugDrugadministrationroute055._(
+  patientDrugDrugadministrationroute$055._(
     'patient.drug.drugadministrationroute',
     possibleValue: '055',
   ),
-  patientDrugDrugadministrationroute055Exact._(
+  patientDrugDrugadministrationroute$055Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '055',
   ),
 
   /// Retrobulbar
-  patientDrugDrugadministrationroute056._(
+  patientDrugDrugadministrationroute$056._(
     'patient.drug.drugadministrationroute',
     possibleValue: '056',
   ),
-  patientDrugDrugadministrationroute056Exact._(
+  patientDrugDrugadministrationroute$056Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '056',
   ),
 
   /// Sunconjunctival
-  patientDrugDrugadministrationroute057._(
+  patientDrugDrugadministrationroute$057._(
     'patient.drug.drugadministrationroute',
     possibleValue: '057',
   ),
-  patientDrugDrugadministrationroute057Exact._(
+  patientDrugDrugadministrationroute$057Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '057',
   ),
 
   /// Subcutaneous
-  patientDrugDrugadministrationroute058._(
+  patientDrugDrugadministrationroute$058._(
     'patient.drug.drugadministrationroute',
     possibleValue: '058',
   ),
-  patientDrugDrugadministrationroute058Exact._(
+  patientDrugDrugadministrationroute$058Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '058',
   ),
 
   /// Subdermal
-  patientDrugDrugadministrationroute059._(
+  patientDrugDrugadministrationroute$059._(
     'patient.drug.drugadministrationroute',
     possibleValue: '059',
   ),
-  patientDrugDrugadministrationroute059Exact._(
+  patientDrugDrugadministrationroute$059Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '059',
   ),
 
   /// Sublingual
-  patientDrugDrugadministrationroute060._(
+  patientDrugDrugadministrationroute$060._(
     'patient.drug.drugadministrationroute',
     possibleValue: '060',
   ),
-  patientDrugDrugadministrationroute060Exact._(
+  patientDrugDrugadministrationroute$060Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '060',
   ),
 
   /// Topical
-  patientDrugDrugadministrationroute061._(
+  patientDrugDrugadministrationroute$061._(
     'patient.drug.drugadministrationroute',
     possibleValue: '061',
   ),
-  patientDrugDrugadministrationroute061Exact._(
+  patientDrugDrugadministrationroute$061Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '061',
   ),
 
   /// Transdermal
-  patientDrugDrugadministrationroute062._(
+  patientDrugDrugadministrationroute$062._(
     'patient.drug.drugadministrationroute',
     possibleValue: '062',
   ),
-  patientDrugDrugadministrationroute062Exact._(
+  patientDrugDrugadministrationroute$062Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '062',
   ),
 
   /// Transmammary
-  patientDrugDrugadministrationroute063._(
+  patientDrugDrugadministrationroute$063._(
     'patient.drug.drugadministrationroute',
     possibleValue: '063',
   ),
-  patientDrugDrugadministrationroute063Exact._(
+  patientDrugDrugadministrationroute$063Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '063',
   ),
 
   /// Transplacental
-  patientDrugDrugadministrationroute064._(
+  patientDrugDrugadministrationroute$064._(
     'patient.drug.drugadministrationroute',
     possibleValue: '064',
   ),
-  patientDrugDrugadministrationroute064Exact._(
+  patientDrugDrugadministrationroute$064Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '064',
   ),
 
   /// Unknown
-  patientDrugDrugadministrationroute065._(
+  patientDrugDrugadministrationroute$065._(
     'patient.drug.drugadministrationroute',
     possibleValue: '065',
   ),
-  patientDrugDrugadministrationroute065Exact._(
+  patientDrugDrugadministrationroute$065Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '065',
   ),
 
   /// Urethral
-  patientDrugDrugadministrationroute066._(
+  patientDrugDrugadministrationroute$066._(
     'patient.drug.drugadministrationroute',
     possibleValue: '066',
   ),
-  patientDrugDrugadministrationroute066Exact._(
+  patientDrugDrugadministrationroute$066Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '066',
   ),
 
   /// Vaginal
-  patientDrugDrugadministrationroute067._(
+  patientDrugDrugadministrationroute$067._(
     'patient.drug.drugadministrationroute',
     possibleValue: '067',
   ),
-  patientDrugDrugadministrationroute067Exact._(
+  patientDrugDrugadministrationroute$067Exact._(
     'patient.drug.drugadministrationroute.exact',
     possibleValue: '067',
   ),
@@ -852,21 +853,21 @@ enum DrugEvent {
   /// Reported role of the drug in the adverse event report. These values are
   /// not validated by FDA.
   /// Suspect (the drug was considered by the reporter to be the cause)
-  patientDrugDrugcharacterization1._(
+  patientDrugDrugcharacterization$1._(
     'patient.drug.drugcharacterization',
     possibleValue: '1',
   ),
 
   /// Concomitant (the drug was reported as being taken along with the suspect
   /// drug)
-  patientDrugDrugcharacterization2._(
+  patientDrugDrugcharacterization$2._(
     'patient.drug.drugcharacterization',
     possibleValue: '2',
   ),
 
   /// Interacting (the drug was considered by the reporter to have interacted
   /// with the suspect drug)
-  patientDrugDrugcharacterization3._(
+  patientDrugDrugcharacterization$3._(
     'patient.drug.drugcharacterization',
     possibleValue: '3',
   ),
@@ -879,25 +880,25 @@ enum DrugEvent {
 
   /// The unit for `drugcumulativedosagenumb`.
   /// kg (kilograms)
-  patientDrugDrugcumulativedosageunit001._(
+  patientDrugDrugcumulativedosageunit$001._(
     'patient.drug.drugcumulativedosageunit',
     possibleValue: '001',
   ),
 
   /// g (grams)
-  patientDrugDrugcumulativedosageunit002._(
+  patientDrugDrugcumulativedosageunit$002._(
     'patient.drug.drugcumulativedosageunit',
     possibleValue: '002',
   ),
 
   /// mg (milligrams)
-  patientDrugDrugcumulativedosageunit003._(
+  patientDrugDrugcumulativedosageunit$003._(
     'patient.drug.drugcumulativedosageunit',
     possibleValue: '003',
   ),
 
   /// µg (micrograms)
-  patientDrugDrugcumulativedosageunit004._(
+  patientDrugDrugcumulativedosageunit$004._(
     'patient.drug.drugcumulativedosageunit',
     possibleValue: '004',
   ),
@@ -942,67 +943,67 @@ enum DrugEvent {
 
   /// The unit for the interval in the field `drugintervaldosageunitnumb.`
   /// Year
-  patientDrugDrugintervaldosagedefinition801._(
+  patientDrugDrugintervaldosagedefinition$801._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '801',
   ),
 
   /// Month
-  patientDrugDrugintervaldosagedefinition802._(
+  patientDrugDrugintervaldosagedefinition$802._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '802',
   ),
 
   /// Week
-  patientDrugDrugintervaldosagedefinition803._(
+  patientDrugDrugintervaldosagedefinition$803._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '803',
   ),
 
   /// Day
-  patientDrugDrugintervaldosagedefinition804._(
+  patientDrugDrugintervaldosagedefinition$804._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '804',
   ),
 
   /// Hour
-  patientDrugDrugintervaldosagedefinition805._(
+  patientDrugDrugintervaldosagedefinition$805._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '805',
   ),
 
   /// Minute
-  patientDrugDrugintervaldosagedefinition806._(
+  patientDrugDrugintervaldosagedefinition$806._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '806',
   ),
 
   /// Trimester
-  patientDrugDrugintervaldosagedefinition807._(
+  patientDrugDrugintervaldosagedefinition$807._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '807',
   ),
 
   /// Cyclical
-  patientDrugDrugintervaldosagedefinition810._(
+  patientDrugDrugintervaldosagedefinition$810._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '810',
   ),
 
   /// Trimester
-  patientDrugDrugintervaldosagedefinition811._(
+  patientDrugDrugintervaldosagedefinition$811._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '811',
   ),
 
   /// As necessary
-  patientDrugDrugintervaldosagedefinition812._(
+  patientDrugDrugintervaldosagedefinition$812._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '812',
   ),
 
   /// Total
-  patientDrugDrugintervaldosagedefinition813._(
+  patientDrugDrugintervaldosagedefinition$813._(
     'patient.drug.drugintervaldosagedefinition',
     possibleValue: '813',
   ),
@@ -1014,19 +1015,19 @@ enum DrugEvent {
 
   /// Whether the reaction occured after readministration of the drug.
   /// Yes
-  patientDrugDrugrecurreadministration1._(
+  patientDrugDrugrecurreadministration$1._(
     'patient.drug.drugrecurreadministration',
     possibleValue: '1',
   ),
 
   /// No
-  patientDrugDrugrecurreadministration2._(
+  patientDrugDrugrecurreadministration$2._(
     'patient.drug.drugrecurreadministration',
     possibleValue: '2',
   ),
 
   /// Unknown
-  patientDrugDrugrecurreadministration3._(
+  patientDrugDrugrecurreadministration$3._(
     'patient.drug.drugrecurreadministration',
     possibleValue: '3',
   ),
@@ -1081,25 +1082,25 @@ enum DrugEvent {
   /// The unit for the field `drugstructuredosagenumb`. For example, *mg* in
   /// `300 mg`.
   /// kg (kilograms)
-  patientDrugDrugstructuredosageunit001._(
+  patientDrugDrugstructuredosageunit$001._(
     'patient.drug.drugstructuredosageunit',
     possibleValue: '001',
   ),
 
   /// g (grams)
-  patientDrugDrugstructuredosageunit002._(
+  patientDrugDrugstructuredosageunit$002._(
     'patient.drug.drugstructuredosageunit',
     possibleValue: '002',
   ),
 
   /// mg (milligrams)
-  patientDrugDrugstructuredosageunit003._(
+  patientDrugDrugstructuredosageunit$003._(
     'patient.drug.drugstructuredosageunit',
     possibleValue: '003',
   ),
 
   /// µg (micrograms)
-  patientDrugDrugstructuredosageunit004._(
+  patientDrugDrugstructuredosageunit$004._(
     'patient.drug.drugstructuredosageunit',
     possibleValue: '004',
   ),
@@ -1114,37 +1115,37 @@ enum DrugEvent {
   ),
 
   /// Year
-  patientDrugDrugtreatmentdurationunit801._(
+  patientDrugDrugtreatmentdurationunit$801._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '801',
   ),
 
   /// Month
-  patientDrugDrugtreatmentdurationunit802._(
+  patientDrugDrugtreatmentdurationunit$802._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '802',
   ),
 
   /// Week
-  patientDrugDrugtreatmentdurationunit803._(
+  patientDrugDrugtreatmentdurationunit$803._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '803',
   ),
 
   /// Day
-  patientDrugDrugtreatmentdurationunit804._(
+  patientDrugDrugtreatmentdurationunit$804._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '804',
   ),
 
   /// Hour
-  patientDrugDrugtreatmentdurationunit805._(
+  patientDrugDrugtreatmentdurationunit$805._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '805',
   ),
 
   /// Minute
-  patientDrugDrugtreatmentdurationunit806._(
+  patientDrugDrugtreatmentdurationunit$806._(
     'patient.drug.drugtreatmentdurationunit',
     possibleValue: '806',
   ),
@@ -1205,7 +1206,7 @@ enum DrugEvent {
 
   /// Unique identifier applied to a drug concept within the National Drug File
   /// Reference Terminology (NDF-RT).
-  patientDrugOpenfdaNui._(
+  patientDrugOpenfdaNui$$._(
     'patient.drug.openfda.nui',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -1213,7 +1214,7 @@ enum DrugEvent {
           'https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/',
     ),
   ),
-  patientDrugOpenfdaNuiExact._(
+  patientDrugOpenfdaNuiExact$$._(
     'patient.drug.openfda.nui.exact',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -1288,7 +1289,7 @@ enum DrugEvent {
     'patient.drug.openfda.product_ndc.exact',
   ),
 
-  patientDrugOpenfdaProductType._(
+  patientDrugOpenfdaProductType$$._(
     'patient.drug.openfda.product_type',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -1296,7 +1297,7 @@ enum DrugEvent {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162063.htm',
     ),
   ),
-  patientDrugOpenfdaProductTypeExact._(
+  patientDrugOpenfdaProductTypeExact$$._(
     'patient.drug.openfda.product_type.exact',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -1306,7 +1307,7 @@ enum DrugEvent {
   ),
 
   /// The route of administation of the drug product.
-  patientDrugOpenfdaRoute._(
+  patientDrugOpenfdaRoute$$._(
     'patient.drug.openfda.route',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -1314,7 +1315,7 @@ enum DrugEvent {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162034.htm',
     ),
   ),
-  patientDrugOpenfdaRouteExact._(
+  patientDrugOpenfdaRouteExact$$._(
     'patient.drug.openfda.route.exact',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -1326,7 +1327,7 @@ enum DrugEvent {
   /// The RxNorm Concept Unique Identifier. RxCUI is a unique number that
   /// describes a semantic concept about the drug product, including its
   /// ingredients, strength, and dose forms.
-  patientDrugOpenfdaRxcui._(
+  patientDrugOpenfdaRxcui$$._(
     'patient.drug.openfda.rxcui',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -1334,7 +1335,7 @@ enum DrugEvent {
           'https://www.nlm.nih.gov/research/umls/rxnorm/docs/2012/rxnorm_doco_full_2012-3.html',
     ),
   ),
-  patientDrugOpenfdaRxcuiExact._(
+  patientDrugOpenfdaRxcuiExact$$._(
     'patient.drug.openfda.rxcui.exact',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -1372,14 +1373,14 @@ enum DrugEvent {
   /// Unique Ingredient Identifier, which is a non-proprietary, free, unique,
   /// unambiguous, non-semantic, alphanumeric identifier based on a substance’s
   /// molecular structure and/or descriptive information.
-  patientDrugOpenfdaUnii._(
+  patientDrugOpenfdaUnii$$._(
     'patient.drug.openfda.unii',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
     ),
   ),
-  patientDrugOpenfdaUniiExact._(
+  patientDrugOpenfdaUniiExact$$._(
     'patient.drug.openfda.unii.exact',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
@@ -1389,37 +1390,37 @@ enum DrugEvent {
 
   /// Populated with Patient Age Group code.
   /// Neonate
-  patientPatientagegroup1._(
+  patientPatientagegroup$1._(
     'patient.patientagegroup',
     possibleValue: '1',
   ),
 
   /// Infant
-  patientPatientagegroup2._(
+  patientPatientagegroup$2._(
     'patient.patientagegroup',
     possibleValue: '2',
   ),
 
   /// Child
-  patientPatientagegroup3._(
+  patientPatientagegroup$3._(
     'patient.patientagegroup',
     possibleValue: '3',
   ),
 
   /// Adolescent
-  patientPatientagegroup4._(
+  patientPatientagegroup$4._(
     'patient.patientagegroup',
     possibleValue: '4',
   ),
 
   /// Adult
-  patientPatientagegroup5._(
+  patientPatientagegroup$5._(
     'patient.patientagegroup',
     possibleValue: '5',
   ),
 
   /// Elderly
-  patientPatientagegroup6._(
+  patientPatientagegroup$6._(
     'patient.patientagegroup',
     possibleValue: '6',
   ),
@@ -1446,56 +1447,56 @@ enum DrugEvent {
 
   /// The unit for the interval in the field `patientonsetage.`
   /// Decade
-  patientPatientonsetageunit800._(
+  patientPatientonsetageunit$800._(
     'patient.patientonsetageunit',
     possibleValue: '800',
   ),
 
   /// Year
-  patientPatientonsetageunit801._(
+  patientPatientonsetageunit$801._(
     'patient.patientonsetageunit',
     possibleValue: '801',
   ),
 
   /// Month
-  patientPatientonsetageunit802._(
+  patientPatientonsetageunit$802._(
     'patient.patientonsetageunit',
     possibleValue: '802',
   ),
 
   /// Week
-  patientPatientonsetageunit803._(
+  patientPatientonsetageunit$803._(
     'patient.patientonsetageunit',
     possibleValue: '803',
   ),
 
   /// Day
-  patientPatientonsetageunit804._(
+  patientPatientonsetageunit$804._(
     'patient.patientonsetageunit',
     possibleValue: '804',
   ),
 
   /// Hour
-  patientPatientonsetageunit805._(
+  patientPatientonsetageunit$805._(
     'patient.patientonsetageunit',
     possibleValue: '805',
   ),
 
   /// The sex of the patient.
   /// Unknown
-  patientPatientsex0._(
+  patientPatientsex$0._(
     'patient.patientsex',
     possibleValue: '0',
   ),
 
   /// Male
-  patientPatientsex1._(
+  patientPatientsex$1._(
     'patient.patientsex',
     possibleValue: '1',
   ),
 
   /// Female
-  patientPatientsex2._(
+  patientPatientsex$2._(
     'patient.patientsex',
     possibleValue: '2',
   ),
@@ -1512,7 +1513,7 @@ enum DrugEvent {
   /// Patient reaction, as a MedDRA term. Note that these terms are encoded in
   /// British English. For instance, diarrhea is spelled `diarrohea`. MedDRA is
   /// a standardized medical terminology.
-  patientReactionReactionmeddrapt._(
+  patientReactionReactionmeddrapt$$._(
     'patient.reaction.reactionmeddrapt',
     possibleValueReference: PossibleValueReference(
       'MedDRA',
@@ -1520,7 +1521,7 @@ enum DrugEvent {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162038.htm',
     ),
   ),
-  patientReactionReactionmeddraptExact._(
+  patientReactionReactionmeddraptExact$$._(
     'patient.reaction.reactionmeddrapt.exact',
     possibleValueReference: PossibleValueReference(
       'MedDRA',
@@ -1537,37 +1538,37 @@ enum DrugEvent {
   /// Outcome of the reaction in `reactionmeddrapt` at the time of last
   /// observation.
   /// Recovered/resolved
-  patientReactionReactionoutcome1._(
+  patientReactionReactionoutcome$1._(
     'patient.reaction.reactionoutcome',
     possibleValue: '1',
   ),
 
   /// Recovering/resolving
-  patientReactionReactionoutcome2._(
+  patientReactionReactionoutcome$2._(
     'patient.reaction.reactionoutcome',
     possibleValue: '2',
   ),
 
   /// Not recovered/not resolved
-  patientReactionReactionoutcome3._(
+  patientReactionReactionoutcome$3._(
     'patient.reaction.reactionoutcome',
     possibleValue: '3',
   ),
 
   /// Recovered/resolved with sequelae (consequent health issues)
-  patientReactionReactionoutcome4._(
+  patientReactionReactionoutcome$4._(
     'patient.reaction.reactionoutcome',
     possibleValue: '4',
   ),
 
   /// Fatal
-  patientReactionReactionoutcome5._(
+  patientReactionReactionoutcome$5._(
     'patient.reaction.reactionoutcome',
     possibleValue: '5',
   ),
 
   /// Unknown
-  patientReactionReactionoutcome6._(
+  patientReactionReactionoutcome$6._(
     'patient.reaction.reactionoutcome',
     possibleValue: '6',
   ),
@@ -1593,31 +1594,31 @@ enum DrugEvent {
 
   /// Category of individual who submitted the report.
   /// Physician
-  primarysourceQualification1._(
+  primarysourceQualification$1._(
     'primarysource.qualification',
     possibleValue: '1',
   ),
 
   /// Pharmacist
-  primarysourceQualification2._(
+  primarysourceQualification$2._(
     'primarysource.qualification',
     possibleValue: '2',
   ),
 
   /// Other health professional
-  primarysourceQualification3._(
+  primarysourceQualification$3._(
     'primarysource.qualification',
     possibleValue: '3',
   ),
 
   /// Lawyer
-  primarysourceQualification4._(
+  primarysourceQualification$4._(
     'primarysource.qualification',
     possibleValue: '4',
   ),
 
   /// Consumer or non-health professional
-  primarysourceQualification5._(
+  primarysourceQualification$5._(
     'primarysource.qualification',
     possibleValue: '5',
   ),
@@ -1631,14 +1632,14 @@ enum DrugEvent {
   ),
 
   /// Country of the reporter of the event.
-  primarysourcecountry._(
+  primarysourcecountry$$._(
     'primarysourcecountry',
     possibleValueReference: PossibleValueReference(
       'Country codes',
       link: 'http://data.okfn.org/data/core/country-list',
     ),
   ),
-  primarysourcecountryExact._(
+  primarysourcecountryExact$$._(
     'primarysourcecountry.exact',
     possibleValueReference: PossibleValueReference(
       'Country codes',
@@ -1687,7 +1688,7 @@ enum DrugEvent {
   /// The type of organization receiving the report. The value,`6`, is only
   /// specified if it is `other`, otherwise it is left blank.
   /// Other
-  receiverReceivertype6._(
+  receiverReceivertype$6._(
     'receiver.receivertype',
     possibleValue: '6',
   ),
@@ -1717,25 +1718,25 @@ enum DrugEvent {
 
   /// Code indicating the circumstances under which the report was generated.
   /// Spontaneous
-  reporttype1._(
+  reporttype$1._(
     'reporttype',
     possibleValue: '1',
   ),
 
   /// Report from study
-  reporttype2._(
+  reporttype$2._(
     'reporttype',
     possibleValue: '2',
   ),
 
   /// Other
-  reporttype3._(
+  reporttype$3._(
     'reporttype',
     possibleValue: '3',
   ),
 
   /// Not available to sender (unknown)
-  reporttype4._(
+  reporttype$4._(
     'reporttype',
     possibleValue: '4',
   ),
@@ -1774,7 +1775,7 @@ enum DrugEvent {
   /// The name of the organization sending the report. Because FDA is providing
   /// these reports to you, the value is always `2`.
   /// Regulatory authority
-  senderSendertype2._(
+  senderSendertype$2._(
     'sender.sendertype',
     possibleValue: '2',
   ),
@@ -1783,13 +1784,13 @@ enum DrugEvent {
   /// The adverse event resulted in death, a life threatening condition,
   /// hospitalization, disability, congenital anomaly, or other serious
   /// condition
-  serious1._(
+  serious$1._(
     'serious',
     possibleValue: '1',
   ),
 
   /// The adverse event did not result in any of the above
-  serious2._(
+  serious$2._(
     'serious',
     possibleValue: '2',
   ),

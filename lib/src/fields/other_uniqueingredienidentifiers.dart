@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class OtherUniqueIngredienIdentifiersFields extends Endpointer {
+final class OtherUniqueIngredienIdentifiersFields
+    extends Endpointer<OtherUniqueIngredienIdentifiersFields> {
   factory OtherUniqueIngredienIdentifiersFields(
     OtherUNII data,
   ) =>
@@ -19,7 +20,7 @@ final class OtherUniqueIngredienIdentifiersFields extends Endpointer {
         );
   final OtherUNII _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -42,14 +43,14 @@ enum OtherUNII {
   /// Unique Ingredient Identifier, which is a non-proprietary, free, unique,
   /// unambiguous, non-semantic, alphanumeric identifier based on a substance’s
   /// molecular structure and/or descriptive information.
-  unii._(
+  unii$$._(
     'unii',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
     ),
   ),
-  uniiExact._(
+  uniiExact$$._(
     'unii.exact',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',

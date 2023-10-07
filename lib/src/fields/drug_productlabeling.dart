@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DrugProductLabelingFields extends Endpointer {
+final class DrugProductLabelingFields
+    extends Endpointer<DrugProductLabelingFields> {
   factory DrugProductLabelingFields(
     DrugLabel data,
   ) =>
@@ -19,7 +20,7 @@ final class DrugProductLabelingFields extends Endpointer {
         );
   final DrugLabel _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -766,7 +767,7 @@ enum DrugLabel {
 
   /// Unique identifier applied to a drug concept within the National Drug File
   /// Reference Terminology (NDF-RT).
-  openfdaNui._(
+  openfdaNui$$._(
     'openfda.nui',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -774,7 +775,7 @@ enum DrugLabel {
           'https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/',
     ),
   ),
-  openfdaNuiExact._(
+  openfdaNuiExact$$._(
     'openfda.nui.exact',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -857,7 +858,7 @@ enum DrugLabel {
     'openfda.product_ndc.exact',
   ),
 
-  openfdaProductType._(
+  openfdaProductType$$._(
     'openfda.product_type',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -865,7 +866,7 @@ enum DrugLabel {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162063.htm',
     ),
   ),
-  openfdaProductTypeExact._(
+  openfdaProductTypeExact$$._(
     'openfda.product_type.exact',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -875,7 +876,7 @@ enum DrugLabel {
   ),
 
   /// The route of administation of the drug product.
-  openfdaRoute._(
+  openfdaRoute$$._(
     'openfda.route',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -883,7 +884,7 @@ enum DrugLabel {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162034.htm',
     ),
   ),
-  openfdaRouteExact._(
+  openfdaRouteExact$$._(
     'openfda.route.exact',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -895,7 +896,7 @@ enum DrugLabel {
   /// The RxNorm Concept Unique Identifier. RxCUI is a unique number that
   /// describes a semantic concept about the drug product, including its
   /// ingredients, strength, and dose forms.
-  openfdaRxcui._(
+  openfdaRxcui$$._(
     'openfda.rxcui',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -903,7 +904,7 @@ enum DrugLabel {
           'https://www.nlm.nih.gov/research/umls/rxnorm/docs/2012/rxnorm_doco_full_2012-3.html',
     ),
   ),
-  openfdaRxcuiExact._(
+  openfdaRxcuiExact$$._(
     'openfda.rxcui.exact',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -941,14 +942,14 @@ enum DrugLabel {
   /// Unique Ingredient Identifier, which is a non-proprietary, free, unique,
   /// unambiguous, non-semantic, alphanumeric identifier based on a substance’s
   /// molecular structure and/or descriptive information.
-  openfdaUnii._(
+  openfdaUnii$$._(
     'openfda.unii',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
     ),
   ),
-  openfdaUniiExact._(
+  openfdaUniiExact$$._(
     'openfda.unii.exact',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
@@ -957,14 +958,14 @@ enum DrugLabel {
   ),
 
   /// Universal Product Code
-  openfdaUpc._(
+  openfdaUpc$$._(
     'openfda.upc',
     possibleValueReference: PossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',
     ),
   ),
-  openfdaUpcExact._(
+  openfdaUpcExact$$._(
     'openfda.upc.exact',
     possibleValueReference: PossibleValueReference(
       'Universal Product Code',

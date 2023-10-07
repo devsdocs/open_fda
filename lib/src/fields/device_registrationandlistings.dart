@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DeviceRegistrationAndListingsFields extends Endpointer {
+final class DeviceRegistrationAndListingsFields
+    extends Endpointer<DeviceRegistrationAndListingsFields> {
   factory DeviceRegistrationAndListingsFields(
     DevRegList data,
   ) =>
@@ -19,7 +20,7 @@ final class DeviceRegistrationAndListingsFields extends Endpointer {
         );
   final DevRegList _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -33,118 +34,118 @@ final class DeviceRegistrationAndListingsFields extends Endpointer {
 enum DevRegList {
   /// Facility operation or activity, e.g. “Manufacturer” (short version).
   /// Complaint File Establishment per 21 CFR 820.198
-  establishmentTypeComplaintFileEstablishmentPer21Cfr820198._(
+  establishmentType$ComplaintFileEstablishmentPer21Cfr820198._(
     'establishment_type',
     possibleValue: 'Complaint File Establishment per 21 CFR 820.198',
   ),
-  establishmentTypeComplaintFileEstablishmentPer21Cfr820198Exact._(
+  establishmentType$ComplaintFileEstablishmentPer21Cfr820198Exact._(
     'establishment_type.exact',
     possibleValue: 'Complaint File Establishment per 21 CFR 820.198',
   ),
 
   /// Develop Specifications But Do Not Manufacture At This Facility
-  establishmentTypeDevelopSpecificationsButDoNotManufactureAtThisFacility._(
+  establishmentType$DevelopSpecificationsButDoNotManufactureAtThisFacility._(
     'establishment_type',
     possibleValue:
         'Develop Specifications But Do Not Manufacture At This Facility',
   ),
-  establishmentTypeDevelopSpecificationsButDoNotManufactureAtThisFacilityExact._(
+  establishmentType$DevelopSpecificationsButDoNotManufactureAtThisFacilityExact._(
     'establishment_type.exact',
     possibleValue:
         'Develop Specifications But Do Not Manufacture At This Facility',
   ),
 
   /// Export Device to the United States But Perform No Other Operation on Device
-  establishmentTypeExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice._(
+  establishmentType$ExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDevice._(
     'establishment_type',
     possibleValue:
         'Export Device to the United States But Perform No Other Operation on Device',
   ),
-  establishmentTypeExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDeviceExact._(
+  establishmentType$ExportDeviceToTheUnitedStatesButPerformNoOtherOperationOnDeviceExact._(
     'establishment_type.exact',
     possibleValue:
         'Export Device to the United States But Perform No Other Operation on Device',
   ),
 
   /// Foreign Private Label Distributor
-  establishmentTypeForeignPrivateLabelDistributor._(
+  establishmentType$ForeignPrivateLabelDistributor._(
     'establishment_type',
     possibleValue: 'Foreign Private Label Distributor',
   ),
-  establishmentTypeForeignPrivateLabelDistributorExact._(
+  establishmentType$ForeignPrivateLabelDistributorExact._(
     'establishment_type.exact',
     possibleValue: 'Foreign Private Label Distributor',
   ),
 
   /// Manufacture Device in the United States for Export Only
-  establishmentTypeManufactureDeviceInTheUnitedStatesForExportOnly._(
+  establishmentType$ManufactureDeviceInTheUnitedStatesForExportOnly._(
     'establishment_type',
     possibleValue: 'Manufacture Device in the United States for Export Only',
   ),
-  establishmentTypeManufactureDeviceInTheUnitedStatesForExportOnlyExact._(
+  establishmentType$ManufactureDeviceInTheUnitedStatesForExportOnlyExact._(
     'establishment_type.exact',
     possibleValue: 'Manufacture Device in the United States for Export Only',
   ),
 
   /// Manufacture Medical Device
-  establishmentTypeManufactureMedicalDevice._(
+  establishmentType$ManufactureMedicalDevice._(
     'establishment_type',
     possibleValue: 'Manufacture Medical Device',
   ),
-  establishmentTypeManufactureMedicalDeviceExact._(
+  establishmentType$ManufactureMedicalDeviceExact._(
     'establishment_type.exact',
     possibleValue: 'Manufacture Medical Device',
   ),
 
   /// Manufacture Medical Device for Another Party (Contract Manufacturer)
-  establishmentTypeManufactureMedicalDeviceForAnotherPartyContractManufacturer._(
+  establishmentType$ManufactureMedicalDeviceForAnotherPartyContractManufacturer._(
     'establishment_type',
     possibleValue:
         'Manufacture Medical Device for Another Party (Contract Manufacturer)',
   ),
-  establishmentTypeManufactureMedicalDeviceForAnotherPartyContractManufacturerExact._(
+  establishmentType$ManufactureMedicalDeviceForAnotherPartyContractManufacturerExact._(
     'establishment_type.exact',
     possibleValue:
         'Manufacture Medical Device for Another Party (Contract Manufacturer)',
   ),
 
   /// Remanufacture Medical Device
-  establishmentTypeRemanufactureMedicalDevice._(
+  establishmentType$RemanufactureMedicalDevice._(
     'establishment_type',
     possibleValue: 'Remanufacture Medical Device',
   ),
-  establishmentTypeRemanufactureMedicalDeviceExact._(
+  establishmentType$RemanufactureMedicalDeviceExact._(
     'establishment_type.exact',
     possibleValue: 'Remanufacture Medical Device',
   ),
 
   /// Repack or Relabel Medical Device
-  establishmentTypeRepackOrRelabelMedicalDevice._(
+  establishmentType$RepackOrRelabelMedicalDevice._(
     'establishment_type',
     possibleValue: 'Repack or Relabel Medical Device',
   ),
-  establishmentTypeRepackOrRelabelMedicalDeviceExact._(
+  establishmentType$RepackOrRelabelMedicalDeviceExact._(
     'establishment_type.exact',
     possibleValue: 'Repack or Relabel Medical Device',
   ),
 
   /// Reprocess Single-Use Device
-  establishmentTypeReprocessSingleuseDevice._(
+  establishmentType$ReprocessSingleuseDevice._(
     'establishment_type',
     possibleValue: 'Reprocess Single-Use Device',
   ),
-  establishmentTypeReprocessSingleuseDeviceExact._(
+  establishmentType$ReprocessSingleuseDeviceExact._(
     'establishment_type.exact',
     possibleValue: 'Reprocess Single-Use Device',
   ),
 
   /// Sterilize Medical Device for Another Party (Contract Sterilizer)
-  establishmentTypeSterilizeMedicalDeviceForAnotherPartyContractSterilizer._(
+  establishmentType$SterilizeMedicalDeviceForAnotherPartyContractSterilizer._(
     'establishment_type',
     possibleValue:
         'Sterilize Medical Device for Another Party (Contract Sterilizer)',
   ),
-  establishmentTypeSterilizeMedicalDeviceForAnotherPartyContractSterilizerExact._(
+  establishmentType$SterilizeMedicalDeviceForAnotherPartyContractSterilizerExact._(
     'establishment_type.exact',
     possibleValue:
         'Sterilize Medical Device for Another Party (Contract Sterilizer)',
@@ -182,13 +183,13 @@ enum DevRegList {
 
   /// Flag indicating whether a device is exempt or not.
   /// No
-  productsExemptN._(
+  productsExempt$N._(
     'products.exempt',
     possibleValue: 'N',
   ),
 
   /// Yes
-  productsExemptY._(
+  productsExempt$Y._(
     'products.exempt',
     possibleValue: 'Y',
   ),
@@ -201,37 +202,37 @@ enum DevRegList {
   /// Drug, and Cosmetic Act, section 513). Additional information can be found
   /// [here](http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/Overview/ClassifyYourDevice/default.htm).
   /// Class I (low to moderate risk): general controls
-  productsOpenfdaDeviceClass1._(
+  productsOpenfdaDeviceClass$1._(
     'products.openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  productsOpenfdaDeviceClass2._(
+  productsOpenfdaDeviceClass$2._(
     'products.openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  productsOpenfdaDeviceClass3._(
+  productsOpenfdaDeviceClass$3._(
     'products.openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  productsOpenfdaDeviceClassF._(
+  productsOpenfdaDeviceClass$F._(
     'products.openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  productsOpenfdaDeviceClassN._(
+  productsOpenfdaDeviceClass$N._(
     'products.openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  productsOpenfdaDeviceClassU._(
+  productsOpenfdaDeviceClass$U._(
     'products.openfda.device_class',
     possibleValue: 'U',
   ),
@@ -260,7 +261,7 @@ enum DevRegList {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  productsOpenfdaRegulationNumber._(
+  productsOpenfdaRegulationNumber$$._(
     'products.openfda.regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -268,7 +269,7 @@ enum DevRegList {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  productsOpenfdaRegulationNumberExact._(
+  productsOpenfdaRegulationNumberExact$$._(
     'products.openfda.regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -328,13 +329,13 @@ enum DevRegList {
 
   /// Identifies whether facility is an initial importer.
   /// No
-  registrationInitialImporterFlagN._(
+  registrationInitialImporterFlag$N._(
     'registration.initial_importer_flag',
     possibleValue: 'N',
   ),
 
   /// Yes
-  registrationInitialImporterFlagY._(
+  registrationInitialImporterFlag$Y._(
     'registration.initial_importer_flag',
     possibleValue: 'Y',
   ),
@@ -491,13 +492,13 @@ enum DevRegList {
 
   /// Registration status code.
   /// Active
-  registrationStatusCode1._(
+  registrationStatusCode$1._(
     'registration.status_code',
     possibleValue: '1',
   ),
 
   /// Active awaiting assignment of registration number
-  registrationStatusCode5._(
+  registrationStatusCode$5._(
     'registration.status_code',
     possibleValue: '5',
   ),

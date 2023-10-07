@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class FoodRecallEnforcementReportsFields extends Endpointer {
+final class FoodRecallEnforcementReportsFields
+    extends Endpointer<FoodRecallEnforcementReportsFields> {
   factory FoodRecallEnforcementReportsFields(
     FoodRecall data,
   ) =>
@@ -19,7 +20,7 @@ final class FoodRecallEnforcementReportsFields extends Endpointer {
         );
   final FoodRecall _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -64,11 +65,11 @@ enum FoodRecall {
   /// health problems or death. Examples include: food found to contain
   /// botulinum toxin, food with undeclared allergens, a label mix-up on a
   /// lifesaving drug, or a defective artificial heart valve.
-  classificationClassI._(
+  classification$ClassI._(
     'classification',
     possibleValue: 'Class I',
   ),
-  classificationClassIExact._(
+  classification$ClassIExact._(
     'classification.exact',
     possibleValue: 'Class I',
   ),
@@ -76,11 +77,11 @@ enum FoodRecall {
   /// Products that might cause a temporary health problem, or pose only a
   /// slight threat of a serious nature. Example: a drug that is under-strength
   /// but that is not used to treat life-threatening situations.
-  classificationClassIi._(
+  classification$ClassIi._(
     'classification',
     possibleValue: 'Class II',
   ),
-  classificationClassIiExact._(
+  classification$ClassIiExact._(
     'classification.exact',
     possibleValue: 'Class II',
   ),
@@ -88,11 +89,11 @@ enum FoodRecall {
   /// Products that are unlikely to cause any adverse health reaction, but that
   /// violate FDA labeling or manufacturing laws. Examples include: a minor
   /// container defect and lack of English labeling in a retail food.
-  classificationClassIii._(
+  classification$ClassIii._(
     'classification',
     possibleValue: 'Class III',
   ),
-  classificationClassIiiExact._(
+  classification$ClassIiiExact._(
     'classification.exact',
     possibleValue: 'Class III',
   ),
@@ -246,31 +247,31 @@ enum FoodRecall {
   /// The type of product being recalled. For food queries, this will always be
   /// `Food`.
   /// The recalled product is a device product.
-  openfdaProductTypeDevices._(
+  openfdaProductType$Devices._(
     'openfda.product_type',
     possibleValue: 'Devices',
   ),
-  openfdaProductTypeDevicesExact._(
+  openfdaProductType$DevicesExact._(
     'openfda.product_type.exact',
     possibleValue: 'Devices',
   ),
 
   /// The recalled product is a drug product.
-  openfdaProductTypeDrugs._(
+  openfdaProductType$Drugs._(
     'openfda.product_type',
     possibleValue: 'Drugs',
   ),
-  openfdaProductTypeDrugsExact._(
+  openfdaProductType$DrugsExact._(
     'openfda.product_type.exact',
     possibleValue: 'Drugs',
   ),
 
   /// The recalled product is a food product.
-  openfdaProductTypeFood._(
+  openfdaProductType$Food._(
     'openfda.product_type',
     possibleValue: 'Food',
   ),
-  openfdaProductTypeFoodExact._(
+  openfdaProductType$FoodExact._(
     'openfda.product_type.exact',
     possibleValue: 'Food',
   ),
@@ -406,32 +407,32 @@ enum FoodRecall {
   /// The recall action reaches the point at which the firm has actually
   /// retrieved and impounded all outstanding product that could reasonably be
   /// expected to be recovered, or has completed all product corrections.
-  statusCompleted._(
+  status$Completed._(
     'status',
     possibleValue: 'Completed',
   ),
-  statusCompletedExact._(
+  status$CompletedExact._(
     'status.exact',
     possibleValue: 'Completed',
   ),
 
   /// A recall which is currently in progress.
-  statusOnGoing._(
+  status$OnGoing._(
     'status',
     possibleValue: 'On-Going',
   ),
-  statusOnGoingExact._(
+  status$OnGoingExact._(
     'status.exact',
     possibleValue: 'On-Going',
   ),
 
   /// Actions that have been determined to be recalls, but that remain in the
   /// process of being classified.
-  statusPending._(
+  status$Pending._(
     'status',
     possibleValue: 'Pending',
   ),
-  statusPendingExact._(
+  status$PendingExact._(
     'status.exact',
     possibleValue: 'Pending',
   ),
@@ -439,11 +440,11 @@ enum FoodRecall {
   /// FDA has determined that all reasonable efforts have been made to remove or
   /// correct the violative product in accordance with the recall strategy, and
   /// proper disposition has been made according to the degree of hazard.
-  statusTerminated._(
+  status$Terminated._(
     'status',
     possibleValue: 'Terminated',
   ),
-  statusTerminatedExact._(
+  status$TerminatedExact._(
     'status.exact',
     possibleValue: 'Terminated',
   ),

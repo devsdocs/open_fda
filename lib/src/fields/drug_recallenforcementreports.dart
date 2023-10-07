@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DrugRecallEnforcementReportsFields extends Endpointer {
+final class DrugRecallEnforcementReportsFields
+    extends Endpointer<DrugRecallEnforcementReportsFields> {
   factory DrugRecallEnforcementReportsFields(
     DrugEnforce data,
   ) =>
@@ -19,7 +20,7 @@ final class DrugRecallEnforcementReportsFields extends Endpointer {
         );
   final DrugEnforce _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -64,11 +65,11 @@ enum DrugEnforce {
   /// health problems or death. Examples include: food found to contain
   /// botulinum toxin, food with undeclared allergens, a label mix-up on a
   /// lifesaving drug, or a defective artificial heart valve.
-  classificationClassI._(
+  classification$ClassI._(
     'classification',
     possibleValue: 'Class I',
   ),
-  classificationClassIExact._(
+  classification$ClassIExact._(
     'classification.exact',
     possibleValue: 'Class I',
   ),
@@ -76,11 +77,11 @@ enum DrugEnforce {
   /// Products that might cause a temporary health problem, or pose only a
   /// slight threat of a serious nature. Example: a drug that is under-strength
   /// but that is not used to treat life-threatening situations.
-  classificationClassIi._(
+  classification$ClassIi._(
     'classification',
     possibleValue: 'Class II',
   ),
-  classificationClassIiExact._(
+  classification$ClassIiExact._(
     'classification.exact',
     possibleValue: 'Class II',
   ),
@@ -88,11 +89,11 @@ enum DrugEnforce {
   /// Products that are unlikely to cause any adverse health reaction, but that
   /// violate FDA labeling or manufacturing laws. Examples include: a minor
   /// container defect and lack of English labeling in a retail food.
-  classificationClassIii._(
+  classification$ClassIii._(
     'classification',
     possibleValue: 'Class III',
   ),
-  classificationClassIiiExact._(
+  classification$ClassIiiExact._(
     'classification.exact',
     possibleValue: 'Class III',
   ),
@@ -193,7 +194,7 @@ enum DrugEnforce {
 
   /// Unique identifier applied to a drug concept within the National Drug File
   /// Reference Terminology (NDF-RT).
-  openfdaNui._(
+  openfdaNui$$._(
     'openfda.nui',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -201,7 +202,7 @@ enum DrugEnforce {
           'https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NDFRT/',
     ),
   ),
-  openfdaNuiExact._(
+  openfdaNuiExact$$._(
     'openfda.nui.exact',
     possibleValueReference: PossibleValueReference(
       'NDF-RT',
@@ -284,7 +285,7 @@ enum DrugEnforce {
     'openfda.product_ndc.exact',
   ),
 
-  openfdaProductType._(
+  openfdaProductType$$._(
     'openfda.product_type',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -292,7 +293,7 @@ enum DrugEnforce {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162063.htm',
     ),
   ),
-  openfdaProductTypeExact._(
+  openfdaProductTypeExact$$._(
     'openfda.product_type.exact',
     possibleValueReference: PossibleValueReference(
       'Type of drug product',
@@ -302,7 +303,7 @@ enum DrugEnforce {
   ),
 
   /// The route of administation of the drug product.
-  openfdaRoute._(
+  openfdaRoute$$._(
     'openfda.route',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -310,7 +311,7 @@ enum DrugEnforce {
           'http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm162034.htm',
     ),
   ),
-  openfdaRouteExact._(
+  openfdaRouteExact$$._(
     'openfda.route.exact',
     possibleValueReference: PossibleValueReference(
       'Route of administration',
@@ -322,7 +323,7 @@ enum DrugEnforce {
   /// The RxNorm Concept Unique Identifier. RxCUI is a unique number that
   /// describes a semantic concept about the drug product, including its
   /// ingredients, strength, and dose forms.
-  openfdaRxcui._(
+  openfdaRxcui$$._(
     'openfda.rxcui',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -330,7 +331,7 @@ enum DrugEnforce {
           'https://www.nlm.nih.gov/research/umls/rxnorm/docs/2012/rxnorm_doco_full_2012-3.html',
     ),
   ),
-  openfdaRxcuiExact._(
+  openfdaRxcuiExact$$._(
     'openfda.rxcui.exact',
     possibleValueReference: PossibleValueReference(
       'RxNorm and RxCUI documentation',
@@ -368,14 +369,14 @@ enum DrugEnforce {
   /// Unique Ingredient Identifier, which is a non-proprietary, free, unique,
   /// unambiguous, non-semantic, alphanumeric identifier based on a substance’s
   /// molecular structure and/or descriptive information.
-  openfdaUnii._(
+  openfdaUnii$$._(
     'openfda.unii',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
       link: 'http://fdasis.nlm.nih.gov/srs/srs.jsp',
     ),
   ),
-  openfdaUniiExact._(
+  openfdaUniiExact$$._(
     'openfda.unii.exact',
     possibleValueReference: PossibleValueReference(
       'Unique Ingredient Identifiers',
@@ -384,14 +385,14 @@ enum DrugEnforce {
   ),
 
   /// Universal Product Code
-  openfdaUpc._(
+  openfdaUpc$$._(
     'openfda.upc',
     possibleValueReference: PossibleValueReference(
       'Universal Product Code',
       link: 'https://en.wikipedia.org/wiki/Universal_Product_Code',
     ),
   ),
-  openfdaUpcExact._(
+  openfdaUpcExact$$._(
     'openfda.upc.exact',
     possibleValueReference: PossibleValueReference(
       'Universal Product Code',
@@ -416,31 +417,31 @@ enum DrugEnforce {
   /// The type of product being recalled. For drug queries, this will always be
   /// `Drugs`.
   /// The recalled product is a device product.
-  productTypeDevices._(
+  productType$Devices._(
     'product_type',
     possibleValue: 'Devices',
   ),
-  productTypeDevicesExact._(
+  productType$DevicesExact._(
     'product_type.exact',
     possibleValue: 'Devices',
   ),
 
   /// The recalled product is a drug product.
-  productTypeDrugs._(
+  productType$Drugs._(
     'product_type',
     possibleValue: 'Drugs',
   ),
-  productTypeDrugsExact._(
+  productType$DrugsExact._(
     'product_type.exact',
     possibleValue: 'Drugs',
   ),
 
   /// The recalled product is a food product.
-  productTypeFood._(
+  productType$Food._(
     'product_type',
     possibleValue: 'Food',
   ),
-  productTypeFoodExact._(
+  productType$FoodExact._(
     'product_type.exact',
     possibleValue: 'Food',
   ),
@@ -492,32 +493,32 @@ enum DrugEnforce {
   /// The recall action reaches the point at which the firm has actually
   /// retrieved and impounded all outstanding product that could reasonably be
   /// expected to be recovered, or has completed all product corrections.
-  statusCompleted._(
+  status$Completed._(
     'status',
     possibleValue: 'Completed',
   ),
-  statusCompletedExact._(
+  status$CompletedExact._(
     'status.exact',
     possibleValue: 'Completed',
   ),
 
   /// A recall which is currently in progress.
-  statusOnGoing._(
+  status$OnGoing._(
     'status',
     possibleValue: 'On-Going',
   ),
-  statusOnGoingExact._(
+  status$OnGoingExact._(
     'status.exact',
     possibleValue: 'On-Going',
   ),
 
   /// Actions that have been determined to be recalls, but that remain in the
   /// process of being classified.
-  statusPending._(
+  status$Pending._(
     'status',
     possibleValue: 'Pending',
   ),
-  statusPendingExact._(
+  status$PendingExact._(
     'status.exact',
     possibleValue: 'Pending',
   ),
@@ -525,11 +526,11 @@ enum DrugEnforce {
   /// FDA has determined that all reasonable efforts have been made to remove or
   /// correct the violative product in accordance with the recall strategy, and
   /// proper disposition has been made according to the degree of hazard.
-  statusTerminated._(
+  status$Terminated._(
     'status',
     possibleValue: 'Terminated',
   ),
-  statusTerminatedExact._(
+  status$TerminatedExact._(
     'status.exact',
     possibleValue: 'Terminated',
   ),

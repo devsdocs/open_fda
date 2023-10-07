@@ -41,12 +41,12 @@ part of '_gen.dart';
         if (p.possibleValuesType == PossibleValuesType.reference) {
           final poss = p.possibleValues! as Reference;
           buff.writeln(
-            "${p.address.toSnakeCase.toSnakeCase}._('${p.address}', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
+            "${p.address.toSnakeCase.toSnakeCase}\$\$._('${p.address}', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
           );
           if (p.isExact != null) {
             if (p.isExact!) {
               buff.writeln(
-                "${p.address.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
+                "${p.address.toSnakeCase.toSnakeCase}Exact\$\$._('${p.address}.exact', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
               );
             }
           }

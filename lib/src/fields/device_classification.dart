@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class DeviceClassificationFields extends Endpointer {
+final class DeviceClassificationFields
+    extends Endpointer<DeviceClassificationFields> {
   factory DeviceClassificationFields(
     DevClass data,
   ) =>
@@ -19,7 +20,7 @@ final class DeviceClassificationFields extends Endpointer {
         );
   final DevClass _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -41,37 +42,37 @@ enum DevClass {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513).
   /// Class I (low to moderate risk): general controls
-  deviceClass1._(
+  deviceClass$1._(
     'device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  deviceClass2._(
+  deviceClass$2._(
     'device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  deviceClass3._(
+  deviceClass$3._(
     'device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  deviceClassF._(
+  deviceClass$F._(
     'device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  deviceClassN._(
+  deviceClass$N._(
     'device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  deviceClassU._(
+  deviceClass$U._(
     'device_class',
     possibleValue: 'U',
   ),
@@ -89,13 +90,13 @@ enum DevClass {
   /// [here](http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpcd/315.cfm)
   /// for more detail.
   /// Not exempt due to Good Manufacturing Practice (GMP)/Quality System
-  gmpExemptFlagN._(
+  gmpExemptFlag$N._(
     'gmp_exempt_flag',
     possibleValue: 'N',
   ),
 
   /// Exempt due to Good Manufacturing Practice (GMP)/Quality System
-  gmpExemptFlagY._(
+  gmpExemptFlag$Y._(
     'gmp_exempt_flag',
     possibleValue: 'Y',
   ),
@@ -105,13 +106,13 @@ enum DevClass {
   /// or more; or the Commissioner makes a determination (that the device is to
   /// be considered implanted).
   /// Device is not implantable
-  implantFlagN._(
+  implantFlag$N._(
     'implant_flag',
     possibleValue: 'N',
   ),
 
   /// Device is implantable
-  implantFlagY._(
+  implantFlag$Y._(
     'implant_flag',
     possibleValue: 'Y',
   ),
@@ -120,13 +121,13 @@ enum DevClass {
   /// is essential to, the restoration or continuation of a bodily function
   /// important to the continuation of human life.
   /// Device is not used for life sustaining purposes
-  lifeSustainSupportFlagN._(
+  lifeSustainSupportFlag$N._(
     'life_sustain_support_flag',
     possibleValue: 'N',
   ),
 
   /// Device is used for life sustaining purposes.
-  lifeSustainSupportFlagY._(
+  lifeSustainSupportFlag$Y._(
     'life_sustain_support_flag',
     possibleValue: 'Y',
   ),
@@ -138,121 +139,121 @@ enum DevClass {
   /// [link](http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/Overview/ClassifyYourDevice/ucm051668.htm#medicalspecialty)
   /// for further detail.
   /// Anesthesiology
-  medicalSpecialtyAn._(
+  medicalSpecialty$An._(
     'medical_specialty',
     possibleValue: 'AN',
   ),
 
   /// Clinical Chemistry
-  medicalSpecialtyCh._(
+  medicalSpecialty$Ch._(
     'medical_specialty',
     possibleValue: 'CH',
   ),
 
   /// Cardiovascular
-  medicalSpecialtyCv._(
+  medicalSpecialty$Cv._(
     'medical_specialty',
     possibleValue: 'CV',
   ),
 
   /// Dental
-  medicalSpecialtyDe._(
+  medicalSpecialty$De._(
     'medical_specialty',
     possibleValue: 'DE',
   ),
 
   /// Ear, Nose, Throat
-  medicalSpecialtyEn._(
+  medicalSpecialty$En._(
     'medical_specialty',
     possibleValue: 'EN',
   ),
 
   /// Gastroenterology, Urology
-  medicalSpecialtyGu._(
+  medicalSpecialty$Gu._(
     'medical_specialty',
     possibleValue: 'GU',
   ),
 
   /// Hematology
-  medicalSpecialtyHe._(
+  medicalSpecialty$He._(
     'medical_specialty',
     possibleValue: 'HE',
   ),
 
   /// General Hospital
-  medicalSpecialtyHo._(
+  medicalSpecialty$Ho._(
     'medical_specialty',
     possibleValue: 'HO',
   ),
 
   /// Immunology
-  medicalSpecialtyIm._(
+  medicalSpecialty$Im._(
     'medical_specialty',
     possibleValue: 'IM',
   ),
 
   /// Medical Genetics
-  medicalSpecialtyMg._(
+  medicalSpecialty$Mg._(
     'medical_specialty',
     possibleValue: 'MG',
   ),
 
   /// Microbiology
-  medicalSpecialtyMi._(
+  medicalSpecialty$Mi._(
     'medical_specialty',
     possibleValue: 'MI',
   ),
 
   /// Neurology
-  medicalSpecialtyNe._(
+  medicalSpecialty$Ne._(
     'medical_specialty',
     possibleValue: 'NE',
   ),
 
   /// Obstetrics/Gynecology
-  medicalSpecialtyOb._(
+  medicalSpecialty$Ob._(
     'medical_specialty',
     possibleValue: 'OB',
   ),
 
   /// Ophthalmic
-  medicalSpecialtyOp._(
+  medicalSpecialty$Op._(
     'medical_specialty',
     possibleValue: 'OP',
   ),
 
   /// Orthopedic
-  medicalSpecialtyOr._(
+  medicalSpecialty$Or._(
     'medical_specialty',
     possibleValue: 'OR',
   ),
 
   /// Pathology
-  medicalSpecialtyPa._(
+  medicalSpecialty$Pa._(
     'medical_specialty',
     possibleValue: 'PA',
   ),
 
   /// Physical Medicine
-  medicalSpecialtyPm._(
+  medicalSpecialty$Pm._(
     'medical_specialty',
     possibleValue: 'PM',
   ),
 
   /// Radiology
-  medicalSpecialtyRa._(
+  medicalSpecialty$Ra._(
     'medical_specialty',
     possibleValue: 'RA',
   ),
 
   /// General, Plastic Surgery
-  medicalSpecialtySu._(
+  medicalSpecialty$Su._(
     'medical_specialty',
     possibleValue: 'SU',
   ),
 
   /// Clinical Toxicology
-  medicalSpecialtyTx._(
+  medicalSpecialty$Tx._(
     'medical_specialty',
     possibleValue: 'TX',
   ),
@@ -318,7 +319,7 @@ enum DevClass {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  regulationNumber._(
+  regulationNumber$$._(
     'regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -326,7 +327,7 @@ enum DevClass {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  regulationNumberExact._(
+  regulationNumberExact$$._(
     'regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -351,25 +352,25 @@ enum DevClass {
   /// The submission type (510(k), PMA, 510(k) Exempt) to which a product code
   /// is limited, or “Contact ODE” if its limitations (if any) are undetermined.
   /// 510(K)
-  submissionTypeId1._(
+  submissionTypeId$1._(
     'submission_type_id',
     possibleValue: '1',
   ),
 
   /// PMA
-  submissionTypeId2._(
+  submissionTypeId$2._(
     'submission_type_id',
     possibleValue: '2',
   ),
 
   /// Contact ODE
-  submissionTypeId3._(
+  submissionTypeId$3._(
     'submission_type_id',
     possibleValue: '3',
   ),
 
   /// 510(K) Exempt
-  submissionTypeId4._(
+  submissionTypeId$4._(
     'submission_type_id',
     possibleValue: '4',
   ),
@@ -381,14 +382,14 @@ enum DevClass {
   /// Center for Biologics Evaluation and Research (CBER), including device-led
   /// combination products.
   /// Device is eligible for The Voluntary Malfunction Summary Reporting Program
-  summaryMalfunctionReportingEligible._(
+  summaryMalfunctionReporting$Eligible._(
     'summary_malfunction_reporting',
     possibleValue: 'Eligible',
   ),
 
   /// Device is not eligible for The Voluntary Malfunction Summary Reporting
   /// Program
-  summaryMalfunctionReportingIneligible._(
+  summaryMalfunctionReporting$Ineligible._(
     'summary_malfunction_reporting',
     possibleValue: 'Ineligible',
   ),
@@ -398,13 +399,13 @@ enum DevClass {
   /// final determination within 30 days after receiving the recommendation of
   /// an Accredited Person (yielding a streamlined review process).
   /// Device is not a candidate for a third party review program
-  thirdPartyFlagN._(
+  thirdPartyFlag$N._(
     'third_party_flag',
     possibleValue: 'N',
   ),
 
   /// Device is a candidate for a third party review program
-  thirdPartyFlagY._(
+  thirdPartyFlag$Y._(
     'third_party_flag',
     possibleValue: 'Y',
   ),
@@ -412,43 +413,43 @@ enum DevClass {
   /// This indicates the reason why a device is unclassified (e.g.
   /// Pre-Amendment).
   /// Pre-Amendment
-  unclassifiedReason1._(
+  unclassifiedReason$1._(
     'unclassified_reason',
     possibleValue: '1',
   ),
 
   /// IDE
-  unclassifiedReason2._(
+  unclassifiedReason$2._(
     'unclassified_reason',
     possibleValue: '2',
   ),
 
   /// For Export Only
-  unclassifiedReason3._(
+  unclassifiedReason$3._(
     'unclassified_reason',
     possibleValue: '3',
   ),
 
   /// Unknown
-  unclassifiedReason4._(
+  unclassifiedReason$4._(
     'unclassified_reason',
     possibleValue: '4',
   ),
 
   /// Guidance Under Development
-  unclassifiedReason5._(
+  unclassifiedReason$5._(
     'unclassified_reason',
     possibleValue: '5',
   ),
 
   /// Enforcement Discretion
-  unclassifiedReason6._(
+  unclassifiedReason$6._(
     'unclassified_reason',
     possibleValue: '6',
   ),
 
   /// Not FDA Regulated
-  unclassifiedReason7._(
+  unclassifiedReason$7._(
     'unclassified_reason',
     possibleValue: '7',
   ),

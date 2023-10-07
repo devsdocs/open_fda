@@ -2,7 +2,8 @@
 
 part of '../main.dart';
 
-final class OtherSubstanceDataReportsFields extends Endpointer {
+final class OtherSubstanceDataReportsFields
+    extends Endpointer<OtherSubstanceDataReportsFields> {
   factory OtherSubstanceDataReportsFields(
     OtherSubstance data,
   ) =>
@@ -19,7 +20,7 @@ final class OtherSubstanceDataReportsFields extends Endpointer {
         );
   final OtherSubstance _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override

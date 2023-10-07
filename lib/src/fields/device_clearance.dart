@@ -2,7 +2,7 @@
 
 part of '../main.dart';
 
-final class DeviceClearanceFields extends Endpointer {
+final class DeviceClearanceFields extends Endpointer<DeviceClearanceFields> {
   factory DeviceClearanceFields(
     DevClear data,
   ) =>
@@ -19,7 +19,7 @@ final class DeviceClearanceFields extends Endpointer {
         );
   final DevClear _data;
   @override
-  String get address => _data.address;
+  String get fieldAddress => _data.address;
   @override
   String? get possValue => _data.possibleValue;
   @override
@@ -48,201 +48,201 @@ enum DevClear {
   /// medical specialty panel that was responsible for classifying the product
   /// (e.g. GU).
   /// Anesthesiology
-  advisoryCommitteeAn._(
+  advisoryCommittee$An._(
     'advisory_committee',
     possibleValue: 'AN',
   ),
-  advisoryCommitteeAnExact._(
+  advisoryCommittee$AnExact._(
     'advisory_committee.exact',
     possibleValue: 'AN',
   ),
 
   /// Clinical Chemistry
-  advisoryCommitteeCh._(
+  advisoryCommittee$Ch._(
     'advisory_committee',
     possibleValue: 'CH',
   ),
-  advisoryCommitteeChExact._(
+  advisoryCommittee$ChExact._(
     'advisory_committee.exact',
     possibleValue: 'CH',
   ),
 
   /// Cardiovascular
-  advisoryCommitteeCv._(
+  advisoryCommittee$Cv._(
     'advisory_committee',
     possibleValue: 'CV',
   ),
-  advisoryCommitteeCvExact._(
+  advisoryCommittee$CvExact._(
     'advisory_committee.exact',
     possibleValue: 'CV',
   ),
 
   /// Dental
-  advisoryCommitteeDe._(
+  advisoryCommittee$De._(
     'advisory_committee',
     possibleValue: 'DE',
   ),
-  advisoryCommitteeDeExact._(
+  advisoryCommittee$DeExact._(
     'advisory_committee.exact',
     possibleValue: 'DE',
   ),
 
   /// Ear, Nose, Throat
-  advisoryCommitteeEn._(
+  advisoryCommittee$En._(
     'advisory_committee',
     possibleValue: 'EN',
   ),
-  advisoryCommitteeEnExact._(
+  advisoryCommittee$EnExact._(
     'advisory_committee.exact',
     possibleValue: 'EN',
   ),
 
   /// Gastroenterology, Urology
-  advisoryCommitteeGu._(
+  advisoryCommittee$Gu._(
     'advisory_committee',
     possibleValue: 'GU',
   ),
-  advisoryCommitteeGuExact._(
+  advisoryCommittee$GuExact._(
     'advisory_committee.exact',
     possibleValue: 'GU',
   ),
 
   /// Hematology
-  advisoryCommitteeHe._(
+  advisoryCommittee$He._(
     'advisory_committee',
     possibleValue: 'HE',
   ),
-  advisoryCommitteeHeExact._(
+  advisoryCommittee$HeExact._(
     'advisory_committee.exact',
     possibleValue: 'HE',
   ),
 
   /// General Hospital
-  advisoryCommitteeHo._(
+  advisoryCommittee$Ho._(
     'advisory_committee',
     possibleValue: 'HO',
   ),
-  advisoryCommitteeHoExact._(
+  advisoryCommittee$HoExact._(
     'advisory_committee.exact',
     possibleValue: 'HO',
   ),
 
   /// Immunology
-  advisoryCommitteeIm._(
+  advisoryCommittee$Im._(
     'advisory_committee',
     possibleValue: 'IM',
   ),
-  advisoryCommitteeImExact._(
+  advisoryCommittee$ImExact._(
     'advisory_committee.exact',
     possibleValue: 'IM',
   ),
 
   /// Medical Genetics
-  advisoryCommitteeMg._(
+  advisoryCommittee$Mg._(
     'advisory_committee',
     possibleValue: 'MG',
   ),
-  advisoryCommitteeMgExact._(
+  advisoryCommittee$MgExact._(
     'advisory_committee.exact',
     possibleValue: 'MG',
   ),
 
   /// Microbiology
-  advisoryCommitteeMi._(
+  advisoryCommittee$Mi._(
     'advisory_committee',
     possibleValue: 'MI',
   ),
-  advisoryCommitteeMiExact._(
+  advisoryCommittee$MiExact._(
     'advisory_committee.exact',
     possibleValue: 'MI',
   ),
 
   /// Neurology
-  advisoryCommitteeNe._(
+  advisoryCommittee$Ne._(
     'advisory_committee',
     possibleValue: 'NE',
   ),
-  advisoryCommitteeNeExact._(
+  advisoryCommittee$NeExact._(
     'advisory_committee.exact',
     possibleValue: 'NE',
   ),
 
   /// Obstetrics/Gynecology
-  advisoryCommitteeOb._(
+  advisoryCommittee$Ob._(
     'advisory_committee',
     possibleValue: 'OB',
   ),
-  advisoryCommitteeObExact._(
+  advisoryCommittee$ObExact._(
     'advisory_committee.exact',
     possibleValue: 'OB',
   ),
 
   /// Ophthalmic
-  advisoryCommitteeOp._(
+  advisoryCommittee$Op._(
     'advisory_committee',
     possibleValue: 'OP',
   ),
-  advisoryCommitteeOpExact._(
+  advisoryCommittee$OpExact._(
     'advisory_committee.exact',
     possibleValue: 'OP',
   ),
 
   /// Orthopedic
-  advisoryCommitteeOr._(
+  advisoryCommittee$Or._(
     'advisory_committee',
     possibleValue: 'OR',
   ),
-  advisoryCommitteeOrExact._(
+  advisoryCommittee$OrExact._(
     'advisory_committee.exact',
     possibleValue: 'OR',
   ),
 
   /// Pathology
-  advisoryCommitteePa._(
+  advisoryCommittee$Pa._(
     'advisory_committee',
     possibleValue: 'PA',
   ),
-  advisoryCommitteePaExact._(
+  advisoryCommittee$PaExact._(
     'advisory_committee.exact',
     possibleValue: 'PA',
   ),
 
   /// Physical Medicine
-  advisoryCommitteePm._(
+  advisoryCommittee$Pm._(
     'advisory_committee',
     possibleValue: 'PM',
   ),
-  advisoryCommitteePmExact._(
+  advisoryCommittee$PmExact._(
     'advisory_committee.exact',
     possibleValue: 'PM',
   ),
 
   /// Radiology
-  advisoryCommitteeRa._(
+  advisoryCommittee$Ra._(
     'advisory_committee',
     possibleValue: 'RA',
   ),
-  advisoryCommitteeRaExact._(
+  advisoryCommittee$RaExact._(
     'advisory_committee.exact',
     possibleValue: 'RA',
   ),
 
   /// General, Plastic Surgery
-  advisoryCommitteeSu._(
+  advisoryCommittee$Su._(
     'advisory_committee',
     possibleValue: 'SU',
   ),
-  advisoryCommitteeSuExact._(
+  advisoryCommittee$SuExact._(
     'advisory_committee.exact',
     possibleValue: 'SU',
   ),
 
   /// Clinical Toxicology
-  advisoryCommitteeTx._(
+  advisoryCommittee$Tx._(
     'advisory_committee',
     possibleValue: 'TX',
   ),
-  advisoryCommitteeTxExact._(
+  advisoryCommittee$TxExact._(
     'advisory_committee.exact',
     possibleValue: 'TX',
   ),
@@ -279,71 +279,71 @@ enum DevClear {
 
   /// Denotes the submission method utilized for the submission of the 510(k).
   /// Direct
-  clearanceTypedirect._(
+  clearanceType$direct._(
     'clearance_type',
     possibleValue: 'direct',
   ),
-  clearanceTypedirectExact._(
+  clearanceType$directExact._(
     'clearance_type.exact',
     possibleValue: 'direct',
   ),
 
   /// Dual
-  clearanceTypedual._(
+  clearanceType$dual._(
     'clearance_type',
     possibleValue: 'dual',
   ),
-  clearanceTypedualExact._(
+  clearanceType$dualExact._(
     'clearance_type.exact',
     possibleValue: 'dual',
   ),
 
   /// NSE
-  clearanceTypense._(
+  clearanceType$nse._(
     'clearance_type',
     possibleValue: 'nse',
   ),
-  clearanceTypenseExact._(
+  clearanceType$nseExact._(
     'clearance_type.exact',
     possibleValue: 'nse',
   ),
 
   /// Post
-  clearanceTypepost._(
+  clearanceType$post._(
     'clearance_type',
     possibleValue: 'post',
   ),
-  clearanceTypepostExact._(
+  clearanceType$postExact._(
     'clearance_type.exact',
     possibleValue: 'post',
   ),
 
   /// Special
-  clearanceTypespecial._(
+  clearanceType$special._(
     'clearance_type',
     possibleValue: 'special',
   ),
-  clearanceTypespecialExact._(
+  clearanceType$specialExact._(
     'clearance_type.exact',
     possibleValue: 'special',
   ),
 
   /// Track
-  clearanceTypetrack._(
+  clearanceType$track._(
     'clearance_type',
     possibleValue: 'track',
   ),
-  clearanceTypetrackExact._(
+  clearanceType$trackExact._(
     'clearance_type.exact',
     possibleValue: 'track',
   ),
 
   /// Traditional
-  clearanceTypetraditional._(
+  clearanceType$traditional._(
     'clearance_type',
     possibleValue: 'traditional',
   ),
-  clearanceTypetraditionalExact._(
+  clearanceType$traditionalExact._(
     'clearance_type.exact',
     possibleValue: 'traditional',
   ),
@@ -386,71 +386,71 @@ enum DevClear {
   /// Four letter codes that denote the specific substantial equivalence
   /// decision rendered by FDA on a specific 510(k).
   /// Substantially Equivalent - Kit with Drugs
-  decisionCodeSekd._(
+  decisionCode$Sekd._(
     'decision_code',
     possibleValue: 'SEKD',
   ),
-  decisionCodeSekdExact._(
+  decisionCode$SekdExact._(
     'decision_code.exact',
     possibleValue: 'SEKD',
   ),
 
   /// Substantially Equivalent with Drug
-  decisionCodeSesd._(
+  decisionCode$Sesd._(
     'decision_code',
     possibleValue: 'SESD',
   ),
-  decisionCodeSesdExact._(
+  decisionCode$SesdExact._(
     'decision_code.exact',
     possibleValue: 'SESD',
   ),
 
   /// Substantially Equivalent
-  decisionCodeSese._(
+  decisionCode$Sese._(
     'decision_code',
     possibleValue: 'SESE',
   ),
-  decisionCodeSeseExact._(
+  decisionCode$SeseExact._(
     'decision_code.exact',
     possibleValue: 'SESE',
   ),
 
   /// Substantially Equivalent - Kit
-  decisionCodeSesk._(
+  decisionCode$Sesk._(
     'decision_code',
     possibleValue: 'SESK',
   ),
-  decisionCodeSeskExact._(
+  decisionCode$SeskExact._(
     'decision_code.exact',
     possibleValue: 'SESK',
   ),
 
   /// Substantially Equivalent - Postmarket Surveillance Required
-  decisionCodeSesp._(
+  decisionCode$Sesp._(
     'decision_code',
     possibleValue: 'SESP',
   ),
-  decisionCodeSespExact._(
+  decisionCode$SespExact._(
     'decision_code.exact',
     possibleValue: 'SESP',
   ),
 
   /// Potential Recall
-  decisionCodeSesr._(
+  decisionCode$Sesr._(
     'decision_code',
     possibleValue: 'SESR',
   ),
-  decisionCodeSesrExact._(
+  decisionCode$SesrExact._(
     'decision_code.exact',
     possibleValue: 'SESR',
   ),
 
   /// Substantially Equivalent - With Limitations
-  decisionCodeSesu._(
+  decisionCode$Sesu._(
     'decision_code',
     possibleValue: 'SESU',
   ),
-  decisionCodeSesuExact._(
+  decisionCode$SesuExact._(
     'decision_code.exact',
     possibleValue: 'SESU',
   ),
@@ -509,37 +509,37 @@ enum DevClear {
   /// A risk based classification system for all medical devices ((Federal Food,
   /// Drug, and Cosmetic Act, section 513)
   /// Class I (low to moderate risk): general controls
-  openfdaDeviceClass1._(
+  openfdaDeviceClass$1._(
     'openfda.device_class',
     possibleValue: '1',
   ),
 
   /// Class II (moderate to high risk): general controls and special controls
-  openfdaDeviceClass2._(
+  openfdaDeviceClass$2._(
     'openfda.device_class',
     possibleValue: '2',
   ),
 
   /// Class III (high risk): general controls and Premarket Approval (PMA)
-  openfdaDeviceClass3._(
+  openfdaDeviceClass$3._(
     'openfda.device_class',
     possibleValue: '3',
   ),
 
   /// HDE
-  openfdaDeviceClassF._(
+  openfdaDeviceClass$F._(
     'openfda.device_class',
     possibleValue: 'F',
   ),
 
   /// Not classified
-  openfdaDeviceClassN._(
+  openfdaDeviceClass$N._(
     'openfda.device_class',
     possibleValue: 'N',
   ),
 
   /// Unclassified
-  openfdaDeviceClassU._(
+  openfdaDeviceClass$U._(
     'openfda.device_class',
     possibleValue: 'U',
   ),
@@ -580,7 +580,7 @@ enum DevClear {
   /// classification regulation covers various aspects of design, clinical
   /// evaluation, manufacturing, packaging, labeling, and postmarket
   /// surveillance of the specific medical device.
-  openfdaRegulationNumber._(
+  openfdaRegulationNumber$$._(
     'openfda.regulation_number',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -588,7 +588,7 @@ enum DevClear {
           'http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/cfrsearch.cfm',
     ),
   ),
-  openfdaRegulationNumberExact._(
+  openfdaRegulationNumberExact$$._(
     'openfda.regulation_number.exact',
     possibleValueReference: PossibleValueReference(
       'CFR database',
@@ -658,13 +658,13 @@ enum DevClear {
   /// in lieu of direct submission to FDA yielding a streamlined review process.
   /// Criteria in section 523(b)(3) of 21 U.S.C. 360m(b).
   /// No
-  thirdPartyFlagN._(
+  thirdPartyFlag$N._(
     'third_party_flag',
     possibleValue: 'N',
   ),
 
   /// Yes
-  thirdPartyFlagY._(
+  thirdPartyFlag$Y._(
     'third_party_flag',
     possibleValue: 'Y',
   ),
