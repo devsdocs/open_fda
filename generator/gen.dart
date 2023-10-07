@@ -4,39 +4,14 @@ import 'dart:io';
 import 'package:reusable_tools/reusable_tools.dart';
 import 'package:yaml_magic/yaml_magic.dart';
 
-import 'model.dart';
-import 'raw.dart';
-
-Future<void> fetchYamlAndConvertToJson([bool download = false]) async {
-  if (download == false) return;
-  const base =
-      'https://raw.githubusercontent.com/FDA/open.fda.gov/master/src/constants/fields/';
-  for (final e in linkOpenFda) {
-    final link = e['link']! as String;
-    final suffix = e['suffix']! as String;
-    final prefix = e['prefix']! as Map;
-    final prefixLowerCase = prefix['lowercase']! as String;
-
-    final fileName = '${prefixLowerCase}_$suffix';
-    final yamlFilePath = 'generator/yamldata/$fileName.yaml';
-    final jsonFilePath = 'generator/jsondata/$fileName.json';
-    final yamlFile = File(yamlFilePath);
-    final jsonFile = File(jsonFilePath);
-
-    await NetworkTools.client
-        .download(
-      '$base$link',
-      yamlFile,
-      fileTransferProgress: FileTransferProgress(link, name: suffix),
-    )
-        .then((_) {
-      final yamlMagic = YamlMagic.load(yamlFilePath).originalMap;
-      final out = const JsonEncoder.withIndent('  ')
-          .convert(_sortJsonMapByKey<String>(yamlMagic));
-      jsonFile.writeAsStringSync(out.replaceAll(r'\"', "'"));
-    });
-  }
-}
+part 'download.gen.dart';
+part 'extension.gen.dart';
+part 'model.dart';
+part 'raw.dart';
+part 'superclass_writer.gen.dart';
+part 'class_writer.gen.dart';
+part 'constructor_writer.gen.dart';
+part 'field_writer.gen.dart';
 
 void formatDart() {
   Process.run('dart', ['format', '.']);
@@ -142,404 +117,48 @@ void go() {
   formatDart();
 }
 
-String superClassWriter(
-  String prefixMainCase,
-  String prefixSnakeCase,
-  String suffix,
-  String shortName,
-  List<Props> props, {
+String getDescendantObjectName(
+  Props p,
   String? childSuffix,
-  bool isProduction = false,
-}) {
-  final buff = StringBuffer();
+  String prefixMainCase,
+  String suffix,
+) {
+  final splitAtDot = p.address.splitDot;
+  final addedSuffix = childSuffix == null
+      ? p.address
+      : p.address.containsDot
+          ? splitAtDot.length == 2
+              ? splitAtDot.last
+              : splitAtDot.length == 3
+                  ? splitAtDot.sublist(2).joinDot
+                  : splitAtDot.sublist(3).joinDot
+          : p.address;
 
-  final superClassName = '$prefixMainCase${suffix}Fields';
-
-  if (childSuffix == null) {
-    buff.writeln(
-      'final class $superClassName extends Endpointer {',
-    );
-    buff.writeln(
-      'factory $superClassName($shortName data,) => $superClassName._(data,);',
-    );
-    buff.writeln(
-      '$superClassName._(this._data,) : super(_Endpoints.$prefixSnakeCase$suffix, _data.address, possValue: _data.possibleValue, possValueReference: _data.possibleValueReference,);',
-    );
-    buff.writeln('final $shortName _data;');
-
-    buff.writeln('@override');
-    buff.writeln('String get address => _data.address;');
-
-    buff.writeln('@override');
-    buff.writeln('String? get possValue => _data.possibleValue;');
-
-    buff.writeln('@override');
-    buff.writeln(
-      'PossibleValueReference? get possValueReference => _data.possibleValueReference;',
-    );
-    buff.writeln('}');
-  }
-
-  buff.writeln(
-    classWriter(
-      prefixMainCase,
-      prefixSnakeCase,
-      suffix,
-      shortName,
-      props,
-      childSuffix: childSuffix,
-      isProduction: isProduction,
-    ),
-  );
-
-  return buff.toString();
+  final descObjectName =
+      '$prefixMainCase${childSuffix ?? suffix}${addedSuffix.toMainCase.toMainCase}';
+  return descObjectName;
 }
 
-String classWriter(
-  String prefixMainCase,
-  String prefixSnakeCase,
-  String suffix,
-  String shortName,
-  List<Props> props, {
-  String? childSuffix,
-  bool isProduction = false,
-}) {
-  final buff = StringBuffer();
-
-  if (isProduction) {
-    final totalEndpoint = props.length;
-    final withExact =
-        props.where((e) => e.isExact != null).where((ec) => ec.isExact!).length;
-    final withoutPossibleValue = props
-        .where(
-          (e) => e.possibleValuesType == PossibleValuesType.none,
-        )
-        .length;
-    final referencePossibleValue = props
-        .where(
-          (e) => e.possibleValuesType == PossibleValuesType.reference,
-        )
-        .length;
-    final oneOfPossibleValue = props
-        .where(
-          (e) => e.possibleValuesType == PossibleValuesType.oneOf,
-        )
-        .length;
-    final topEndpoint = props.where((e) => !e.address.containsDot).length;
-
-    final docs = [
-      'Total Endpoints: $totalEndpoint,',
-      'Top Endpoints: $topEndpoint,',
-      'Endpoints with exact: $withExact,',
-      'Without Possible Value: $withoutPossibleValue,',
-      'Reference Possible Value: $referencePossibleValue,',
-      'One-Of Possible Value: $oneOfPossibleValue,',
-    ];
-
-    buff.writeln(docWriterFromList(docs));
-    buff.writeln(
-      'enum $shortName {',
-    );
-  } else {
-    // final superClassName = '$prefixMainCase${suffix}Fields';
-    final className = '$prefixMainCase${childSuffix ?? suffix}';
-    buff.writeln(
-      'final class $className extends OpenFDAEndpointer {',
-    );
-  }
-
-  // buff.writeln();
-  // buff.writeln('@override');
-  // buff.writeln(
-  //   'final endPointBase = _Endpoints.$prefixSnakeCase$suffix;',
-  // );
-  final fieldsData = fieldWriter(
-    prefixMainCase,
-    prefixSnakeCase,
-    suffix,
-    shortName,
-    props,
-    childSuffix: childSuffix,
-    isProduction: isProduction,
-  );
-  buff.writeln();
-
-  buff.writeln();
-  buff.writeln(fieldsData.$1);
-  if (isProduction) {
-    buff.writeln(';');
-  }
-  buff.writeln(
-    constructorWriter(
-      prefixMainCase,
-      prefixSnakeCase,
-      suffix,
-      shortName,
-      props,
-      childSuffix: childSuffix,
-      isProduction: isProduction,
-    ),
-  );
-  buff.writeln();
-  buff.writeln('}');
-
-  for (final a in fieldsData.$2) {
-    buff.writeln();
-    buff.writeln(a);
-    buff.writeln();
-  }
-
-  return buff.toString();
+String formatKeyForEnum(String key) {
+  final cleanKey = key.clean;
+  final formatKey = (key == 'true' || key == 'false')
+      ? key.toMainCase
+      : key == '*'
+          ? 'Asterix'
+          : cleanKey.contains(' ')
+              ? cleanKey.capitalizeEachWordInSentence
+              : cleanKey == cleanKey.toUpperCase()
+                  ? cleanKey.contains('/')
+                      ? cleanKey
+                          .split('/')
+                          .map((e) => e.capitalizeWord)
+                          .join('/')
+                      : cleanKey.capitalizeWord
+                  : cleanKey;
+  return formatKey;
 }
 
-String constructorWriter(
-  String prefixMainCase,
-  String prefixSnakeCase,
-  String suffix,
-  String shortName,
-  List<Props> props, {
-  String? childSuffix,
-  bool isProduction = false,
-}) {
-  final buff = StringBuffer();
-
-  if (!isProduction) {
-    final className = '$prefixMainCase${childSuffix ?? suffix}';
-    buff.writeln('$className({');
-    for (final p in props) {
-      if (props.any(
-        (e) =>
-            (e.isObject! || e.isListOfObject!) &&
-            p.address.startsWith(e.address) &&
-            p != e,
-      )) {
-        continue;
-      }
-      buff.writeln('this.${p.address.toSnakeCase.toSnakeCase},');
-    }
-    buff.writeln('});');
-  } else {
-    // final className = '$prefixMainCase${childSuffix ?? suffix}';
-    // buff.writeln('$className() : super(_Endpoints.$prefixSnakeCase$suffix,);');
-    buff.writeln(
-      'const $shortName._(this.address, {this.possibleValue, this.possibleValueReference,});',
-    );
-    buff.writeln('final String address;');
-    buff.writeln('final String? possibleValue;');
-    buff.writeln('final PossibleValueReference? possibleValueReference;');
-  }
-
-  return buff.toString();
-}
-
-(String, List<String>) fieldWriter(
-  String prefixMainCase,
-  String prefixSnakeCase,
-  String suffix,
-  String shortName,
-  List<Props> props, {
-  String? childSuffix,
-  bool isProduction = false,
-}) {
-  final buff = StringBuffer();
-
-  final dataListOfObject = <String>[];
-
-  for (final p in props) {
-    final listOfObjectChild =
-        props.where((e) => e.address.startsWith(p.address) && e != p).toList();
-
-    final splitAtDot = p.address.splitDot;
-    final addedSuffix = childSuffix == null
-        ? p.address
-        : p.address.containsDot
-            ? splitAtDot.length == 2
-                ? splitAtDot.last
-                : splitAtDot.length == 3
-                    ? splitAtDot.sublist(2).joinDot
-                    : splitAtDot.sublist(3).joinDot
-            : p.address;
-
-    final descObjectName =
-        '$prefixMainCase${childSuffix ?? suffix}${addedSuffix.toMainCase.toMainCase}';
-
-    if (isProduction) {
-      if (props.any(
-        (e) => p.address.startsWith(e.address) && p != e,
-      )) {
-        continue;
-      }
-      if (p.comment != null) {
-        buff.writeln(docWriterFromString(p.comment!));
-      }
-      if (p.possibleValues == null) {
-        buff.writeln(
-          "${p.address.toSnakeCase.toSnakeCase}._('${p.address}',),",
-        );
-        if (p.isExact != null) {
-          if (p.isExact!) {
-            buff.writeln(
-              "${p.address.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact',),",
-            );
-          }
-        }
-      } else {
-        if (p.possibleValuesType == PossibleValuesType.reference) {
-          final poss = p.possibleValues! as Reference;
-          buff.writeln(
-            "${p.address.toSnakeCase.toSnakeCase}._('${p.address}', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
-          );
-          if (p.isExact != null) {
-            if (p.isExact!) {
-              buff.writeln(
-                "${p.address.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValueReference: PossibleValueReference('${poss.name}', link: '${poss.link}',),),",
-              );
-            }
-          }
-        } else {
-          final poss = p.possibleValues! as OneOf;
-          if (poss.data != null) {
-            // final writeEnum = enumWriter(
-            //   descObjectName,
-            //   p,
-            //   childSuffix: childSuffix,
-            //   isProduction: isProduction,
-            // );
-            // dataListOfObject.add(writeEnum);
-
-            poss.data!.forEach((key, value) {
-              buff.writeln(docWriterFromString(value.toString()));
-
-              final cleanKey = key.clean;
-              final formatKey = key == '*'
-                  ? 'Asterix'
-                  : cleanKey.contains(' ')
-                      ? cleanKey.capitalizeEachWordInSentence
-                      : cleanKey == cleanKey.toUpperCase()
-                          ? cleanKey.contains('/')
-                              ? cleanKey
-                                  .split('/')
-                                  .map((e) => e.capitalizeWord)
-                                  .join('/')
-                              : cleanKey.capitalizeWord
-                          : cleanKey;
-
-              final enumType =
-                  getEnumType(p.address.toSnakeCase.toSnakeCase + formatKey);
-
-              buff.writeln(
-                "${enumType.toSnakeCase.toSnakeCase}._('${p.address}', possibleValue: '$key',),",
-              );
-              if (p.isExact != null) {
-                if (p.isExact!) {
-                  buff.writeln(
-                    "${enumType.toSnakeCase.toSnakeCase}Exact._('${p.address}.exact', possibleValue: '$key',),",
-                  );
-                }
-              }
-
-              // if (!poss.isBool!) {
-              //   final enumType = getEnumType(key);
-              //   buff.writeln(
-              //     "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
-              //   );
-              //   if (p.isExact != null) {
-              //     if (p.isExact!) {
-              //       buff.writeln(
-              //         "final ${p.address.toSnakeCase.toSnakeCase}${enumType.toMainCase.toMainCase}Exact = ('${p.address}.exact', PossibleValueType.oneOf, _$descObjectName.${enumType.toSnakeCase},);",
-              //       );
-              //     }
-              //   }
-              // } else {
-              //   buff.writeln(
-              //     "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase} = ('${p.address}', PossibleValueType.bool, $key,);",
-              //   );
-              //   if (p.isExact != null) {
-              //     if (p.isExact!) {
-              //       buff.writeln(
-              //         "final ${p.address.toSnakeCase.toSnakeCase}${key.toMainCase.toMainCase}Exact = ('${p.address}', PossibleValueType.bool, $key,);",
-              //       );
-              //     }
-              //   }
-              // }
-            });
-          } else {
-            throw Exception('Empty One Of');
-          }
-        }
-      }
-
-      final getChild = fieldWriter(
-        prefixMainCase,
-        prefixSnakeCase,
-        suffix,
-        shortName,
-        listOfObjectChild,
-        childSuffix: childSuffix,
-        isProduction: isProduction,
-      );
-      buff.writeln();
-
-      buff.writeln(getChild.$1);
-      buff.writeln();
-      dataListOfObject.addAll(getChild.$2);
-    } else {
-      if (props.any(
-        (e) =>
-            (e.isObject! || e.isListOfObject!) &&
-            p.address.startsWith(e.address) &&
-            p != e,
-      )) {
-        continue;
-      }
-
-      if (p.isObject!) {
-        buff.writeln(
-          'final $descObjectName? ${p.address.toSnakeCase.toSnakeCase};',
-        );
-        final newChildSuffix = suffix + p.address.toMainCase.toMainCase;
-
-        final getChild = classWriter(
-          prefixMainCase,
-          prefixSnakeCase,
-          suffix,
-          shortName,
-          listOfObjectChild,
-          childSuffix: newChildSuffix,
-          isProduction: isProduction,
-        );
-        dataListOfObject.add(getChild);
-      } else {
-        if (p.isListOfObject!) {
-          buff.writeln(
-            'final List<$descObjectName>? ${p.address.toSnakeCase.toSnakeCase};',
-          );
-
-          final newChildSuffix = suffix + p.address.toMainCase.toMainCase;
-
-          final getChild = classWriter(
-            prefixMainCase,
-            prefixSnakeCase,
-            suffix,
-            shortName,
-            listOfObjectChild,
-            childSuffix: newChildSuffix,
-            isProduction: isProduction,
-          );
-          dataListOfObject.add(getChild);
-        } else {
-          buff.writeln(
-            'final ${p.type}? ${p.address.toSnakeCase.toSnakeCase};',
-          );
-        }
-      }
-    }
-  }
-
-  return (buff.toString(), dataListOfObject);
-}
-
-String getEnumType(String key) {
+String getEnumName(String key) {
   final splitKey = key.split('');
   final enumType = num.tryParse(key) != null
       ? int.parse(key).numToWords
@@ -553,42 +172,6 @@ String getEnumType(String key) {
           : key.removeNonAlph;
   return enumType;
 }
-
-// String enumWriter(
-//   String descObjectName,
-//   Props props, {
-//   String? childSuffix,
-//   bool isProduction = false,
-// }) {
-//   final poss = props.possibleValues! as OneOf;
-
-//   final buff = StringBuffer();
-
-//   if (poss.data != null) {
-//     if (!poss.isBool!) {
-//       if (props.comment != null) {
-//         buff.writeln(docWriter(props.comment!));
-//       }
-//       buff.writeln('enum _$descObjectName {');
-
-//       poss.data!.forEach((key, value) {
-//         final enumType = getEnumType(key);
-
-//         buff.writeln(docWriter(value.toString()));
-//         buff.writeln("${enumType.toSnakeCase}._('$key',),");
-//       });
-
-//       buff.writeln(';');
-//       buff.writeln('const _$descObjectName._(this.value,);');
-//       buff.writeln('final String value;');
-//       buff.writeln('}');
-//     }
-//   } else {
-//     throw Exception('Empty One Of');
-//   }
-
-//   return buff.toString();
-// }
 
 List<Props> getListOfProps(
   Map<String, dynamic> map, {
@@ -610,71 +193,56 @@ List<Props> getListOfProps(
         if (type is Map) {
           pool.add(props);
         } else {
-          if (!recur) {
-            pool.add(props);
-          } else {
-            if (value.containsKey('properties')) {
-              final getS = getListOfProps(
-                value['properties'] as Map<String, dynamic>,
-                prefix: address,
-              );
-              pool.addAll(getS);
-            }
-            if (value.containsKey('items')) {
-              final items = value['items'] as Map<String, dynamic>;
-              if (items.containsKey('properties')) {
-                final getS = getListOfProps(
-                  (value['items'] as Map<String, dynamic>)['properties']
-                      as Map<String, dynamic>,
-                  prefix: address,
-                );
-                pool.addAll(getS);
-              } else {
-                final getS = getListOfProps(
-                  value['items'] as Map<String, dynamic>,
-                  prefix: address,
-                );
-                pool.addAll(getS);
-              }
-            }
-            pool.add(props);
-          }
+          final digDeeper = digDeeperProps(recur, props, value, address);
+          pool.addAll(digDeeper);
         }
       } else {
-        if (!recur) {
-          pool.add(props);
-        } else {
-          if (value.containsKey('properties')) {
-            final getS = getListOfProps(
-              value['properties'] as Map<String, dynamic>,
-              prefix: address,
-            );
-            pool.addAll(getS);
-          }
-          if (value.containsKey('items')) {
-            final items = value['items'] as Map<String, dynamic>;
-            if (items.containsKey('properties')) {
-              final getS = getListOfProps(
-                (value['items'] as Map<String, dynamic>)['properties']
-                    as Map<String, dynamic>,
-                prefix: address,
-              );
-              pool.addAll(getS);
-            } else {
-              final getS = getListOfProps(
-                value['items'] as Map<String, dynamic>,
-                prefix: address,
-              );
-              pool.addAll(getS);
-            }
-          }
-          pool.add(props);
-        }
+        final digDeeper = digDeeperProps(recur, props, value, address);
+        pool.addAll(digDeeper);
       }
     }
   });
 
   return pool.toSet().toList()..sort();
+}
+
+List<Props> digDeeperProps(
+  bool recur,
+  Props props,
+  Map<dynamic, dynamic> value,
+  String address,
+) {
+  final pool = <Props>[];
+  if (!recur) {
+    pool.add(props);
+  } else {
+    if (props.isObject!) {
+      final getS = getListOfProps(
+        value['properties'] as Map<String, dynamic>,
+        prefix: address,
+      );
+      pool.addAll(getS);
+    }
+    if (props.isList!) {
+      final items = value['items'] as Map<String, dynamic>;
+      if (props.isListOfObject!) {
+        final getS = getListOfProps(
+          items['properties'] as Map<String, dynamic>,
+          prefix: address,
+        );
+        pool.addAll(getS);
+      } else {
+        final getS = getListOfProps(
+          items,
+          prefix: address,
+        );
+        pool.addAll(getS);
+      }
+    }
+    pool.add(props);
+  }
+
+  return pool;
 }
 
 String docWriterFromList(List source) {
@@ -891,140 +459,5 @@ Type? getType(Map<dynamic, dynamic> value) {
         return null;
       }
     }
-  }
-}
-
-List<dynamic>? _sortJsonList(List<dynamic>? list) {
-  if (list == null || list.isEmpty) {
-    return list;
-  }
-
-  return list
-      .map(
-        (e) => (e is Map<String, dynamic>)
-            ? _sortJsonMapByKey<String>(e)
-            : (e is List<dynamic>)
-                ? _sortJsonList(e)
-                : e,
-      )
-      .toList();
-}
-
-Map<T, dynamic>? _sortJsonMapByKey<T>(Map<T, dynamic>? map) {
-  if (map == null || map.isEmpty) {
-    return map;
-  }
-
-  return {
-    for (final key in map.keys.toList()..sort())
-      key: (map[key] is Map<T, dynamic>)
-          ? _sortJsonMapByKey(map[key] as Map<T, dynamic>)
-          : (map[key] is List<dynamic>)
-              ? _sortJsonList(map[key] as List<dynamic>)
-              : map[key],
-  };
-}
-
-extension Int on int {
-  String get numToWords {
-    const data = {
-      0: 'zero',
-      1: 'one',
-      2: 'two',
-      3: 'three',
-      4: 'four',
-      5: 'five',
-      6: 'six',
-      7: 'seven',
-      8: 'eight',
-      9: 'nine',
-    };
-    final str = toString();
-    if (str.length == 1) {
-      return data[this]!;
-    } else {
-      return str
-          .split('')
-          .map((e) => data[int.parse(e)]!.capitalizeWord)
-          .join()
-          .toSnakeCase;
-    }
-  }
-}
-
-extension Str on String {
-  String get toSnakeCase {
-    if (contains(' ')) {
-      final joinSpace = clean
-          .split(' ')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinSpace[0].toLowerCase() + joinSpace.substring(1);
-    }
-    if (contains('_')) {
-      final joinUnderScore = clean
-          .split('_')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-    if (contains('.')) {
-      final joinUnderScore = clean
-          .split('.')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-      return joinUnderScore[0].toLowerCase() + joinUnderScore.substring(1);
-    }
-
-    return this[0].toLowerCase() + substring(1);
-  }
-
-  String get toMainCase {
-    if (contains(' ')) {
-      return clean
-          .split(' ')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    if (contains('_')) {
-      return clean
-          .split('_')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    if (contains('.')) {
-      return clean
-          .split('.')
-          .map((e) => e[0].toUpperCase() + e.substring(1))
-          .join();
-    }
-    return this[0].toUpperCase() + substring(1);
-  }
-
-  String get removeNonAlph {
-    final alphs = RegExp(r'[a-zA-Z0-9\*]');
-    final format = replaceAll('/', 'Or');
-    final res = !format.contains(' ')
-        ? !format.contains(alphs)
-            ? throw Exception('Empty!')
-            : format.toSnakeCase
-        : (format.clean.split(' ')
-              ..retainWhere(
-                (e) => e.contains(alphs),
-              ))
-            .map(
-              (e) => e.split('').map((e) => e.contains(alphs) ? e : '').join(),
-            )
-            .join(' ');
-
-    final filter = res == '*'
-        ? 'asterix'
-        : res
-            .replaceAll('-', '')
-            .replaceAll('/', '')
-            .replaceAll(')', '')
-            .replaceAll('(', '');
-
-    return filter;
   }
 }

@@ -27,9 +27,9 @@ final class FoodAdverseEventsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 14, Top Endpoints: 7, Endpoints with exact: 5,
-/// Without Possible Value: 8, Reference Possible Value: 1,
-/// One-Of Possible Value: 5,
+/// Total Endpoints: 14, Total Endpoints: 14, Top Endpoints: 7,
+/// Endpoints with exact: 5, Without Possible Value: 8,
+/// Reference Possible Value: 1, One-Of Possible Value: 5,
 enum FoodEvent {
   consumer._(
     'consumer',

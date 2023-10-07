@@ -28,9 +28,9 @@ final class DeviceCovid19SerologicalTestingEvaluationsFields
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 31, Top Endpoints: 31, Endpoints with exact: 2,
-/// Without Possible Value: 24, Reference Possible Value: 0,
-/// One-Of Possible Value: 7,
+/// Total Endpoints: 31, Total Endpoints: 31, Top Endpoints: 31,
+/// Endpoints with exact: 2, Without Possible Value: 24,
+/// Reference Possible Value: 0, One-Of Possible Value: 7,
 enum DevCovid {
   /// Agreement between all antibody results and antibody_truth. Any positive
   /// makes the result positive. All results must be negative for the overall

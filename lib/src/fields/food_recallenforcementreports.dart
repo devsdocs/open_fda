@@ -27,9 +27,9 @@ final class FoodRecallEnforcementReportsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 49, Top Endpoints: 25, Endpoints with exact: 36,
-/// Without Possible Value: 46, Reference Possible Value: 0,
-/// One-Of Possible Value: 3,
+/// Total Endpoints: 49, Total Endpoints: 49, Top Endpoints: 25,
+/// Endpoints with exact: 36, Without Possible Value: 46,
+/// Reference Possible Value: 0, One-Of Possible Value: 3,
 enum FoodRecall {
   address1._(
     'address_1',

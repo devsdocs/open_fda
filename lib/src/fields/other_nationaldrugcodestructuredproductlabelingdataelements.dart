@@ -28,9 +28,9 @@ final class OtherNationalDrugCodeStructuredProductLabelingDataElementsFields
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 12, Top Endpoints: 12, Endpoints with exact: 0,
-/// Without Possible Value: 12, Reference Possible Value: 0,
-/// One-Of Possible Value: 0,
+/// Total Endpoints: 12, Total Endpoints: 12, Top Endpoints: 12,
+/// Endpoints with exact: 0, Without Possible Value: 12,
+/// Reference Possible Value: 0, One-Of Possible Value: 0,
 enum OtherSPL {
   /// Some types of marketing categories may be associated with FDA assigned
   /// numbers (e.g., NDA123456) or regulatory citations (e.g., part348).

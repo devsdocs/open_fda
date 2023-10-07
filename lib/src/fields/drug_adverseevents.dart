@@ -27,9 +27,9 @@ final class DrugAdverseEventsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 99, Top Endpoints: 27, Endpoints with exact: 41,
-/// Without Possible Value: 72, Reference Possible Value: 8,
-/// One-Of Possible Value: 19,
+/// Total Endpoints: 99, Total Endpoints: 99, Top Endpoints: 27,
+/// Endpoints with exact: 41, Without Possible Value: 72,
+/// Reference Possible Value: 8, One-Of Possible Value: 19,
 enum DrugEvent {
   /// Populated with the Regulatory Authority’s case report number, when
   /// available.

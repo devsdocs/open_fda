@@ -27,9 +27,9 @@ final class DevicePreMarketApprovalFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 30, Top Endpoints: 24, Endpoints with exact: 9,
-/// Without Possible Value: 24, Reference Possible Value: 1,
-/// One-Of Possible Value: 5,
+/// Total Endpoints: 30, Total Endpoints: 30, Top Endpoints: 24,
+/// Endpoints with exact: 9, Without Possible Value: 24,
+/// Reference Possible Value: 1, One-Of Possible Value: 5,
 enum DevPreMarket {
   /// This equates to the review division within CDRH in which the PMA would be
   /// reviewed, if it were reviewed today; this is derived from the procode and

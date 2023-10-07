@@ -27,9 +27,9 @@ final class DeviceRegistrationAndListingsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 61, Top Endpoints: 6, Endpoints with exact: 27,
-/// Without Possible Value: 55, Reference Possible Value: 1,
-/// One-Of Possible Value: 5,
+/// Total Endpoints: 61, Total Endpoints: 61, Top Endpoints: 6,
+/// Endpoints with exact: 27, Without Possible Value: 55,
+/// Reference Possible Value: 1, One-Of Possible Value: 5,
 enum DevRegList {
   /// Facility operation or activity, e.g. “Manufacturer” (short version).
   /// Complaint File Establishment per 21 CFR 820.198

@@ -27,9 +27,9 @@ final class DeviceClassificationFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 21, Top Endpoints: 17, Endpoints with exact: 3,
-/// Without Possible Value: 11, Reference Possible Value: 1,
-/// One-Of Possible Value: 9,
+/// Total Endpoints: 21, Total Endpoints: 21, Top Endpoints: 17,
+/// Endpoints with exact: 3, Without Possible Value: 11,
+/// Reference Possible Value: 1, One-Of Possible Value: 9,
 enum DevClass {
   /// Compositional definition of a medical device, based on the input of
   /// nomenclature experts, incorporating the definition of components of a

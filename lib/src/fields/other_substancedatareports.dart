@@ -27,9 +27,9 @@ final class OtherSubstanceDataReportsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 451, Top Endpoints: 21, Endpoints with exact: 0,
-/// Without Possible Value: 451, Reference Possible Value: 0,
-/// One-Of Possible Value: 0,
+/// Total Endpoints: 451, Total Endpoints: 451, Top Endpoints: 21,
+/// Endpoints with exact: 0, Without Possible Value: 451,
+/// Reference Possible Value: 0, One-Of Possible Value: 0,
 enum OtherSubstance {
   codes._(
     'codes',

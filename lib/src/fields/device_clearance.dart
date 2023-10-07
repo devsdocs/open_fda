@@ -27,9 +27,9 @@ final class DeviceClearanceFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 30, Top Endpoints: 24, Endpoints with exact: 17,
-/// Without Possible Value: 24, Reference Possible Value: 1,
-/// One-Of Possible Value: 5,
+/// Total Endpoints: 30, Total Endpoints: 30, Top Endpoints: 24,
+/// Endpoints with exact: 17, Without Possible Value: 24,
+/// Reference Possible Value: 1, One-Of Possible Value: 5,
 enum DevClear {
   /// Delivery address of the applicant.
   address1._(

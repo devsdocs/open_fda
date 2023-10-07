@@ -1,3 +1,5 @@
+part of 'gen.dart';
+
 enum PossibleValuesType {
   none,
   oneOf,

@@ -27,9 +27,9 @@ final class DrugAtFDAFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 49, Top Endpoints: 5, Endpoints with exact: 22,
-/// Without Possible Value: 44, Reference Possible Value: 4,
-/// One-Of Possible Value: 1,
+/// Total Endpoints: 49, Total Endpoints: 49, Top Endpoints: 5,
+/// Endpoints with exact: 22, Without Possible Value: 44,
+/// Reference Possible Value: 4, One-Of Possible Value: 1,
 enum DrugFDA {
   /// This corresponds to the NDA, ANDA, or BLA number reported by the labeler
   /// for products which have the corresponding Marketing Category designated.

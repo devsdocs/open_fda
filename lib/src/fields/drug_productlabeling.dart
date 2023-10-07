@@ -27,9 +27,9 @@ final class DrugProductLabelingFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 198, Top Endpoints: 177, Endpoints with exact: 21,
-/// Without Possible Value: 192, Reference Possible Value: 6,
-/// One-Of Possible Value: 0,
+/// Total Endpoints: 198, Total Endpoints: 198, Top Endpoints: 177,
+/// Endpoints with exact: 21, Without Possible Value: 192,
+/// Reference Possible Value: 6, One-Of Possible Value: 0,
 enum DrugLabel {
   /// Information about the types of abuse that can occur with the drug and
   /// adverse reactions pertinent to those types of abuse, primarily based on

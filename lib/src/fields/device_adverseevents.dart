@@ -27,9 +27,9 @@ final class DeviceAdverseEventsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 129, Top Endpoints: 80, Endpoints with exact: 104,
-/// Without Possible Value: 103, Reference Possible Value: 2,
-/// One-Of Possible Value: 24,
+/// Total Endpoints: 129, Total Endpoints: 129, Top Endpoints: 80,
+/// Endpoints with exact: 104, Without Possible Value: 103,
+/// Reference Possible Value: 2, One-Of Possible Value: 24,
 enum DevEvent {
   /// Whether the report is about an incident where the use of the device is
   /// suspected to have resulted in an adverse outcome in a patient.

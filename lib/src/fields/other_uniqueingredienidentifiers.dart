@@ -27,9 +27,9 @@ final class OtherUniqueIngredienIdentifiersFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 2, Top Endpoints: 2, Endpoints with exact: 2,
-/// Without Possible Value: 1, Reference Possible Value: 1,
-/// One-Of Possible Value: 0,
+/// Total Endpoints: 2, Total Endpoints: 2, Top Endpoints: 2,
+/// Endpoints with exact: 2, Without Possible Value: 1,
+/// Reference Possible Value: 1, One-Of Possible Value: 0,
 enum OtherUNII {
   /// The specific substance identified by the unii.
   subtstanceName._(

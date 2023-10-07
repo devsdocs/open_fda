@@ -27,9 +27,9 @@ final class DeviceRecallsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 36, Top Endpoints: 29, Endpoints with exact: 7,
-/// Without Possible Value: 34, Reference Possible Value: 1,
-/// One-Of Possible Value: 1,
+/// Total Endpoints: 36, Total Endpoints: 36, Top Endpoints: 29,
+/// Endpoints with exact: 7, Without Possible Value: 34,
+/// Reference Possible Value: 1, One-Of Possible Value: 1,
 enum DevRecall {
   /// Action taken as part of the recall.
   action._(

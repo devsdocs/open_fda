@@ -27,9 +27,9 @@ final class AnimalAndVeterinaryAdverseEventsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 80, Top Endpoints: 19, Endpoints with exact: 21,
-/// Without Possible Value: 69, Reference Possible Value: 0,
-/// One-Of Possible Value: 11,
+/// Total Endpoints: 80, Total Endpoints: 80, Top Endpoints: 19,
+/// Endpoints with exact: 21, Without Possible Value: 69,
+/// Reference Possible Value: 0, One-Of Possible Value: 11,
 enum AVEvent {
   /// Animal(s) involved in the adverse drug event.
   animal._(

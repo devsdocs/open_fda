@@ -27,9 +27,9 @@ final class TobaccoProblemReportsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 9, Top Endpoints: 9, Endpoints with exact: 3,
-/// Without Possible Value: 9, Reference Possible Value: 0,
-/// One-Of Possible Value: 0,
+/// Total Endpoints: 9, Total Endpoints: 9, Top Endpoints: 9,
+/// Endpoints with exact: 3, Without Possible Value: 9,
+/// Reference Possible Value: 0, One-Of Possible Value: 0,
 enum TobaccoProb {
   /// Date report was received by CTP; this is the earliest date of report
   /// receipt, either to Safety Reporting Portal (SRP) or by other means. Date

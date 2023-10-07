@@ -27,9 +27,9 @@ final class DeviceUniqueDeviceIdentifierFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 79, Top Endpoints: 39, Endpoints with exact: 16,
-/// Without Possible Value: 46, Reference Possible Value: 0,
-/// One-Of Possible Value: 33,
+/// Total Endpoints: 79, Total Endpoints: 79, Top Endpoints: 39,
+/// Endpoints with exact: 16, Without Possible Value: 46,
+/// Reference Possible Value: 0, One-Of Possible Value: 33,
 enum DevUnique {
   /// The Proprietary/Trade/Brand name of the medical device as used in device
   /// labeling or in the catalog. This information may 1) be on a label attached
@@ -582,13 +582,13 @@ enum DevUnique {
 
   /// GMDN Implantable flag.
   /// false
-  gmdnTermsImplantablefalse._(
+  gmdnTermsImplantableFalse._(
     'gmdn_terms.implantable',
     possibleValue: 'false',
   ),
 
   /// true
-  gmdnTermsImplantabletrue._(
+  gmdnTermsImplantableTrue._(
     'gmdn_terms.implantable',
     possibleValue: 'true',
   ),
@@ -609,13 +609,13 @@ enum DevUnique {
   /// manufacturing source or otherwise allow the history of the device
   /// manufacturing, packaging, labeling, distribution and use to be determined.
   /// false
-  hasDonationIdNumberfalse._(
+  hasDonationIdNumberFalse._(
     'has_donation_id_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasDonationIdNumbertrue._(
+  hasDonationIdNumberTrue._(
     'has_donation_id_number',
     possibleValue: 'true',
   ),
@@ -626,13 +626,13 @@ enum DevUnique {
   /// manufacturing source or otherwise allow the history of the device
   /// manufacturing, packaging, labeling, distribution and use to be determined.
   /// false
-  hasExpirationDatefalse._(
+  hasExpirationDateFalse._(
     'has_expiration_date',
     possibleValue: 'false',
   ),
 
   /// true
-  hasExpirationDatetrue._(
+  hasExpirationDateTrue._(
     'has_expiration_date',
     possibleValue: 'true',
   ),
@@ -646,13 +646,13 @@ enum DevUnique {
   /// source or otherwise allow the history of the device manufacturing,
   /// packaging, labeling, distribution and use to be determined.
   /// false
-  hasLotOrBatchNumberfalse._(
+  hasLotOrBatchNumberFalse._(
     'has_lot_or_batch_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasLotOrBatchNumbertrue._(
+  hasLotOrBatchNumberTrue._(
     'has_lot_or_batch_number',
     possibleValue: 'true',
   ),
@@ -663,13 +663,13 @@ enum DevUnique {
   /// the history of the device manufacturing, packaging, labeling, distribution
   /// and use to be determined.
   /// false
-  hasManufacturingDatefalse._(
+  hasManufacturingDateFalse._(
     'has_manufacturing_date',
     possibleValue: 'false',
   ),
 
   /// true
-  hasManufacturingDatetrue._(
+  hasManufacturingDateTrue._(
     'has_manufacturing_date',
     possibleValue: 'true',
   ),
@@ -681,13 +681,13 @@ enum DevUnique {
   /// the device manufacturing, packaging, labeling, distribution and use to be
   /// determined.
   /// false
-  hasSerialNumberfalse._(
+  hasSerialNumberFalse._(
     'has_serial_number',
     possibleValue: 'false',
   ),
 
   /// true
-  hasSerialNumbertrue._(
+  hasSerialNumberTrue._(
     'has_serial_number',
     possibleValue: 'true',
   ),
@@ -854,26 +854,26 @@ enum DevUnique {
   /// 3.2(e). At least one of the products in the combination product must be a
   /// device in this case.
   /// false
-  isCombinationProductfalse._(
+  isCombinationProductFalse._(
     'is_combination_product',
     possibleValue: 'false',
   ),
 
   /// true
-  isCombinationProducttrue._(
+  isCombinationProductTrue._(
     'is_combination_product',
     possibleValue: 'true',
   ),
 
   /// The device is exempt from Direct Marking requirements under 21 CFR 801.45.
   /// false
-  isDirectMarkingExemptfalse._(
+  isDirectMarkingExemptFalse._(
     'is_direct_marking_exempt',
     possibleValue: 'false',
   ),
 
   /// true
-  isDirectMarkingExempttrue._(
+  isDirectMarkingExemptTrue._(
     'is_direct_marking_exempt',
     possibleValue: 'true',
   ),
@@ -882,13 +882,13 @@ enum DevUnique {
   /// that are intended for implantation, transplantation, infusion, or transfer
   /// into a human recipient as defined under 21 CFR 1271.3.
   /// false
-  isHctPfalse._(
+  isHctPFalse._(
     'is_hct_p',
     possibleValue: 'false',
   ),
 
   /// true
-  isHctPtrue._(
+  isHctPTrue._(
     'is_hct_p',
     possibleValue: 'true',
   ),
@@ -898,13 +898,13 @@ enum DevUnique {
   /// products, including medical devices, that are packaged together to achieve
   /// a common intended use and are being distributed as a medical device.
   /// false
-  isKitfalse._(
+  isKitFalse._(
     'is_kit',
     possibleValue: 'false',
   ),
 
   /// true
-  isKittrue._(
+  isKitTrue._(
     'is_kit',
     possibleValue: 'true',
   ),
@@ -915,13 +915,13 @@ enum DevUnique {
   /// requirements under 21 CFR 801.437. Not all medical products that are NOT
   /// made with natural rubber latex will be marked.
   /// false
-  isLabeledAsNoNrlfalse._(
+  isLabeledAsNoNrlFalse._(
     'is_labeled_as_no_nrl',
     possibleValue: 'false',
   ),
 
   /// true
-  isLabeledAsNoNrltrue._(
+  isLabeledAsNoNrlTrue._(
     'is_labeled_as_no_nrl',
     possibleValue: 'true',
   ),
@@ -935,13 +935,13 @@ enum DevUnique {
   /// Rubber Latex Which May Cause Allergic Reactions' or (4) 'The Packaging of
   /// This Product Contains Dry Natural Rubber'.
   /// false
-  isLabeledAsNrlfalse._(
+  isLabeledAsNrlFalse._(
     'is_labeled_as_nrl',
     possibleValue: 'false',
   ),
 
   /// true
-  isLabeledAsNrltrue._(
+  isLabeledAsNrlTrue._(
     'is_labeled_as_nrl',
     possibleValue: 'true',
   ),
@@ -949,13 +949,13 @@ enum DevUnique {
   /// Indicates that the device does not require a prescription to use and can
   /// be purchased over the counter.
   /// false
-  isOtcfalse._(
+  isOtcFalse._(
     'is_otc',
     possibleValue: 'false',
   ),
 
   /// true
-  isOtctrue._(
+  isOtcTrue._(
     'is_otc',
     possibleValue: 'true',
   ),
@@ -963,26 +963,26 @@ enum DevUnique {
   /// Indicates whether the device is exempt from premarket notification
   /// requirements.
   /// false
-  isPmExemptfalse._(
+  isPmExemptFalse._(
     'is_pm_exempt',
     possibleValue: 'false',
   ),
 
   /// true
-  isPmExempttrue._(
+  isPmExemptTrue._(
     'is_pm_exempt',
     possibleValue: 'true',
   ),
 
   /// Indicates whether the device requires a prescription.
   /// false
-  isRxfalse._(
+  isRxFalse._(
     'is_rx',
     possibleValue: 'false',
   ),
 
   /// true
-  isRxtrue._(
+  isRxTrue._(
     'is_rx',
     possibleValue: 'true',
   ),
@@ -990,13 +990,13 @@ enum DevUnique {
   /// Indicates that the device is intended for one use or on a single patient
   /// during a single procedure.
   /// false
-  isSingleUsefalse._(
+  isSingleUseFalse._(
     'is_single_use',
     possibleValue: 'false',
   ),
 
   /// true
-  isSingleUsetrue._(
+  isSingleUseTrue._(
     'is_single_use',
     possibleValue: 'true',
   ),
@@ -1255,26 +1255,26 @@ enum DevUnique {
   /// Indicates the medical device is free from viable microorganisms. See
   /// ISO/TS 11139.
   /// false
-  sterilizationIsSterilefalse._(
+  sterilizationIsSterileFalse._(
     'sterilization.is_sterile',
     possibleValue: 'false',
   ),
 
   /// true
-  sterilizationIsSteriletrue._(
+  sterilizationIsSterileTrue._(
     'sterilization.is_sterile',
     possibleValue: 'true',
   ),
 
   /// Indicates that the device requires sterilization prior to use.
   /// false
-  sterilizationIsSterilizationPriorUsefalse._(
+  sterilizationIsSterilizationPriorUseFalse._(
     'sterilization.is_sterilization_prior_use',
     possibleValue: 'false',
   ),
 
   /// true
-  sterilizationIsSterilizationPriorUsetrue._(
+  sterilizationIsSterilizationPriorUseTrue._(
     'sterilization.is_sterilization_prior_use',
     possibleValue: 'true',
   ),

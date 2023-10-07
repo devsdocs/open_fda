@@ -27,9 +27,9 @@ final class DrugRecallEnforcementReportsFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 46, Top Endpoints: 25, Endpoints with exact: 33,
-/// Without Possible Value: 37, Reference Possible Value: 6,
-/// One-Of Possible Value: 3,
+/// Total Endpoints: 46, Total Endpoints: 46, Top Endpoints: 25,
+/// Endpoints with exact: 33, Without Possible Value: 37,
+/// Reference Possible Value: 6, One-Of Possible Value: 3,
 enum DrugEnforce {
   address1._(
     'address_1',

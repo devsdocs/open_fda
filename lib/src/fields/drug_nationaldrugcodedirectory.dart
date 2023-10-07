@@ -27,9 +27,9 @@ final class DrugNationalDrugCodeDirectoryFields extends Endpointer {
       _data.possibleValueReference;
 }
 
-/// Total Endpoints: 39, Top Endpoints: 21, Endpoints with exact: 21,
-/// Without Possible Value: 38, Reference Possible Value: 0,
-/// One-Of Possible Value: 1,
+/// Total Endpoints: 39, Total Endpoints: 39, Top Endpoints: 21,
+/// Endpoints with exact: 21, Without Possible Value: 38,
+/// Reference Possible Value: 0, One-Of Possible Value: 1,
 enum DrugCode {
   activeIngredients._(
     'active_ingredients',
